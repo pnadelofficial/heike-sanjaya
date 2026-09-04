@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阿闍梨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>阿闍梨</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>ācārya (Buddhist teacher/master; a high-ranking monk)</li>
+      
+      <li>Ajari (a Buddhist master or teacher of high rank)</li>
+      
+      <li>ācārya (a Buddhist teacher or master; also used as a title for a senior monk)</li>
+      
+      <li>Ajari (a title for a high-ranking Buddhist monk)</li>
+      
+      <li>Ajari (a title for a high-ranking Buddhist monk; acarya)</li>
+      
+      <li>Ajari (a title for a senior Buddhist monk or master)</li>
+      
+      <li>ācārya (a high-ranking Buddhist teacher or master)</li>
+      
+      <li>acarya (Buddhist teacher)</li>
+      
+      <li>Ajari (a high-ranking Buddhist monk who is a teacher/mentor, especially one who has mastered the precepts and is qualified to give ordination)</li>
+      
+      <li>Ajari (a title for a senior Buddhist monk)</li>
+      
+      <li>Ajari (a Buddhist master or teacher)</li>
+      
+      <li>acarya (Buddhist master)</li>
+      
+      <li>Ajari (a title for a senior Buddhist monk or teacher)</li>
+      
+      <li>ācārya (Buddhist teacher)</li>
+      
+      <li>Ajari (a high-ranking Buddhist priest)</li>
+      
+      <li>ācārya (a Buddhist teacher or master)</li>
+      
+      <li>ācārya</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (21)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-1-629-nlp_gloss-13">1</a></p>
+      <p class="occurrence-context">智釋、學明、寶臺房、正智、學音、土佐阿闍梨ぞ進みける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-2-114-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">昔大唐の一行阿闍梨は、玄宗皇帝の御持僧にて坐けるが、玄宗の后楊貴妃に名をたち給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-2-121-nlp_gloss-51">2</a></p>
+      <p class="occurrence-context">唯[_][1]
+                  澗谷に鳥の一聲計にて、苔のぬれ衣ほしあへず、無實の罪に依て、遠流の重科を蒙むる事を、天道憐み給ひて、九曜の形を現じつゝ、一行阿闍梨を守り給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-3-182-nlp_gloss-25">3</a></p>
+      <p class="occurrence-context">主上此御腹に、皇子御誕生あらまほしう思召、其比、有驗の僧と聞えし三井寺の頼豪阿闍梨を召て、「汝此后の腹に、皇子御誕生祈り申せ、御願成就せば、勸賞はこふによるべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-3-186-nlp_gloss-12">3</a></p>
+      <p class="occurrence-context">君なのめならず御感有て三井寺の頼豪阿闍梨を召て、「汝が所望の事は如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-3-196-nlp_gloss-15">3</a></p>
+      <p class="occurrence-context">」と仰ければ、美作守綸言を蒙て、頼豪阿闍梨が宿坊に行向ひ、勅定の趣を仰含んとするに、以の外にふすぼたる持佛堂に立籠て、怖氣なる聲して、「天子には戯の言なし、綸言汗の如しとこそ承れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-476-nlp_gloss-9">4</a></p>
+      <p class="occurrence-context">其中に平家の祈しける一如房阿闍梨眞海、弟子同宿數十人引具し、僉議の庭に進出で申けるは、「かう申せば、平家の方人とや思召され候らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-483-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">爰に乘圓房阿闍梨慶秀と云老僧あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-492-nlp_gloss-15">4</a></p>
+      <p class="occurrence-context">搦手に向ふ老僧共大將軍には源三位入道頼政、乘圓房阿闍梨慶秀律成房阿闍梨日胤、帥法印禪智、禪智が弟子義寶、禪永を始として、都合其勢一千人、手々に燒松もて、如意が峯へぞ向ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-492-nlp_gloss-19">4</a></p>
+      <p class="occurrence-context">搦手に向ふ老僧共大將軍には源三位入道頼政、乘圓房阿闍梨慶秀律成房阿闍梨日胤、帥法印禪智、禪智が弟子義寶、禪永を始として、都合其勢一千人、手々に燒松もて、如意が峯へぞ向ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-494-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">平等院には、因幡竪者荒大夫、角六郎房、島阿闍梨、筒井法師に、郷阿闍梨、惡少納言、北院には、金光院の六天狗、式部大輔、能登、加賀、佐渡、備後等也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-494-nlp_gloss-23">4</a></p>
+      <p class="occurrence-context">平等院には、因幡竪者荒大夫、角六郎房、島阿闍梨、筒井法師に、郷阿闍梨、惡少納言、北院には、金光院の六天狗、式部大輔、能登、加賀、佐渡、備後等也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-495-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">松井肥後、證南院筑後、賀屋筑前、大矢俊長、五智院但馬、乘圓房阿闍梨慶秀が房人、六十人の内、加賀光乘、刑部春秀、法師原には一來法師に如ざりき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-512-nlp_gloss-9">4</a></p>
+      <p class="occurrence-context">若大衆共、「是は一如房阿闍梨が長僉議にこそ夜は明たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-513-nlp_gloss-28">4</a></p>
+      <p class="occurrence-context">
+押寄せて其坊きれ。」とて、坊を散々にきる。防ぐ處の弟子同宿、數十人討れぬ。一
+如房阿闍梨這々六波羅に參て老眼より涙を流いて此由訴申けれ共、六波羅には軍兵數萬騎馳集て騒ぐ事もなかりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-523-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">乘圓房阿闍梨慶秀、鳩の杖にすがりて、宮の御前に參り、老眼より涙をはら／＼と流いて申けるは、「何迄も御供仕べう候へ共、齡既に八旬にたけて、行歩叶ひがたう候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-4-559-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">
+                  爰に乘圓房阿闍梨慶秀が召使ける一來法師と云ふ大力の早態在けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-6-546-nlp_gloss-20">6</a></p>
+      <p class="occurrence-context">謀反の輩調伏の爲に、五壇の法承て行はれける降三世の大阿闍梨、大行事の彼岸所にして、ね死にしぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-6-548-nlp_gloss-11">6</a></p>
+      <p class="occurrence-context">又大元法承て修せられける安祥寺の實玄阿闍梨が御巻數を進じたりけるを、披見せられければ、平家調伏の由を註進したりけるぞ怖しき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-7-664-nlp_gloss-145">7</a></p>
+      <p class="occurrence-context">前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%98%BF%E9%97%8D%E6%A2%A8#tk-11-582-nlp_gloss-62">11</a></p>
+      <p class="occurrence-context">生捕には、前内大臣宗盛公、平大納言時忠、右衞門督清宗、内藏頭信基、讃岐中將時實、兵部少輔雅明、大臣殿の八歳になり給ふ若公、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨融圓、侍には源大夫判官季貞、攝津判官盛澄、橘内左衞門季康、藤内左衞門信康、阿波民部重能父子、以上三十八人也。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

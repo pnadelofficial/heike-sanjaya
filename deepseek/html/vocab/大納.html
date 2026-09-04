@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大納</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>大納</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Great Counselor</li>
+      
+      <li>Major Counselor (Dainagon)</li>
+      
+      <li>the Senior Counselor</li>
+      
+      <li>Great Chancellor</li>
+      
+      <li>Major Counselor</li>
+      
+      <li>Great Councillor</li>
+      
+      <li>Chancellor</li>
+      
+      <li>great storehouse</li>
+      
+      <li>chief councilor</li>
+      
+      <li>Chief Councilor (Dainagon)</li>
+      
+      <li>Grand Counselor</li>
+      
+      <li>Senior Counselor</li>
+      
+      <li>great</li>
+      
+      <li>great counselor</li>
+      
+      <li>Major Counselor (title)</li>
+      
+      <li>Great</li>
+      
+      <li>Dainagon (a high-ranking official title)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (25)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%A7%E7%B4%8D#tk-1-533-nlp_gloss-15">1</a></p>
+      <p class="occurrence-context">その外、故中御門の藤中納言家成卿の三男、新大納言成親卿もひらに申されけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%A7%E7%B4%8D#tk-1-542-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">新大納言是に恐れをも致されず、晝は人目の滋ければ、夜な／＼歩行にて、中御門烏丸の宿所より、賀茂の上の社へ七夜續けて參られけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%A7%E7%B4%8D#tk-1-545-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">
+                  新大納言猶恐れをも致されず、賀茂の上の社に、ある聖を籠て、御寶殿の御後なる杉の洞に壇を立てて、拏吉尼の法を百日行はせられけるほどに、彼の大杉に雷落ち
+かゝり、雷火おびただしく燃え上て、宮中已に危く見えけるを、宮人ども多く走り集て、これを打消つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%A7%E7%B4%8D#tk-1-556-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">新大納言成親卿宣ひけるは、「徳大寺、花山院に越えられたらむは、いかゞせん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%A7%E7%B4%8D#tk-1-575-nlp_gloss-5">1</a></p>
+      <p class="occurrence-context">」と仰せければ大納言立かへて、「平氏たふれ候ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%A7%E7%B4%8D#tk-1-587-nlp_gloss-12">1</a></p>
+      <p class="occurrence-context">此法勝寺の執行と申すは、京極の源大納言雅俊の卿の孫、木寺の法印寛雅には子なりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%B4%8D#tk-2-396-nlp_gloss-8">2</a></p>
+      <p class="occurrence-context">良有て入道宣けるは、「新大納言成親、此一門を滅して天下を亂むとする企あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%B4%8D#tk-2-427-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">其までは思も寄ねども、大納言殿の御事をば、今朝内の大臣の樣々に申されければ、其も暫は心安い樣にこそ承はれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%B4%8D#tk-2-609-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">」と宣ひければ、其邊をはしりまはて尋けれども、我こそ大納言殿の御方と云者一人もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%B4%8D#tk-2-683-nlp_gloss-45">2</a></p>
+      <p class="occurrence-context">備中の瀬尾と、備前の有木の別所の間は、僅五十町に足ぬ所なれば、丹波少將其方の風もさすが懷うや思はれけむ、或時兼康を召て、「是より大納言殿の御渡有なる備中の有木の別所へは、如何程の道ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%B4%8D#tk-2-702-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">近きを遠う申は、大納言殿の御渡有なる所を成經に知せじとてこそ申らめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%B4%8D#tk-2-762-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">さる程に大納言入道殿をば同八月十九日、備前備中兩國の境、庭瀬の郷、吉備の中山といふ處にて終に失ひ奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-23-nlp_gloss-16">3</a></p>
+      <p class="occurrence-context">殊には讃岐院の御靈、宇治惡左府の憶念、新大納言成親の死靈、西光法師が惡靈、鬼界島の流人共の生靈などぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-149-nlp_gloss-41">3</a></p>
+      <p class="occurrence-context">御産によて、六波羅へ參らせ給ふ人々、關白松殿、太政大臣妙音院、左大臣大炊御門、右大臣月輪殿、内大臣小松殿、左大將實定、源大納言定房、三條大納言實房、五條大納言國綱、藤大納言實國、按察使資方、中御門中納言宗家、花山院中納言兼雅、源中納言雅頼、權中納言實綱、藤中納言資長、池中納言頼盛、左衞門督時忠、別當忠親、左宰相中將實家、右宰相中將實宗、新宰相中將通親、平宰相教盛、六角宰相家通、堀川宰相頼定、左大辨宰相長方、右大辨三位俊經、左兵衞督重教、右兵衞督光能、皇太后宮大夫朝方、左京大夫長教、太宰大貳親宣、新三位實清、以上三十三人、右大辨の外は直衣なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-227-nlp_gloss-8">3</a></p>
+      <p class="occurrence-context">誠に存生の時ならば、大納言入道殿こそ、如何に共宣ふべきに、生を隔たる習程、恨めしかりける物はなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-240-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">故大納言殿の山庄、洲濱殿とて鳥羽に在り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-246-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">「爰には大納言殿のとこそ坐しか、此妻戸をばかうこそ出入給しか、あの木をば、自らこそ植給しか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-551-nlp_gloss-3">3</a></p>
+      <p class="occurrence-context">次に新大納言成親卿已下、鹿谷に寄合て、謀反の企候し事、全く私の計略に非ず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-582-nlp_gloss-50">3</a></p>
+      <p class="occurrence-context">
+圓融院の御宇、天禄三年十一月一日、一條攝政謙徳公失給しかば、御弟堀川の關白忠
+義公、其時は未從二位中納言にてましましけり。其御弟法興院の大入道殿其比は大納
+言の右大將にておはしける間、忠義公は、御弟に越られ給しか共、今又越返し奉り、
+内大臣正二位にあがて、内覽の宣旨蒙らせ給ひたりしをこそ、人皆耳目を驚したる御
+昇進とは申しに、是は其には猶超過せり、非參議二位中將より大中納言を經ずして、
+大臣關白になり給ふ事いまだ承り及ばず。普賢寺殿の御事也。上卿の宰相、大外記、
+大夫史に至る迄、皆あきれたる樣にぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%B4%8D#tk-3-586-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">折節大納言明ざりければ、員の外にぞ加はられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%A4%A7%E7%B4%8D#tk-4-97-nlp_gloss-34">4</a></p>
+      <p class="occurrence-context">」とて、笑はせおはしましければ、大納言大に爭がひ申さるゝ所に、文持たる便女が參て、「五條の大納言殿へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%A4%A7%E7%B4%8D#tk-4-700-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">一世の源氏、無位より三位する事嵯峨皇帝の御子、陽院の大納言定卿の外は是始とぞ承る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%A4%A7%E7%B4%8D#tk-10-670-nlp_gloss-8">10</a></p>
+      <p class="occurrence-context">故尼御前の御恩をば大納言殿に報じ奉らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%B4%8D#tk-11-584-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">女房達には、女院、北の政所、廊御方、大納言佐殿、帥佐殿、治部卿局以下、四十三人とぞ聞えし[_][2]元歴二年の春の暮、如何なる年月にて一人海底に沈み、百官波上に浮らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%B4%8D#tk-11-762-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">大納言斜ならず悦で、やがて燒ぞ棄てられける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

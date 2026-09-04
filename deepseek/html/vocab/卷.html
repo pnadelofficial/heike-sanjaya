@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>卷</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>belly armor</li>
+      
+      <li>scabbard</li>
+      
+      <li>scroll</li>
+      
+      <li>armor</li>
+      
+      <li>roll</li>
+      
+      <li>wrapped</li>
+      
+      <li>belly wrap</li>
+      
+      <li>volume</li>
+      
+      <li>to roll up</li>
+      
+      <li>scrolls</li>
+      
+      <li>rolled up</li>
+      
+      <li>rolls</li>
+      
+      <li>wrap</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (27)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8D%B7#tk-1-24-nlp_gloss-10">1</a></p>
+      <p class="occurrence-context">薄青の狩衣の下に萠黄威の腹卷をき、弦袋つけたる太刀脇はさんで、殿上の小庭に畏てぞ候ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8D%B7#tk-1-60-nlp_gloss-17">1</a></p>
+      <p class="occurrence-context">しかるべしとて、其刀をめし出して叡覽あれば、上は鞘卷のくろくぬりたりけるが、中は木刀に銀薄をぞおしたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8D%B7#tk-1-139-nlp_gloss-8">1</a></p>
+      <p class="occurrence-context">始めは水干に立烏帽子、白鞘卷をさいて、舞ひければ、男舞とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8D%B7#tk-1-411-nlp_gloss-7">1</a></p>
+      <p class="occurrence-context">觀音房は黒絲威の腹卷に、白柄の長刀くきみじかに取り、勢至房は、萠黄威の腹卷に、黒漆の大太刀もて、二人つと走出で、延暦寺の額をきて落し、散々に打わり、「うれしや水、なるは瀧の水、日はてるとも、絶えずとうたへ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8D%B7#tk-1-411-nlp_gloss-26">1</a></p>
+      <p class="occurrence-context">觀音房は黒絲威の腹卷に、白柄の長刀くきみじかに取り、勢至房は、萠黄威の腹卷に、黒漆の大太刀もて、二人つと走出で、延暦寺の額をきて落し、散々に打わり、「うれしや水、なるは瀧の水、日はてるとも、絶えずとうたへ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%8D%B7#tk-2-26-nlp_gloss-23">2</a></p>
+      <p class="occurrence-context">白い布で包まれたり、一生不犯の座主、彼箱を開けて見給ふに、黄紙に書る文一卷有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%8D%B7#tk-2-28-nlp_gloss-20">2</a></p>
+      <p class="occurrence-context">我が名の有所迄は見て、それより奧をば見ず、元の如く卷返して置るゝ習也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%8D%B7#tk-2-436-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">既に赤地の錦の直垂に、黒絲縅の腹卷の、白金物打たる胸板せめて、先年安藝守たりし時、神拜の次に、靈夢を蒙て、嚴島の大明神より現に賜はられたりける銀の蛭卷したる小長刀、常の枕を放ず立られたりしを脇挾み、中門の廊へぞ出られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%8D%B7#tk-2-463-nlp_gloss-18">2</a></p>
+      <p class="occurrence-context">門前にて車よりおり、門の内へ指入て見給へば、入道腹卷を著給ふ上は一門の卿相雲客數十人、各色々の直垂に、思々の鎧著て、中門の廊に二行に著座せられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%8D%B7#tk-2-552-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">法皇仰参らせん事も、はや思とゞまり、腹卷脱おき、素絹の衣に袈裟打掛て、最心にも起らぬ念誦してこそ坐しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%8D%B7#tk-2-989-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">さりながら猶故郷を戀つゝ、君に不忠なき樣を一卷の書に作て參らせたりければ、「さては不愍の事ごさんなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%8D%B7#tk-4-451-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">代々相傳の家領を奪ふと云へども、上裁も恐れて舌を卷巻き、宮々相承の庄園を取ると云へども、權威に憚てもの言ふことなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%8D%B7#tk-4-772-nlp_gloss-91">4</a></p>
+      <p class="occurrence-context">燒る所、本覺院、成喜院、眞如院、花園院、普賢堂、大寶院、清瀧院、教待和尚本坊、竝に本尊等、八間四面の大講堂、鐘樓、經藏、灌頂堂、護法善神の社壇、新熊野の御寶殿、惣じて堂舎塔廟六百三十七宇、大津の在家一千八百五十三宇、智證の渡し給へる一切經七千餘卷、佛像二千餘體、忽に煙と成こそ悲しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%8D%B7#tk-6-11-nlp_gloss-13">6</a></p>
+      <p class="occurrence-context">興福寺別當花林院僧正永圓は、佛像經卷の煙とのぼりけるを見て、あな淺ましと、心打騒ぎ、心をくだかれけるより病附て、幾程もなく終に失給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8D%B7#tk-8-178-nlp_gloss-40">8</a></p>
+      <p class="occurrence-context">」とぞ教へければ、娘母の教に從て、朝歸りする男の水色の狩衣を著たりけるに狩衣のくびがみに、針を刺し、賤の小手卷といふ物を著て、歴て行方を繋いで行けば、豐後國に取ても、日向境、姥嶽と云ふ嵩のすそ、大きなる岩屋の中へぞ繋ぎ入たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8D%B7#tk-8-313-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">萌黄絲威の腹卷一兩、白う作たる太刀一振、滋籐の弓野矢副てたぶ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8D%B7#tk-8-411-nlp_gloss-57">8</a></p>
+      <p class="occurrence-context">」と披露しければ、備前、備中、備後三箇國の兵共馬物具然るべき所從をば、平家の御方へ参せて、息みける老者共、或はかきの直垂につめ紐し、或は布の小袖に東折し、くさり腹卷綴り著て、山靱、高箙に矢共少々差し、掻負掻負瀬尾が許へ馳集る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8D%B7#tk-8-564-nlp_gloss-15">8</a></p>
+      <p class="occurrence-context">主水正親成、薄青の狩衣の下に、萠黄威の腹卷を著て白葦毛なる馬に乘り、河原を上りに落てゆく。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%8D%B7#tk-9-174-nlp_gloss-39">9</a></p>
+      <p class="occurrence-context">」とて、勢田の方へ落行程に、今井四郎兼平も、八百餘騎で勢田を固めたりけるが僅に五十騎許に打なされ、旗をば卷せて主の覺束なきに、都へとて歸す程に、大津の打出濱にて、木曾殿に行合奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%8D%B7#tk-10-276-nlp_gloss-8">10</a></p>
+      <p class="occurrence-context">御隙には經をも一卷、御廻向候はゞ然るべう候べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%8D%B7#tk-10-708-nlp_gloss-20">10</a></p>
+      <p class="occurrence-context">鞍置馬三十疋、裸馬三十疋、長持三十枝に、羽、金、染物、卷絹風情の物を入て奉り給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%8D%B7#tk-10-774-nlp_gloss-31">10</a></p>
+      <p class="occurrence-context">」と云ふ處に、同廿五日の夜に入て佐々木三郎盛綱浦の男を一人語て、白い小袖、大口、白鞘卷など取せ、すかしおほせて、「此海に馬にて渡しぬべき所やある。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8D%B7#tk-11-187-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">」とて鎧直垂は著給はず、唐卷染の小袖に、唐綾威の鎧著て、いか物作の大太刀帶き、二十四差たるたかうすべうの矢負ひ、滋籐の弓を持給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8D%B7#tk-11-190-nlp_gloss-20">11</a></p>
+      <p class="occurrence-context">能登殿の童に、菊王と云ふ大力の剛の者あり、萌黄威の腹卷に、三枚甲の緒をしめて、白柄の長刀の鞘を外し、三郎兵衞が首を取らんと、走りかゝる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8D%B7#tk-11-192-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">童が腹卷の引合せをあなたへつと射ぬかれて、犬居に倒れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8D%B7#tk-11-450-nlp_gloss-34">11</a></p>
+      <p class="occurrence-context">新中納言是を召寄せて見給へば、白篦に鶴の本白、こうの羽を破合せて作だる矢の十三束二伏有に、沓卷より一束計おいて、和田小太郎平義盛と、漆にてぞ書附たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%8D%B7#tk-12-432-nlp_gloss-12">12</a></p>
+      <p class="occurrence-context">」と云ひければ、常陸房黒革威の腹卷の袖著けたるに大太刀帶て彼家に走入てみれば、歳五十計なる男のかちの直垂に折烏帽子著て唐瓶子菓子などとりさばくり、銚子どももて酒勸めむとする處に、物具したる法師の打入を見て、かいふいて逃ければやがて續いて逐懸たり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

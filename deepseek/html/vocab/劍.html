@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>劍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>劍</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>sword</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (34)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8A%8D#tk-1-48-nlp_gloss-20">1</a></p>
+      <p class="occurrence-context">案のごとく五節はてにしかば、殿上人一同に申されけるは、「夫雄劍を帶して公宴に列し、兵仗を給て、宮中を出入するはみな格式の禮をまもる綸命よしある先規なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%8A%8D#tk-3-112-nlp_gloss-69">3</a></p>
+      <p class="occurrence-context">神社は太神宮を始奉て、二十餘箇所、佛寺は東大寺、興福寺、
+已下十六箇所に御誦經あり。御誦經の御使は、宮の侍の中に、有官の輩是を勤む。平
+紋の狩衣に帶劔したる者共が、色々の御誦經物、御劍御衣を持續いて、東の臺より南
+庭を渡て、西の中門に出づ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-234-nlp_gloss-8">5</a></p>
+      <p class="occurrence-context">悦んで叡覧を歴られん時、劍を拔き胸を刺んに易かりなん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-271-nlp_gloss-28">5</a></p>
+      <p class="occurrence-context">燕の指圖ならびに樊於期が首見參にいるゝところに指圖の入たる櫃の底に、氷の樣なる劍の見えければ、始皇帝是を見て、やがて逃んとし給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-272-nlp_gloss-13">5</a></p>
+      <p class="occurrence-context">荊軻王の御袖をむずと引へて、劍を胸に差當たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-289-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">荊軻怒て、劍を投懸奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-290-nlp_gloss-17">5</a></p>
+      <p class="occurrence-context">折節御前に番の醫師の候けるが、藥の袋を荊軻が劍に投合せたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-291-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">劍藥の袋を懸られながら、口六尺の銅の柱を、半迄こそ切たりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%8A%8D#tk-5-293-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">王立歸て、わが劍を召寄て、荊軻を八裂にこそし給ひけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%8A%8D#tk-9-305-nlp_gloss-16">9</a></p>
+      <p class="occurrence-context">一張の弓の勢は、半月胸の前に懸り、三尺の劍の光は、秋の霜腰の間に横へたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%8A%8D#tk-9-352-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">内侍所、神璽、寶劍是也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-352-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">」と申ければ、法皇大に御感有て、御劍已下種々の神寶を長盛して大明神へまゐらせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-607-nlp_gloss-8">11</a></p>
+      <p class="occurrence-context">吾朝には神代より傳はれる靈劍三あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-608-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">十握劍、天の早切劍、草薙劍是也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-608-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">十握劍、天の早切劍、草薙劍是也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-608-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">十握劍、天の早切劍、草薙劍是也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-609-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">十握劍は大和國磯上布留社に納めらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-610-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">天早切の劍は尾張國熱田宮にありとかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-611-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">草薙劍は内裏にあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-612-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">今の寶劍是也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-633-nlp_gloss-20">11</a></p>
+      <p class="occurrence-context">大蛇人と思ひて其影を飽まで飮で醉臥たりけるを尊帶給へる十握の劍をぬいて大蛇をづた／＼に切り給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-635-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">尊恠しと思食し、堅樣に破て御覽ずれば一の靈劍あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-639-nlp_gloss-18">11</a></p>
+      <p class="occurrence-context">大蛇の尾のなかに在ける時は村雲常に掩ければ天の村雲劍とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-644-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">靈威本の劍に相劣らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-645-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">天の村雲劍は崇神天皇より景行天皇まで三代は天照大神の社壇に崇め置かれたりけるを、景行天皇の御宇四十年六月に東夷反逆の間、御子日本武尊、御心も剛に御力も人に勝れておはしければ、清撰に當てあづまへ下り給ひし時、天照大神へ詣て御暇申させ給ひけるに、御妹いつきの尊を以て謹而怠事なかれとて靈劍を尊にさづけ申給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-645-nlp_gloss-98">11</a></p>
+      <p class="occurrence-context">天の村雲劍は崇神天皇より景行天皇まで三代は天照大神の社壇に崇め置かれたりけるを、景行天皇の御宇四十年六月に東夷反逆の間、御子日本武尊、御心も剛に御力も人に勝れておはしければ、清撰に當てあづまへ下り給ひし時、天照大神へ詣て御暇申させ給ひけるに、御妹いつきの尊を以て謹而怠事なかれとて靈劍を尊にさづけ申給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-650-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">其よりしてこそ天の村雲の劍をば草薙劍とも名付られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-650-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">其よりしてこそ天の村雲の劍をば草薙劍とも名付られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-654-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">草薙劍をば熱田の社に納めらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-655-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">あめの御門の御宇七年に新羅の沙門道行此劍を竊で吾國の寶とせんと思て、竊に舟に藏して行程に波風震動して忽に海底に沈まんとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-656-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">即靈劍のたゝりなりと知て、罪を謝して先途を遂ず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-659-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">今の寶劍是也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-661-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">陽成院狂病にをかされましまして靈劍を拔せ給ひければ、夜るのおとど閃々として電光にことならず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8A%8D#tk-11-666-nlp_gloss-61">11</a></p>
+      <p class="occurrence-context">」と申されければ、其中に、ある博士の勘へ申けるは「昔出雲國ひの河上にて素盞烏尊に切り殺され奉し大蛇、靈劍を惜む志深くして八の首八の尾を表事として人王八十代の後、八歳の帝と成て靈劍を取り返して海底に沈み給ふにこそ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中宮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>中宮</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>empress</li>
+      
+      <li>Empress</li>
+      
+      <li>the empress</li>
+      
+      <li>Emperor&#39;s principal consort</li>
+      
+      <li>Emperor&#39;s Principal Consort</li>
+      
+      <li>Emperor&#39;s primary consort</li>
+      
+      <li>Middle Chamber</li>
+      
+      <li>middle palace</li>
+      
+      <li>Emperor&#39;s chief consort</li>
+      
+      <li>Emperor&#39;s consort</li>
+      
+      <li>of the Empress</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (35)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E4%B8%AD%E5%AE%AE#tk-0-71-nlp_gloss-36">0</a></p>
+      <p class="occurrence-context">同十四日夜半ばかり、山門の大衆、又下洛すと聞えしかば、夜中に主上腰輿に召して、院の御所法住寺殿へ行幸なる。中宮は御車に奉て、行啓あり。小松の大臣、直衣に箭負て供奉せらる。嫡子權亮少將維盛、束帶に平胡録負て參られけり。關白殿を始め奉て、太政大臣以下の公卿、殿上人、我も／＼と馳せ參る。凡京中の貴賤、禁中の上下、噪ぎのゝしること夥し。山門には神輿に箭立ち、神人宮仕射殺され、衆徒多く疵を被りしかば、大宮、二宮以下、講堂、中堂、すべて諸堂一宇も殘さず皆燒拂て、山野にまじはるべきよし、三千一同に僉議しけり。是によて大衆の申す所、御はからひあるべしと聞えしかば、山門の上綱等、子細を衆徒に觸れむとて、登山したりけるを、大衆おこて西坂本より皆おかへす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-2-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">去程に入道相國の御女建禮門院、其比は未中宮と聞えさせ給しが、御惱とて、雲の上、天が下の歎にてぞ在ける。諸寺に御讀經始り、諸社へ官幣使を立らる、醫家藥を盡し、陰陽術を窮め、大法秘法一つとして殘る所なう修せられけり。され共、御惱たゞにも渡せ給はず、御懷姙とぞ聞えし。主上今年十八、中宮は二十二に成せ給ふ。然共、未皇子も姫宮も出來させ給はず。若皇子にてわたらせ給はば、如何に目出度からんと、平家の人々は唯今皇子御誕生の有樣に、勇悦びあはれけり。他家の人々も、「平氏の御繁昌折を得たり、皇子御誕生疑なし。」とぞ申あはれける。御懷姙定らせ給しかば、有驗の高僧貴僧に仰せて、大法秘法を修し、星宿佛菩薩につけて、皇子御誕生と祈誓せらる。六月一日、中宮御著帶有けり。仁和寺の御室守覺法親王、御參内有て、孔雀經の法をもて、御加持あり。天台の座主覺快法親王、同う參せ給て、變成男子の法を修せられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-2-nlp_gloss-100">2</a></p>
+      <p class="occurrence-context">去程に入道相國の御女建禮門院、其比は未中宮と聞えさせ給しが、御惱とて、雲の上、天が下の歎にてぞ在ける。諸寺に御讀經始り、諸社へ官幣使を立らる、醫家藥を盡し、陰陽術を窮め、大法秘法一つとして殘る所なう修せられけり。され共、御惱たゞにも渡せ給はず、御懷姙とぞ聞えし。主上今年十八、中宮は二十二に成せ給ふ。然共、未皇子も姫宮も出來させ給はず。若皇子にてわたらせ給はば、如何に目出度からんと、平家の人々は唯今皇子御誕生の有樣に、勇悦びあはれけり。他家の人々も、「平氏の御繁昌折を得たり、皇子御誕生疑なし。」とぞ申あはれける。御懷姙定らせ給しかば、有驗の高僧貴僧に仰せて、大法秘法を修し、星宿佛菩薩につけて、皇子御誕生と祈誓せらる。六月一日、中宮御著帶有けり。仁和寺の御室守覺法親王、御參内有て、孔雀經の法をもて、御加持あり。天台の座主覺快法親王、同う參せ給て、變成男子の法を修せられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-2-nlp_gloss-219">2</a></p>
+      <p class="occurrence-context">去程に入道相國の御女建禮門院、其比は未中宮と聞えさせ給しが、御惱とて、雲の上、天が下の歎にてぞ在ける。諸寺に御讀經始り、諸社へ官幣使を立らる、醫家藥を盡し、陰陽術を窮め、大法秘法一つとして殘る所なう修せられけり。され共、御惱たゞにも渡せ給はず、御懷姙とぞ聞えし。主上今年十八、中宮は二十二に成せ給ふ。然共、未皇子も姫宮も出來させ給はず。若皇子にてわたらせ給はば、如何に目出度からんと、平家の人々は唯今皇子御誕生の有樣に、勇悦びあはれけり。他家の人々も、「平氏の御繁昌折を得たり、皇子御誕生疑なし。」とぞ申あはれける。御懷姙定らせ給しかば、有驗の高僧貴僧に仰せて、大法秘法を修し、星宿佛菩薩につけて、皇子御誕生と祈誓せらる。六月一日、中宮御著帶有けり。仁和寺の御室守覺法親王、御參内有て、孔雀經の法をもて、御加持あり。天台の座主覺快法親王、同う參せ給て、變成男子の法を修せられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-3-nlp_gloss-5">2</a></p>
+      <p class="occurrence-context">かゝりし程に、中宮は月の重るに隨て、御身を苦うせさせ給ふ。一度笑ば百の媚有けん漢の李夫人、昭陽殿の病の床もかくやと覺え、唐の楊貴妃、梨花一枝春の雨を帶び、芙蓉の風にしをれ、女郎花の露重げなるよりも猶痛しき御樣なり。かゝる御惱の折節に合せて、こはき御物怪共、取入奉る。よりまし明王の縛に掛て、靈顯れたり。殊には讃岐院の御靈、宇治惡左府の憶念、新大納言成親の死靈、西光法師が惡靈、鬼界島の流人共の生靈などぞ申ける。是によて太政入道生靈も死靈も、宥らるべしとて、其比やがて讃岐院御追號有て、崇徳天皇と號す。宇治惡左府、贈官贈位行はれて、太政大臣正一位を贈らる。勅使は少内記惟基とぞ聞えし。件の墓所は、大和國添上の郡、
+河上の村、般若野の五三昧也。保元の秋掘起して捨られし後は死骸道の邊の土となて、
+年々に只春の草のみ茂れり。今勅使尋來て、宣命を讀けるに、亡魂いかに嬉とおぼし
+けん。怨靈はかく怖ろしき事也。されば早良の廢太子をば崇道天皇と號し、井上内親
+王をば、皇后の職位に復す。是皆怨靈を宥められし策也。冷泉院の御物狂う坐し、花
+山の法皇十善萬乘の定位をすべらせ給しは、基方民部卿が靈とかや。三條院の御目も
+御覽ぜられざりしは、寛算供奉が靈也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-4-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">門脇宰相か樣の事共傳聞いて、小松殿に申されけるは、「中宮御産の御祈樣々に候也。何と申候とも非常の赦に過たる事有るべし共覺え候はず。中にも鬼界島の流人共召還されたらん程の功徳善根、爭か候べき。」と申されければ、小松殿父の禪門の御前に坐て、「あの丹波少將が事を宰相の強ちに歎申候が不便に候。中宮御惱の御事、承及ぶ如くんば、殊更成親卿が死靈などと聞え候。大納言が死靈を宥んと思召んにつけても、生て候少將をこそ召還され候はめ。人の念ひを休させ給はば、思召す事も叶ひ、人の願を叶へさせ給はば、御願も既成就して中宮やがて、皇子御誕生有て、家門の榮花彌盛に候べし。」など被申ければ、入道相國、日來にも似ず事の外に和いで、「さて俊寛と康頼法師が事は、如何に。」「其も同う召こそ還され候はめ。若一人も留られむは、中中罪業たるべう候。」と申されたりければ、「康頼法師が事はさる事なれ共、俊寛は隨分入道が口入を以て、人と成たる者ぞかし。其に所しもこそ多けれ、我山莊鹿谷に城廓を構へて、事にふれて、奇怪の振舞共が有けんなれば、俊寛をば思もよらず。」とぞ宣ける。小松殿歸て叔父の宰相殿呼奉り、「少將は既に赦免候はんずるぞ。御心安う思召され候へ。」とのたまへば、宰相手を合てぞ悦ばれける。「下し時もなどか申請ざらんと思ひたり氣にて、教盛を見候度毎には涙を流し候しが、不便に候。」と申されければ、小松殿、「誠にさこそは思召され候らめ。子は誰とても悲ければ、能々申候はん。」とて入給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-4-nlp_gloss-100">2</a></p>
+      <p class="occurrence-context">門脇宰相か樣の事共傳聞いて、小松殿に申されけるは、「中宮御産の御祈樣々に候也。何と申候とも非常の赦に過たる事有るべし共覺え候はず。中にも鬼界島の流人共召還されたらん程の功徳善根、爭か候べき。」と申されければ、小松殿父の禪門の御前に坐て、「あの丹波少將が事を宰相の強ちに歎申候が不便に候。中宮御惱の御事、承及ぶ如くんば、殊更成親卿が死靈などと聞え候。大納言が死靈を宥んと思召んにつけても、生て候少將をこそ召還され候はめ。人の念ひを休させ給はば、思召す事も叶ひ、人の願を叶へさせ給はば、御願も既成就して中宮やがて、皇子御誕生有て、家門の榮花彌盛に候べし。」など被申ければ、入道相國、日來にも似ず事の外に和いで、「さて俊寛と康頼法師が事は、如何に。」「其も同う召こそ還され候はめ。若一人も留られむは、中中罪業たるべう候。」と申されたりければ、「康頼法師が事はさる事なれ共、俊寛は隨分入道が口入を以て、人と成たる者ぞかし。其に所しもこそ多けれ、我山莊鹿谷に城廓を構へて、事にふれて、奇怪の振舞共が有けんなれば、俊寛をば思もよらず。」とぞ宣ける。小松殿歸て叔父の宰相殿呼奉り、「少將は既に赦免候はんずるぞ。御心安う思召され候へ。」とのたまへば、宰相手を合てぞ悦ばれける。「下し時もなどか申請ざらんと思ひたり氣にて、教盛を見候度毎には涙を流し候しが、不便に候。」と申されければ、小松殿、「誠にさこそは思召され候らめ。子は誰とても悲ければ、能々申候はん。」とて入給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-4-nlp_gloss-182">2</a></p>
+      <p class="occurrence-context">門脇宰相か樣の事共傳聞いて、小松殿に申されけるは、「中宮御産の御祈樣々に候也。何と申候とも非常の赦に過たる事有るべし共覺え候はず。中にも鬼界島の流人共召還されたらん程の功徳善根、爭か候べき。」と申されければ、小松殿父の禪門の御前に坐て、「あの丹波少將が事を宰相の強ちに歎申候が不便に候。中宮御惱の御事、承及ぶ如くんば、殊更成親卿が死靈などと聞え候。大納言が死靈を宥んと思召んにつけても、生て候少將をこそ召還され候はめ。人の念ひを休させ給はば、思召す事も叶ひ、人の願を叶へさせ給はば、御願も既成就して中宮やがて、皇子御誕生有て、家門の榮花彌盛に候べし。」など被申ければ、入道相國、日來にも似ず事の外に和いで、「さて俊寛と康頼法師が事は、如何に。」「其も同う召こそ還され候はめ。若一人も留られむは、中中罪業たるべう候。」と申されたりければ、「康頼法師が事はさる事なれ共、俊寛は隨分入道が口入を以て、人と成たる者ぞかし。其に所しもこそ多けれ、我山莊鹿谷に城廓を構へて、事にふれて、奇怪の振舞共が有けんなれば、俊寛をば思もよらず。」とぞ宣ける。小松殿歸て叔父の宰相殿呼奉り、「少將は既に赦免候はんずるぞ。御心安う思召され候へ。」とのたまへば、宰相手を合てぞ悦ばれける。「下し時もなどか申請ざらんと思ひたり氣にて、教盛を見候度毎には涙を流し候しが、不便に候。」と申されければ、小松殿、「誠にさこそは思召され候らめ。子は誰とても悲ければ、能々申候はん。」とて入給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-9-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">さる程に同年十一月十二日の寅の刻より、中宮御産の氣坐すとて、京中六波羅ひしめきあへり。御産所は六波羅池殿にて有けるに法皇も御幸なる。關白殿を始め奉て、太政大臣以下の公卿殿上人、すべて世に人と數へられ、官加階に望をかけ、所帶所職を帶する程の人の、一人も漏るは無りけり。先例も、女御、后、御産の時に臨んで大赦行はるゝ事あり。大治二年九月十一日、待賢門院御産の時、大赦有りき。其例とて今度も、重科の輩多く許されける中に、俊寛僧都一人、赦免無りけるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-11-nlp_gloss-85">2</a></p>
+      <p class="occurrence-context">小松大臣は例の善惡に噪がぬ人にて坐ければ、其後遙に程歴て、嫡子權亮少將以下公達の車共遣續させ、色々の御衣四十領、銀劔七つ、廣蓋に置せ、御馬十二匹引せて參り給。寛弘に上東門院御産の時、御堂殿御馬を參せられし其例とぞ聞えし。此大臣は中宮の御兄にて坐ける上、父子の御契なれば、御馬參せ給ふも理なり。五條の大納言國綱卿、御馬二匹進ぜらる。志の至か、徳の餘かとぞ人申ける。猶伊勢より始て、安藝の嚴島に至まで、七十餘箇所へ神馬を立らる。内裏にも寮の御馬に四手附て、數十匹引立たり。仁和寺御室は、孔雀經の法、天台座主覺快法親王は、七佛藥師の法、寺の長吏圓慶法親王は、金剛童子の法、其外五大虚空藏、六觀音、一字金輪、五壇の法、六字加輪、八字文殊、普賢延命に至るまで、殘所なう修せられけり。護摩の煙御所中にみち、鈴の音雲を響し、修法の聲身の毛堅て、如何なる御物のけなり共、面をむかふべしとも見えざりけり。猶佛所の法印に仰て、御身等身の藥師竝に五大尊の像を作り始らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-12-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">かゝりしか共、中宮は隙なく頻らせ給ふばかりにて、御産も頓に成遣ず。入道相國、
+二位殿、胸に手を置て、こはいかにせんとぞあきれ給ふ。人の物申しけれども、唯と
+もかくも好樣にとぞ宣ける。さり共「軍の陣ならば、是程淨海は臆せじ物を。」とぞ
+後には仰られける。御驗者は、房覺性運兩僧正、春堯法印、豪禪、實專兩僧都、各僧
+伽の句どもあげ、本寺本山の三寶、年來所持の本尊達、責ふせ々々々もまれけり。誠
+にさこそはと覺えて尊かりける中に法皇は、折しも新熊野へ御幸なるべきにて、御精
+進の次なりける間、錦帳近く御座有て、千手經を打上遊されけるにこそ、今一際事替
+て、さしも躍狂ふ御よりまし共が縛も、暫打靜けれ。法皇仰なりけるは、「如何なる
+御物氣なり共、此老法師がかくて候はんには、爭か近附奉るべき。就中に今現るる所
+の怨靈共は、皆我朝恩によて、人と成し者共ぞかし。縱報謝の心をこそ存ぜず共、豈
+障碍を成すべきや。速に罷退き候へ。」とて女人生産し難からん時に臨で、邪魔遮障
+し、苦忍難からんにも、心を致して大悲呪を稱誦せば、鬼神退散して、安樂に生ぜん
+と遊いて、皆水精の御數珠を推揉せ給へば、御産平安のみならず、皇子にてこそ坐け
+れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-13-nlp_gloss-9">2</a></p>
+      <p class="occurrence-context">頭中將重衡卿、其時は未中宮亮にておはしけるが、御簾の内よりつと出て、御産平安、皇子御誕生候ぞや。」と、高らかに申されければ、法皇を始參せて、關白殿以下の大臣、公卿、殿上人、各の助修、數輩の御驗者、陰陽頭、典藥頭、惣て堂上堂下、一同にあと悦あへる聲は、門外までどよみて、暫は靜りやらざりけり。入道餘りの嬉さに、聲をあげてぞ泣ける。悦泣とは是を云べきにや。小松殿、中宮の御方に參せ給て、金錢九十九文、皇子の御枕に置き、「天を以て父とし、地を以て母と定め給へ。御命は方士東方朔が齡を保ち、御心には天照大神入替らせ給へ。」とて、桑の弓蓬の矢を以て、天地四方を射させらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-13-nlp_gloss-123">2</a></p>
+      <p class="occurrence-context">頭中將重衡卿、其時は未中宮亮にておはしけるが、御簾の内よりつと出て、御産平安、皇子御誕生候ぞや。」と、高らかに申されければ、法皇を始參せて、關白殿以下の大臣、公卿、殿上人、各の助修、數輩の御驗者、陰陽頭、典藥頭、惣て堂上堂下、一同にあと悦あへる聲は、門外までどよみて、暫は靜りやらざりけり。入道餘りの嬉さに、聲をあげてぞ泣ける。悦泣とは是を云べきにや。小松殿、中宮の御方に參せ給て、金錢九十九文、皇子の御枕に置き、「天を以て父とし、地を以て母と定め給へ。御命は方士東方朔が齡を保ち、御心には天照大神入替らせ給へ。」とて、桑の弓蓬の矢を以て、天地四方を射させらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-16-nlp_gloss-103">2</a></p>
+      <p class="occurrence-context">御修法の結願には、勸賞共行はる。仁和寺の御室は東寺修造せらるべし。並に後七日の御修法、大元の法、灌頂興行せらるべき由仰下さる。御弟子覺誓僧都、法印に擧せらる。座主の宮は、二品竝に牛車の宣旨を申させ給ふ。仁和寺の御室さゝへ申させ給ふによて、法眼圓良、法印に成さる。其外の勸賞共毛擧に遑あらずとぞ聞えし。中宮は日數經にければ、六波羅より内裏へ參せ給ひけり。此御娘、后に立せ給しかば、入道相國夫婦共に、「哀れ、如何にもして皇子御誕生あれかし。位に即奉て、外祖父、
+外祖母と仰れん。」と願ける。我が崇奉る安藝の嚴島に申さんとて、月詣を始て、祈
+り申されければ、中宮やがて、御懷姙有て、思ひのごとく皇子にて坐けるこそ目出度
+けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-16-nlp_gloss-187">2</a></p>
+      <p class="occurrence-context">御修法の結願には、勸賞共行はる。仁和寺の御室は東寺修造せらるべし。並に後七日の御修法、大元の法、灌頂興行せらるべき由仰下さる。御弟子覺誓僧都、法印に擧せらる。座主の宮は、二品竝に牛車の宣旨を申させ給ふ。仁和寺の御室さゝへ申させ給ふによて、法眼圓良、法印に成さる。其外の勸賞共毛擧に遑あらずとぞ聞えし。中宮は日數經にければ、六波羅より内裏へ參せ給ひけり。此御娘、后に立せ給しかば、入道相國夫婦共に、「哀れ、如何にもして皇子御誕生あれかし。位に即奉て、外祖父、
+外祖母と仰れん。」と願ける。我が崇奉る安藝の嚴島に申さんとて、月詣を始て、祈
+り申されければ、中宮やがて、御懷姙有て、思ひのごとく皇子にて坐けるこそ目出度
+けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-19-nlp_gloss-22">2</a></p>
+      <p class="occurrence-context">白河院御在位の御時、京極大殿の御娘の后に立せ給て、賢子の中宮とて、御最愛有けり。主上此御腹に、皇子御誕生あらまほしう思召、其比、有驗の僧と聞えし三井寺の頼豪阿闍梨を召て、「汝此后の腹に、皇子御誕生祈り申せ、御願成就せば、勸賞はこふによるべし。」とぞ仰ける。「安う候」とて三井寺に歸り、百日肝膽を摧て祈申されければ、中宮軈て百日の内に御懷姙有て、承保元年十二月十六日。御産平安、皇子御誕生有けり。君なのめならず御感有て三井寺の頼豪阿闍梨を召て、「汝が所望の事は如何に。」と仰下されければ、三井寺に戒壇建立の事を奏す。主上「是こそ存の外の所望なれ。一階僧正などをも申べきかとこそ思召つれ。凡は皇子御誕生有て、皇祚を繼しめん事も、海内無爲を思ふ爲なり。今汝が所望達せば、山門憤て、世上も靜なるべからず。兩門合戰して、天台の佛法亡なんず」とて、御許されも無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-19-nlp_gloss-111">2</a></p>
+      <p class="occurrence-context">白河院御在位の御時、京極大殿の御娘の后に立せ給て、賢子の中宮とて、御最愛有けり。主上此御腹に、皇子御誕生あらまほしう思召、其比、有驗の僧と聞えし三井寺の頼豪阿闍梨を召て、「汝此后の腹に、皇子御誕生祈り申せ、御願成就せば、勸賞はこふによるべし。」とぞ仰ける。「安う候」とて三井寺に歸り、百日肝膽を摧て祈申されければ、中宮軈て百日の内に御懷姙有て、承保元年十二月十六日。御産平安、皇子御誕生有けり。君なのめならず御感有て三井寺の頼豪阿闍梨を召て、「汝が所望の事は如何に。」と仰下されければ、三井寺に戒壇建立の事を奏す。主上「是こそ存の外の所望なれ。一階僧正などをも申べきかとこそ思召つれ。凡は皇子御誕生有て、皇祚を繼しめん事も、海内無爲を思ふ爲なり。今汝が所望達せば、山門憤て、世上も靜なるべからず。兩門合戰して、天台の佛法亡なんず」とて、御許されも無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-21-nlp_gloss-150">2</a></p>
+      <p class="occurrence-context">去程に承暦元年八月六日、皇子御年四歳にて遂に隱させ給ぬ。敦文の親王是也。主上斜ならず御歎有けり。山門に又西京の座主、良信大僧正、其比は圓融坊の僧都とて有驗僧と聞えしを内裏へ召て、「こは如何せんずる。」と仰ければ、「何も、吾山の力にてこそか樣の御願は成就する事で候へ。九條右丞相、慈慧大僧正に契申させ給しに依てこそ、冷泉院の皇子御誕生は候しか。安い程の御事候。」とて、比叡山に歸り上り、山王大師に、百日肝膽を摧て祈申ければ、中宮軈て百日の内に御懷姙有て、承暦三年七月九日、御産平安、皇子御誕生有けり。堀川の天皇是なり。怨靈は昔もかく怖しかりし事也。今度さしも目出度き御産に、非常の大赦行はれたりといへ共、俊寛僧都一人、赦免無りけるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-54-nlp_gloss-51">2</a></p>
+      <p class="occurrence-context">按察大納言資方卿の子息右近衞少將兼讚岐守源資時、二つの官を停らる。參議皇太后宮權大夫兼右兵衞督藤原光能、大藏卿右京大夫兼伊豫守高階康經、藏人左少辨兼中宮權大進藤原基親、三官共に停めらる。按察大納言資方卿、子息右近衞少將、孫の右少將雅方、是三人をやがて都の中を追出さるべしとて、上卿には藤大納言實國、博士判官中原範貞に仰せて、やがて其日都の中を追出さる。大納言宣けるは、「三界廣しといへ共、五尺の身置き所なし。一生程なしといへ共、一日暮難し。」とて、夜中に九重のうちを紛出て、八重立つ雲の外へぞ赴かれける。彼大江山、生野の道にかゝりつゝ、丹波國村雲と云ふ所にぞ、暫はやすらひ給けるが、其より終には尋出されて、
+信濃國とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E4%B8%AD%E5%AE%AE#tk-2-66-nlp_gloss-47">2</a></p>
+      <p class="occurrence-context">同廿三日。天台座主覺快法親王、頻に御辭退有るに依て、前座主明雲大僧正、還著せらる。入道相國は、かく散々にし散されたれ共、御娘中宮にてまします。關白殿と申も聟也。萬心安うや思はれけん。「政務は只一向主上の御計たるべし。」とて、福原へぞ下られける。前右大將宗盛卿、急ぎ參内して、此由奏聞せられければ、主上は
+「法皇の讓坐したる世ならばこそ。唯とう／＼執柄に言合て、宗盛ともかうも計へ。」
+とて、聞召もいれざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-17-nlp_gloss-204">3</a></p>
+      <p class="occurrence-context">同四月二十二日新帝の御即位あり。大極殿にてあるべかりしかども、一年炎上の後は、未造りも出されず。太政官の廳にて、行はるべしと、定められたりけるを、其時の九條殿申させ給ひけるは、「太政官の廳は、凡人の家にとらば公文所體の所也。大極殿無らん上は、紫宸殿にてこそ、御即位は有るべけれ。」と申させ給ひければ、紫宸殿にてぞ、御即位は有ける。「去じ康保四年十一月一日、冷泉院の御即位、紫宸殿にて有しは、主上御邪氣に依て、大極殿へ行幸かなはざりし故也。其例如何あるべからん。只後三條院の延久の佳例に任せ、太政官の廳にて行はるべき物を。」と人々申合はれけれども、九條殿の御計の上は、左右に及ばず。中宮は弘徽殿より仁壽殿へ遷らせ給ひて、高御座へ參せ給ひける御有樣、目出度かりけり。平家の人々皆出仕せられける中に、小松殿の公達は、去年大臣失せ給ひし間、色にて籠居せられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-38-nlp_gloss-27">3</a></p>
+      <p class="occurrence-context">是に附ても、天下の人、小松大臣の御事をぞしのび申ける。或時小松殿參内の次に、中宮の御方へ参せ給ひたりけるに、八尺許有ける蛇が、大臣の指貫の左の輪を這廻りけるを、重盛騒がば、女房達も騒ぎ、中宮も驚せ給ひなんずと思召し、左の手で蛇の尾を押へ、右の手で首を取り、直衣の袖の中に引入れ、些ともさわがず、つい立て、「六位や候、六位や候。」と召されければ、伊豆守、其時は未衞府藏人でおはしけるか、仲綱と名乘て參れたりけるに、此蛇をたぶ。給て弓場殿を經て、殿上の小庭にいでつゝ、御倉の小舎人をめして、「是給れ。」と言れければ、大に頭を掉て逃去ぬ。力及ばず我郎等競の瀧口を召て、是を給ぶ。給て捨てけり。其朝小松殿善い馬に鞍置て、伊豆守の許へ遣すとて、「さても昨日の振舞こそ、優に候しか。是は乘一の馬で候。夜陰に及で陣外より、傾城の許へ通れむ時もちゐらるべし。」とて遣さる。伊豆守、大臣の御返事なれば、「御馬畏て賜り候ぬ。さても昨日の御振舞は、還城樂にこそ似て候しか。」とぞ申されける。如何なれば小松大臣は、か樣にゆゆしうおはせしに、宗盛卿はさこそ無らめ、剩へ人の惜む馬乞取て、天下の大事に及ぬるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-38-nlp_gloss-65">3</a></p>
+      <p class="occurrence-context">是に附ても、天下の人、小松大臣の御事をぞしのび申ける。或時小松殿參内の次に、中宮の御方へ参せ給ひたりけるに、八尺許有ける蛇が、大臣の指貫の左の輪を這廻りけるを、重盛騒がば、女房達も騒ぎ、中宮も驚せ給ひなんずと思召し、左の手で蛇の尾を押へ、右の手で首を取り、直衣の袖の中に引入れ、些ともさわがず、つい立て、「六位や候、六位や候。」と召されければ、伊豆守、其時は未衞府藏人でおはしけるか、仲綱と名乘て參れたりけるに、此蛇をたぶ。給て弓場殿を經て、殿上の小庭にいでつゝ、御倉の小舎人をめして、「是給れ。」と言れければ、大に頭を掉て逃去ぬ。力及ばず我郎等競の瀧口を召て、是を給ぶ。給て捨てけり。其朝小松殿善い馬に鞍置て、伊豆守の許へ遣すとて、「さても昨日の振舞こそ、優に候しか。是は乘一の馬で候。夜陰に及で陣外より、傾城の許へ通れむ時もちゐらるべし。」とて遣さる。伊豆守、大臣の御返事なれば、「御馬畏て賜り候ぬ。さても昨日の御振舞は、還城樂にこそ似て候しか。」とぞ申されける。如何なれば小松大臣は、か樣にゆゆしうおはせしに、宗盛卿はさこそ無らめ、剩へ人の惜む馬乞取て、天下の大事に及ぬるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-0-nlp_gloss-153">4</a></p>
+      <p class="occurrence-context">治承四年六月三日、福原へ行幸在べしとて京中ひしめきあへり。此日來都遷り有るべしと聞えしかども、忽に今明の程とは思はざりつるに、こは如何にとて上下騒合へり。剩へ三日と定められたりしが、今一日引上て、二日になりにけり。二日の卯刻に、既に行幸の御輿を寄たりければ、主上は今年三歳、未幼なう坐ましければ、何心もなう召されけり。主上少なう渡せ給ふ時の御同輿には、母后こそ參せ給ふに、是は其儀なし。御乳母平大納言時忠卿の北の方帥のすけ殿ぞ、一つ御輿に參られける。中宮、一院、上皇、御幸なる。攝政殿を始め奉て太政大臣已下の公卿殿上人、我も／＼と供奉せらる。三日福原へ入せ給ふ。池中納言頼盛卿の宿所、皇居になる。同四日頼盛家の賞とて、正二位し給ふ。九條殿の御子、右大將良通卿、越られ給ひけり。攝ろくの臣の御子息、凡人の次男に、加階越えられ給ふ事、是れ始とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-63-nlp_gloss-154">4</a></p>
+      <p class="occurrence-context">入道相國か樣の事共傳聞給ひて、爭か好しと思はるべき。且々南都の狼藉を靜めんとて、備中國の住人瀬尾太郎兼康、大和國の檢非所に補せらる。兼康五百餘騎で南都へ發向す。「相構て、衆徒は狼藉を致すとも、汝等は致すべからず。物具なせそ。弓箭な帶しそ。」とて向はれたりけるに、大衆かゝる内議をば知らず、兼康が餘勢六十餘人搦取て、一々に皆頸を斬て、猿澤の池の端にぞ懸竝べたる。入道相國大に怒て、
+「さらば南都を攻よや。」とて、大將軍には頭中將重衡、副將軍には中宮亮通盛、都
+合其勢四萬餘騎で南都へ發向す。大衆老少嫌はず七千餘人甲の緒をしめ、奈良坂、般
+若寺、二箇所の路を掘切て、堀ほり垣楯かき、逆茂木引て待かけたり。平家は四萬餘
+騎を二手に分て、奈良坂、般若寺、二箇所の城郭に押寄て、鬨をどとつくる。大衆は
+皆歩立打物なり。官軍は馬にてかけまはしかけまはし、あそここゝに追懸／＼指つめ
+引つめ散々に射ければ、防ぐ所の大衆數を盡いて討れにけり。卯刻に矢合して一日戰
+ひ暮す。夜に入て、奈良坂、般若寺、二箇所の城郭共に破れぬ。落行く衆徒の中に、
+坂四郎永覺と云ふ惡僧あり。打物持ても弓箭を取ても力の強さも七大寺十五大寺に勝
+たり。萌黄威の腹巻の上に、黒絲威の鎧を重てぞ著たりける。帽子甲に五枚甲の緒を
+しめて、左右の手には茅の葉の樣に反たる白柄の大長刀、黒漆の大太刀持つまゝに、
+同宿十餘人前後にたて、てがいの門より打て出でたり。是ぞ暫支たる。多くの官兵、馬の足薙れて討れにけり。されども官軍は大勢にて、入替入替攻ければ、永覺が前後左右に防ぐ所の同宿皆討れぬ。永覺只獨猛けれども、後あらはになりければ、南を指いて落ぞ行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-66-nlp_gloss-26">4</a></p>
+      <p class="occurrence-context">二十九日、頭中將、南都亡して北京へ歸りいらる。入道相國ばかりぞ、憤晴て喜ばれける。中宮一院上皇攝政以下の人々は、「惡僧をこそ滅すとも、伽藍を破滅すべしや。」とぞ御歎有ける。衆徒の頸ども本は大路を渡いて、獄門の木にかけらるべしと、聞えしかども、東大寺興福寺の亡ぬる淺ましさに沙汰にも及ばず。あそここゝの溝や堀やにぞ捨置ける。聖武皇帝の宸筆の御記文には、「我寺興複せば、天下も興複し、我寺衰微せば、天下も衰微すべし。」と遊されたり。されば天下の衰微せん事、疑なしとぞ見えたりける。淺ましかりつる年も暮れ、治承も五年に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-7-nlp_gloss-406">5</a></p>
+      <p class="occurrence-context">又安元の比ほひ、御方違の行幸有しに、さらでだに鶏人曉唱聲、明王の眠を驚す程にも成しかば、何も御寢覺がちにて、つや／＼御寢もならざりけり。況や冱る霜夜の烈きには、延喜聖代、國土の民共いかに寒るらんとて、夜のおとゞにして、御衣を脱せ給ける事などまでも思召し出して、我帝徳の至ぬ事をぞ御歎有ける。やゝ深更に及んで、程遠く人の叫ぶ聲しけり。供奉の人々は聞附られざりけれども、主上聞召て、
+「今叫ぶ者は何者ぞ。きと見て參れ。」と仰ければ、上臥したる殿上人、上日の者に
+仰す。走り散て尋ぬれば、或辻に、怪の女童のながもちの蓋提て泣にてぞ有ける。「いかに。」と問へば、「主の女房の、院の御所に侍はせ給ふが、此程やうやうにし
+て、したてられつる御裝束が持て參る程に、只今男の二三人詣來て、奪取て罷りぬる
+ぞや。今は御裝束が有ばこそ、御所にもさぶらはせ給はめ。はかばかしう立宿せ給ふ
+べき親い御方も坐さず。此事思ひつゞくるに泣也。」とぞ申ける。さて彼女童を具し
+て參り、此由奏聞しければ、主上聞召て、「あな無慚。如何なる者のしわざにてか有
+らん。堯の代の民は、堯の心のすなほなるを以て心とするが故に皆すなほ也。今の代
+の民は、朕が心を以て心とするが故に、かたましき者朝に在て罪を犯す。此吾恥に非
+ずや。」とぞ仰ける。「さて取られつらん衣は何色ぞ。」と御尋あれば、「然々の
+色。」と奏す。建禮門院の未中宮にておはしましける時なり。其御方へ、「さやうの色したる御衣や候。」と仰ければ、先のより遙に美きが參たりけるを、件の女童にぞ賜せける。「未夜深し、又さる目にもや逢ふ。」とて、上日の者をつけて、主の女房の局まで送せましましけるぞ忝き。されば怪の賤の男、賤の女に至る迄、只此君千秋萬歳の寶算をぞ祈り奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-8-nlp_gloss-9">5</a></p>
+      <p class="occurrence-context">中にも哀成し御事は、中宮の御方に候はせ給ふ女房の召使ける上童、思はざる外、龍顏に咫尺する事有けり。唯尋常の白地にても無して主上常はめされけり。まめやかに御志深かりければ、主の女房も召使はず、却て主の如くにぞいつきもてなしける。そのかみ謠詠にいへることあり。「女を生でもひいさんする事無れ。男を生でも喜歡する事無れ。男は侯にだにも封ぜられず、女は妃たり。」とて、后に立つと云へり。此人女御后とももてなされ、國母仙院ともあふがれなんず。目出たかりける幸かなとて其名をば葵前と云ければ、内々は葵女御などぞささやきける。主上是を聞召て、其後は召ざりけり。御志の盡ぬるには非ず、唯世の謗を憚せ給ふに依て也。されば常に御詠がちにて、夜のおとゞにのみぞ入せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-11-nlp_gloss-18">5</a></p>
+      <p class="occurrence-context">主上戀募の御思に沈ませおはします。申慰參せんとて、中宮の御方より小督殿と申す女房を參せらる。此女房は、櫻町中納言重教卿の御娘、宮中一の美人、琴の上手にておはしける。冷泉大納言隆房卿、未少將なりし時、見初たりし女房なり。少將初は歌を詠み文を盡し戀悲しみ給へども、靡く氣色も無りしが、さすが歎に弱る心にや、終には靡給ひけり。されども今は君に召れ參せて、爲方もなく悲さに、飽ぬ別の涙には、袖しほたれてほしあへず。少將餘所ながらも小督殿見奉る事もやと、常は參内せられけり。御座ける局の邊、御簾のあたりを彼方此方へ行き通りたゝずみ歩き給へども、小督殿吾君に召されん上は、少將いかにいふとも、詞をもかはし文を見べきにもあらずとて、傳の情をだにも懸られず。少將若やと、一首の歌を詠で、小督殿のおはしける御簾の中へ投入たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-14-nlp_gloss-6">5</a></p>
+      <p class="occurrence-context">入道相國是を聞き、中宮と申も御女也、冷泉少將も聟也。小督殿に、二人の聟を取られて、「いやいや小督があらん限りは世の中好まじ。召出して失はん。」とぞ宣ひける。小督殿漏聞いて、「我身の事は爭でもありなん、君の御爲御心苦し。」とて或暮方に内裏を出て、行方も知ず失たまひぬ。主上御歎斜ならず、晝は夜のおとゞに入せ給ひて、御涙にのみ咽び、夜は南殿に出御成て、月の光を御覧じてぞ、慰せ給ひける。入道相國是を聞き、「君は小督故に思召し沈せ給ひたん也。さらむには。」とて、御介錯の女房達をも參せず、參内し給ふ臣下をも猜み給へば、入道の權威に憚て、通ふ人もなし。禁中彌忌々しうぞ見えける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-50-nlp_gloss-16">5</a></p>
+      <p class="occurrence-context">治承四年の五節は福原にて行はれけるに、殿上人中宮の御方へ推參ありしが、或雲客の「竹湘浦に斑なり。」といふ朗詠をせられたりければ、此大納言立聞して、「あな淺間し、是は禁忌也とこそ承れ。かかる事きくとも聞じ。」とて、ぬき足して遁出られぬ。譬へば、此朗詠の心は、昔堯の帝に二人の姫宮ましましき。姉をば娥黄と云ひ、妹をば女英と云ふ。共に舜の御門の后也。舜の御門かくれ給ひて後、彼蒼梧の野邊へ送り奉り、烟となし奉る時、二人の后名殘を惜み奉り、湘浦といふ所迄隨ひつゝ、泣悲しみ給ひしに、其涙岸の竹に懸て斑にぞ染たりける。其後も常には彼所におはして瑟を引て慰み給へり。今彼所を見るなれば、岸の竹は斑にて立けり。琴を調べし迹には雲たなびいて、物哀なる心を橘相公の賦に作れる也。此大納言はさせる文才詩歌麗しうおはせざりしか共、かゝるさかしき人にてか樣の事までも聞咎められけるにこそ。此人大納言までは思も寄らざりしを、母上賀茂大明神に歩みを運び、「願くは、我子の國綱一日でも候へ、藏人頭歴させたまへ。」と、百日肝膽を碎いて祈申されけるが、或夜の夢に檳榔の車をゐて來て、我家の車寄に立と夢を見て、是を人に語り給へば、「其れは、公卿の北方に成せ給ふべきにこそ。」とあはせたりければ、「我年已に闌たり。今更さ樣の振舞在べしとも覺えず。」と宣ひけるが、御子國綱藏人頭は事も宜し。正二位大納言に上り給ふこそ目出けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-60-nlp_gloss-7">5</a></p>
+      <p class="occurrence-context">同十二月廿四日、中宮院號蒙せ給ひて、建禮門院とぞ申ける。未幼主の御時、母后の院號是始とぞ承る。さる程に今年も暮て、養和も二年に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E4%B8%AD%E5%AE%AE#tk-7-5-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">御母儀は七條修理大夫信隆卿の御娘なり。建禮門院の未だ中宮にてまし／＼ける時其御方に宮仕給ひしを、主上常は召れける程に、うち續き宮あまた出來させ給へり。信隆卿、御娘餘たおはしければ、如何にもして女御后にもなしたてまつらばやとねがはれけるに、人の家に白い鷄を千飼つれば、其家に必ず后出來たると云ふ事有りとて、鷄の白いを千そろへて飼はれたりける故にや、此御娘皇子數多生參せ給へり。信隆卿内々うれしうは思はれけれども、平家にも憚り、中宮にも恐れ參せて、もてなし奉る事もおはせざりしを、入道相國の北方八條の二位殿、「苦しかるまじ、我育て參せて、儲の君にして奉らむ。」とて、御乳母共あまた附て、そだて參せ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E4%B8%AD%E5%AE%AE#tk-7-5-nlp_gloss-149">7</a></p>
+      <p class="occurrence-context">御母儀は七條修理大夫信隆卿の御娘なり。建禮門院の未だ中宮にてまし／＼ける時其御方に宮仕給ひしを、主上常は召れける程に、うち續き宮あまた出來させ給へり。信隆卿、御娘餘たおはしければ、如何にもして女御后にもなしたてまつらばやとねがはれけるに、人の家に白い鷄を千飼つれば、其家に必ず后出來たると云ふ事有りとて、鷄の白いを千そろへて飼はれたりける故にや、此御娘皇子數多生參せ給へり。信隆卿内々うれしうは思はれけれども、平家にも憚り、中宮にも恐れ參せて、もてなし奉る事もおはせざりしを、入道相國の北方八條の二位殿、「苦しかるまじ、我育て參せて、儲の君にして奉らむ。」とて、御乳母共あまた附て、そだて參せ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E4%B8%AD%E5%AE%AE#tk-8-65-nlp_gloss-61">8</a></p>
+      <p class="occurrence-context">此北方と申は、頭刑部卿則方の女、上西門院の女房、宮中一の美人、名をば小宰相殿とぞ申ける。此女房十六と申し安元の春の比、女院法勝寺へ花見の御幸有しに、通盛卿其時は未だ中宮の亮にて供奉せられたりけるが、此女房を只一目見て、哀れと思ひ初けるより、其面影のみ身にひしと立傍て、忘るゝ隙も無りければ、常は歌を詠み、文を盡して戀悲しみ給へど、玉章の數のみ積りて、取入給ふ事もなし。既に三年になりしかば、通盛卿今を限りの文を書て、小宰相殿の許へ遣す。をりふし取傳ける女房にも逢はずして、使空しく歸りける道にて小宰相殿は折ふし我里より御所へぞ參り給ひけるが、使道にて行會ひ奉り、空う歸り參らん事の本意なさに、御車のそばをつと走り通る樣にて、通盛の文を小宰相殿の乘給へる車の簾の内へぞ、投げ入ける。伴の者共に問ひ給へば、「知らず」と申す。さて此文を明て見給へば、通盛卿の文にてぞ有ける。車に置くべき樣もなし。大路に捨んもさすがにて、袴の腰に挾みつゝ、御所へぞ參給ひける。さて宮仕給ふ程に、所しもこそ多けれ、御前に文を落されけり。女院これを御覽じて、急ぎ取せおはしまし、御衣の御袂に引藏させ給ひて、「珍敷き物をこそ求めたれ。此主は誰なるらん。」と仰せければ、女房達、萬の神佛に懸て「知ず」とのみぞ申あはれける。其中に小宰相殿は顏打赤めて物も申されず。女院も通盛卿の申とはかねて知召れたりければ、さて此文を明けて御覽ずるに、妓爐の烟の匂ひ殊に馴しく、筆の立ども尋常ならず。あまりに人の心強きも中々今は嬉くてなんど、細々と書いて、奧には一首の歌ぞ有ける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

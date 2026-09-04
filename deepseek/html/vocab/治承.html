@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>治承</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>治承</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Jishō (era name)</li>
+      
+      <li>Jishō</li>
+      
+      <li>Jishō (a Japanese era name)</li>
+      
+      <li>Jishō (Japanese era name)</li>
+      
+      <li>Juei (era name, fourth year)</li>
+      
+      <li>Jishō (Japanese era name, 1177-1181)</li>
+      
+      <li>Juei (era name)</li>
+      
+      <li>Jishō (the fourth year of the Jishō era)</li>
+      
+      <li>Jishō (the Japanese era name)</li>
+      
+      <li>Jishō (a Japanese era name, 1177-1181 CE)</li>
+      
+      <li>Jishō (an era name, 1177-1181)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (28)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%B2%BB%E6%89%BF#tk-1-755-nlp_gloss-17">1</a></p>
+      <p class="occurrence-context">山門の大衆、日吉の神輿を陣頭へ振奉ること、永久より以降、治承までは六箇度なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%B2%BB%E6%89%BF#tk-2-0-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">
+                  治承元年五月五日、天台座主明雲大僧正、公請を停止せらるゝ上、藏人を御使にて如意輪の御本尊を召返て、御持僧を改易せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%B2%BB%E6%89%BF#tk-2-861-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">さればにや、さしも止事無りつる天台の佛法も、治承の今に及で、亡果ぬるにやと、心有る人歎悲まずと云事なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%B2%BB%E6%89%BF#tk-2-893-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">維當れる歳次、治承元年丁酉、月のならび十月二月、日の數三百五十餘箇日、吉日良辰を擇で、掛卷も忝なく、日本第一大靈驗、熊野三所權現、飛瀧大薩たの教令、宇豆の廣前にして、信心の大施主、羽林藤原成經、並に沙彌性照、一心清淨の誠を致し三業相應の志を抽て、謹で以て敬白す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B2%BB%E6%89%BF#tk-3-0-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">
+                  治承二年正月一日、院御所には拜禮行はれて、四日の日朝覲の行幸在けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B2%BB%E6%89%BF#tk-3-219-nlp_gloss-2">3</a></p>
+      <p class="occurrence-context">明れば治承三年正月下旬に丹波少將成經、肥前國鹿瀬庄を立て、都へと急がれけれ共餘寒猶烈しく、海上も痛く荒ければ、浦傅島傅して、きさらぎ十日比にぞ、備前の兒島に著給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B2%BB%E6%89%BF#tk-3-590-nlp_gloss-12">3</a></p>
+      <p class="occurrence-context">保元の昔は、南海土佐へ遷され、治承の今は、又東關尾張國とかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B2%BB%E6%89%BF#tk-3-684-nlp_gloss-173">3</a></p>
+      <p class="occurrence-context">寛平の昔をも訪ひ、
+花山の古をも尋て、家をいで世をのがれ山林流浪の行者とも成ぬべうこそ候へ。」と
+遊されたりければ、法皇の御返事には、「さな思召され候そ。さて渡せ給ふこそ一つ
+の頼にても候へ。跡なく思召し成せ給ひなん後は、何の頼か候べき。唯愚老がともか
+うもならむ樣を聞召果させ給ふべし。」と遊されたりければ、主上此返事を龍顏に押
+當て、いとゞ御涙に沈ませ給ふ。君は船、臣は水、水能く船を浮べ、水又船を覆す。
+臣能く君を保ち、臣又君を覆す。保元平治の比は、入道相國君を保ち奉ると云共、安
+元治承の今は、又君をなみし奉る。史書の文に違はず。大宮大相國、三條内大臣、葉
+室大納言、中山中納言も失せられぬ。今は古き人とては成頼、親範ばかり也。此人々
+も、かゝらむ世には、朝に仕へ身を立て、大中納言を經ても何かはせんとて、いまだ
+盛んなし人々の、家を出で世を遁れ、民部卿入道親範は、大原の霜に伴ひ、宰相入道
+成頼は、高野の霧に交り、一向後世菩提の營みの外は他事なしとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B2%BB%E6%89%BF#tk-3-708-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">年去り年來て、治承も四年に成りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B2%BB%E6%89%BF#tk-4-0-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">
+                  治承四年正月一日の日、鳥羽殿には、相國も許さず、法皇も恐させ坐しければ、元日元三の間、參入する人も無し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B2%BB%E6%89%BF#tk-4-133-nlp_gloss-84">4</a></p>
+      <p class="occurrence-context">御手跡美しう遊し、御才學勝てましましければ、位にも即せ給ふべきに、故建春門院の御猜にて、押籠められさせ給つゝ、花の下の春の遊には、紫毫を揮て手から御作を書き、月の前の秋の宴には、玉笛を吹て自ら雅音を操給ふ、かくして明し暮し給ふ程に、治承四年には、御歳三十にぞ成せましましける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B2%BB%E6%89%BF#tk-4-402-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">治承四年五月十八日　大衆等</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B2%BB%E6%89%BF#tk-4-430-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">治承四年五月十八日　大衆等</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B2%BB%E6%89%BF#tk-4-465-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">治承四年五月二十一日　大衆等</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B2%BB%E6%89%BF#tk-5-0-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">
+                  治承四年六月三日、福原へ行幸在べしとて京中ひしめきあへり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B2%BB%E6%89%BF#tk-5-368-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">治承三年三月　日　　文學</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B2%BB%E6%89%BF#tk-5-492-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">治承四年七月十四日　前右兵衞督光能奉</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B2%BB%E6%89%BF#tk-5-554-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">治承四年九月二十八日　太上天皇</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B2%BB%E6%89%BF#tk-5-755-nlp_gloss-7">5</a></p>
+      <p class="occurrence-context">淺ましかりつる年も暮れ、治承も五年に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%B2%BB%E6%89%BF#tk-6-0-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">
+                  治承五年正月一日のひ、内裏には、東國の兵革、南都の火災に依て、朝拜停められ、主上出御もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%B2%BB%E6%89%BF#tk-6-192-nlp_gloss-26">6</a></p>
+      <p class="occurrence-context">年月は重なれ共、昨日今日の御別の樣に思召して、御涙も未盡せぬに、治承四年五月には、第二皇子高倉宮討たれさせ給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%B2%BB%E6%89%BF#tk-6-466-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">治承四年の五節は福原にて行はれけるに、殿上人中宮の御方へ推參ありしが、或雲客の「竹湘浦に斑なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%B2%BB%E6%89%BF#tk-6-531-nlp_gloss-39">6</a></p>
+      <p class="occurrence-context">其日筑後守貞能、筑前肥後兩國を給はて、鎭西の謀反平げに、西國へ發向す、其日又非常の大赦行はれて、去ぬる治承三年に流され給ひし人々、召還さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%B2%BB%E6%89%BF#tk-7-204-nlp_gloss-17">7</a></p>
+      <p class="occurrence-context">平家の方には、畠山庄司重能、小山田別當有重、去る治承より今迄召籠められたりしを「汝らは故い者共也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%B2%BB%E6%89%BF#tk-9-63-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">治承の合戰に、足利又太郎忠綱は、鬼神でわたしけるか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%B2%BB%E6%89%BF#tk-10-823-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">去ぬる治承養和の比より、諸國七道の人民百姓等、源氏の爲に惱され平家の爲に亡され、家かまどを棄て山林にまじはり、春は東作の思を忘れ、秋は西收の營にも及ばず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%B2%BB%E6%89%BF#tk-11-685-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">治承養和の飢饉、東國西國の軍に、人種ほろびうせたりといへども、猶殘りは多かりけりとぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%B2%BB%E6%89%BF#tk-11-1064-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">治承の合戰の時、爰に打立て、伽藍を滅し給へる故也。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

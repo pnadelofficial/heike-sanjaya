@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兵部</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>兵部</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Minister of War</li>
+      
+      <li>Minister of Military Affairs</li>
+      
+      <li>Minister of the Board of Military Affairs</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (5)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%B5%E9%83%A8#tk-10-34-nlp_gloss-244">10</a></p>
+      <p class="occurrence-context">新中納言、「見べき程の事は見つ、今は自害せん。」とて、乳人子の伊賀平内左衞門家長を召て「いかに日比の約束は違まじきか。」と宣へば、「子細にや及候。」と申。中納言に、鎧二領著せ奉り、我身も鎧二領著て、手を取組で海へぞ入にける。是を見て侍共廿餘人後たてまつらじと手に手を取組で一所に沈みけり。其中に、越中次郎兵衞、上總五郎兵衞、惡七兵衞、飛騨四郎兵衞は、何としてか逃れたりけん、そこをも又落にけり。海上には赤旗赤幟共、投捨かなぐり捨たりければ、龍田川の紅葉葉を、嵐の吹散したるがごとし。汀に寄る白浪も、薄紅にぞ成にける。主もなき虚しき船は、潮に引かれ風に從て、いづくを指ともなくゆられゆくこそ悲しけれ。生捕には、前内大臣宗盛公、平大納言時忠、右衞門督清宗、内藏頭信基、讃岐中將時實、兵部少輔雅明、大臣殿の八歳になり給ふ若公、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨融圓、侍には源大夫判官季貞、攝津判官盛澄、橘内左衞門季康、藤内左衞門信康、阿波民部重能父子、以上三十八人也。菊池次郎高直、原田大夫種直は、軍以前より郎等共相具して降人に參る。女房達には、女院、北の政所、廊御方、大納言佐殿、帥佐殿、治部卿局以下、四十三人とぞ聞えし[2]元歴二年の春の暮、如何なる年月にて一人海底に沈み、百官波上に浮らん。國母官女は、東夷西戎の手に從ひ、臣下卿相は數萬の軍旅にとらはれて、舊里に歸り給ひしに、或は朱買臣が錦をきざる事を歎き、或は王昭君が胡國に赴きし恨も、かくやとぞ悲み給ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E9%83%A8#tk-11-2-nlp_gloss-56">11</a></p>
+      <p class="occurrence-context">同九月二十三日、平家の餘黨の都にあるを、國々へ遣はさるべき由鎌倉殿より公家へ申されたりければ、平大納言時忠卿能登國、子息讃岐中將時實上總國、内藏頭信基安藝國、兵部少輔正明隱岐國、二位僧都專親阿波國、法勝寺執行能圓備後國、中納言律師忠快武藏國とぞ聞えし。或西海の波の上、或東關の雲の果て、先途何くを期せず、後會其期を知らず、別の涙を押て、面々に赴かれけん心の中推量れて哀なり。其中に平大納言は、建禮門院の吉田に渡らせ給ふ處に參て「時忠こそ責重うして、今日既に配所へ趣き候へ。同じ都の内に候て、御當りの御事共承はらまほしう候つるに、終に如何なる御有樣にて渡らせ給ひ候はんずらむと、思置參せ候にこそ、行空も覺ゆまじう候へ。」と、泣々申されければ、女院、「げにも昔の名殘とては、そこばかりこそおはしつれ。今はあはれをもかけ、吊ふ人も誰かは有るべき。」とて御涙せきあへさせ給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E9%83%A8#tk-11-3-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">此大納言と申は、出羽前司具信が孫、兵部權大輔贈左大臣時信が子也。故建春門院の御せうとにて高倉の上皇の御外戚なり。世の覺え時のきら目出たかりき。入道相國の北方、八條の二位殿も姉にておはせしかば、兼官兼職、思の如く心の如し。されば程なくあがて正二位の大納言に至れり。檢非違使別當にも三箇度までなり給ふ。此人の廳務の時は、竊盗強盗をば召捕て、樣もなく右のかひなをば腕中より打落し／＼追捨らる。されば惡別當とぞ申ける。主上併三種の神器都へ返し入奉るべき由西國へ院宣を下されたりけるに院宣の御使、花形がつらに、浪形と云燒驗をせられけるも、此大納言のしわざ也。法皇も故女院の御せうとなれば、御形見に御覽ぜまほしう思召しけれども、加樣の惡行によて御憤淺からず。九郎判官も親しうなられたりしかば、いかにもして申宥めばやと思はれけれども叶はず。子息侍從時家とて、十六になられけるが流罪にも漏れて、伯父の時光卿の許におはしけり。母上帥のすけ殿の共に、大納言の袂にすがり、袖をひかへて今を限りの名殘をぞ惜みける。大納言、「終にすまじき別かは。」と心強は宣へどもさこそは悲しうも思はれけめ。年闌齡傾て後、さしも睦まじかりし妻子にも、別果て、住慣し都をも、雲井の餘所に顧みて、古へは名にのみ聞し越路の旅に趣き、遙々と下り給ふに、彼は志賀唐崎、是は眞野の入江、交田の浦と申ければ、大納言泣々詠じ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E9%83%A8#tk-6-76-nlp_gloss-121">6</a></p>
+      <p class="occurrence-context">落行く平家は誰々ぞ。前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。山崎關戸院に玉の御輿を舁居て、男山を伏拜み、平大納言時忠卿「南無歸命頂禮八幡大菩薩、君を始參せて、我等都へ歸し入させ給へ。」と祈れけるこそ悲しけれ。各後を顧給へば、霞める空の心地して、烟のみ心細く立のぼる。平中納言教盛卿</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%B5%E9%83%A8#tk-8-28-nlp_gloss-33">8</a></p>
+      <p class="occurrence-context">と御返事申させ給ひて、遂に大納言にもなり給はず、大外記中原師直が子、周防介師純大外記になる。兵部少輔正明、五位藏人になされて、藏人少輔とぞ云はれける。昔將門が東八箇國を討從へて、下總相馬郡に都を立て、我身を平親王と稱して百官をなしたりしには、歴博士ぞ無りける。是は其には似るべからず。舊都をこそ落給ふと云へども、主上三種神器を帶して、萬乘の位に備り給へり。叙位除目行れんも僻事にはあらず。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

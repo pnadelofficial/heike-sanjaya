@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>奧</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>depths</li>
+      
+      <li>interior</li>
+      
+      <li>the interior (of a place)</li>
+      
+      <li>inner part; interior</li>
+      
+      <li>inside</li>
+      
+      <li>inner part</li>
+      
+      <li>Mutsu (province)</li>
+      
+      <li>inner</li>
+      
+      <li>interior (as part of the place name Ōshū, meaning &#39;the interior of the land&#39;)</li>
+      
+      <li>Mutsu (a province)</li>
+      
+      <li>inner (part)</li>
+      
+      <li>the end (of the letter)</li>
+      
+      <li>end (of a letter)</li>
+      
+      <li>interior (of a region); the deep parts</li>
+      
+      <li>the interior</li>
+      
+      <li>depth</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (38)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A5%A7#tk-1-296-nlp_gloss-13">1</a></p>
+      <p class="occurrence-context">」とて祇王二十一にて尼になり、嵯峨野の奧なる山里に柴の庵をひきむすび念佛してこそ居たりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A5%A7#tk-1-403-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">やがて、その夜、香隆寺の艮、蓮臺野の奧、船岡山にをさめ奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A5%A7#tk-1-676-nlp_gloss-33">1</a></p>
+      <p class="occurrence-context">それに不思議なりし事は、七日に滿ずる夜、八王子の御社にいくらもありける參人どもの中に、陸奧より遙々と上りたりける童神子、夜半ばかりに俄にたえ入けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A5%A7#tk-2-28-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">我が名の有所迄は見て、それより奧をば見ず、元の如く卷返して置るゝ習也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A5%A7#tk-2-688-nlp_gloss-5">2</a></p>
+      <p class="occurrence-context">又東に聞ゆる出羽陸奧兩國も、昔は六十六郡が一國にてありけるを、其時十二郡を割分て、出羽の國とは立られたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A5%A7#tk-2-759-nlp_gloss-31">2</a></p>
+      <p class="occurrence-context">北方に文參らせたりければ、是を開て御覽ずるに、早出家し給たると覺敷て、御髮の一房文の奧に有けるを、二目とも見給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A5%A7#tk-3-65-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">奧より端へ讀み、端より奧へ讀けれ共、二人と計書かれて、三人とはかゝれず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A5%A7#tk-3-65-nlp_gloss-8">3</a></p>
+      <p class="occurrence-context">奧より端へ讀み、端より奧へ讀けれ共、二人と計書かれて、三人とはかゝれず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A5%A7#tk-3-327-nlp_gloss-14">3</a></p>
+      <p class="occurrence-context">北方は少き人を隱しかねまゐらせ給ひて、鞍馬の奧に忍ばせ給て候しに、此童計こそ時々參て宮仕つかまつり候しが、何も御歎の愚なる事は候はざりしかども、稚き人は、餘に戀參させ給て、參り候度毎に、『有王よ、鬼界が島とかやへ我具して參れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A5%A7#tk-3-334-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">奧には、「などや三人流されたる人の、二人は召還されて候に、今迄御上り候はぬぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%A5%A7#tk-4-485-nlp_gloss-23">4</a></p>
+      <p class="occurrence-context">我寺の本願天武天皇は未だ春宮の御時、大友王子にはゞからせ給ひて、芳野の奧をいでさせ給ひ、大和國宇多郡を過させ給ひけるには、其勢僅に十七騎、去共伊賀伊勢に打越え、美濃尾張の勢を以て、大友王子を亡して、終に位に即せ給ひき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%A5%A7#tk-4-723-nlp_gloss-38">4</a></p>
+      <p class="occurrence-context">其時の將軍義家朝臣、南殿の大床に候はれけるが、御惱の刻限に及で、鳴絃する事三度の後、高聲に「前陸奧守、源義家」と名乘たりければ、人人皆身の毛堅て、御惱怠せ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%A5%A7#tk-5-334-nlp_gloss-9">5</a></p>
+      <p class="occurrence-context">
+                  後には、高雄と云ふ山の奧に、行ひすましてぞ居たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-128-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">就中に曾祖父前陸奧守義家朝臣、身を宗廟の氏族に歸附して、名を八幡太郎と號せしより以降、門葉たる者の歸敬せずといふことなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-166-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">明る十二日奧の秀衡が許より、木曾殿へ龍蹄二匹奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-423-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">正二位行權大納言兼出羽陸奧按察使平朝臣頼盛</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-450-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">陸奧新判官義康が子、矢田判官代義清、大江山を經て上洛すとも申あへり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-455-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">吉野山の奧の奧へも入なばやとは思はれけれども、諸國七道、悉く背きぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-455-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">吉野山の奧の奧へも入なばやとは思はれけれども、諸國七道、悉く背きぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A5%A7#tk-7-704-nlp_gloss-22">7</a></p>
+      <p class="occurrence-context">且は十善帝王、三種神器を帶して渡らせ給へば、如何ならん野の末山の奧迄も、行幸の御供仕らんとは思はずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A5%A7#tk-8-5-nlp_gloss-25">8</a></p>
+      <p class="occurrence-context">法皇は仙洞を出でて天台山に、主上は鳳闕を去て西海へ、攝政殿は芳野の奧とかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A5%A7#tk-8-19-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">陸奧新判官義康が子、矢田判官代義清、大江山を經て上洛す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A5%A7#tk-8-132-nlp_gloss-46">8</a></p>
+      <p class="occurrence-context">」時忠「さもさうず、還俗の國王の樣、異國にも先蹤有らん、我朝には先天武天皇未だ東宮の御時、大伴皇子に憚からせ給て、鬢髮を剃り、芳野の奧に忍ばせ給せたりしかども、大伴皇子を亡して、終には位に即せ給ひき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A5%A7#tk-8-303-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">奧の秀衡が陸奧守になり、佐竹四郎隆義が常陸守に成て候とて頼朝が命に從はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%A5%A7#tk-9-373-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」などもあそばいて、奧には一首の歌ぞありける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%A5%A7#tk-9-937-nlp_gloss-18">9</a></p>
+      <p class="occurrence-context">あまりに人の心強きも中々今は嬉くてなんど、細々と書いて、奧には一首の歌ぞ有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%A5%A7#tk-10-48-nlp_gloss-7">10</a></p>
+      <p class="occurrence-context">」など、細々と書續け、奧に一首の歌ぞありける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%A5%A7#tk-10-130-nlp_gloss-39">10</a></p>
+      <p class="occurrence-context">」とて走出でて、手づから文を取て見給へば、西國よりとられてありし有樣、今日明日とも知らぬ身の行末など、細々と書續け、奧には一首の歌ぞ有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%A5%A7#tk-10-591-nlp_gloss-46">10</a></p>
+      <p class="occurrence-context">「祖父太政大臣平朝臣清盛公法名淨海、親父内大臣左大將重盛公法名淨蓮、其子三位中將維盛法名淨圓、生年二十七歳、壽永三年三月廿八日、那智の奧にて入水す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%A5%A7#tk-10-592-nlp_gloss-9">10</a></p>
+      <p class="occurrence-context">」と書附けて、又舟に乘り、奧へぞ漕出給。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%A5%A7#tk-10-725-nlp_gloss-12">10</a></p>
+      <p class="occurrence-context">後世の事をよく／＼申させ候ひ、那智の奧にて、御身を投させ給ひて候とこそ、御供申たりける舍人武里は語り申つれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A5%A7#tk-11-173-nlp_gloss-32">11</a></p>
+      <p class="occurrence-context">一年平治の合戰に、父討れて孤にて有しが、鞍馬の兒にて、後には金商人の所從になり、粮料背負て奧州へ落惑ひし小冠者が事か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A5%A7#tk-11-189-nlp_gloss-26">11</a></p>
+      <p class="occurrence-context">中にも九郎大夫判官を射倒さむとねらはれけれども、源氏の方にも心得て、
+奧州の佐藤三郎兵衞嗣信、同四郎兵衞忠信、伊勢三郎義盛、源八廣綱、江田源三、熊
+井太郎、武藏坊辨慶など云ふ一人當千の兵共、吾も吾もと馬の首を立竝て大將軍の矢
+面に塞りければ、力及び給はず。「矢面の雜人原そこのき給へ。」とて、差詰引詰
+散々に射給へば、矢場に鎧武者十餘騎計射落さる。中にも眞先に進んだる奧州の佐藤
+三郎兵衞が弓手の肩を馬手の脇へつと射拔れて、暫もたまらず、馬より、倒にどうと
+落つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A5%A7#tk-11-189-nlp_gloss-125">11</a></p>
+      <p class="occurrence-context">中にも九郎大夫判官を射倒さむとねらはれけれども、源氏の方にも心得て、
+奧州の佐藤三郎兵衞嗣信、同四郎兵衞忠信、伊勢三郎義盛、源八廣綱、江田源三、熊
+井太郎、武藏坊辨慶など云ふ一人當千の兵共、吾も吾もと馬の首を立竝て大將軍の矢
+面に塞りければ、力及び給はず。「矢面の雜人原そこのき給へ。」とて、差詰引詰
+散々に射給へば、矢場に鎧武者十餘騎計射落さる。中にも眞先に進んだる奧州の佐藤
+三郎兵衞が弓手の肩を馬手の脇へつと射拔れて、暫もたまらず、馬より、倒にどうと
+落つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%A5%A7#tk-12-102-nlp_gloss-14">12</a></p>
+      <p class="occurrence-context">正俊希有にしてそこをばのがれて鞍馬の奧ににげ籠りたりけるが、鞍馬は判官の故山なりければ、彼法師土佐房を搦めて、次日判官の許へ送りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%A5%A7#tk-12-148-nlp_gloss-32">12</a></p>
+      <p class="occurrence-context">」と悦で大物浦より船に乘て下られけるが、折節西の風烈しく吹き住吉の浦に打上られて、吉野の奧にぞ籠りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%A5%A7#tk-12-150-nlp_gloss-17">12</a></p>
+      <p class="occurrence-context">奈良法師にせめられて、又都へ歸り入、北國にかゝて終に奧へぞ下られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%A5%A7#tk-12-185-nlp_gloss-46">12</a></p>
+      <p class="occurrence-context">如何にもしてとり奉らんとて、手を分てもとめられけれども、求かねて下らんとせられける所に、或女房の六波羅に出て申けるは「是より西遍照寺の奧、大覺寺と申す山寺の北の方、菖蒲谷と申す所にこそ、小松三位中將殿の北方、若君、姫君おはしませ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

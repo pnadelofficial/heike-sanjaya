@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>關白殿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>關白殿</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Lord Kampaku</li>
+      
+      <li>Grand Regent</li>
+      
+      <li>Regent</li>
+      
+      <li>Lord the Dajo Daijin</li>
+      
+      <li>Lord Dajō-daijin</li>
+      
+      <li>Retired Emperor</li>
+      
+      <li>Grand Councilor</li>
+      
+      <li>the Dainagon</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (9)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-0-64-nlp_gloss-35">0</a></p>
+      <p class="occurrence-context">山門には、御裁斷遲々の間、七社の神輿を根本中堂に振上げ奉り、その御前にて、眞讀の大般若を七日讀で、關白殿を呪咀し奉る。結願の導師には、仲胤法印、その比はいまだ仲胤供奉と申しが、高座に上り、かね打ならし、表白の詞にいはく、「我等なたねの二葉よりおふし立て給ふ神達、後二條の關白殿に、鏑矢一つ放ち當て給へ、大八王子權現。」と高らかにぞ祈誓したりける。やがてその夜不思議の事あり。八王子の御殿より、鏑矢の聲いでて、王城をさしてなん行くとぞ、人の夢には見たりける。そのあした、關白殿の御所の御格子をあげけるに、只今山よりとてきたるやうに、露にぬれたる樒、一枝たたりけるこそ怖しけれ。やがて山王の御咎めとて、後二條の關白殿、重き御病をうけさせ給ひしかば、母上、大殿の北の政所大に歎かせ給つゝ、御樣をやつし、賤しき下臈のまねをして、日吉の社に御參籠あて、七日七夜が間祈申させ給けり。あらはれての御祈には、百番の芝田樂、百番の一物、競馬、流鏑馬、相撲各百番、百座の仁王講、百座の藥師講、一ちやく手半の藥師百體、等身の藥師一體並に釋迦、阿彌陀の像、各造立供養せられけり。又御心中に、三つの御立願あり。御心のうちの事なれば、人いかで知り奉るべき。それに不思議なりし事は、七日に滿ずる夜、八王子の御社にいくらもありける參人どもの中に、陸奧より遙々と上りたりける童神子、夜半ばかりに俄にたえ入けり。遙にかき出して祈りければ、程なくいき出て、やがて立て舞ひかなづ。人奇特の思をなして是を見る。半時ばかり舞て後、山王おりさせ給て、やう／＼の御託宣こそ恐しけれ。「衆生等確に承れ。大殿の北の政所、今日七日我が御前に籠らせ給たり。御立願三つあり。一つには今度殿下の壽命を助けてたべ、さも候はゞ、下殿に候ふ諸のかたはうどに交て、一千日が間、朝夕宮仕申さんとなり。大殿の北の政所にて、世を世とも思し召さで、すごさせ給ふ御心に、子を思ふ道にまよひぬれば、いぶせきことも忘れて、あさましげなるかたはうどに交はて、一千日が間、朝夕宮仕申さむと仰せらるゝこそ、誠に哀に思しめせ。二つには、大宮の波止土濃より八王子の御社まで、囘廊作て參らせむとなり。三千人の大衆、降にも照にも、社參の時いたはしうおぼゆるに、囘廊作られたらば、いかにめでたからん。三つには今度の殿下の壽命を助させ給はゞ、八王子の御社にて、法花問答講毎日退轉なく行べしとなり。何れもおろかならねども、かみ二つはさなくともありなむ。毎日法花問答講は、誠にあらまほしうこそ思召せ。但今度の訴訟は、むげに安かりぬべき事にてありつるを、御裁許なくして、神人宮仕射殺され、疵を被り、泣く泣く參て訴申す事の餘に心憂て、如何ならむ世までも忘るべしともおほえず。その上かれらに當る處の矢は、しかしながら和光垂跡の御膚に立たるなり。誠か虚言か是を見よ。」とて、肩ぬいだるを見れば、左の脇の下、大なるかはらけの口ばかりうげのいてぞ見えたりける。「是が餘に心憂ければ、如何に申とも、始終のことは叶ふまじ。法花問答講一定あるべくば、三年が命を延べて奉らむ。それを不足に思し召さば、力及ばず。」とて山王あがらせ給ひけり。母上は御立願の事、人にも語らせ給はねば誰漏しつらむと、少しも疑ふ方もましまさず。御心の内の事どもを、ありのまゝに御託宣ありければ、心肝にそうて、ことに貴くおぼしめし、泣々申させ給けるは「縱ひ一日片時にて候ふとも、ありがたうこそ候ふべきに、まして三年が命を延べて給らむ事しかるべう候ふ。」とて、泣々御下向あり。急ぎ都へ入せ給て、殿下の御領紀伊國に、田中庄といふ所を、八王子の御社へ永代寄進せらる。それよりして法花問答講、今の世に至るまで毎日退轉なしとぞ承る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-0-64-nlp_gloss-93">0</a></p>
+      <p class="occurrence-context">山門には、御裁斷遲々の間、七社の神輿を根本中堂に振上げ奉り、その御前にて、眞讀の大般若を七日讀で、關白殿を呪咀し奉る。結願の導師には、仲胤法印、その比はいまだ仲胤供奉と申しが、高座に上り、かね打ならし、表白の詞にいはく、「我等なたねの二葉よりおふし立て給ふ神達、後二條の關白殿に、鏑矢一つ放ち當て給へ、大八王子權現。」と高らかにぞ祈誓したりける。やがてその夜不思議の事あり。八王子の御殿より、鏑矢の聲いでて、王城をさしてなん行くとぞ、人の夢には見たりける。そのあした、關白殿の御所の御格子をあげけるに、只今山よりとてきたるやうに、露にぬれたる樒、一枝たたりけるこそ怖しけれ。やがて山王の御咎めとて、後二條の關白殿、重き御病をうけさせ給ひしかば、母上、大殿の北の政所大に歎かせ給つゝ、御樣をやつし、賤しき下臈のまねをして、日吉の社に御參籠あて、七日七夜が間祈申させ給けり。あらはれての御祈には、百番の芝田樂、百番の一物、競馬、流鏑馬、相撲各百番、百座の仁王講、百座の藥師講、一ちやく手半の藥師百體、等身の藥師一體並に釋迦、阿彌陀の像、各造立供養せられけり。又御心中に、三つの御立願あり。御心のうちの事なれば、人いかで知り奉るべき。それに不思議なりし事は、七日に滿ずる夜、八王子の御社にいくらもありける參人どもの中に、陸奧より遙々と上りたりける童神子、夜半ばかりに俄にたえ入けり。遙にかき出して祈りければ、程なくいき出て、やがて立て舞ひかなづ。人奇特の思をなして是を見る。半時ばかり舞て後、山王おりさせ給て、やう／＼の御託宣こそ恐しけれ。「衆生等確に承れ。大殿の北の政所、今日七日我が御前に籠らせ給たり。御立願三つあり。一つには今度殿下の壽命を助けてたべ、さも候はゞ、下殿に候ふ諸のかたはうどに交て、一千日が間、朝夕宮仕申さんとなり。大殿の北の政所にて、世を世とも思し召さで、すごさせ給ふ御心に、子を思ふ道にまよひぬれば、いぶせきことも忘れて、あさましげなるかたはうどに交はて、一千日が間、朝夕宮仕申さむと仰せらるゝこそ、誠に哀に思しめせ。二つには、大宮の波止土濃より八王子の御社まで、囘廊作て參らせむとなり。三千人の大衆、降にも照にも、社參の時いたはしうおぼゆるに、囘廊作られたらば、いかにめでたからん。三つには今度の殿下の壽命を助させ給はゞ、八王子の御社にて、法花問答講毎日退轉なく行べしとなり。何れもおろかならねども、かみ二つはさなくともありなむ。毎日法花問答講は、誠にあらまほしうこそ思召せ。但今度の訴訟は、むげに安かりぬべき事にてありつるを、御裁許なくして、神人宮仕射殺され、疵を被り、泣く泣く參て訴申す事の餘に心憂て、如何ならむ世までも忘るべしともおほえず。その上かれらに當る處の矢は、しかしながら和光垂跡の御膚に立たるなり。誠か虚言か是を見よ。」とて、肩ぬいだるを見れば、左の脇の下、大なるかはらけの口ばかりうげのいてぞ見えたりける。「是が餘に心憂ければ、如何に申とも、始終のことは叶ふまじ。法花問答講一定あるべくば、三年が命を延べて奉らむ。それを不足に思し召さば、力及ばず。」とて山王あがらせ給ひけり。母上は御立願の事、人にも語らせ給はねば誰漏しつらむと、少しも疑ふ方もましまさず。御心の内の事どもを、ありのまゝに御託宣ありければ、心肝にそうて、ことに貴くおぼしめし、泣々申させ給けるは「縱ひ一日片時にて候ふとも、ありがたうこそ候ふべきに、まして三年が命を延べて給らむ事しかるべう候ふ。」とて、泣々御下向あり。急ぎ都へ入せ給て、殿下の御領紀伊國に、田中庄といふ所を、八王子の御社へ永代寄進せらる。それよりして法花問答講、今の世に至るまで毎日退轉なしとぞ承る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-0-64-nlp_gloss-205">0</a></p>
+      <p class="occurrence-context">山門には、御裁斷遲々の間、七社の神輿を根本中堂に振上げ奉り、その御前にて、眞讀の大般若を七日讀で、關白殿を呪咀し奉る。結願の導師には、仲胤法印、その比はいまだ仲胤供奉と申しが、高座に上り、かね打ならし、表白の詞にいはく、「我等なたねの二葉よりおふし立て給ふ神達、後二條の關白殿に、鏑矢一つ放ち當て給へ、大八王子權現。」と高らかにぞ祈誓したりける。やがてその夜不思議の事あり。八王子の御殿より、鏑矢の聲いでて、王城をさしてなん行くとぞ、人の夢には見たりける。そのあした、關白殿の御所の御格子をあげけるに、只今山よりとてきたるやうに、露にぬれたる樒、一枝たたりけるこそ怖しけれ。やがて山王の御咎めとて、後二條の關白殿、重き御病をうけさせ給ひしかば、母上、大殿の北の政所大に歎かせ給つゝ、御樣をやつし、賤しき下臈のまねをして、日吉の社に御參籠あて、七日七夜が間祈申させ給けり。あらはれての御祈には、百番の芝田樂、百番の一物、競馬、流鏑馬、相撲各百番、百座の仁王講、百座の藥師講、一ちやく手半の藥師百體、等身の藥師一體並に釋迦、阿彌陀の像、各造立供養せられけり。又御心中に、三つの御立願あり。御心のうちの事なれば、人いかで知り奉るべき。それに不思議なりし事は、七日に滿ずる夜、八王子の御社にいくらもありける參人どもの中に、陸奧より遙々と上りたりける童神子、夜半ばかりに俄にたえ入けり。遙にかき出して祈りければ、程なくいき出て、やがて立て舞ひかなづ。人奇特の思をなして是を見る。半時ばかり舞て後、山王おりさせ給て、やう／＼の御託宣こそ恐しけれ。「衆生等確に承れ。大殿の北の政所、今日七日我が御前に籠らせ給たり。御立願三つあり。一つには今度殿下の壽命を助けてたべ、さも候はゞ、下殿に候ふ諸のかたはうどに交て、一千日が間、朝夕宮仕申さんとなり。大殿の北の政所にて、世を世とも思し召さで、すごさせ給ふ御心に、子を思ふ道にまよひぬれば、いぶせきことも忘れて、あさましげなるかたはうどに交はて、一千日が間、朝夕宮仕申さむと仰せらるゝこそ、誠に哀に思しめせ。二つには、大宮の波止土濃より八王子の御社まで、囘廊作て參らせむとなり。三千人の大衆、降にも照にも、社參の時いたはしうおぼゆるに、囘廊作られたらば、いかにめでたからん。三つには今度の殿下の壽命を助させ給はゞ、八王子の御社にて、法花問答講毎日退轉なく行べしとなり。何れもおろかならねども、かみ二つはさなくともありなむ。毎日法花問答講は、誠にあらまほしうこそ思召せ。但今度の訴訟は、むげに安かりぬべき事にてありつるを、御裁許なくして、神人宮仕射殺され、疵を被り、泣く泣く參て訴申す事の餘に心憂て、如何ならむ世までも忘るべしともおほえず。その上かれらに當る處の矢は、しかしながら和光垂跡の御膚に立たるなり。誠か虚言か是を見よ。」とて、肩ぬいだるを見れば、左の脇の下、大なるかはらけの口ばかりうげのいてぞ見えたりける。「是が餘に心憂ければ、如何に申とも、始終のことは叶ふまじ。法花問答講一定あるべくば、三年が命を延べて奉らむ。それを不足に思し召さば、力及ばず。」とて山王あがらせ給ひけり。母上は御立願の事、人にも語らせ給はねば誰漏しつらむと、少しも疑ふ方もましまさず。御心の内の事どもを、ありのまゝに御託宣ありければ、心肝にそうて、ことに貴くおぼしめし、泣々申させ給けるは「縱ひ一日片時にて候ふとも、ありがたうこそ候ふべきに、まして三年が命を延べて給らむ事しかるべう候ふ。」とて、泣々御下向あり。急ぎ都へ入せ給て、殿下の御領紀伊國に、田中庄といふ所を、八王子の御社へ永代寄進せらる。それよりして法花問答講、今の世に至るまで毎日退轉なしとぞ承る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-0-65-nlp_gloss-58">0</a></p>
+      <p class="occurrence-context">かゝりし程に、後二條關白殿、御病かろませ給て、もとの如くにならせ給ふ。上下喜びあはれし程に、三年の過ぐるは夢なれや、永長二年になりにけり。六月二十一日、又後二條の關白殿、御髮の際に惡しき御瘡出きさせ給て、打ち臥させ給ひしが、同二十七日、御年三十八にて終にかくれさせ給ぬ。御心の猛さ、理の強さ、さしもゆゝしき人にてましましけれ共、まめやかに事の急になりしかば、御命を惜ませ給ひける也。誠に惜しかるべし。四十にだにも滿たせ給はで、大殿に先立まゐらせ給こそ悲しけれ。必ずしも父を先立つべしといふことはなけれども、生死のおきてに順ふならひ、萬徳圓滿の世尊、十地究竟の大士達も、力及び給はぬ事どもなり、慈悲具足の山王、利物の方便にてましませば、御咎めなかるべしとも覺えず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-0-71-nlp_gloss-73">0</a></p>
+      <p class="occurrence-context">同十四日夜半ばかり、山門の大衆、又下洛すと聞えしかば、夜中に主上腰輿に召して、院の御所法住寺殿へ行幸なる。中宮は御車に奉て、行啓あり。小松の大臣、直衣に箭負て供奉せらる。嫡子權亮少將維盛、束帶に平胡録負て參られけり。關白殿を始め奉て、太政大臣以下の公卿、殿上人、我も／＼と馳せ參る。凡京中の貴賤、禁中の上下、噪ぎのゝしること夥し。山門には神輿に箭立ち、神人宮仕射殺され、衆徒多く疵を被りしかば、大宮、二宮以下、講堂、中堂、すべて諸堂一宇も殘さず皆燒拂て、山野にまじはるべきよし、三千一同に僉議しけり。是によて大衆の申す所、御はからひあるべしと聞えしかば、山門の上綱等、子細を衆徒に觸れむとて、登山したりけるを、大衆おこて西坂本より皆おかへす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-2-9-nlp_gloss-44">2</a></p>
+      <p class="occurrence-context">さる程に同年十一月十二日の寅の刻より、中宮御産の氣坐すとて、京中六波羅ひしめきあへり。御産所は六波羅池殿にて有けるに法皇も御幸なる。關白殿を始め奉て、太政大臣以下の公卿殿上人、すべて世に人と數へられ、官加階に望をかけ、所帶所職を帶する程の人の、一人も漏るは無りけり。先例も、女御、后、御産の時に臨んで大赦行はるゝ事あり。大治二年九月十一日、待賢門院御産の時、大赦有りき。其例とて今度も、重科の輩多く許されける中に、俊寛僧都一人、赦免無りけるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-2-13-nlp_gloss-51">2</a></p>
+      <p class="occurrence-context">頭中將重衡卿、其時は未中宮亮にておはしけるが、御簾の内よりつと出て、御産平安、皇子御誕生候ぞや。」と、高らかに申されければ、法皇を始參せて、關白殿以下の大臣、公卿、殿上人、各の助修、數輩の御驗者、陰陽頭、典藥頭、惣て堂上堂下、一同にあと悦あへる聲は、門外までどよみて、暫は靜りやらざりけり。入道餘りの嬉さに、聲をあげてぞ泣ける。悦泣とは是を云べきにや。小松殿、中宮の御方に參せ給て、金錢九十九文、皇子の御枕に置き、「天を以て父とし、地を以て母と定め給へ。御命は方士東方朔が齡を保ち、御心には天照大神入替らせ給へ。」とて、桑の弓蓬の矢を以て、天地四方を射させらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-2-48-nlp_gloss-79">2</a></p>
+      <p class="occurrence-context">同十四日、相國禪門此日比福原におはしけるが、何とか思ひなられたりけん。數千騎の軍兵をたなびいて、都へ入給ふ由聞えしかば、京中何と聞わきたる事は無れ共、上下怖れおののく。何者の申出したりけるやらん。入道相國朝家を恨み奉べしと披露をなす。關白殿、内内聞召るゝ旨や有けん、急ぎ御參内有て、「今度相國禪門入洛の事は、ひとへに基房亡すべき結構にて候也。如何なる憂目にか逢べきやらん。」と、奏せさせ給へば、主上大に驚せ給て、「そこに如何なる目にも逢むは偏にたゞ吾逢にてこそ有んずらめ。」とて、御涙を流させ給ふぞ忝き。誠に天下の御政は主上攝録の御計にてこそ有に、こは如何にしつる事共ぞや。天照大神春日大明神の神慮の程も量がたし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%97%9C%E7%99%BD%E6%AE%BF#tk-2-50-nlp_gloss-42">2</a></p>
+      <p class="occurrence-context">法印御所へ參て、此由奏聞せられければ、法皇も道理至極して、仰下るゝ方もなし。
+同十六日入道相國、此日來思立給へる事なれば、關白殿を始奉て、太政大臣以下の公
+卿、殿上人、四十三人が官職を停て、追籠らる。關白殿をば、太宰帥に遷て、鎭西へ
+流し奉る。かゝらん世には、とてもかくても有なんとて、鳥羽の邊、古川と云ふ所に
+て、御出家有り。御歳三十五。禮儀能く知めし、曇なき鏡にて渡せ給ひつる者をとて、世の惜奉る事斜ならず、遠流の人の道にて出家したるをば、約束の國へは遣ぬ事である間、初は日向國と定られたりしか共、御出家の間、備前の國府の邊、井ばさまと云ふ所に留め奉る。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>皇后</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>皇后</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Empress</li>
+      
+      <li>empress</li>
+      
+      <li>Crown Prince</li>
+      
+      <li>Queen</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (12)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%9A%87%E5%90%8E#tk-10-21-nlp_gloss-90">10</a></p>
+      <p class="occurrence-context">判官都を立給ひて後住吉の神主長盛、院の御所へ參て、大藏卿泰經朝臣を以て奏聞しけるは「去十六日の丑刻に當社第三の神殿より、鏑矢の聲出でて、西を指て罷候ぬ。」と申ければ、法皇大に御感有て、御劍已下種々の神寶を長盛して大明神へまゐらせらる。昔神功皇后、新羅を責給ひし時、伊勢大神宮より、二神のあらみさきを差副させ給ひけり。二神御船の艫舳に立て、新羅を安く被責落ぬ。歸朝の後、一神は攝津國住吉の郡に留り給ふ。住吉大明神の御事也。今一神は信濃國諏訪の郡に跡を垂る。諏訪大明神是也。昔の征罰の事を、思食忘ず今も朝の怨敵を滅し給ふべきにやと、君も臣も憑もしうぞ思食されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%9A%87%E5%90%8E#tk-2-3-nlp_gloss-300">2</a></p>
+      <p class="occurrence-context">かゝりし程に、中宮は月の重るに隨て、御身を苦うせさせ給ふ。一度笑ば百の媚有けん漢の李夫人、昭陽殿の病の床もかくやと覺え、唐の楊貴妃、梨花一枝春の雨を帶び、芙蓉の風にしをれ、女郎花の露重げなるよりも猶痛しき御樣なり。かゝる御惱の折節に合せて、こはき御物怪共、取入奉る。よりまし明王の縛に掛て、靈顯れたり。殊には讃岐院の御靈、宇治惡左府の憶念、新大納言成親の死靈、西光法師が惡靈、鬼界島の流人共の生靈などぞ申ける。是によて太政入道生靈も死靈も、宥らるべしとて、其比やがて讃岐院御追號有て、崇徳天皇と號す。宇治惡左府、贈官贈位行はれて、太政大臣正一位を贈らる。勅使は少内記惟基とぞ聞えし。件の墓所は、大和國添上の郡、
+河上の村、般若野の五三昧也。保元の秋掘起して捨られし後は死骸道の邊の土となて、
+年々に只春の草のみ茂れり。今勅使尋來て、宣命を讀けるに、亡魂いかに嬉とおぼし
+けん。怨靈はかく怖ろしき事也。されば早良の廢太子をば崇道天皇と號し、井上内親
+王をば、皇后の職位に復す。是皆怨靈を宥められし策也。冷泉院の御物狂う坐し、花
+山の法皇十善萬乘の定位をすべらせ給しは、基方民部卿が靈とかや。三條院の御目も
+御覽ぜられざりしは、寛算供奉が靈也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%9A%87%E5%90%8E#tk-4-2-nlp_gloss-240">4</a></p>
+      <p class="occurrence-context">都遷は先蹤なきに非ず。神武天皇と申すは、地神五代の帝、彦波瀲武うが草葺不合尊の第四の王子、御母は玉依姫、海人の娘也。神の代十二代の跡を受け、人代百王の帝祖也。辛酉の歳、日向國宮崎郡にして、皇王の寶祚を繼ぎ、五十九年と云し己未歳十月に東征して、豐葦原中津國に留り、此比大和國と名づけたる畝傍の山を點じて、帝都をたて橿原の地を切掃て、宮室を作り給へり。是を橿原の宮と名づけたり。其より以降、代々の帝王、都を他國他所へ遷さるゝ事三十度に餘り、四十度に及べり。神武天皇より、景行天皇まで十二代には、大和國郡々に都を立て、他國へは終に移れず。然るを成務天皇元年に近江國に移て、志賀郡に都を立つ。仲哀天皇二年に、長門國に移て、豐浦郡に都を立つ。其國の彼都にて、御門隱れさせ給しかば、后神功皇后御世を請取らせ給ひ、女體として、鬼界、高麗、契丹まで、責從へさせ給ひけり。異國の軍を靖めさせ給ひて、歸朝の後筑前國三笠郡にして、皇子御誕生、其所をば宇美宮とぞ申たる。かけまくも忝なく、八幡の御事是なり。位に即せ給ひては、應神天皇とぞ申ける。其後神功皇后は、大和國に移て、磐余稚櫻宮に御座す。應神天皇は同國輕島明宮に住せ給ふ。仁徳天皇元年に、津國難波に移て、高津宮に御座す。履仲天皇二年に、大和國に移て、十市郡に都を立つ。反正天皇元年に、河内國に移て、柴垣宮に住せ給ふ。允恭天皇四十二年に又大和國に移て、飛鳥のあすかの宮におはします。雄略天皇二十一年に、同國泊瀬朝倉に宮居し給ふ。繼體天皇五年に、山城國綴喜に移て、十二年、其後乙訓に宮居し給ふ。宣化天皇元年に、又大和國に歸て、檜隈入野宮におはします。孝徳天皇大化元年に、攝津國長柄に移て、豐崎宮に住せ給ふ、齊明天皇二年、又大和國に歸て、岡本宮におはします。天智天皇六年に、近江國に移て、大津宮に住せ給ふ、天武天皇元年に、猶大和國に歸て、岡本の南の宮に住せ給ふ。是を清見原の御門と申き。持統、文武二代の聖朝は、同國藤原宮におはします。元明天皇より、光仁天皇迄七代は、奈良の都に住せ給ふ。然を桓武天皇、延暦三年十月二日、奈良の京春日の里より、山城國長岡にうつて、十年と云し正月に、大納言藤原小黒丸、參議左大辨紀古佐美、大僧都玄慶等を遣して、當國葛野郡宇多村を見せらるゝに、兩人共に奏して云、此地の體を見るに、左青龍、右白虎、前朱雀、後玄武、四神相應の地なり。尤帝都を定むるに足れりと申す。仍て愛宕郡に御座す賀茂大明神に、告申させ給ひて、延暦十三年十一月廿一日、長岡の京より此京へ移されて後、帝王三十二代、星霜は三百八十餘歳の春秋を送り迎ふ。昔より代々の帝王、國々所々に、多の都を立てられしかども、かくの如くの勝地は無しとて、桓武天皇殊に執し思食し、大臣公卿諸道の才人等に仰せ合せ、長久なるべき樣とて、土にて八尺の人形を作り、鐡の鎧甲をきせ、同う鐡の弓矢を持せて、東山の嶺に、西向に立てゝ埋まれけり。末代に此都を他國へうつす事あらば、守護神となるべしとぞ御約束ありける。されば天下に事出來んとては、此塚必鳴動す。將軍が塚とて今に在り。桓武天皇と申は平家の曩祖にて御座す。中にも此京をば平安城と名付けて平かに安き都と書り。尤平家の崇べき都也。先祖の御門の、さしも執し思食されたる都を、させる故なく、他國他所へ遷さるゝこそ淺ましけれ。嵯峨皇帝の御時平城の先帝尚侍の勸に依て世を亂り給ひし時、既に此京を他國へ移さんとせさせ給ひしを大臣公卿諸國の人民背き申しかば、移されずして止にき。一天の君萬乘の主だにも移し得給はぬ都を、入道相國、人臣の身として、移されけるぞ怖しき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%9A%87%E5%90%8E#tk-4-2-nlp_gloss-322">4</a></p>
+      <p class="occurrence-context">都遷は先蹤なきに非ず。神武天皇と申すは、地神五代の帝、彦波瀲武うが草葺不合尊の第四の王子、御母は玉依姫、海人の娘也。神の代十二代の跡を受け、人代百王の帝祖也。辛酉の歳、日向國宮崎郡にして、皇王の寶祚を繼ぎ、五十九年と云し己未歳十月に東征して、豐葦原中津國に留り、此比大和國と名づけたる畝傍の山を點じて、帝都をたて橿原の地を切掃て、宮室を作り給へり。是を橿原の宮と名づけたり。其より以降、代々の帝王、都を他國他所へ遷さるゝ事三十度に餘り、四十度に及べり。神武天皇より、景行天皇まで十二代には、大和國郡々に都を立て、他國へは終に移れず。然るを成務天皇元年に近江國に移て、志賀郡に都を立つ。仲哀天皇二年に、長門國に移て、豐浦郡に都を立つ。其國の彼都にて、御門隱れさせ給しかば、后神功皇后御世を請取らせ給ひ、女體として、鬼界、高麗、契丹まで、責從へさせ給ひけり。異國の軍を靖めさせ給ひて、歸朝の後筑前國三笠郡にして、皇子御誕生、其所をば宇美宮とぞ申たる。かけまくも忝なく、八幡の御事是なり。位に即せ給ひては、應神天皇とぞ申ける。其後神功皇后は、大和國に移て、磐余稚櫻宮に御座す。應神天皇は同國輕島明宮に住せ給ふ。仁徳天皇元年に、津國難波に移て、高津宮に御座す。履仲天皇二年に、大和國に移て、十市郡に都を立つ。反正天皇元年に、河内國に移て、柴垣宮に住せ給ふ。允恭天皇四十二年に又大和國に移て、飛鳥のあすかの宮におはします。雄略天皇二十一年に、同國泊瀬朝倉に宮居し給ふ。繼體天皇五年に、山城國綴喜に移て、十二年、其後乙訓に宮居し給ふ。宣化天皇元年に、又大和國に歸て、檜隈入野宮におはします。孝徳天皇大化元年に、攝津國長柄に移て、豐崎宮に住せ給ふ、齊明天皇二年、又大和國に歸て、岡本宮におはします。天智天皇六年に、近江國に移て、大津宮に住せ給ふ、天武天皇元年に、猶大和國に歸て、岡本の南の宮に住せ給ふ。是を清見原の御門と申き。持統、文武二代の聖朝は、同國藤原宮におはします。元明天皇より、光仁天皇迄七代は、奈良の都に住せ給ふ。然を桓武天皇、延暦三年十月二日、奈良の京春日の里より、山城國長岡にうつて、十年と云し正月に、大納言藤原小黒丸、參議左大辨紀古佐美、大僧都玄慶等を遣して、當國葛野郡宇多村を見せらるゝに、兩人共に奏して云、此地の體を見るに、左青龍、右白虎、前朱雀、後玄武、四神相應の地なり。尤帝都を定むるに足れりと申す。仍て愛宕郡に御座す賀茂大明神に、告申させ給ひて、延暦十三年十一月廿一日、長岡の京より此京へ移されて後、帝王三十二代、星霜は三百八十餘歳の春秋を送り迎ふ。昔より代々の帝王、國々所々に、多の都を立てられしかども、かくの如くの勝地は無しとて、桓武天皇殊に執し思食し、大臣公卿諸道の才人等に仰せ合せ、長久なるべき樣とて、土にて八尺の人形を作り、鐡の鎧甲をきせ、同う鐡の弓矢を持せて、東山の嶺に、西向に立てゝ埋まれけり。末代に此都を他國へうつす事あらば、守護神となるべしとぞ御約束ありける。されば天下に事出來んとては、此塚必鳴動す。將軍が塚とて今に在り。桓武天皇と申は平家の曩祖にて御座す。中にも此京をば平安城と名付けて平かに安き都と書り。尤平家の崇べき都也。先祖の御門の、さしも執し思食されたる都を、させる故なく、他國他所へ遷さるゝこそ淺ましけれ。嵯峨皇帝の御時平城の先帝尚侍の勸に依て世を亂り給ひし時、既に此京を他國へ移さんとせさせ給ひしを大臣公卿諸國の人民背き申しかば、移されずして止にき。一天の君萬乘の主だにも移し得給はぬ都を、入道相國、人臣の身として、移されけるぞ怖しき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%9A%87%E5%90%8E#tk-4-19-nlp_gloss-142">4</a></p>
+      <p class="occurrence-context">夫れ我朝に朝敵の始めを尋ぬれば日本磐余彦尊の御宇四年、紀州名草郡、高雄村に一つの蜘蛛有り、身短く足手長くて、力人に勝れたり。人民多く損害せしかば、官軍發向して、宣旨を讀かけ、葛の網を結で、終に是を掩ひ殺す。其より以降野心を狹んで、朝威を滅んとする輩、大石の山丸、大山王子、守屋の大臣、山田の石河、蘇我の入鹿、大友の眞鳥、文屋の宮田、橘の逸勢、氷上の川繼、伊豫の親王、太宰少貳藤原の廣嗣、惠美の押勝、早良の太子、井上の皇后、藤原仲成、平將門、藤原純友、安倍貞任、對馬守源義親、惡佐府、惡衞門督に至る迄、すべて廿餘人。され共一人として、素懷を遂ぐる者なし。尸を山野に曝し、頭を獄門に懸らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%9A%87%E5%90%8E#tk-6-10-nlp_gloss-2">6</a></p>
+      <p class="occurrence-context">昔神功皇后新羅を攻させ給ひしに、御方の戰弱く、異國の軍強して、既にかうと見えし時、皇后天に御祈誓ありしかば、靈鳩三つ飛來て、楯の面に顯れて、異國の軍敗れにけり。又此人人の先祖、頼義の朝臣、貞任、宗任を攻給ひしにも、御方の戰弱くして、凶徒の軍強かりしかば、頼義朝臣敵の陣に向て、是は全く私の火には非ず、神火なりとて火を放つ。風忽に夷賊の方へ吹掩ひ、貞任が館厨河の城燒ぬ。其後軍敗て貞任、宗任亡びにき。木曾殿か樣の先蹤を忘れ給はず、馬より下り、甲を脱ぎ、手水鵜飼をして、今靈鳩を拜し給ひけん心の中こそ憑しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%9A%87%E5%90%8E#tk-6-10-nlp_gloss-29">6</a></p>
+      <p class="occurrence-context">昔神功皇后新羅を攻させ給ひしに、御方の戰弱く、異國の軍強して、既にかうと見えし時、皇后天に御祈誓ありしかば、靈鳩三つ飛來て、楯の面に顯れて、異國の軍敗れにけり。又此人人の先祖、頼義の朝臣、貞任、宗任を攻給ひしにも、御方の戰弱くして、凶徒の軍強かりしかば、頼義朝臣敵の陣に向て、是は全く私の火には非ず、神火なりとて火を放つ。風忽に夷賊の方へ吹掩ひ、貞任が館厨河の城燒ぬ。其後軍敗て貞任、宗任亡びにき。木曾殿か樣の先蹤を忘れ給はず、馬より下り、甲を脱ぎ、手水鵜飼をして、今靈鳩を拜し給ひけん心の中こそ憑しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%9A%87%E5%90%8E#tk-6-66-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">修理大夫經盛の子息、皇后宮亮經正、幼少にては、仁和寺の御室の御所に、童形にて、候はれしかば、かゝる怱劇の中にも、其御名殘きと思出て、侍五六騎具して、仁和寺殿へ馳參り、門前にて馬より下り、申入られけるは、「一門運盡て今日既に帝都を罷出候。浮世に思ひ殘す事とては、唯君の御名殘計也。八歳の時參り始め候て、十三で元服仕り候し迄は、相勞る事の候はぬ外は、白地にも御前を立去事も候はざりしに、今日より後西海千里の浪路に趣いて、又何の日、何の時、歸り參るべしとも覺えぬこそ口惜う候へ。今一度御前へ參て、君をも見參せたう候へども、既に甲冑を鎧ひ弓箭を帶し、あらぬ樣なる粧に罷成て候へば、憚存候。」とぞ申されける。御室哀に思召し、「唯其姿を改めずして參れ。」とこそ仰せけれ。經正其日は、紫地の錦の直垂に、萠黄匂の鎧著て、長覆輪の太刀を帶き、切斑の矢負ひ、滋籘の弓脇に挾み、甲をば脱高紐にかけ、御前の御坪に畏る。御室やがて御出有て、御簾高く揚させ「是へ／＼」と召されければ、大床へこそ參られけれ。供に具せられたる藤兵衞有教を召す。赤地の錦の袋に入たる御琵琶持て參たり。經正是を取次で、御前にさし置き申されけるは、「先年下し預て候し青山持せて參て候。餘りに名殘は惜しう候へども、さしもの名物を、田舎の塵に成ん事口惜う候。若不思議に運命開けて、又都へ立歸る事候はゞ、其時こそ猶下し預り候はめ。」と泣々申されければ、御室哀におぼしめし一首の御詠をあそばいて下されけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%9A%87%E5%90%8E#tk-6-76-nlp_gloss-83">6</a></p>
+      <p class="occurrence-context">落行く平家は誰々ぞ。前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。山崎關戸院に玉の御輿を舁居て、男山を伏拜み、平大納言時忠卿「南無歸命頂禮八幡大菩薩、君を始參せて、我等都へ歸し入させ給へ。」と祈れけるこそ悲しけれ。各後を顧給へば、霞める空の心地して、烟のみ心細く立のぼる。平中納言教盛卿</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E7%9A%87%E5%90%8E#tk-7-21-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">皇后宮亮經正</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%9A%87%E5%90%8E#tk-8-55-nlp_gloss-32">8</a></p>
+      <p class="occurrence-context">門脇中納言教盛卿の末子、藏人大夫成盛は、常陸國の住人土屋五郎重行に組で討たれ給ひぬ。修理大夫經盛の嫡子皇后宮亮經正は助け舟に乘らんと汀の方へ落給ひけるが、河越小太郎重房が手に取籠られて、討たれ給ひぬ。其弟、若狹守經俊、淡路守清房、尾張守清定、三騎つれて敵の中へ懸入、散々に戰ひ、分捕數多して、一所で討死してけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%9A%87%E5%90%8E#tk-8-60-nlp_gloss-143">8</a></p>
+      <p class="occurrence-context">凡東西の木戸口時を移す程也ければ、源平數を盡いて討れにけり。櫓の前逆茂木の下には、人馬のしゝむら山の如し。一谷の小篠原、緑の色を引替へて、薄紅にぞ成にける。一谷、生田森、山の傍、海の汀にて射られ斬られて死ぬるはしらず、源氏の方に斬懸らるゝ頸ども、二千餘人也。今度討れ給へるむねとの人々には、越前三位通盛、弟藏人大夫成盛、薩摩守忠度、武藏盛知明、備中守師盛、尾張守清定、淡路守清房、修理大夫經盛の嫡子皇后宮亮經正、弟若狹守經俊、其弟大夫敦盛、以上十人とぞ聞えし。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

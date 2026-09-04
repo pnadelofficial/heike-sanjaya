@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鳥羽</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>鳥羽</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Toba</li>
+      
+      <li>Toba (a place name, referring to Toba-in, the retired Emperor Toba)</li>
+      
+      <li>Toba (place name, a palace in Kyoto)</li>
+      
+      <li>Toba (place name)</li>
+      
+      <li>Toba (place name, referring to the Toba Palace)</li>
+      
+      <li>Toba (palace name)</li>
+      
+      <li>Toba (place name, referring to Toba Palace)</li>
+      
+      <li>Toba (a place name, referring to the Toba Palace or Toba area in Kyoto)</li>
+      
+      <li>Toba (proper noun, referring to Emperor Toba)</li>
+      
+      <li>Toba (a place name, here referring to the Toba Emperor)</li>
+      
+      <li>Toba (a place name in Kyoto)</li>
+      
+      <li>Toba (Imperial Palace/Emperor)</li>
+      
+      <li>Toba (a place name)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (55)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-11-nlp_gloss-10">1</a></p>
+      <p class="occurrence-context">しかるを忠盛備前守たりし時、鳥羽院の御願得長壽院を造進して三十三間の御堂をたて、一千一體の御佛をすゑ奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-67-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">其比、忠盛、備前國より都へのぼりたりけるに、鳥羽院「明石浦はいかに。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-138-nlp_gloss-13">1</a></p>
+      <p class="occurrence-context">抑我朝に白拍子のはじまりける事は、昔鳥羽院の御宇に島の千歳和歌の前とてこれら二人がまひいだしたりけるなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-346-nlp_gloss-3">1</a></p>
+      <p class="occurrence-context">されども鳥羽院、御晏駕の後は、兵革打ち續き、死罪、流刑、闕官、停任、常に行はれて、海内も靜かならず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-395-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">鳥羽院五歳、近衞院三歳にて踐祚あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-508-nlp_gloss-10">1</a></p>
+      <p class="occurrence-context">御車副には、因幡のさい使、鳥羽の國久丸といふをのこ、下臈なれども、なさけある者にて、泣々御車つかまつて、中御門の御所へ還御なし奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-602-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">鳥羽院の御時も、季教、季頼父子、共に朝家に召仕はれ傳奏する折もありなど聞えしかども、皆身の程をばふるまうてこそありしに、此時の北面の輩は、以外に過分にて、公卿殿上人をも物ともせず、禮儀禮節もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%B3%A5%E7%BE%BD#tk-1-656-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">鳥羽院の御時、越前の平泉寺を、山門へつけられけるには、當山を御歸依淺からざるによて、「非を以て理とす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-7-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">同十一日鳥羽院七の宮、覺快法親王、天台座主にならせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-449-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">世を靜めん程、法皇を鳥羽の北殿へ移奉るか、然らずは、是へまれ、御幸をなし参らせんと思ふは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-461-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">法皇をば鳥羽殿へ押籠参らせうと候が、内々は鎭西の方へ流し参らせうと被擬候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-471-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">世をしづめん程、法皇を鳥羽の北殿へ遷奉るか、然らずば、是へまれ、御幸を成まゐらせんと思ふは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-601-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">鳥羽殿を過給ふにも、此御所へ御幸なりしには、一度も御供には外れざりし物をとて、我山庄洲濱殿とてありしをも、餘所に見てこそ通られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-675-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">福原の御使、やがて今夜鳥羽まで出させ給ふべき由申ければ、「幾程も延ざらん者故に、今宵許は、都の内にて明さばや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%B3%A5%E7%BE%BD#tk-2-676-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">」と宣へ共、頻に申せば、其夜鳥羽へぞ出られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-161-nlp_gloss-18">3</a></p>
+      <p class="occurrence-context">抑平家安藝の嚴島を信じ始られける事は如何にと云に、鳥羽院の御宇に清盛公未安藝守たりし時、安藝國を以て、高野の大塔を修理せよとて、渡邊遠藤六郎頼方を雜掌に附られ、六年に修理畢ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-239-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">三月十六日少將殿鳥羽へあかうぞ著給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-240-nlp_gloss-10">3</a></p>
+      <p class="occurrence-context">故大納言殿の山庄、洲濱殿とて鳥羽に在り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-276-nlp_gloss-15">3</a></p>
+      <p class="occurrence-context">鬼界島の流人、今日既に京都へ入と聞えしかば、鳥羽まで行向うて見けれ共、我主は見え給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-576-nlp_gloss-74">3</a></p>
+      <p class="occurrence-context">
+同十六日入道相國、此日來思立給へる事なれば、關白殿を始奉て、太政大臣以下の公
+卿、殿上人、四十三人が官職を停て、追籠らる。關白殿をば、太宰帥に遷て、鎭西へ
+流し奉る。かゝらん世には、とてもかくても有なんとて、鳥羽の邊、古川と云ふ所に
+て、御出家有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-644-nlp_gloss-170">3</a></p>
+      <p class="occurrence-context">平治に信頼が、仕たりし樣に、火をかけて、人をば皆燒殺さるべしと聞えし間、上下の女房女童、物をだに打被かず、
+遽て噪で走出づ。法皇も大に驚かせおはします。前右大將宗盛卿、御車を寄て、「と
+う／＼めさるべう候。」と奏せられければ、法皇「こはされば何事ぞや。御とがある
+べし共思召さず。成親俊寛が樣に遠き國遙の島へも、遷遣んずるにこそ。主上さて渡
+せ給へば、政務の口入する計也。其もさるべからずば、自今以後さらでこそ有め。」
+と仰ければ、宗盛卿「其儀では候はず。世を靜ん程、鳥羽殿へ御幸成參せんと、父入
+道申候。」「さらば宗盛やがて御供に參れ。」と仰けれ共、父の禪門の氣色に畏を成
+て、參られず。「哀れ是に附ても、兄の内府には事外に劣たる者かな。一念もかゝる
+御目に逢べかりしを内府が身に代て制し停てこそ今日迄も心安かりつれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-654-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">さて鳥羽殿へ入せ給たるに大膳大夫信成が、何として紛れ參りたりけるやらむ、御前近う候けるをめして「如何樣にも、今夜失はれなんずと思召すぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-657-nlp_gloss-20">3</a></p>
+      <p class="occurrence-context">又靜憲法印、入道相國の西八條の邸に行て、「夕法皇の鳥羽殿へ御幸成て候なるに、
+御前に人一人も候はぬ由承るが餘に淺ましう覺え候。何か苦う候べき、靜憲ばかりは
+御ゆるされ候へかし。參り給はん。」と申されければ、「とう／＼、御房は事あやま
+つまじき人なれば。」とて許されけり。法印鳥羽殿へ參て、門前にて車よりおり、門
+の内へさし入給へば、折しも法皇、御經を打上々々遊されける御聲も、殊にすごう聞えさせ給ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-657-nlp_gloss-90">3</a></p>
+      <p class="occurrence-context">又靜憲法印、入道相國の西八條の邸に行て、「夕法皇の鳥羽殿へ御幸成て候なるに、
+御前に人一人も候はぬ由承るが餘に淺ましう覺え候。何か苦う候べき、靜憲ばかりは
+御ゆるされ候へかし。參り給はん。」と申されければ、「とう／＼、御房は事あやま
+つまじき人なれば。」とて許されけり。法印鳥羽殿へ參て、門前にて車よりおり、門
+の内へさし入給へば、折しも法皇、御經を打上々々遊されける御聲も、殊にすごう聞えさせ給ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-669-nlp_gloss-24">3</a></p>
+      <p class="occurrence-context">主上は關白の流され給ひ、臣下の多く亡びぬる事をこそ御歎有けるに、剩へ法皇鳥羽殿に押籠られさせ給ふと聞召されて後は、つや／＼供御も聞召れず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-672-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">法皇鳥羽殿へ押籠られさせ給て後は、内裏には臨時の御神事とて、主上夜ごとに清凉殿の石灰の壇にて、伊勢太神宮をぞ御拜有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%B3%A5%E7%BE%BD#tk-3-682-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">其比内裏よりひそかに鳥羽殿へ御書あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-0-nlp_gloss-9">4</a></p>
+      <p class="occurrence-context">
+                  治承四年正月一日の日、鳥羽殿には、相國も許さず、法皇も恐させ坐しければ、元日元三の間、參入する人も無し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-2-nlp_gloss-27">4</a></p>
+      <p class="occurrence-context">同正月廿日のひ春宮御袴著、竝に御眞魚始とて、目出たき事共有しかども法皇は鳥羽殿にて、御耳の餘所にぞ聞召す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-36-nlp_gloss-31">4</a></p>
+      <p class="occurrence-context">其上此嚴島をば平家斜ならず、崇敬ひ給ふ間、上には平家に御同心、下には法皇の何となう鳥羽殿に押籠られて渡らせ給ふ、入道相國の謀反の心をも和げ給へとの御祈念の爲とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-44-nlp_gloss-22">4</a></p>
+      <p class="occurrence-context">其日の暮方に、前右大將宗盛卿を召て、「明日御幸の次に、鳥羽殿へ參て、法皇の見參に入ばやと思召すはいかに。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-47-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">」と申されければ、「さらば宗盛其樣をやがて今夜鳥羽殿へ申せかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-49-nlp_gloss-8">4</a></p>
+      <p class="occurrence-context">前右大將宗盛卿、急ぎ鳥羽殿へ參て、此由奏聞せられければ、法皇餘に思召す御事にて、夢やらんとぞ仰ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-54-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">未夜の中に鳥羽殿へ御幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-66-nlp_gloss-12">4</a></p>
+      <p class="occurrence-context">遙に日闌けて後、御暇申させ給ひ、鳥羽の草津より御船に召されけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-115-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">八日都へいらせ給ふに、御迎の公卿殿上人、鳥羽の草津へぞ參られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-116-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">還御の時は、鳥羽殿へは御幸もならず、入道相國の西八條の亭へいらせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-138-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">御謀反起させ給ひて、平家を亡し、法皇のいつとなく鳥羽殿に押籠られて渡せ給ふ御心をも休め參せ、君も位に即せ給ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-177-nlp_gloss-2">4</a></p>
+      <p class="occurrence-context">仲兼、鳥羽殿に歸り參て門より參らうとすれば、守護の武士共許さず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-184-nlp_gloss-29">4</a></p>
+      <p class="occurrence-context">さる程に前右大將宗盛卿、法皇の御事をたりふし申されければ、入道相國漸思直て、同十三日鳥羽殿を出奉り、八條烏丸美福門院の御所へ御幸なし奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-280-nlp_gloss-7">4</a></p>
+      <p class="occurrence-context">法皇是を聞食して「鳥羽殿を御出在は御悦也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%B3%A5%E7%BE%BD#tk-4-517-nlp_gloss-7">4</a></p>
+      <p class="occurrence-context">彼蝉折と申は、昔鳥羽院の御時金を千兩、宋朝の御門へ、送らせ給ひたりければ、返報と覺くて、生たる蝉の如くに、節の附たる笛竹を、一節贈らせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%B3%A5%E7%BE%BD#tk-5-13-nlp_gloss-13">5</a></p>
+      <p class="occurrence-context">さる程に法皇を入道相國やう／＼思直て、鳥羽殿を出し奉り、都へ入れ參らせたりしが、高倉宮御謀反に依て又大に憤り、福原へ御幸なし奉り、四面に端板して、口一つ開たる内に三間の板屋を作て、押籠參らせ、守護の武士には、原田の大夫種直ばかりぞ候ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%B3%A5%E7%BE%BD#tk-5-640-nlp_gloss-102">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「大將軍權亮少將維盛をば鬼界が島へ流すべし、侍大將上總守忠清をば死罪に行へ。」
+とぞ宣ひける。同九日平家の侍共、老少參會して、「忠清が死罪の事、いかゞ有ら
+ん。」と評定す。中に主馬判官盛國進出でて申けるは、「忠清は昔より不覺人とは承
+り及ばず、あれが十八歳と覺え候、鳥羽殿の寶藏に五畿内の惡黨二人、迯籠て候しを、
+寄て搦めうと申す者候はざりしに、此忠清白晝に唯一人築地を越え、はね入て、一人
+をば討取り、一人をば生捕て、後代に名を揚たりし者にて候。今度の不覺は、徒事と
+も覺え候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%B3%A5%E7%BE%BD#tk-6-18-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">上皇は、去去年法皇の鳥羽殿におしこめられさせ給し御事、去年高倉宮の討たれさせ給し御有樣、都遷とて淺間しかりし天下の亂れ、加樣の事共御心苦しう思食されけるより御惱つかせ給ひて、常は煩しう聞えさせ給ひしが、東大寺興福寺の亡びぬるよし聞召されて、御惱彌重らせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%B3%A5%E7%BE%BD#tk-6-435-nlp_gloss-5">6</a></p>
+      <p class="occurrence-context">」と申せば、鳥羽院も知召されて、「清盛が華族は、人に劣じ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%B3%A5%E7%BE%BD#tk-6-610-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">鳥羽院六歳にて、朝覲行幸、其例とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%B3%A5%E7%BE%BD#tk-7-629-nlp_gloss-18">7</a></p>
+      <p class="occurrence-context">池の大納言頼盛卿も、池殿に火を懸て出られけるが、鳥羽の南の門に引へつゝ、「忘たる事あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%B3%A5%E7%BE%BD#tk-8-138-nlp_gloss-17">8</a></p>
+      <p class="occurrence-context">太上天皇の伊勢へ公卿の勅使を立らるゝ事は、朱雀、白河、鳥羽三代の蹤跡ありといへども、是皆御出家以前なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%B3%A5%E7%BE%BD#tk-9-262-nlp_gloss-25">9</a></p>
+      <p class="occurrence-context">」と云ければ、五百餘騎の勢あそこに引へ、こゝに引へ、落ゆく程に、鳥羽の南の門を出けるには、其勢僅に廿餘騎にぞ成にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%B3%A5%E7%BE%BD#tk-9-798-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">件の笛は、祖父忠盛、笛の上手にて、鳥羽院より給はられたりけるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%B3%A5%E7%BE%BD#tk-11-603-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">同二十五日、内侍所、璽の御箱、鳥羽に著せ給ふと聞えしかば、内裏より御迎に參らせ給ふ人々、勘解由小路中納言經房卿、高倉宰相中將泰通、權右中辨兼忠、左衞門權佐親雅、榎並中將公時、但馬少將教能、武士には伊豆藏人大夫頼兼、石河判官代能兼、左衞門尉有綱とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%B3%A5%E7%BE%BD#tk-11-683-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">鳥羽の南の門、作道、四塚迄、ひしと續いて、幾千萬と云ふ數を知らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%B3%A5%E7%BE%BD#tk-11-693-nlp_gloss-27">11</a></p>
+      <p class="occurrence-context">西國にては、かり男に成たりしが、いま一度大臣殿の御車をつかまつらんと思ふ志ふかゝりければ、鳥羽にて判官に申けるは、「舎人牛飼など申者は、いふかひなき下臈の果にて候へば、心有るべきでは候はねども年來めしつかはれまゐらせて候御志淺からず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%B3%A5%E7%BE%BD#tk-12-168-nlp_gloss-8">12</a></p>
+      <p class="occurrence-context">されば平家の時も法皇を鳥羽殿に押籠參せて後院の別當を置かれしにも、勘解由小路中納言、此經房卿二人をぞ後院の別當には成されたりける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

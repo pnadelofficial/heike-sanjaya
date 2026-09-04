@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>景季</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>景季</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Kageki</li>
+      
+      <li>Kageki (proper name)</li>
+      
+      <li>Kageki (proper noun, a person&#39;s name)</li>
+      
+      <li>Kagenaga</li>
+      
+      <li>Kagehide (a personal name)</li>
+      
+      <li>Kageki (personal name)</li>
+      
+      <li>Kageki (a personal name)</li>
+      
+      <li>Kagesue (a proper name)</li>
+      
+      <li>Kageki (proper noun, name of a person)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (12)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-29-nlp_gloss-33">9</a></p>
+      <p class="occurrence-context">各鎌倉を立て、足柄を歴て行もあり、箱根にかゝる人もあり、思ひ／＼に上る程に、駿河國浮島原にて梶原源太景季、高き所に打上り、暫しひかへて、多の馬共を見ければ、思ひ／＼の鞍置て、いろ／＼の鞦かけ、或は乘り口に引かせ、或はもろ口に引かせ、幾千萬といふ數を知らず、引き通し／＼しける中にも、景季が給はたるするすみに、勝る馬こそ無かりけれと、嬉しう思ひて見る處に、いけずきとおぼしき馬こそ出來たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-29-nlp_gloss-98">9</a></p>
+      <p class="occurrence-context">各鎌倉を立て、足柄を歴て行もあり、箱根にかゝる人もあり、思ひ／＼に上る程に、駿河國浮島原にて梶原源太景季、高き所に打上り、暫しひかへて、多の馬共を見ければ、思ひ／＼の鞍置て、いろ／＼の鞦かけ、或は乘り口に引かせ、或はもろ口に引かせ、幾千萬といふ數を知らず、引き通し／＼しける中にも、景季が給はたるするすみに、勝る馬こそ無かりけれと、嬉しう思ひて見る處に、いけずきとおぼしき馬こそ出來たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-34-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">おなじやうにめしつかはるゝ景季を佐々木におぼしめしかへられけるこそ遺恨なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-45-nlp_gloss-20">9</a></p>
+      <p class="occurrence-context">」と言ひければ、梶原此詞に腹がゐて、「ねたい、さらば景季も竊むべかりける者を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-66-nlp_gloss-4">9</a></p>
+      <p class="occurrence-context">一騎は梶原源太景季、一騎は佐々木四郎高綱也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-110-nlp_gloss-23">9</a></p>
+      <p class="occurrence-context">日記を披いて御覽ずれば、「宇治川の先陣、佐々木四郎高綱、二陣梶原源太景季。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-144-nlp_gloss-27">9</a></p>
+      <p class="occurrence-context">」と仰ければ、先づ大將軍九郎義經、次に安田三郎義定、畠山庄司次郎重忠、梶原源太景季、佐々木四郎高綱、澁谷右馬允重資とこそ名乘たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-381-nlp_gloss-45">9</a></p>
+      <p class="occurrence-context">大手の大將軍には、蒲御曹司範頼、相伴ふ人々、武田太郎信義、加賀美次郎遠光、同小次郎長清、山名次郎教義、同三郎義行、侍大將には、梶原平三景時、嫡子源太景季、次男平次景高、同三郎景家、稻毛三郎重成、榛谷四郎重朝、同五郎行重、小山小四郎朝政、同中沼五郎宗政、結城七郎朝光、佐貫四郎大夫廣綱、小野寺前司太郎道綱、曾我太郎資信、中村太郎時經、江戸四郎重春、玉井四郎資景、大河津太郎廣行、庄三郎忠家、同四郎高家、勝大八郎行平、久下次郎重光、河原太郎高直、同次郎盛直、藤田三郎大夫行泰を先として、都合其勢五萬餘騎二月四日の辰の一點に都を立て、其日の申酉の刻に、攝津國昆陽野に陣を取る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-615-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">如何したりけん、其中に景季は見ざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-749-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">梶原源太景季、庄の四郎高家、大將軍と目を懸け、鞭鐙を合せて追懸奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%99%AF%E5%AD%A3#tk-9-752-nlp_gloss-21">9</a></p>
+      <p class="occurrence-context">もみふせたる馬共、逐著べしとも覺えず、只延に延ければ、梶原源太景季、鐙踏張り立上り、若しやと遠矢によひいて射たりけるに、三位中將の馬の三頭を箆深に射させて弱る處に、後藤兵衞盛長「吾馬召されなんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%99%AF%E5%AD%A3#tk-11-390-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">さる程に嫡子の源太景季、次男平次景高、同三郎景家、父と一所に寄合うたり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

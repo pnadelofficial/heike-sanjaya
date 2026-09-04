@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>戰ひ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>戰ひ</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>fighting</li>
+      
+      <li>fought</li>
+      
+      <li>battle</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (16)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%B0%E3%81%B2#tk-4-565-nlp_gloss-33">4</a></p>
+      <p class="occurrence-context">或は分取して歸る者も有り、或は痛手負て、腹掻切り川へ飛入る者もあり、橋の上の戰、火いづる程ぞ戰ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%B0%E3%81%B2#tk-4-623-nlp_gloss-15">4</a></p>
+      <p class="occurrence-context">六條藏人仲家、其子藏人太郎仲光も、散々に戰ひ、分捕餘たして、遂に討死してけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%B0%E3%81%B2#tk-4-632-nlp_gloss-30">4</a></p>
+      <p class="occurrence-context">競瀧口をば平家の侍共、如何にもして、生捕にせんとうかゞひけれ共、競も先に心えて、散散に戰ひ、大事の手負ひ、腹掻切てぞ死にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%88%B0%E3%81%B2#tk-6-239-nlp_gloss-9">6</a></p>
+      <p class="occurrence-context">城の内の兵共、手のきは戰ひ、打死する者多かりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%88%B0%E3%81%B2#tk-7-215-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">暫支て戰ひけるが、高橋勢は、國々の驅武者なれば、一騎も落合はず、我先にとこそ落行きけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%88%B0%E3%81%B2#tk-7-232-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">暫支て戰ひけるが、有國が方の勢多く討たれぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%88%B0%E3%81%B2#tk-7-233-nlp_gloss-26">7</a></p>
+      <p class="occurrence-context">
+有國深入して戰ふほどに、矢種皆射盡して馬をも射させ、歩立になり、打物拔て戰ひけるが、敵餘た討取り矢七つ八つ射立られて、立死にこそ死にけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%88%B0%E3%81%B2#tk-8-390-nlp_gloss-13">8</a></p>
+      <p class="occurrence-context">平家の侍備中國住人瀬尾太郎兼康は、北國の戰ひに、加賀國の住人藏光次郎成澄が手にかゝて、生捕にせられたりしを、成澄が弟藏光三郎成氏に預けられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%88%B0%E3%81%B2#tk-8-460-nlp_gloss-21">8</a></p>
+      <p class="occurrence-context">其後打物拔て、先小太郎が首討落し、敵の中へ破て入り散々に戰ひ、敵あまた討取て、終に討死してけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%B0%E3%81%B2#tk-9-336-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">能登殿やがて續いて攻給へば、一日一夜防ぎ戰ひ、安摩六郎、園邊兵衞、叶はじとや思ひけん、家子郎等に防矢射させ、身がらは迯て京へ上る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%B0%E3%81%B2#tk-9-342-nlp_gloss-30">9</a></p>
+      <p class="occurrence-context">」と申されければ、福原より數萬騎の大勢を向らるゝ由聞えし程に、城の内の兵ども、手のきは戰ひ、分捕高名し究て、「平家は大勢でまします也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%B0%E3%81%B2#tk-9-542-nlp_gloss-24">9</a></p>
+      <p class="occurrence-context">子息小次郎直家も、生年十六歳と名乘て掻楯の際に馬のはなを突する程責寄て戰ひけるが、弓手の肘を射させて、馬より飛び下、父と竝でぞ立たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%B0%E3%81%B2#tk-9-614-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">梶原五百餘騎大勢の中へかけ入り散々に戰ひ、僅に五十騎計に討成され、颯と引いてぞ出たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%B0%E3%81%B2#tk-9-804-nlp_gloss-26">9</a></p>
+      <p class="occurrence-context">其弟、若狹守經俊、淡路守清房、尾張守清定、三騎つれて敵の中へ懸入、散々に戰ひ、分捕數多して、一所で討死してけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%B0%E3%81%B2#tk-9-810-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">其後矢種の有る程射盡して、打物拔で戰ひけるが、敵餘た討とり、弓手の膝口を射させ、立も上らずゐながら討死してけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%B0%E3%81%B2#tk-10-246-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">況や運盡き世亂てより以來は、こゝに戰ひ、かしこに爭ひ、人を滅し身を助らんと思ふ惡心のみ遮て、善心はかつて起らず。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

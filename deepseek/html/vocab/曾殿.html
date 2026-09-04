@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>曾殿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>曾殿</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Lord Kiso</li>
+      
+      <li>former lord</li>
+      
+      <li>the Lord of Kiso</li>
+      
+      <li>Lord Former</li>
+      
+      <li>the Lord Kiso</li>
+      
+      <li>Lord</li>
+      
+      <li>the former lord</li>
+      
+      <li>the late Lord Kiso</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (45)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-96-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿國の案内者を召て、「あれは何れの宮と申ぞ、如何なる神を崇奉るぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-100-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿大に悦て、手書に具せられたる大夫房覺明を召て、「義仲こそ幸に新八幡の御寶殿に近附奉て、合戰を既に遂げむとすれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-105-nlp_gloss-52">7</a></p>
+      <p class="occurrence-context">覺明が爲體、あかぢの直垂に黒革威の鎧著て、黒漆の太刀を帶き、二十四差たる黒ほろの矢負ひ、塗籠籐の弓脇に挾み、甲をば脱ぎ高紐に懸け、箙より小硯疊紙取出し、木曾殿の御前に畏て願書を書く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-114-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">」と宣ふ間、南都をば逃て北國へ落下り、木曾殿の手書して、大夫坊覺明とぞ名乘ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-144-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿か樣の先蹤を忘れ給はず、馬より下り、甲を脱ぎ、手水鵜飼をして、今靈鳩を拜し給ひけん心の中こそ憑しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-157-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">去程に木曾殿大手より鬨のこゑをぞ作合せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-166-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">明る十二日奧の秀衡が許より、木曾殿へ龍蹄二匹奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-169-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿宣ひけるは、「今は思ふ事なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-177-nlp_gloss-25">7</a></p>
+      <p class="occurrence-context">案のごとく十郎藏人行家、散々に懸なされ、引退いて、馬の息休むる處に、木曾殿「さればこそ」とて、荒手二萬餘騎、入かへて平家三萬餘騎が中へをめいて駈入り、揉に揉で、火出る程にぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-182-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿は志保山打越えて、能登の小田中、親王の塚の前に陣を取る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-189-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">いざ各木曾殿へ參う。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-214-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿の方より、樋口次郎兼光、落合五郎兼行、三百餘騎で馳向ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-237-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿の方より、手塚太郎光盛好い敵と目をかけ「あなやさし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-250-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">又手塚が郎等後れ馳に出きたるに首取せ、木曾殿の御前に馳參りて、「光盛こそ奇異の曲者組で討て候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-255-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">」と申せば、木曾殿「あはれ是は齋藤別當で有ござんなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-261-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">」木曾殿、「其ならば、今は七十にも餘り、白髮にこそ成ぬらんに、鬢鬚の黒いは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9B%BE%E6%AE%BF#tk-7-370-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">木曾殿又家の子郎等を召集めて、覺明に此返牒を開かせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-391-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">きこゆる剛の者大力なりければ、木曾殿あたらをのこを失ふべきかとて切らず、人あひ心樣優に情ありければ、藏光も懇にもてなしけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-397-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">自今以後御軍候はゞ、ま先かけて木曾殿に命を參せん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-401-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">木曾殿「神妙の事を申すごさんなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-405-nlp_gloss-17">8</a></p>
+      <p class="occurrence-context">瀬尾が嫡子小太郎宗康は、平家の御方に候けるが、父が木曾殿より暇ゆるされて下ると聞えしかば、年比の郎等共催し聚め、其勢五十騎許迎に上る程に、播磨の國府で行あうて下る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-410-nlp_gloss-24">8</a></p>
+      <p class="occurrence-context">「兼康こそ暇賜て罷下れ、平家に志思ひ參せん人々は、兼康を先として木曾殿の下り給に矢一つ射懸奉れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-413-nlp_gloss-42">8</a></p>
+      <p class="occurrence-context">備前の國に十郎藏人の置かれたりし代官、瀬尾に討たれて、其下人共が逃て京へ上る程に、播磨と備前の境船坂といふ處にて、木曾殿に參りあふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-464-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">木曾殿是を見給ひて「あはれ剛の者哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%BE%E6%AE%BF#tk-8-468-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">さる程に木曾殿は備中國萬壽の庄にて勢汰へして、八島へ既に寄むとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-35-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">都へ上て木曾殿の御内に四天王と聞ゆる、今井、樋口、楯、根井に組んで死ぬるか、然らずば西國へ向うて、一人當千と聞る平家の侍共と軍して死なんとこそ思つれども、此御氣色では、それも詮なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-102-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」と言ひければ、「木曾殿の家の子に、長瀬判官代重綱。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-105-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">是を始て、木曾殿の方より宇治橋固たる勢も、暫さゝへてふせぎけれども、東國の大勢渡いて攻ければ、散散に懸成され、木幡山、伏見を指いてぞ落行ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-122-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿「我をすゝむる自害にこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-164-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿は信濃より、巴、山吹とて、二人の便女を具せられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-174-nlp_gloss-61">9</a></p>
+      <p class="occurrence-context">」とて、勢田の方へ落行程に、今井四郎兼平も、八百餘騎で勢田を固めたりけるが僅に五十騎許に打なされ、旗をば卷せて主の覺束なきに、都へとて歸す程に、大津の打出濱にて、木曾殿に行合奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-176-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿今井が手を取て宣けるは、「義仲六條河原で如何にも成べかりつれ共、汝が行末の戀しさに、多くの敵の中を懸け破て、是迄は逃たる也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-179-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿「契は未だ朽せざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-184-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿大に悦で「此勢あらば、などか最後の軍せざるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-205-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿「おのれは、とう／＼、女なれば、何地へも落ゆけ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-207-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">若し人手に懸らば、自害をせんずれば、木曾殿の最後の軍に、女を具せられたりけりなど言れん事も、然るべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-215-nlp_gloss-4">9</a></p>
+      <p class="occurrence-context">今井四郎、木曾殿、主從二騎に成て宣けるは、「日來は何とも覺えぬ鎧が、今日は重う成たるぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-226-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">」と申ければ、木曾殿のたまひけるは「義仲都にて如何にも成べかりつるが、是迄逃れ來るは汝と一所で死なんと思ふ爲也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-231-nlp_gloss-35">9</a></p>
+      <p class="occurrence-context">敵に押隔てられ、いふかひなき人の郎等に組落されさせ給て討れさせ給なば、さばかり日本國に聞えさせ給ひつる木曾殿をば、何某が郎等の討奉たるなど申さん事こそ口惜う候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-235-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿の乳母子今井の四郎兼平、生年三十三に罷成る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-244-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">木曾殿は唯一騎、粟津の松原へ駈給ふが、正月廿一日、入相許の事なるに、薄氷は張たりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-248-nlp_gloss-28">9</a></p>
+      <p class="occurrence-context">痛手なれば、まかふを馬の首に當て俯し給へる處に、石田が郎等二人落合て、終に木曾殿の頸をとてけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-249-nlp_gloss-27">9</a></p>
+      <p class="occurrence-context">太刀の鋒に貫ぬき、高く指上げ、大音聲を揚て、「此日比日本國に聞えさせ給ひつる木曾殿をば、三浦石田次郎爲久が討奉たるぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-276-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">」とて使者を立てゝ、「日比は木曾殿の御内に、今井、樋口とて聞え給しかども、今は木曾殿討れさせ給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%BE%E6%AE%BF#tk-9-276-nlp_gloss-32">9</a></p>
+      <p class="occurrence-context">」とて使者を立てゝ、「日比は木曾殿の御内に、今井、樋口とて聞え給しかども、今は木曾殿討れさせ給ひぬ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

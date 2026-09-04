@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一谷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>一谷</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Ichino-tani (a place name)</li>
+      
+      <li>Ichino-tani (a place name, literally &#39;one valley&#39;)</li>
+      
+      <li>Ichino-tani</li>
+      
+      <li>Ichino-tani (place name)</li>
+      
+      <li>Ichinotani</li>
+      
+      <li>Ichinotani (a place name)</li>
+      
+      <li>Ichidani</li>
+      
+      <li>Ichitani (place name)</li>
+      
+      <li>Ichi-no-tani</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (37)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-297-nlp_gloss-35">9</a></p>
+      <p class="occurrence-context">
+                  平家は去年の冬の比より、讃岐國八島磯を出て、攝津國難波潟へ押渡り、福原の舊都に居住して、西は一谷を城郭に構へ、東は生田森を大手の木戸口とぞ定めける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-300-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">一谷は北は山、南は海、口は狹くて奧廣し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-379-nlp_gloss-15">9</a></p>
+      <p class="occurrence-context">五日は西塞り、六日は道虚日、七日の卯刻一谷の東西の木戸口にて、源平矢合とこそ定めけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-408-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">備中守は平内兵衞海老次郎を召具して、一谷へぞ參られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-441-nlp_gloss-31">9</a></p>
+      <p class="occurrence-context">六日の明ぼのに、九郎御曹司、一萬餘騎を二手に分け、先づ土肥次郎實平をば七千餘騎で一谷の西の手へ差遣はす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-442-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">我身は三千餘騎で、一谷のうしろ鵯越を落さんと、丹波路より搦手にこそまはられけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-469-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」「是より平家の城廓一谷へ落さんと思ふは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-489-nlp_gloss-15">9</a></p>
+      <p class="occurrence-context">いざうれ是より土肥が承はて向うたる播磨路へ向うて、一谷の眞先懸う。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-507-nlp_gloss-32">9</a></p>
+      <p class="occurrence-context">落さんずる谷をば弓手になし、馬手へ歩ませゆく程に、年比人も通はぬ田井の畑と云ふ古道を經て、一谷の波打際へぞ出たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-508-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">一谷の近く鹽屋と云ふ處に未だ夜深かりければ、土肥次郎實平、七千餘騎で引へたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-509-nlp_gloss-16">9</a></p>
+      <p class="occurrence-context">熊谷は波打際より夜に紛て、そこをつと打通り、一谷の西の木戸口にぞ押寄たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-516-nlp_gloss-29">9</a></p>
+      <p class="occurrence-context">」とて、掻楯の際に歩ませ寄り、大音聲を揚て、「武藏國の住人熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-539-nlp_gloss-53">9</a></p>
+      <p class="occurrence-context">熊谷は先に名乘たれとも、平山が聞くに名乘んとや思ひけん、又掻楯の際に歩ませ寄り、大音聲を揚て、
+「以前に名乘つる武藏國の住人、熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。
+我と思はん平家の侍共、直家に落合へや落合へ。」とぞのゝしたる。是を聞て、「い
+ざや通夜名乘る熊谷親子をひさげて來ん。」とて、進む平家の侍誰々ぞ。越中次郎兵
+衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清、後藤内定經、是を始めてむねとの兵廿餘
+騎、木戸を開いて懸出たり。こゝに平山滋目結の直垂に、緋威の鎧著て、二つ引兩の
+母衣をかけ、目糟毛と云ふ聞る名馬にぞ乘たりける。旗差は黒革縅の鎧に、甲猪頸に
+著ないて、さび月毛なる馬にぞ乘たりける。「保元平治兩度の合戰に先がけたりし武
+藏國の住人、平山武者所季重。」と名乘て、旗差と二騎馬の鼻をならべてをめいてか
+く。熊谷蒐れば、平山續き、平山蒐れば熊谷續く。互にわれ劣じと、入替々々、もみ
+                  にもうで、火出る程ぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-547-nlp_gloss-44">9</a></p>
+      <p class="occurrence-context">熊谷鎧に立たる矢どもかなぐり捨て、城の内を睨まへ、大音聲を揚て、「去年の冬の比鎌倉を出しより、命をば兵衞佐殿に奉り、屍をば一谷で曝さんと思切たる直實ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-594-nlp_gloss-32">9</a></p>
+      <p class="occurrence-context">」と云程こそ有けれ、西國に聞えたる強弓精兵、備中國の住人、眞名邊四郎、眞名邊五郎とて兄弟有り、四郎は一谷に置れたり、五郎は生田森に有けるが、是を見て能彎てひやうふつと射る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-640-nlp_gloss-33">9</a></p>
+      <p class="occurrence-context">かかりしかども、源氏大手ばかりでは叶ふべし共見えざりしに、九郎御曹司搦手に回て七日の日の明ぼのに、一谷の後、鵯越に打上り既に落さんとし給ふに、其勢にや驚たりけん、男鹿二つ妻鹿一つ、平家の城廓一谷へぞ落たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-640-nlp_gloss-65">9</a></p>
+      <p class="occurrence-context">かかりしかども、源氏大手ばかりでは叶ふべし共見えざりしに、九郎御曹司搦手に回て七日の日の明ぼのに、一谷の後、鵯越に打上り既に落さんとし給ふに、其勢にや驚たりけん、男鹿二つ妻鹿一つ、平家の城廓一谷へぞ落たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-678-nlp_gloss-28">9</a></p>
+      <p class="occurrence-context">かくする事とは知ながら、乘じとする船には取付きつかみ附き、或はうで打切れ、或はひぢ打落されて一谷の汀に、朱になてぞ並臥たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-723-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">薩摩守忠度は、一谷の西手の大將軍にて坐けるが、紺地の錦の直垂に、黒絲威の鎧著て黒き馬の太う逞きに、沃懸地の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-848-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">一谷の小篠原、緑の色を引替へて、薄紅にぞ成にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-849-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">一谷、生田森、山の傍、海の汀にて射られ斬られて死ぬるはしらず、源氏の方に斬懸らるゝ頸ども、二千餘人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-855-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">行先未何くとも思ひ定ぬかと思しくて、一谷の沖にやすらふ船も有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-858-nlp_gloss-25">9</a></p>
+      <p class="occurrence-context">都へ近附く事も僅に一日の道なれば、今度はさりともと憑しう思はれけるに、一谷も攻落され、人々皆心細うぞなられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%80%E8%B0%B7#tk-9-906-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">一谷より八島へ推渡る夜半ばかりの事なれば、舟の中靖て、人是をしらざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-0-nlp_gloss-9">10</a></p>
+      <p class="occurrence-context">
+                  壽永三年二月七日、攝津國一谷にて討れし平氏の頸共十二日に都へ入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-3-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">今度一谷にて一門の人々殘り少ううたれ給ひ、三位中將と云ふ公卿一人生捕にせられて上るなりと聞給ひ、此人離れじ物をとて、引覆てぞ伏給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-31-nlp_gloss-8">10</a></p>
+      <p class="occurrence-context">御兄弟の御中に備中守殿ばかり一谷にて討れさせ給ひて候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-185-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">中將一谷で生捕にせられぬと聞し後は肝魂も身に副はず、如何にもして此世にて今一度あひ見るべきと思へども、夢にだに見えねば、いとどむねせきて、湯水も喉へ入れられず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-205-nlp_gloss-18">10</a></p>
+      <p class="occurrence-context">但し是に就て彼を案ずるに、通盛卿以下、當家數輩攝州一谷にして、既に誅せられ畢。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-539-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">一谷で備中守うたれ候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-655-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">一谷で備中守殿討たれさせ給候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B8%80%E8%B0%B7#tk-10-747-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">今度一谷にて、一門の人々のこりすくなく討たれ給ひ、むねとの侍共半過ぎて滅ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B8%80%E8%B0%B7#tk-11-182-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">去年の春、一谷にて、武藏相模の若殿原の手なみの程は見てん物を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B8%80%E8%B0%B7#tk-11-208-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">一谷の鵯越をも此馬にてぞ落れたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B8%80%E8%B0%B7#tk-11-860-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">その故は『一谷を上の山より義經が落さずば、東西の木戸口破れ難し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B8%80%E8%B0%B7#tk-11-866-nlp_gloss-22">11</a></p>
+      <p class="occurrence-context">判官、思はれけるは「去年の正月木曾義仲を追討せしよりこのかた一谷壇浦に至るまで命を棄てゝ平家を責め落し、内侍所、璽の御箱事故なく返入奉り、大將軍父子生捕にして、具して是迄下りたらんには、縱如何なる不思議ありとも、一度はなどか對面なかるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B8%80%E8%B0%B7#tk-11-987-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">三位中將一谷で生捕にせられ給ひし後も、先帝に附まゐらせておはせしが、壇浦にて海にいらせ給ひしかば、武士の荒氣なきにとらはれて、舊里に歸り姉の大夫三位に同宿して、日野と云所におはしけり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

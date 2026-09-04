@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>和田</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>和田</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Wada</li>
+      
+      <li>Wada (place name)</li>
+      
+      <li>Wada (a surname)</li>
+      
+      <li>Wada (a place name; here referring to a location in Japan)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (11)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%92%8C%E7%94%B0#tk-5-65-nlp_gloss-49">5</a></p>
+      <p class="occurrence-context">同き六月九日、新都の事始め有るべしとて、上卿には徳大寺左大將實定卿、土御門宰相中將通親卿、奉行の辨には、藏人左少辨行隆、官人共召具して、和田の松原の西の野を點じて、九條の地を割れけるに、一條より下五條までは其所あて、五條より下は無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%92%8C%E7%94%B0#tk-6-380-nlp_gloss-16">6</a></p>
+      <p class="occurrence-context">尊慧なのめならず悦で、「日本の大相國と申す人攝津國和田御崎を點じて、四面十餘町に屋を作り、今日の十萬僧會の如く持經者を多くくつ請して、坊ごとに一面に座につき、説法讀經、丁寧に勤行を致され候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%92%8C%E7%94%B0#tk-8-271-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">二人の家子は、和田三郎宗實、比企藤四郎能員なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%92%8C%E7%94%B0#tk-9-382-nlp_gloss-73">9</a></p>
+      <p class="occurrence-context">搦手の大將軍は、九郎御曹司義經、同く伴ふ人々、安田三郎義貞、大内太郎惟義、村上判官代康國、田代冠者信綱、侍大將には土肥次郎實平、子息彌太郎遠平、三浦介義澄、子息平六義村、畠山庄司次郎重忠、同長野三郎重清、佐原十郎義連、[_][3]和田小太郎義盛同次郎義茂同三郎宗實、佐々木四郎高綱、同五郎義清、熊谷次郎直實、子息小次郎直家、平山武者所季重、天野次郎直經、小河次郎資能、原三郎清益、金子十郎家忠、同與一親範、渡柳彌五郎清忠、別府小太郎清重、多々羅五郎義春、其子太郎光義、片岡太郎經春、源八廣綱、伊勢三郎義盛、奧州佐藤三郎嗣信、同四郎忠信、江田源三、熊井太郎、武藏坊辨慶を先として、都合其勢一萬餘騎、同日の同時に都を立て、丹波路に懸り、二日路を一日に打て、播磨と丹波と境なる三草の山の東の山口、小野原にこそ著にけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%92%8C%E7%94%B0#tk-10-278-nlp_gloss-28">10</a></p>
+      <p class="occurrence-context">此の硯は、親父入道相國砂金を多く宋朝の御門へ奉り給ひたりければ返報と覺しくて、日本和田の平大相國の許へとて、送られたりけるとかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%92%8C%E7%94%B0#tk-11-447-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">源氏の方にも和田小太郎義盛、船には乘らず、馬に打乘てなぎさに引へ、甲をば脱いで人にもたせ、鐙の鼻蹈そらし、よ引て射ければ、三町が内との物は外さずつよう射けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%92%8C%E7%94%B0#tk-11-450-nlp_gloss-41">11</a></p>
+      <p class="occurrence-context">新中納言是を召寄せて見給へば、白篦に鶴の本白、こうの羽を破合せて作だる矢の十三束二伏有に、沓卷より一束計おいて、和田小太郎平義盛と、漆にてぞ書附たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%92%8C%E7%94%B0#tk-11-452-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">是も沖よりなぎさへ三町餘をつと射渡して、和田小太郎が、後一段餘に引へたる三浦の石田左近太郎が弓手のかひなにしたたかにこそ立たりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%92%8C%E7%94%B0#tk-11-453-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">三浦の人共是を見て、「和田小太郎が、我に過て遠矢射る者なしと思ひて恥かいたるをかしさよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%92%8C%E7%94%B0#tk-11-456-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">和田小太郎是を聞き、「やすからぬ事也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%92%8C%E7%94%B0#tk-11-458-nlp_gloss-18">11</a></p>
+      <p class="occurrence-context">又判官の乘給る船に、沖より白篦の大矢を一つ射立てゝ、和田が樣に「こまたへ給はらん。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

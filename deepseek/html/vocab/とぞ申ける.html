@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>とぞ申ける</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>とぞ申ける</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>was called</li>
+      
+      <li>so they called</li>
+      
+      <li>said</li>
+      
+      <li>said (archaic honorific)</li>
+      
+      <li>said (so), thus spoke</li>
+      
+      <li>thus said</li>
+      
+      <li>said that</li>
+      
+      <li>and so said</li>
+      
+      <li>said (thus)</li>
+      
+      <li>said (polite, past tense)</li>
+      
+      <li>said (auxiliary)</li>
+      
+      <li>so said</li>
+      
+      <li>thus said (humble)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (42)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-33-nlp_gloss-51">1</a></p>
+      <p class="occurrence-context">此人々はかけまくもかたじけなく柏原天皇の御末とは申ながら、中比は都の住居もうと／＼しく、地下にのみ振舞なて伊勢國に住國ふかかりしかば、其國の器に事よせて、伊勢平氏とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-114-nlp_gloss-57">1</a></p>
+      <p class="occurrence-context">
+                  抑この重教卿を櫻町の中納言と申ける事はすぐれて心數奇給へる人にて、つねは吉野山をこひ、町に櫻をうゑならべ、其内に屋を立て、すみたまひしかば、來る年の春ごとに、みる人櫻町とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-139-nlp_gloss-18">1</a></p>
+      <p class="occurrence-context">始めは水干に立烏帽子、白鞘卷をさいて、舞ひければ、男舞とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-152-nlp_gloss-4">1</a></p>
+      <p class="occurrence-context">名をば佛とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-201-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-455-nlp_gloss-39">1</a></p>
+      <p class="occurrence-context">主上は二歳にて御禪を受けさせ給ひ、纔に五歳と申二月十九日、東宮踐祚ありしかば、位をすべらせ給て、新院とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-541-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-1-617-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-2-128-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-2-736-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-2-780-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-2-833-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-2-876-nlp_gloss-25">2</a></p>
+      <p class="occurrence-context">さればにや、さしも止事なかりつる靈山の多く滅失ぬるは、王法の末に成ぬる先表やらんとぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-3-509-nlp_gloss-145">3</a></p>
+      <p class="occurrence-context">當道三經の中に、坤儀經の説を見候に、『年を得ては年を出ず、月を得ては月を出ず、日を得ては日を出
+ず。』と見えて候。以の外に火急候。」とて、はらはらとぞ泣ける。傳奏の人も色を
+失ひ、君も叡慮を驚せ坐ます。若き公卿殿上人は「怪からぬ泰親が今の泣樣や、何事
+の有るべき。」とて、笑合れけり。され共此泰親は、晴明五代の苗裔を請て、天文は
+淵源を窮め、推條掌を指が如し。一事も違はざりければ、指神子とぞ申ける。雷の落
+懸りたりしか共、雷火の爲に、狩衣の袖は燒ながら、其身は恙も無りけり。上代にも
+末代にも、有がたかりし泰親なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-4-131-nlp_gloss-10">4</a></p>
+      <p class="occurrence-context">三條高倉にましませば、高倉宮とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-4-196-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-4-235-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-4-353-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-4-491-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-4-506-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-5-152-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-5-248-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-5-431-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-5-439-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-5-642-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-6-286-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-6-553-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-8-683-nlp_gloss-14">8</a></p>
+      <p class="occurrence-context">何しか人の口なれば、新攝政殿をばかるの大臣とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-9-178-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-9-824-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">此馬は信濃國井上だちにて有ければ、井上黒とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-9-923-nlp_gloss-30">9</a></p>
+      <p class="occurrence-context">此北方と申は、頭刑部卿則方の女、上西門院の女房、宮中一の美人、名をば小宰相殿とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-10-299-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-10-364-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-10-460-nlp_gloss-10">10</a></p>
+      <p class="occurrence-context">親しき者ども皆用て、高野の聖とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-10-472-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-10-679-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-11-177-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-11-210-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-11-419-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-11-639-nlp_gloss-19">11</a></p>
+      <p class="occurrence-context">大蛇の尾のなかに在ける時は村雲常に掩ければ天の村雲劍とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-11-913-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3%E3%81%91%E3%82%8B#tk-11-986-nlp_gloss-32">11</a></p>
+      <p class="occurrence-context">此重衡卿の北方と申は鳥飼中納言惟實の女、五條大納言國綱の養子、先帝の御乳母、大納言佐殿とぞ申ける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

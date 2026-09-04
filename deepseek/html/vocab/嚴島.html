@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嚴島</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>嚴島</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Itsukushima</li>
+      
+      <li>Itsukushima (a shrine island in Aki province)</li>
+      
+      <li>Itsukushima (a shrine island in Hiroshima Prefecture)</li>
+      
+      <li>Itsukushima (the name of a shrine on Miyajima island, also referring to the island itself)</li>
+      
+      <li>Itsukushima (a shrine located on the island of Itsukushima in Aki province)</li>
+      
+      <li>Itsukushima (shrine)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (21)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%9A%B4%E5%B3%B6#tk-2-436-nlp_gloss-39">2</a></p>
+      <p class="occurrence-context">既に赤地の錦の直垂に、黒絲縅の腹卷の、白金物打たる胸板せめて、先年安藝守たりし時、神拜の次に、靈夢を蒙て、嚴島の大明神より現に賜はられたりける銀の蛭卷したる小長刀、常の枕を放ず立られたりしを脇挾み、中門の廊へぞ出られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%9A%B4%E5%B3%B6#tk-2-794-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">譬ば安藝の嚴島をば、平家斜ならず崇敬はれ候に、何かは苦しう候べき、彼宮へ御參あり、御祈誓候へかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%9A%B4%E5%B3%B6#tk-2-801-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">『徳大寺殿は何事の御祈誓に嚴島へは參らせ給ひたりけるやらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%9A%B4%E5%B3%B6#tk-2-807-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">」とて、俄に精進始めつゝ、嚴島へぞ參られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%9A%B4%E5%B3%B6#tk-2-822-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">」「徳大寺は何事の祈誓に、嚴島までは參られたりけるやらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%9A%B4%E5%B3%B6#tk-2-925-nlp_gloss-39">2</a></p>
+      <p class="occurrence-context">是を浦に持て出て、「南無歸命頂禮、梵天帝釋、四大天王、けんろう地神、王城の鎭守諸大明神、殊には熊野權現、嚴島大明神、せめては一本なり共、都へ傳てたべ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%9A%B4%E5%B3%B6#tk-3-119-nlp_gloss-7">3</a></p>
+      <p class="occurrence-context">猶伊勢より始て、安藝の嚴島に至まで、七十餘箇所へ神馬を立らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%9A%B4%E5%B3%B6#tk-3-160-nlp_gloss-22">3</a></p>
+      <p class="occurrence-context">位に即奉て、外祖父、
+外祖母と仰れん。」と願ける。我が崇奉る安藝の嚴島に申さんとて、月詣を始て、祈
+り申されければ、中宮やがて、御懷姙有て、思ひのごとく皇子にて坐けるこそ目出度
+けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%9A%B4%E5%B3%B6#tk-3-161-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">抑平家安藝の嚴島を信じ始られける事は如何にと云に、鳥羽院の御宇に清盛公未安藝守たりし時、安藝國を以て、高野の大塔を修理せよとて、渡邊遠藤六郎頼方を雜掌に附られ、六年に修理畢ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%9A%B4%E5%B3%B6#tk-3-167-nlp_gloss-5">3</a></p>
+      <p class="occurrence-context">さては、安藝の嚴島、越前の氣比の宮は、兩界の垂跡で候が、氣比の宮は榮たれ共、嚴島はなきが如くに荒果て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%9A%B4%E5%B3%B6#tk-3-167-nlp_gloss-29">3</a></p>
+      <p class="occurrence-context">さては、安藝の嚴島、越前の氣比の宮は、兩界の垂跡で候が、氣比の宮は榮たれ共、嚴島はなきが如くに荒果て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%9A%B4%E5%B3%B6#tk-3-177-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">猶任を延られて、嚴島を修理せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%9A%B4%E5%B3%B6#tk-4-43-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">同十七日、嚴島御幸の御門出とて、入道相國の西八條の亭へ入せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%9A%B4%E5%B3%B6#tk-4-51-nlp_gloss-7">4</a></p>
+      <p class="occurrence-context">此日比聞えさせ給ひつる嚴島の御幸、西八條より既に遂させ御座す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%9A%B4%E5%B3%B6#tk-4-70-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">同廿六日、嚴島へ御參著、入道相國の最愛の内侍が宿所、御所になる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%9A%B4%E5%B3%B6#tk-4-83-nlp_gloss-10">4</a></p>
+      <p class="occurrence-context">風烈かりければ、御船漕戻し、嚴島の内、ありの浦に留らせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%9A%B4%E5%B3%B6#tk-5-133-nlp_gloss-9">5</a></p>
+      <p class="occurrence-context">」と或老翁に問ひ奉れば「嚴島の大明神」と答へ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%9A%B4%E5%B3%B6#tk-5-142-nlp_gloss-27">5</a></p>
+      <p class="occurrence-context">それにふしぎなりし事には清盛公いまだ安藝守たりし時神拜のついでに靈夢をかうぶて嚴島の大明神よりうつゝにたまはれたりし銀のひるまきしたる小長刀つねの枕をはなたず、たてられたりしが、ある夜俄にうせにけるこそふしぎなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%9A%B4%E5%B3%B6#tk-5-144-nlp_gloss-35">5</a></p>
+      <p class="occurrence-context">中にも高野に坐ける宰相入道成頼、か樣の事共を傳へ聞て、「すは平家の代は、やう／＼末に成ぬるは、嚴島大明神の、平家の方人し給ひけると云ふは其謂れ有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%9A%B4%E5%B3%B6#tk-5-151-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">誠に嚴島の大明神は女神とは申しながら、三明六通の靈神にてましませば俗體に現じ給はんも、難かるべきにあらず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%9A%B4%E5%B3%B6#tk-6-199-nlp_gloss-30">6</a></p>
+      <p class="occurrence-context">入道相國、か樣に痛う情なう振舞おかれし事を、さすが怖とや思はれけん、法皇慰め參せんとて、安藝の嚴島の内侍が腹の御娘、生年十八に成給ふが、優に花やかにおはしけるを法皇へ參らせらる。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>式部</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>式部</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Minister of the Board of Ceremonial</li>
+      
+      <li>Shikibu</li>
+      
+      <li>Shikibu-no-daijo</li>
+      
+      <li>Minister of Ceremonial</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (6)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%BC%8F%E9%83%A8#tk-0-1-nlp_gloss-15">0</a></p>
+      <p class="occurrence-context">其先祖を尋ぬれば、桓武天皇第五の皇子、一品式部卿葛原親王九代の後胤讃岐守正盛が孫、刑部卿忠盛朝臣の嫡男なり。彼親王の御子、高親王無官無位にして、うせ給ひぬ。其御子高望の王の時始めて平の姓を給て、上總介になり給しより、忽に王氏を出て人臣につらなる。其子鎭守府將軍義茂後には國香とあらたむ。國香より正盛に至る迄、六代は諸國の受領たりしかども、殿上の仙籍をばいまだゆるされず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%BC%8F%E9%83%A8#tk-0-56-nlp_gloss-328">0</a></p>
+      <p class="occurrence-context">東山の麓鹿の谷といふ所は、後は三井寺に續いて、ゆゝしき城郭にてぞありける。俊寛僧都の山庄あり。かれに常は寄りあひ／＼、平家滅さむずる謀をぞ囘しける。或時法皇も御幸なる。故少納言入道信西が子息、淨憲法印御供仕る。その夜の酒宴に、此由を淨憲法印に仰あはせられければ、「あなあさましや、人あまた承候ぬ。唯今漏きこえて、天下の大事に及び候ひなんず。」と大に噪ぎ申ければ、新大納言氣色かはりて、さと立たれけるが、御前に候ける瓶子を、狩衣の袖にかけて引きたふされたりけるを、法皇「あれはいかに。」と仰せければ大納言立かへて、「平氏たふれ候ひぬ。」と申されける。法皇ゑつぼに入らせおはしまして、「物ども參て猿樂つかまつれ。」と仰ければ、平判官康頼參りて、「あゝ餘にへいじの多う候に、もて醉て候。」と申す。俊寛僧都「さてそれをいかゞ仕らむずる。」と申されければ、西光法師「頸を取るにはしかじ。」とて、瓶子の首を取てぞ入にける。淨憲法印餘りのあさましさに、つや／＼物も申されず。返す／＼も恐しかりしことどもなり。與力の輩誰々ぞ。近江中將入道蓮淨俗名成正、法勝寺の執行俊寛僧都、山城守基兼、式部大輔雅綱、平判官康頼、宗判官信房、新平判官資行、攝津國源氏多田藏人行綱を始として北面の輩多く與力したりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%BC%8F%E9%83%A8#tk-1-13-nlp_gloss-21">1</a></p>
+      <p class="occurrence-context">さる程に、近江中將入道蓮淨、法勝寺執行俊寛僧都、山城守基兼、式部大輔正綱、平判官康頼、宗判官信房、新平判官資行も、捕れて出來たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%BC%8F%E9%83%A8#tk-1-35-nlp_gloss-29">1</a></p>
+      <p class="occurrence-context">大納言一人にもかぎらず、警を蒙る輩多かりけり。近江中將入道蓮淨佐渡國、山城守基兼伯耆國、式部大輔正綱播磨國、宗判官信房阿波國、新平判官資行は美作國とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%BC%8F%E9%83%A8#tk-3-56-nlp_gloss-171">3</a></p>
+      <p class="occurrence-context">搦手に向ふ老僧共大將軍には源三位入道頼政、乘圓房阿闍梨慶秀律成房阿闍梨日胤、帥法印禪智、禪智が弟子義寶、禪永を始として、都合其勢一千人、手々に燒松もて、如意が峯へぞ向ひける。大手の大將軍には嫡子伊豆守仲綱、次男源大夫判官兼綱、六條藏人仲家、其子藏人太郎仲光、大衆には圓滿院大輔源覺、成喜院荒土佐、律成房伊賀公、法輪院鬼佐渡、是等は力の強さ、弓箭打物もては、鬼にも神にも逢うと云ふ一人當千の兵也。平等院には、因幡竪者荒大夫、角六郎房、島阿闍梨、筒井法師に、郷阿闍梨、惡少納言、北院には、金光院の六天狗、式部大輔、能登、加賀、佐渡、備後等也。松井肥後、證南院筑後、賀屋筑前、大矢俊長、五智院但馬、乘圓房阿闍梨慶秀が房人、六十人の内、加賀光乘、刑部春秀、法師原には一來法師に如ざりき。堂衆には、筒井淨妙明秀、小藏尊月、尊永、慈慶、樂住、鐡拳玄永、武士には渡邊省播磨次郎、授薩摩兵衞、長七唱、競瀧口、與右馬允、續源太、清、勸を先として、都合其勢一千五百餘人三井寺をこそ打立けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%BC%8F%E9%83%A8#tk-6-22-nlp_gloss-150">6</a></p>
+      <p class="occurrence-context">六月一日藏人右衞門權佐定長、神祇權少副大中臣親俊を、殿上の下口へ召て、兵革靖まらば、大神宮へ行幸成るべき由仰下さる。大神宮は高天原より天降せ給ひしを垂仁天皇の御宇、廿五年三月に、大和國笠縫の里より、伊勢國渡會の郡、五十鈴の河上、下津磐根に大宮柱をふとしきたて、祝初奉てより以降、日本六十餘州、三千七百五十餘社の、大小の神祗冥道の中には無雙也。され共、代々の御門臨幸は無りしに、奈良の御門の御時左大臣不比等の孫、參議式部卿宇合の子、右近衞權少將兼太宰少貳藤原廣嗣と云ふ人有けり。天平十五年十月、肥前國松浦郡にして、數萬の凶賊を語らて、國家を既に危めんとす。是によて大野東人を大將軍にて、廣嗣追討せられし時、始めて大神宮へ行幸なりけるとかや、其例とぞ聞えし。彼廣嗣は肥前の松浦より都へ一日に下上る馬を持たりけり。追討せられし時も、御方の凶賊落行き、皆亡て後、件の馬に打乘て、海中へ馳入けるとぞ聞えし。其亡靈あれて、怖き事共多かりける中に、天平十六年六月十八日、筑前國御笠郡、太宰府の觀世音寺、供養せられし導師には、[2]玄ばう僧正とぞ聞えし。高座に上り敬白の鐘打鳴す時、俄に空掻曇り雷おびたゞしう鳴て、[3]玄ばうの上に落懸り、其首を取て雲の中へぞ入にける。是は廣嗣調伏したりける故とぞ聞えし。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

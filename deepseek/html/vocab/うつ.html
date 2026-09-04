@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>うつ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>うつ</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>to strike</li>
+      
+      <li>transfer</li>
+      
+      <li>beautiful</li>
+      
+      <li>moved</li>
+      
+      <li>reality</li>
+      
+      <li>hang</li>
+      
+      <li>to hang</li>
+      
+      <li>to carve (inscribe)</li>
+      
+      <li>to hang (an inscription/plaque)</li>
+      
+      <li>moving to</li>
+      
+      <li>to move/transfer</li>
+      
+      <li>actually</li>
+      
+      <li>to strike; to hit</li>
+      
+      <li>prostrate</li>
+      
+      <li>is reflected</li>
+      
+      <li>to reflect</li>
+      
+      <li>striking</li>
+      
+      <li>beautifully</li>
+      
+      <li>to be moved/transferred</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (25)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-25-nlp_gloss-7">1</a></p>
+      <p class="occurrence-context">貫首以下あやしみをなし、「うつぼ柱よりうち、鈴の綱のへんに布衣の者の候ふはなにものぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-81-nlp_gloss-29">1</a></p>
+      <p class="occurrence-context">保元々年七月に宇治の左府代をみだり給し時、安藝守とて御方にて勳功ありしかば、播磨守にうつて同三年太宰大貳になる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-189-nlp_gloss-10">1</a></p>
+      <p class="occurrence-context">佛御前は髮姿よりはじめてみめ形うつくしく聲よく節も上手でありければ、なじかは舞もそんずべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-190-nlp_gloss-21">1</a></p>
+      <p class="occurrence-context">心も及ばず舞すましたりければ、入道相國舞にめで給ひて佛に心をうつされけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-313-nlp_gloss-10">1</a></p>
+      <p class="occurrence-context">佛御前と見奉るは夢かや、うつゝか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-405-nlp_gloss-38">1</a></p>
+      <p class="occurrence-context">一天の君崩御なて後、御墓所へわたし奉る時の作法は、南北二京の大衆悉く供奉して、御墓所の廻に、わが寺々の額をうつことあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-406-nlp_gloss-16">1</a></p>
+      <p class="occurrence-context">先づ聖武天皇の御願、爭ふべき寺なければ、東大寺の額をうつ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-407-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">次に淡海公の御願とて、興福寺の額をうつ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-408-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">北京には、興福寺に向へて延暦寺の額をうつ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%86%E3%81%A4#tk-1-409-nlp_gloss-24">1</a></p>
+      <p class="occurrence-context">次に天武天皇の御願、教待和尚、智證大師の草創とて、園城寺の額をうつ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E3%81%86%E3%81%A4#tk-3-263-nlp_gloss-26">3</a></p>
+      <p class="occurrence-context">六條は盡せぬ物思ひに黒かりし髮も皆白く成り、北の方、さしも花やかにうつくしう坐しか共、いつしか痩衰へて、其人とも見え給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%86%E3%81%A4#tk-5-46-nlp_gloss-24">5</a></p>
+      <p class="occurrence-context">然を桓武天皇、延暦三年十月二日、奈良の京春日の里より、山城國長岡にうつて、十年と云し正月に、大納言藤原小黒丸、參議左大辨紀古佐美、大僧都玄慶等を遣して、當國葛野郡宇多村を見せらるゝに、兩人共に奏して云、此地の體を見るに、左青龍、右白虎、前朱雀、後玄武、四神相應の地なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%86%E3%81%A4#tk-5-50-nlp_gloss-6">5</a></p>
+      <p class="occurrence-context">末代に此都を他國へうつす事あらば、守護神となるべしとぞ御約束ありける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%86%E3%81%A4#tk-5-142-nlp_gloss-32">5</a></p>
+      <p class="occurrence-context">それにふしぎなりし事には清盛公いまだ安藝守たりし時神拜のついでに靈夢をかうぶて嚴島の大明神よりうつゝにたまはれたりし銀のひるまきしたる小長刀つねの枕をはなたず、たてられたりしが、ある夜俄にうせにけるこそふしぎなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%86%E3%81%A4#tk-5-312-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">時にうつくしげなる童子一人來て、文學が左右の手を取て引上給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E3%81%86%E3%81%A4#tk-9-695-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">敵をうつと云ふは、我も名乘て聞せ、敵にも名乘せて、頸を捕たればこそ大功なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%86%E3%81%A4#tk-10-313-nlp_gloss-10">10</a></p>
+      <p class="occurrence-context">南には蒼海漫々として、岸うつ浪も茫々たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%86%E3%81%A4#tk-11-292-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">うつぶして鞭をもて掻寄て、取う／＼とし給へば、兵共、「唯捨させ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%86%E3%81%A4#tk-11-632-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">其影酒にうつれり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%86%E3%81%A4#tk-11-726-nlp_gloss-30">11</a></p>
+      <p class="occurrence-context">抑内侍所と申は、昔、天照大神天の岩戸に閉籠らんとせさせ給ひし時、如何にもして我容をうつし置きて御子孫に見て奉らんとて御鏡を鑄給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E3%81%86%E3%81%A4#tk-12-341-nlp_gloss-20">12</a></p>
+      <p class="occurrence-context">既に今はの時に成しかば、若君御ぐしの肩にかゝりたりけるを、よにうつくしき御手をもて前へ打越し給ひたりければ、守護の武士ども見まゐらせて「あないとほし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E3%81%86%E3%81%A4#tk-12-349-nlp_gloss-13">12</a></p>
+      <p class="occurrence-context">「あないとほし、あの松原の中に、世にうつくしき若君を、北條殿の斬らせたまふぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E3%81%86%E3%81%A4#tk-12-500-nlp_gloss-26">12</a></p>
+      <p class="occurrence-context">さる程に、六代御前はやう／＼、十四五にも成給へば、みめ容いよ／＼うつくしく、あたりも照り輝くばかりなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E3%81%86%E3%81%A4#tk-12-506-nlp_gloss-21">12</a></p>
+      <p class="occurrence-context">」と仰ければ、六代御前十六と申し文治五年の春の比、うつくしげなる髮を肩のまはりに鋏み落し柿の衣袴に笈など拵へ聖に暇乞うて修行に出でられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E3%81%86%E3%81%A4#tk-12-610-nlp_gloss-225">12</a></p>
+      <p class="occurrence-context">二の宮は、御學問怠らせ給はず、正理を先とせさせ給ひしかば、如何にもして、此宮を位に即奉らんとはからひけれども、前右大將頼朝卿のおはせし程は叶はざりけるが、
+建久十年正月十三日、頼朝卿失せ給ひしかば、やがて謀反を起さんとしける程に忽に
+洩聞えて、二條猪熊の宿所に官人共つけられ召捕て八十に餘て後隱岐國へぞ流されけ
+る。文覺京を出るとて、「是程老の波に望て、今日明日とも知ぬ身を、縱勅勘なりと
+も都の片邊には置給はで隱岐國まで流さるる及丁冠者こそ安からね。終には文覺が流
+さるゝ國へ迎へ申さんずるものを。」と、申けるこそ怖しけれ。此君は餘に毬杖の玉
+を愛せさせ給ひければ文覺かやうに惡口申ける也。されば承久に御謀反起させ給ひて、
+國こそ多けれ、隱岐國へうつされ給ひけるこそ不思議なれ。彼國にても文覺が亡靈荒て、
+常は御物語申けるとぞ聞えし。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

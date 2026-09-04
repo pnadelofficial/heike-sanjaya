@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>將軍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>將軍</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>general</li>
+      
+      <li>general (military commander)</li>
+      
+      <li>deputy general</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (29)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B0%87%E8%BB%8D#tk-1-384-nlp_gloss-34">1</a></p>
+      <p class="occurrence-context">伊尹、第伍倫、虞世南、太公望、ろく里先生、李勣、司馬、手長、足長、馬形の障子、鬼の間、李將軍が姿をさながら寫せる障子もあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B0%87%E8%BB%8D#tk-4-769-nlp_gloss-33">4</a></p>
+      <p class="occurrence-context">されば三井寺をも南都をも攻らるべしとて、同五月二十七日、大將軍には入道の四男頭中將重衡、副將軍には薩摩守忠度、都合其勢一萬餘騎で園城寺へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-52-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">將軍が塚とて今に在り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-148-nlp_gloss-26">5</a></p>
+      <p class="occurrence-context">其も平家亡び、源氏の世盡なん後、大織冠の御末、執柄家の君達の、天下の將軍に成給べきか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-496-nlp_gloss-36">5</a></p>
+      <p class="occurrence-context">さる程に、福原には勢の附ぬ先に、急ぎ討手を下べしと公卿僉議有て、大將軍には小松權亮少將維盛、副將軍には薩摩守忠度、都合其勢三萬餘騎、九月十八日に新都を立て、十九日には舊都に著き、やがて廿日東國へこそ討立れけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-497-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">大將軍權亮少將維盛は、生年二十三、容儀帶佩繪に書とも筆も及難し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-500-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">副將軍薩摩守忠度は、紺地の錦の直垂に、黒糸威の鎧著て、黒き馬の太う逞に沃懸地の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-516-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">大將軍副將軍各禮儀を正うして、是を給はる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-516-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">大將軍副將軍各禮儀を正うして、是を給はる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-518-nlp_gloss-12">5</a></p>
+      <p class="occurrence-context">古朝敵を滅さんとて、都をいづる將軍は、三つの存知有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-560-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">大將軍權亮少將維盛、侍大將上總守忠清を召て「只維盛が存知には、足柄を打越えて坂東にて軍をせん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B0%87%E8%BB%8D#tk-5-716-nlp_gloss-26">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「さらば南都を攻よや。」とて、大將軍には頭中將重衡、副將軍には中宮亮通盛、都
+合其勢四萬餘騎で南都へ發向す。大衆老少嫌はず七千餘人甲の緒をしめ、奈良坂、般
+若寺、二箇所の路を掘切て、堀ほり垣楯かき、逆茂木引て待かけたり。平家は四萬餘
+騎を二手に分て、奈良坂、般若寺、二箇所の城郭に押寄て、鬨をどとつくる。大衆は
+皆歩立打物なり。官軍は馬にてかけまはしかけまはし、あそここゝに追懸／＼指つめ
+引つめ散々に射ければ、防ぐ所の大衆數を盡いて討れにけり。卯刻に矢合して一日戰
+ひ暮す。夜に入て、奈良坂、般若寺、二箇所の城郭共に破れぬ。落行く衆徒の中に、
+坂四郎永覺と云ふ惡僧あり。打物持ても弓箭を取ても力の強さも七大寺十五大寺に勝
+たり。萌黄威の腹巻の上に、黒絲威の鎧を重てぞ著たりける。帽子甲に五枚甲の緒を
+しめて、左右の手には茅の葉の樣に反たる白柄の大長刀、黒漆の大太刀持つまゝに、
+同宿十餘人前後にたて、てがいの門より打て出でたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B0%87%E8%BB%8D#tk-6-212-nlp_gloss-30">6</a></p>
+      <p class="occurrence-context">義仲も東山北陸兩道を從へ、今一日も先に平家を責落し、譬へば日本國に、二人の將軍と云はればや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B0%87%E8%BB%8D#tk-6-498-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">大將軍には、左兵衞督知盛、左中將清經、小松少將有盛、都合其勢三萬餘騎で發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B0%87%E8%BB%8D#tk-6-565-nlp_gloss-2">6</a></p>
+      <p class="occurrence-context">又「將軍勅令を蒙て、國の境を出。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B0%87%E8%BB%8D#tk-7-24-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">大將軍には小松三位中將維盛、越前三位通盛、但馬守經正、薩摩守忠度、參河守知度、淡路守清房、侍大將には、越中前司盛俊、上總大夫判官忠綱、飛騨大夫判官景高、高橋判官長綱、河内判官秀國、武藏三郎左衞門有國、越中二郎兵衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清を先として、以上大將軍六人、しかるべき侍三百四十餘人、都合其勢十萬餘騎、壽永二年四月十七日辰の一點に都を立て、北國へこそ趣きけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B0%87%E8%BB%8D#tk-7-27-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">大將軍維盛、通盛は進給へ共、副將軍經正、忠度、知度、清房なんどは、未近江國鹽津、貝津に引へたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B0%87%E8%BB%8D#tk-7-27-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">大將軍維盛、通盛は進給へ共、副將軍經正、忠度、知度、清房なんどは、未近江國鹽津、貝津に引へたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B0%87%E8%BB%8D#tk-7-446-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">大將軍には新中納言知盛卿、本三位中將重衡卿、都合其勢三千餘騎都を立て先づ山階に宿せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B0%87%E8%BB%8D#tk-8-65-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">其上朝日の將軍と云ふ院宣を下されけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B0%87%E8%BB%8D#tk-9-132-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">大將軍九郎義經、軍兵共に軍をばせさせ、院御所の覺束なきに、守護し奉らんとて、先づ我身共に直甲五六騎、六條殿へ馳參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B0%87%E8%BB%8D#tk-9-383-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">平家の方には大將軍小松新三位中將資盛、同少將有盛、丹後侍從忠房、備中守師盛、侍大將には平内兵衞清家、海老次郎盛方を初として、都合其勢三千餘騎、小野原より三里隔てゝ三草山の西の山口に陣をとる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B0%87%E8%BB%8D#tk-9-407-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">大將軍小松新三位中將、同少將、丹後侍從、面目なうや思はれけん、播磨國高砂より舟に乘て、讃岐の八島へ渡給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B0%87%E8%BB%8D#tk-10-767-nlp_gloss-6">10</a></p>
+      <p class="occurrence-context">平家の方には大將軍小松新三位中將資盛、同少將有盛、丹後侍從忠房、侍大將には飛騨三郎左衞門景經、越中次郎兵衞盛次、上總五郎兵衞忠光、惡七兵衞景清を先として、五百餘艘の兵船に取乘て、備前の小島に著と聞えしかば、源氏室を立て、是も備前國、西河尻、藤戸に陣をぞ取たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B0%87%E8%BB%8D#tk-10-793-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">大將軍參河守、「あれ制せよ、留めよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B0%87%E8%BB%8D#tk-10-795-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">大將軍の許されもなきに、狼藉也留まり給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B0%87%E8%BB%8D#tk-10-798-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">大將軍參河守是を見て、「佐々木に謀られにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B0%87%E8%BB%8D#tk-11-444-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">大將軍九郎大夫判官眞先に進で戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B0%87%E8%BB%8D#tk-11-788-nlp_gloss-34">11</a></p>
+      <p class="occurrence-context">』と云ひし事の不便さに、『あの右衞門督をば朝敵を平げん時は、大將軍をせさせ、是をば副將軍をせさせんずれば。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

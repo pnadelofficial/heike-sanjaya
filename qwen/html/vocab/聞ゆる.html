@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聞ゆる</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>聞ゆる</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>known</li>
+      
+      <li>heard</li>
+      
+      <li>was known</li>
+      
+      <li>said</li>
+      
+      <li>called</li>
+      
+      <li>hearing</li>
+      
+      <li>is said</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (12)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-1-37-nlp_gloss-269">1</a></p>
+      <p class="occurrence-context">同廿二日福原へ下著給ひたりければ、太政入道瀬尾太郎兼康に仰て、備中國へぞ流されける。兼康は宰相の還聞給はん所を恐れて、道すがらも樣々に痛り慰め奉る。され共、少將少も慰み給ふ事もなし。夜晝只佛の御名をのみ唱て父の事をぞ嘆かれける。
+新大納言は、備前の兒島に御座けるを、預の武士難波次郎經遠是は猶舟津近うて惡かりなんとて、地へ渡奉り、備前備中兩國の境、庭瀬の郷有木の別所と云ふ山寺に置奉る。備中の瀬尾と、備前の有木の別所の間は、僅五十町に足ぬ所なれば、丹波少將其方の風もさすが懷うや思はれけむ、或時兼康を召て、「是より大納言殿の御渡有なる備中の有木の別所へは、如何程の道ぞ。」と問給へば、直に知せ奉ては、惡かりなんと思ひけむ、「片道十二三で候。」と申。其時少將涙をはらはらと流いて、「日本は昔三十三箇國にて有けるを、中比六十六箇國には分られたんなり。さ云ふ備前備中備後も、本は一國にて有ける也。又東に聞ゆる出羽陸奧兩國も、昔は六十六郡が一國にてありけるを、其時十二郡を割分て、出羽の國とは立られたり。されば實方中將、奧州へ流されたりける時、此國の名所阿古耶の松と云所を見ばやとて、國中を尋ありきけるが、尋かねて歸りける道に、老翁の一人行逢たりければ『やゝ御邊はふるい人とこそ見奉れ、當國の名所に阿古屋の松と云ふ所やしりたる。』と問に、『全く當國の内には候はず、出羽の國にや候らん。』と申ければ、『さては御邊も知ざりけり。世末に成て、國の名所をも早皆呼失ひけるにこそ。』とて、空しく過んとしければ、老翁中將の袖を控へて、『あはれ君は、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-10-19-nlp_gloss-480">10</a></p>
+      <p class="occurrence-context">判官志度浦に下居て、頸共實檢しておはしけるが、伊勢三郎義盛をめして、宣ひけるは、「阿波民部重能が嫡子、田内左衞門教能は河野四郎通信が、召せども參らぬを責んとて、三千餘騎にて、伊豫へ越えたりけるが、河野をば打泄して家子郎等百五十人が頸斬て昨日八島の内裏へ參せたりけるが、今日是へ著ときく。汝行向て、ともかくもこしらへて具して參れかし。」と宣へば、畏て承り、旗一流給はてさす儘に、其勢僅に十六騎、皆白裝束にて馳向ふ。義盛教能に行合たり。白旗赤旗、二町許を隔てゝゆらへたり。伊勢三郎義盛使者を立て申けるは「是は源氏の大將軍九郎大夫判官殿の御内に、伊勢三郎義盛と申者で候が、大將に申べき事有て、是まで罷向て候。軍合戰の料でも候はねば、物具もし候はず、弓矢ももたせ候はず、あけて入させ給へ。」と申ければ、三千餘騎の兵共、中を開てぞ通しける。義盛教能に打雙て、「且聞給ても有るらん、鎌倉殿の御弟九郎大夫判官殿院宣を承て、平家追討の爲に、西國へ向はせ給て候が、一昨日阿波國勝浦にて、御邊の伯父櫻間介殿討たれ給ぬ。昨日八島に寄せて御所内裏皆燒拂ひ、大臣殿父子生捕にし奉り能登殿は自害し給ひぬ。その外の君達或は討死に或は海に入り給ひぬ。餘黨の僅に有つるは志度の浦にて、皆討たれぬ。御邊の父阿波民部殿は、降人に參せ給ひて候を、義盛が預り奉て候が、あはれ田内左衞門が是をば夢にも知らで、明日は軍して討れ參らせんずる無慚さよと、通夜歎き給ふが、餘に最愛て此事知らせ奉らんとて是まで罷向て候。其上は軍して討死せんとも降人に參て父を今一度見奉らんともともかうも御邊が計ぞ。」といひければ、田内左衞門、聞ゆる兵なれども運や盡にけん。「且聞く事に少も違ず。」とて、甲を脱弓の弦を弛いて、郎等にもたす。大將がか樣になる上は、三千餘騎の兵ども皆此の如し。僅に十六騎に具せられ、おめおめと降人にこそ參りけれ。「義盛が策誠にゆゝしかりけり。」と判官も感じ給ひけり。やがて田内左衞門をば物具めされて、伊勢三郎に預けらる。「さてあの勢共は如何に。」と宣へば、遠國の者共は、「誰を誰とか思ひ參せ候べき。唯世の亂れをしづめて國を知し召さんを君とせん。」と申ければ、尤然るべしとて、三千餘騎を、皆我勢にぞ具せられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-10-32-nlp_gloss-177">10</a></p>
+      <p class="occurrence-context">大臣殿の御乳母飛騨三郎左衞門景經、小船に乘て、義盛が船に乘移り、「吾君取奉るは何者ぞ。」とて太刀を拔で走りかゝる。義盛既にあぶなう見えけるを、義盛が童、主を討せじと中に隔たり、景經に打てかゝる。景經が打つ太刀に、義盛が童、甲の眞甲打破れて、二の太刀に頸打落されぬ。義盛猶あぶなう見えけるを、並の船より、堀彌太郎親經、よ引いて兵と射る。景經内甲を射させてひるむ處を、堀彌太郎、義盛が船に乘移て、三郎左衞門に組で伏す。堀が郎等主に續いて乘移り、景經が鎧の草摺引上て、二刀刺す。飛騨三郎左衞門景經聞ゆる大力の剛の者なれども運や盡にけん。痛手は負つ、敵はあまたあり、そこにて終に討たれにけり。大臣殿は生ながら取りあげられ目の前で乳子がうたるるを見給ふに、いかなる心ちかせられけん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-4-26-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">熊野へ參り、那智籠せんとしけるが、行の試みに、聞ゆる瀑に暫くうたれて見んとて、瀑下へぞ參りける。比は十二月十日餘の事なれば、雪降積り、つらゝいて、谷の小川も音もせず、峯の嵐吹凍り、瀑の白絲垂氷と成り、皆白妙に押竝べて、四方の梢も見え分かず。然るに文學瀑壺に下浸り、頸際漬て、慈救の咒を滿けるが、二三日こそ有けれ、四五日にも成ければ、堪へずして文學浮あがりにけり。數千丈漲り落る瀑なれば、なじかはたまるべき。さとおとされて、刀の刃の如くに、さしも嚴き岩角の中を、浮ぬ沈ぬ、五六町こそ流れたれ。時にうつくしげなる童子一人來て、文學が左右の手を取て引上給ふ。人奇特の思を成し、火を燒きあぶりなどしければ、定業ならぬ命では有り、ほどなく息いでにけり。文學少し人心地いできて、大の眼を見怒かし「我此瀑に三七日打れて、慈救の三洛叉を滿うと思ふ大願有り。今日は纔に五日になる。七日だにも過ざるに、何者が爰へはとて來たるぞ。」と言ければ、見る人身の毛よだて物いはず。又瀑壺に歸り立て打れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-6-2-nlp_gloss-473">6</a></p>
+      <p class="occurrence-context">大將軍維盛、通盛は進給へ共、副將軍經正、忠度、知度、清房なんどは、未近江國鹽津、貝津に引へたり。其中にも經正は、詩歌管絃に長じ給へる人なれば、かゝる亂の中にも、心を澄し、湖の端に打出て、遙に澳なる島を見渡し伴に具せられたる藤兵衞有教を召て、「あれをば何くと云ぞ。」と問はれければ、「あれこそ聞え候ふ竹生島にて候へ。」と申。「げにさる事あり。いざや參らん。」とて、藤兵衞有教、安衞門守教以下、侍五六人召具して、小船に乘り、竹生島へぞ渡られける。比は卯月中の八日の事なれば、緑に見ゆる梢には、春の情を殘すと覺え、澗谷の鶯舌の聲老て、初音床しき郭公、折知顏に告渡る。松に藤なみさきかゝて誠に面白かりければ、急ぎ船より下り、岸に上て此島の景色を見給ふに、心も詞も及れず。彼秦皇、漢武、或は童男丱女を遣はし、或は方士をして不死の藥を尋ね給ひしに、蓬莱を見ずばいなや歸らじと云て、徒に船の中にて老い、天水茫々として求る事を得ざりけん蓬莱洞の有樣もかくや在けんとぞ見えし。或經の文に云く、「閻浮提の内に湖有り、其中に金輪際より生出たる水精輪の山有り、天女住む處。」と云り。即此島のこと也。經正、明神の御前につい居給ひつゝ、「夫大辯功徳天は、往古の如來、法身の大士なり。辯才妙音二天の名は、各別なりとは云へ共、本地一體にして、衆生を濟度し給ふ。一度参詣の輩は、所願成就圓滿すと承はる。憑しうこそ候へ。」とて、しばらく法施參らせ給に、漸々日暮れ、居待の月指出て、海上も照渡り、社壇も彌輝きて、誠に面白かりければ、常住の僧共、「聞ゆる御事なり。」とて、御琵琶を參らせたりければ、經正是を彈給ふに、上原石上の秘曲には、宮の中も澄渡り、明神感應に堪ずして、經正の袖の上に、白龍現じて見え給へり。忝なく嬉しさの餘りに、なくなくかうぞ思續け給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-6-12-nlp_gloss-354">6</a></p>
+      <p class="occurrence-context">次第に闇うなりければ北南より廻れる搦手の勢一萬餘騎、倶利迦羅の堂の邊にまゐり會ひ、箙の方立打敲き、鬨をどとぞ作ける。平家後を顧みければ、白旗雲の如く差上あり。此山は四方巖石であんなれば、搦手よもまはらじとこそ思つるに、こは如何にとて噪ぎあへり。去程に木曾殿大手より鬨のこゑをぞ作合せ給ふ。松長の柳原、茱萸木林に一萬騎引へたりける勢も、今井四郎が六千餘騎で、日宮林に在けるも同う鬨をぞ作ける。前後四萬騎が喚く聲、山も河も唯一度に崩るるとこそ聞えにけれ。案のごとく平家。次第に闇うはなる、前後より敵は攻來る、「きたなしや返せや返せ。」
+と云ふ族多かりけれ共、大勢の傾立ちぬるは、左右なう取て返す事難ければ、倶利迦
+羅谷へ、我先にとぞ落しける。ま先に落したる者が見えねば、此谷の底に、道の有に
+こそとて、親落せば子も落し、兄落せば弟も續く。主落せば家子郎等落しけり。馬に
+は人、人には馬、落重り落重りさばかり深き谷一つを、平家の勢七萬餘騎でぞ填たり
+ける。巖泉血を流し、死骸岳を成せり。されば其谷の邊には、矢の穴刀の瑕殘て今に
+有りとぞ承はる。平家には宗と憑まれたりける上總大夫判官忠綱、飛騨大夫判官景高、
+河内判官秀國も、此谷に埋もれて失にけり。備中國住人瀬尾太郎兼康といふ聞ゆる大
+力も、そこにて加賀國住人藏光次郎成澄が手に懸て、生捕にせらる。越前國火打が城
+にて、返忠したりける平泉寺の長吏齋明威儀師も捕はれぬ。木曾殿「あまりに憎きに
+其法師をば先切れ。」とて、切られけり。平氏の大將維盛、通盛、希有の命生て加賀國へ引退く。七萬餘騎が中より、僅に二十餘騎ぞ遁たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-8-4-nlp_gloss-96">8</a></p>
+      <p class="occurrence-context">金覆輪の鞍置て、小總の鞦懸け、白沫かませ、舎人あまた附たりけれども、猶引もためず躍らせて出きたり。梶原源太打寄て、「其れは誰が御馬ぞ。」「佐々木殿の御馬候。」其時梶原「安からぬ者なり。おなじやうにめしつかはるゝ景季を佐々木におぼしめしかへられけるこそ遺恨なれ。都へ上て木曾殿の御内に四天王と聞ゆる、今井、樋口、楯、根井に組んで死ぬるか、然らずば西國へ向うて、一人當千と聞る平家の侍共と軍して死なんとこそ思つれども、此御氣色では、それも詮なし。爰で佐々木に引組み刺違へ、好い侍二人死で兵衞佐殿に損とらせ奉らん。」とつぶやいてこそ待懸たれ。佐々木四郎は何心もなく歩せて出來たり。梶原押竝べてやくむ、向うざまにやあて落すと思ひけるが、先詞を懸けり。「いかに佐々木殿、いけずき給はらせ給てさうな。」と言ひければ、佐々木「あはれ此仁も内々所望すると聞し物を。」ときと思ひ出して、「さ候へばこそ此御大事にのぼり候が、定て宇治勢田の橋をばひいて候らん。乘て河渡すべき馬はなし。いけずきを申さばやとは思へども、梶原殿の申されけるにも御許れないと承はる間、まして高綱が申すにもよも給らじと思つゝ後日には如何なる御勘當も有ばあれと存じて、曉立んとての夜、舎人に心をあはせて、さしも御秘藏候いけずきを盗みすまいて上りさうはいかに。」と言ひければ、梶原此詞に腹がゐて、「ねたい、さらば景季も竊むべかりける者を。」とて、どと笑て退にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-8-18-nlp_gloss-172">8</a></p>
+      <p class="occurrence-context">樋口次郎は兒玉黨に結ほれたりければ、兒玉の人ども寄合て、「弓矢取習ひ我も人も廣い中へ入らんとするは、自然の事の在ん時の一まとの息をも休め、暫しの命をも續んと思ふ爲也。されば樋口次郎が我等にむすぼほれけんも、さこそは思ひけめ。今度の我等が勳功には樋口が命を申請ん。」とて使者を立てゝ、「日比は木曾殿の御内に、今井、樋口とて聞え給しかども、今は木曾殿討れさせ給ひぬ。何か苦かるべき、我等が中へ降人に成給へ。勳功の賞に申かへて命ばかり助奉らん。出家入道をもして後世を弔ひ參せ給へ。」と云ければ、樋口次郎聞ゆる兵なれども、運や盡にけん、兒玉黨の中へ降人にこそ成にけれ。是を九郎御曹司に申す。御所へ奏聞して宥められたりしを傍の公卿殿上人、局の女房達、「木曾が法住寺殿へ寄せて、鬨を作り君をも惱し參らせ、火をかけて、多の人々を滅し失ひしには、あそこにもこゝにも、今井樋口といふ聲のみこそ有しか。これらを宥められんは口惜かるべし。」と、面々に申されければ、又死罪に定めらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-8-21-nlp_gloss-186">8</a></p>
+      <p class="occurrence-context">平家は去年の冬の比より、讃岐國八島磯を出て、攝津國難波潟へ押渡り、福原の舊都に居住して、西は一谷を城郭に構へ、東は生田森を大手の木戸口とぞ定めける。其内、福原、兵庫、板宿、須磨に籠る勢、是は山陽道八箇國、南海道六箇國、都合十四箇國を打隨へて、召るゝ所の軍兵也。十萬餘騎とぞ聞えし。一谷は北は山、南は海、口は狹くて奧廣し。岸高くして屏風を立たるに異ならず。北の山際より、南の海の遠淺迄、大石を重上げ、大木を伐て逆茂木にひき、深き所には大船どもをそばだてて掻楯にかき、城の面の高櫓には、一人當千と聞ゆる四國鎭西の兵ども甲冑弓箭を帶して、雲霞の如くになみ居たり。やぐらの下には、鞍置馬共、十重廿重に引立てたり。常に大皷を打て亂聲を爲す。一張の弓の勢は、半月胸の前に懸り、三尺の劍の光は、秋の霜腰の間に横へたり。高き所には赤旗多く打立たれば、春風に吹れて天に翻るは、火焔の燃上るに異ならず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-8-37-nlp_gloss-72">8</a></p>
+      <p class="occurrence-context">六日の明ぼのに、九郎御曹司、一萬餘騎を二手に分け、先づ土肥次郎實平をば七千餘騎で一谷の西の手へ差遣はす。我身は三千餘騎で、一谷のうしろ鵯越を落さんと、丹波路より搦手にこそまはられけれ。兵共「是は聞ゆる惡所で有なり。同う死ぬるとも敵に逢うてこそ死たけれ惡所に落ては死たからず。あはれ此山の案内者やあるらん。」と面々に申ければ、武藏國の住人平山武者所進み出でて、申けるは、「季重こそ案内は知て候へ。」御曹司、「和殿は東國生立の者の、今日始めて見る西國の山の案内者、大に實しからず。」と宣へば、平山重ねて申けるは、「御諚とも覺候はぬ者哉。吉野泊瀬の花をば歌人が知り、敵の籠たる城の後の案内をば剛の者が知候。」と申ければ、是又傍若無人にぞ聞えける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-8-39-nlp_gloss-255">8</a></p>
+      <p class="occurrence-context">六日の夜半ばかりまでは、熊谷平山搦手にぞ候ける。熊谷次郎、子息の小次郎を喚で云けるは、「此手は惡所を落さんずる時に、誰先といふ事も有まじ。いざうれ是より土肥が承はて向うたる播磨路へ向うて、一谷の眞先懸う。」と云ひければ、小次郎、「然べう候。直家もかうこそ申たう候つれ。さらばやがて寄せさせ給へ。」と申す。熊谷、「誠や平山も此手にあるぞかし、打込の軍好まぬ者也。平山が樣見て參れ。」とて、下人を遣はす。案の如く平山は、熊谷より先に出立て、「人をば知らず、季重に於ては一引も引まじい者を。」と、獨り言をぞし居たりける。下人が馬を飼ふとて、「憎い馬の長食哉。」とて、打ければ、「かうなせそ、其馬の名殘も、今夜ばかりぞ。」とて打立けり。下人走歸て、急ぎ此由告たりければ、「さればこそ。」とて、やがて是も打出けり。熊谷は、かちの直垂に、赤革威の鎧著て、紅の母衣を懸け、ごんだ栗毛と云ふ聞ゆる名馬にぞ乘たりける。小次郎は、澤潟を一しほすたる直垂に、節繩目の鎧著て、西樓と云ふ白月毛なる馬に乘たりけり。旗差はきぢんの直垂に、小櫻を黄にかへいたる鎧著て、黄河原毛なる馬にぞ乘たりける。落さんずる谷をば弓手になし、馬手へ歩ませゆく程に、年比人も通はぬ田井の畑と云ふ古道を經て、一谷の波打際へぞ出たりける。一谷の近く鹽屋と云ふ處に未だ夜深かりければ、土肥次郎實平、七千餘騎で引へたり。熊谷は波打際より夜に紛て、そこをつと打通り、一谷の西の木戸口にぞ押寄たる。其時は未だ夜ふかゝりければ敵の方にも靜返て音もせず。御方一騎もつゞかず。熊谷次郎子息の小次郎を喚で云ひけるは、「我も／＼と先に心を懸たる人々は多かるらん。心狹う直實計とは思ふべからず。既に寄せたれども、未だ夜の明るを相待て、此邊にも引へたるらん。いざ名乘う。」とて、掻楯の際に歩ませ寄り、大音聲を揚て、「武藏國の住人熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。」とぞ名乘たる。平家の方には、「よし／＼音なせそ。敵に馬の足を疲かせよ。矢種をば射盡させよ。」とて、會釋ふ者も無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%81%9E%E3%82%86%E3%82%8B#tk-8-52-nlp_gloss-71">8</a></p>
+      <p class="occurrence-context">本三位中將重衡卿は、生田森の副將軍におはしけるが、其勢皆落失せて、只主從二騎になり給ふ。三位中將、その日の裝束にはかちんに白う黄なる絲をもて、群千鳥繍たる直垂に、紫下濃の鎧著て、童子鹿毛といふ聞ゆる名馬に、乘り給へり。乳母子の後藤兵衞盛長は、滋目結の直垂に、緋威の鎧著て三位中將の秘藏せられたる夜目無月毛に乘せられたり。梶原源太景季、庄の四郎高家、大將軍と目を懸け、鞭鐙を合せて追懸奉る。汀には助け船幾等も在けれども、後より敵は追懸たり、のがるべき隙も無りければ、湊河、苅藻河をも打渡り、蓮の池をば馬手に見て、駒の林を弓手になし、板宿、須磨をも打過て、西を指てぞ落たまふ。究竟の名馬には乘給へり。もみふせたる馬共、逐著べしとも覺えず、只延に延ければ、梶原源太景季、鐙踏張り立上り、若しやと遠矢によひいて射たりけるに、三位中將の馬の三頭を箆深に射させて弱る處に、後藤兵衞盛長「吾馬召されなんず。」とや思ひけん、鞭を上てぞ落行ける。三位中將是を見て、「如何に盛長、年比日比さは契らざりし者を、我を捨て何くへ行ぞ。」と宣へども、空きかずして、鎧に附たる赤印かなぐり捨て、唯逃にこそ逃たりけれ。三位中將敵は近付く、馬は弱し、海へ打入れ給ひたりけれども、そこしも遠淺にて沈べき樣も無りければ、馬より下、鎧の上帶切り、高紐はづし物具脱ぎ棄、腹を切んとし給ふ處を梶原より先に、庄の四郎高家鞭鐙を合せて馳來り、急ぎ馬より飛下り、「正なう候。何く迄も御供仕らん。」とて、我馬に掻乘せ奉り、鞍の前輪にしめ附て、我身は乘替に乘てぞ歸りける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

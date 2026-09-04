@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>朱雀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>朱雀</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Suzaku</li>
+      
+      <li>Suzaku Gate</li>
+      
+      <li>Suzaku-in</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (7)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E6%9C%B1%E9%9B%80#tk-0-17-nlp_gloss-87">0</a></p>
+      <p class="occurrence-context">昔奈良の御門の御時、神龜五年、朝家に中衞の大將をはじめおかれ、大同四年に
+中衞を近衞と改られしよりこのかた、兄弟左右に相並事僅に三四箇度なり。文徳天皇
+の御時は左に良房右大臣左大將、右に良相、大納言の右大將、是は閑院の左大臣冬嗣
+の御子なり。朱雀院の御宇には左に實頼、小野宮殿、右に師輔、九條殿、貞信公の御
+子なり。御冷泉院の御時は、左に教通、大二條殿、右に頼宗、堀河殿、御堂の關白の
+御子なり。二條院の御宇には左に基房、松殿、右に兼實、月輪殿、法性寺殿の御子な
+り。是皆攝祿の臣の御子息、凡人にとりては其例なし。殿上
+の交をだにきらはれし人の子孫にて禁色雜袍をゆり、綾羅錦繍を身にまとひ、大臣大
+將になて、兄弟、左右に相並事、末代とはいひながら不思議なりし事どもなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E6%9C%B1%E9%9B%80#tk-0-74-nlp_gloss-166">0</a></p>
+      <p class="occurrence-context">同四月二十八日亥刻ばかりに、樋口富小路より火出來て、辰巳の風烈しう吹きければ、京中多く燒にけり。大なる車輪の如くなるほむらが、三町五町を隔てゝ、戌亥の方へすぢかへに、飛び越え／＼燒け行けば、怖しなどもおろかなり。或は具平親王の千種殿、或は北野の天神の紅梅殿、橘逸勢のはひ松殿、鬼殿、高松殿、鴨居殿、東三條、冬嗣の大臣の閑院殿、昭宣公の堀川殿、これを始めて、昔今の名所三十餘箇所、公卿の家だにも、十六箇所まで燒にけり。その外殿上人、諸大夫の家々は注すに及ばず。はては大内に吹きつけて、朱雀門より始めて、應天門、會昌門、大極殿、豐樂院、諸司、八省、朝所、一時がうちに灰燼の地とぞなりにける。家々の日記、代々の文書、
+七珍萬寶さながら塵灰となりぬ。その間の費如何ばかりぞ。人の燒け死ぬること數百人、牛馬の類は數を知らず。これ徒事にあらず、山王の御咎とて、比叡山より大なる
+猿共が、二三千おりくだり、手に手に松火をともいて、京中を燒くとぞ、人の夢には見えたりける。大極殿は清和天皇の御宇、貞觀十八年に始めて燒けたりければ、同十九年正月三日、陽成院の御即位は、豐樂院にてぞありける。元慶元年四月九日事始ありて同二年十月八日にぞ造り出されたりける。後冷泉院の御宇、天喜五年二月二十六日、又やけにけり。治歴四年八月十四日事始ありしかども、造りいだされずして、後冷泉院崩御なりぬ。後三條院の御宇、延久四年四月十五日造り出して、文人詩を作り奉り、伶人樂を奏して遷幸なし奉る。今は世末になて、國の力も皆衰たれば、その後
+はつひに造られず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%9C%B1%E9%9B%80#tk-1-31-nlp_gloss-145">1</a></p>
+      <p class="occurrence-context">同六月二日、新大納言成親卿をば、公卿の座へ出し奉て、御物参せたりけれども、胸せき塞て、御箸をだにもたてられず。御車を寄て、とう／＼と申せば、大納言心ならず乘り給ふ。軍兵共前後左右に打圍みたり。我方の者は一人もなし。「今一度小松殿に見え奉らばや。」とのたまへども、其も叶はず。「縱重科を蒙て遠國へ行く者も、人一人身に順へぬ者やある。」と車の内にてかき口説かれければ、守護の武士共も皆鎧の袖をぞぬらしける。西の朱雀を南へ行ば、大内山も今は餘所にぞ見給ける。年來見馴奉りし雜色牛飼に至るまで、涙を流し袖を絞らぬはなかりけり。増て都に殘りとゞまり給ふ北方少き人々の心の中、推量れて哀也。鳥羽殿を過給ふにも、此御所へ御幸なりしには、一度も御供には外れざりし物をとて、我山庄洲濱殿とてありしをも、餘所に見てこそ通られけれ。南の門へ出て、舟遲とぞ急がせける。「こは何地へやらん、同う失はるべくば、都近き此邊にてもあれかし。」と宣けるぞ責ての事なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%B1%E9%9B%80#tk-2-60-nlp_gloss-70">2</a></p>
+      <p class="occurrence-context">さて御車に召されけり。公卿殿上人、一人も供奉せられず。只北面の下臈、さては金行といふ御力者許ぞ參りける。御車の尻には、尼前一人參られたり。此尼前と申は、
+法皇の御乳の人、紀伊二位の事也。七條を西へ、朱雀を南へ御幸成る。恠しの賤の男
+賤の女に至るまで「あはれ法皇の流されさせましますぞや。」とて、涙を流し袖を絞
+らぬは無けり。「去七日の夜の大地震も、かゝるべかりける前表にて、十六洛叉の底
+迄も答へ、堅牢地神の驚きさわぎ給ひけんも理哉。」とぞ人申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%9C%B1%E9%9B%80#tk-6-24-nlp_gloss-52">6</a></p>
+      <p class="occurrence-context">嵯峨皇帝の御時は平城先帝、尚侍の勸に依て、世を亂り給ひし時、其御祈の爲に、御門第三皇女祐智子内親王を、賀茂の齋院に奉らせ給けり。是齋院の始めなり。朱雀院の御宇には、將門純友が兵亂に依て八幡の臨時の祭を始めらる。今度もか樣の例を以て樣々の御祈共始められけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9C%B1%E9%9B%80#tk-7-15-nlp_gloss-39">7</a></p>
+      <p class="occurrence-context">同九月二日の日、法皇より伊勢へ公卿の勅使を立らる。勅使は參議長教とぞ聞えし。太上天皇の伊勢へ公卿の勅使を立らるゝ事は、朱雀、白河、鳥羽三代の蹤跡ありといへども、是皆御出家以前なり。御出家以後の例はこれ始めとぞ承る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9C%B1%E9%9B%80#tk-8-17-nlp_gloss-247">8</a></p>
+      <p class="occurrence-context">今井が兄樋口次郎兼光は、十郎藏人討んとて、河内國長野城へ越たりけるが、其にては討漏しぬ。紀伊國名草に有りと聞えしかば、やがて續いて越たりけるが、都に軍有りと聞て、馳上る。淀の大渡の橋で、今井が下人行合たり。「あな心憂、是は何地へとて渡せ給ひ候ぞ。君は討れさせ給ぬ。今井殿は自害。」と申ければ、樋口次郎涙をはら／＼と流いて、「是聞給へ、殿原、君に御志思ひ參せ給はん人人は、是より何地へも落行き、出家入道して、乞食頭陀の行をも立て、後世をも弔參せ給へ。兼光は都へ上り討死して、冥途にて君の見參に入、今井四郎を今一度見んと思ふぞ。」と云ければ、五百餘騎の勢あそこに引へ、こゝに引へ、落ゆく程に、鳥羽の南の門を出けるには、其勢僅に廿餘騎にぞ成にける。樋口次郎今日既に都へ入と聞えしかば、黨も高家も、七條、朱雀、四塚さまへ馳向ふ。樋口が手に、茅野太郎と云ふ者有り。四塚に幾も馳向うたる敵の中へ馳入り、大音聲を揚て、「此御中に甲斐の一條次郎殿の御手の人やまします。」と問ければ、「強一條次郎殿の手で、軍をばするか、誰にも合へかし。」とて、どと笑ふ。笑はれて名のりけるは、「かう申す者は信濃國諏訪上宮の住人、茅野大夫光家が子に、茅野太郎光廣、必ず一條の次郎殿の御手を尋るには非ず、弟の茅野七郎それにあり。光廣が子共二人信濃國に候が、あはれ我父は、好てや死にたるらん。惡てや死にたるらんと歎かん處に、弟の七郎が前で討死して、子共にたしかに聞せんと思ふ爲也。敵をば嫌まじ。」とて、あれに馳合ひ、これに馳合ひ、敵三騎きて落し、四人に當る敵に押雙べ引組でどうと落ち刺違てぞ死にける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

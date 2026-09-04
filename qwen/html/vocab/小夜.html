@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小夜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>小夜</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>midnight</li>
+      
+      <li>little night</li>
+      
+      <li>small night</li>
+      
+      <li>late night</li>
+      
+      <li>night</li>
+      
+      <li>nightingale</li>
+      
+      <li>Sayo</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (7)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%B0%8F%E5%A4%9C#tk-0-37-nlp_gloss-52">0</a></p>
+      <p class="occurrence-context">既に御入内の日になりしかば、父の大臣供奉の上達部、出車の儀式など、心ことにだしたて參らせ給ひけり。大宮ものうき御出立なれば、とみにもたてまつらず。遙に夜も深け、小夜も半になて後、御車に抜け乘せられ給ひけり。御入内の後は、麗景殿にぞまし／＼ける。ひたすら、朝政をすゝめ申させ給ふ御在樣なり。彼紫宸殿の皇居には、賢聖の障子を立てられたり。伊尹、第伍倫、虞世南、太公望、ろく里先生、李勣、司馬、手長、足長、馬形の障子、鬼の間、李將軍が姿をさながら寫せる障子もあり。尾張守小野道風が、七囘賢聖の障子と書けるも、理とぞ見えし。かの清凉殿の畫圖の御障子には、昔金岡が書きたりし遠山の在明の月もありとかや。故院の未幼主にてましましけるそのかみ、何となき御手まさぐりの次に、かきくもらかさせ給ひしが、ありしながらに少しもたがはぬを御覽じて、先帝の昔もや御戀しくおぼし召されけん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B0%8F%E5%A4%9C#tk-1-11-nlp_gloss-6">1</a></p>
+      <p class="occurrence-context">同五月二十九日の小夜深方に、多田藏人行綱、入道相國の西八條の亭に參て、「行綱こそ申べき事候間參て候へ。」と、いはせければ、入道「常にも參らぬ者が參じたるは何事ぞ。あれきけ。」とて、主馬判官盛國を出されたり。「人傳には申まじき事也。」といふ間、さらばとて、入道自中門の廊へ出られたり。「夜は遙に更ぬらん、唯今如何に、何事ぞや。」とのたまへば、「晝は人目の繁う候間、夜に紛れ參て候。此程に院中の人々の兵具を調へ、軍兵を召され候をば、何とか聞召されて候。」「其は山攻めらるべしとこそきけ。」といと事もなげにぞのたまひける。行綱近うより、 小聲に成て申けるは、「其儀にては候はず、一向御一家の御上とこそ承り候へ。」「さて其をば法皇も知召されたるか。」「仔細にや及び候。成親卿の軍兵催され候も、院宣とてこそ召され候へ。俊寛がと振舞て、康頼がかう申て、西光がと申て。」など云ふ事共、始よりありの儘には指過ていひ散し、暇申てとて出にけり。入道大に驚き大聲をもて、侍共よびのゝしり給ふ事聞もおびたゞし。行綱なまじひなる事申出して證人にや引れんずらんとおそろしさに、大野に火を放たる心地して、人も追はぬに執袴して、急ぎ門外へぞにげ出ける。入道、先づ貞能を召て、「當家傾うとする謀反の輩、京中に滿々たんなり。一門の人々にも觸申、侍共催せ。」と宣へば、馳廻て催す。右大將宗盛卿、三位中將知盛、頭中將重衡、左馬頭行盛以下の人々、甲冑を鎧ひ、弓箭を帶し馳集る。其外軍兵雲霞の如くに馳つどふ。其夜の中に西八條には、兵ども六七千騎も有らんとこそ見えたりけれ。明れば六月一日なり。未暗かりけるに、入道、檢非違使安倍資成をめして、「きと院の御所へ參れ。信成を招いて申さんずる樣はよな、近習の人々、此一門を亡して天下を亂らんとする企あり。一々に召取て、尋沙汰仕るべし。夫をば君も知召るまじう候と申せ。」とこそ宣けれ。資成急ぎ馳參り、大膳大夫信成喚出いて、此由申に、色を失ふ。御前へ參て、此よし奏聞しければ、法皇、「あは此等が内々計りし事の、泄にけるよ。」と思召にあさまし。さるにても、「こは何事ぞ。」とばかり仰られて、分明の御返事もなかりけり。資成急ぎ馳歸て、入道相國に此由申せば、「さればこそ。行綱は、實をいひけり。此事行綱知らせずば、淨海安穩にあるべしや。」とて、飛騨守景家、筑後守貞能に仰て、謀反の輩、搦捕べき由下知せらる。仍二百餘騎、三百餘騎、あそここゝに押寄々々搦捕る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B0%8F%E5%A4%9C#tk-4-9-nlp_gloss-27">4</a></p>
+      <p class="occurrence-context">と讀たりけるに依てこそ、待宵とは召されけれ。大將彼女房呼出し、昔今の物語して、小夜もやう／＼更行けば、ふるき都のあれゆくを今樣にこそうたはれけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B0%8F%E5%A4%9C#tk-4-38-nlp_gloss-256">4</a></p>
+      <p class="occurrence-context">さる程に、福原には勢の附ぬ先に、急ぎ討手を下べしと公卿僉議有て、大將軍には小松權亮少將維盛、副將軍には薩摩守忠度、都合其勢三萬餘騎、九月十八日に新都を立て、十九日には舊都に著き、やがて廿日東國へこそ討立れけれ。大將軍權亮少將維盛は、生年二十三、容儀帶佩繪に書とも筆も及難し。重代の鎧唐皮と云ふ著せ長をば、唐櫃に入て舁せらる。道中には、赤地の錦の直垂に、萌黄絲威の鎧著て、連錢蘆毛なる馬に、金覆輪の鞍置て乘り給へり。副將軍薩摩守忠度は、紺地の錦の直垂に、黒糸威の鎧著て、黒き馬の太う逞に沃懸地の鞍置て乘り給へり。馬鞍鎧甲弓箭太刀刀に至る迄、光輝く程に出立れたりしかば、めでたかりし見物也。薩摩守忠度は、年來或る宮腹の女房の許へ通はれけるが、或時坐たりけるに、其女房の許へ、止事なき女房客人に來て、良久しう物語し給ふ。小夜も遙に更行く迄に客人歸り給はず。忠度軒端にしばしやすらひて、扇を荒く遣はれければ、宮腹の女房、「野もせに集く蟲の音よ。」と、優にやさしく口ずさみ給へば、薩摩守やがて遣ひ止て歸られけり。其後又坐たりけるに、宮腹の女房「さても一日、何とて扇をば遣ひ止にしぞや。」ととはれければ、「いさ、かしがましなど聞え候しかば、さてこそ遣ひやみ候しか。」とぞ宣ひける。彼女房の許より忠度の許へ、小袖一重遣すとて、千里の名殘の悲しさに、一首の歌をぞ、贈られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B0%8F%E5%A4%9C#tk-6-58-nlp_gloss-328">6</a></p>
+      <p class="occurrence-context">小松三位中將維盛卿は、日比より思食設られたりけれ共、指當ては悲かりけり。北方と申は、故中御門新大納言成親卿の御娘也。桃顏露に綻び、紅粉眼に媚をなし、柳髮風に亂るゝ粧、又人有べし共見え給はず。六代御前とて、生年十に成給ふ若君、其妹八歳の姫君おはしけり。此人々皆後じと慕ひ給へば、三位中將宣ひけるは、「日比申し樣に、我は一門に具して、西國の方へ落行なり。何く迄も具足し奉るべけれ共、道にも敵待なれば、心安う通ん事も有難し。縱我討れたりと聞給ふ共、樣など替給ふ事は努々有るべからず。其故は、如何ならん人にも見えて、身をも助け、少き者共をも育み給ふべし。情を懸る人も、などか無かるべき。」と、慰め給へども、北方とかうの返事もし給はず引被てぞ臥給ふ。既に打立んとし給へば、袖にすがて「都には父もなし母もなし、捨られ參らせて後、誰にかはみゆべき。如何ならん人にも見えよなど承るこそ恨しけれ。前世の契り有ければ、人こそ憐み給ふとも、又人毎にしもや情を懸くべき。何く迄も伴ひ奉り、同野原の露とも消え、一つの底の水屑とも成らんとこそ契りしに、されば小夜の寢覺の睦語は、皆僞に成にけり。責ては身一つならば如何がせん。捨られ奉る身の憂さ、思知ても留まりなん。少き者共をば、誰に見讓り、如何にせよとか思召す。恨しうも留め給ふ者哉。」と、且は恨み且は慕ひ給へば、三位中將宣ひけるは、「誠に人は十三、我は十五より見初奉り、火の中水の底へも、倶に入り倶に沈み、限ある別路迄も後れ先立じとこそ申しかども、かく心憂き有樣にて、軍の陣へ趣けば、具足し奉て、行方も知ぬ旅の空にて、憂目を見せ奉らんも、うたてかるべし。其上今度は用意も候はず。何くの浦にも心安う落著いたらば、其よりこそ迎へに人をも奉らめ。」とて、思ひ切てぞ立れける。中門の廊に出て、鎧取て著、馬引寄させ、既に乘らんとし給へば、若君姫君走出でて、父の鎧の袖、草摺に取附き、「是はされば何地へとて、渡せ給ぞ。我も參ん、我も行ん。」と面々に慕ひ泣給ふにぞ、浮世のきづなと覺えて、三位中將、いとゞ爲方なげには見えられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B0%8F%E5%A4%9C#tk-8-61-nlp_gloss-119">8</a></p>
+      <p class="occurrence-context">軍破にければ、主上を始奉て、人々皆御船に召て、出給ふ心の中こそ悲しけれ、汐に引れ風に隨て、紀伊路へ趣く船も有り。葦屋の沖に漕出て、浪にゆらるゝ船も有り。或は須磨より明石の浦傳ひ、泊定めぬ梶枕、片敷袖もしをれつゝ、朧に霞む春の月、心を碎かぬ人ぞなき。或は淡路のせとを漕通り、繪島磯に漂へば、波路幽に鳴渡り、友迷はせる小夜千鳥、是も我身の類哉。行先未何くとも思ひ定ぬかと思しくて、一谷の沖にやすらふ船も有り。か樣に風に任せ、浪に隨ひて、浦々島々に漂よへば、互に死生も知難し。國を從ふる事も十四箇國、勢の附く事も十萬餘騎也。都へ近附く事も僅に一日の道なれば、今度はさりともと憑しう思はれけるに、一谷も攻落され、人々皆心細うぞなられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B0%8F%E5%A4%9C#tk-9-7-nlp_gloss-362">9</a></p>
+      <p class="occurrence-context">知時持て、參りたり。守護の武士共、又「見參せ候はん。」と申せば、見せてけり。「苦しう候まじ。」とて奉る。三位中將是を見て、彌思や増り給ひけん、土肥次郎に宣ひけるは、「年比相具したりし女房に、今一度對面して、申たき事の有るは如何がすべき。」と宣へば、實平情ある士にて、「誠に女房などの御事にて渡らせ給ひ候はんはなじかは苦う候べき。」とて許し奉る。中將斜ならず悦て、人に車借て迎へに遣したりければ、女房取もあへず、是に乘てぞおはしける。縁に車をやり寄せてかくと申せば、中將車寄に出迎ひ給ひ、「武士共の見奉るに、下させ給べからず。」とて、車の簾を打かつぎ、手に手を取組み、顏に顏を推當てて、暫しは物も宣はず、唯泣より外の事ぞなき。稍久しう有て、中將宣ひけるは、「西國へ下し時も、今一度見參せたう候しかども、大形の世の騒さに申べき便もなくて、罷下り候ぬ。其後はいかにもして御文をも參らせ、御返り事をも承はりたう候しかども、心に任せぬ旅の習ひ、明暮の軍に隙なくて、空しく年月を送り候き。今又人知ぬ在樣を見候は再あひ奉るべきで候けり。」とて、袖を顏に推當てうつぶしにぞなられける。互の心の中、推量られてあはれ也。かくて小夜も半に成ければ、「此ごろは大路の狼藉に候に、疾々。」と返し奉る。車遣出せば、中將別れの涙を押へて泣々袖を引へつゝ、</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

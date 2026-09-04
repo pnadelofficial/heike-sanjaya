@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同十</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>同十</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>same</li>
+      
+      <li>the same</li>
+      
+      <li>on the same</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (9)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%90%8C%E5%8D%81#tk-0-50-nlp_gloss-72">0</a></p>
+      <p class="occurrence-context">是によて主上御元服の御定め、その日は延させ給ぬ。同廿五日、院の殿上にてぞ、御元服の定めはありける。攝政殿さても渡らせ給ふべきならねば、同十二月九日、兼宣旨をかうぶり、十四日太政大臣にあがらせ給ふ。やがて同十七日慶申しありしかども、世の中はにが／＼しうぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%90%8C%E5%8D%81#tk-0-51-nlp_gloss-23">0</a></p>
+      <p class="occurrence-context">さる程に今歳も暮ぬ。明れば嘉應三年正月五日、主上御元服あり。同十三日朝覲の行幸ありけり。法皇、女院、待ち受け參らせさせ給て、初冠の御粧いかばかりらうたく思しめされけん。入道相國の御娘、女御に參らせ給ひけり。御歳十五歳。法皇御猶子の儀なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%90%8C%E5%8D%81#tk-0-74-nlp_gloss-314">0</a></p>
+      <p class="occurrence-context">同四月二十八日亥刻ばかりに、樋口富小路より火出來て、辰巳の風烈しう吹きければ、京中多く燒にけり。大なる車輪の如くなるほむらが、三町五町を隔てゝ、戌亥の方へすぢかへに、飛び越え／＼燒け行けば、怖しなどもおろかなり。或は具平親王の千種殿、或は北野の天神の紅梅殿、橘逸勢のはひ松殿、鬼殿、高松殿、鴨居殿、東三條、冬嗣の大臣の閑院殿、昭宣公の堀川殿、これを始めて、昔今の名所三十餘箇所、公卿の家だにも、十六箇所まで燒にけり。その外殿上人、諸大夫の家々は注すに及ばず。はては大内に吹きつけて、朱雀門より始めて、應天門、會昌門、大極殿、豐樂院、諸司、八省、朝所、一時がうちに灰燼の地とぞなりにける。家々の日記、代々の文書、
+七珍萬寶さながら塵灰となりぬ。その間の費如何ばかりぞ。人の燒け死ぬること數百人、牛馬の類は數を知らず。これ徒事にあらず、山王の御咎とて、比叡山より大なる
+猿共が、二三千おりくだり、手に手に松火をともいて、京中を燒くとぞ、人の夢には見えたりける。大極殿は清和天皇の御宇、貞觀十八年に始めて燒けたりければ、同十九年正月三日、陽成院の御即位は、豐樂院にてぞありける。元慶元年四月九日事始ありて同二年十月八日にぞ造り出されたりける。後冷泉院の御宇、天喜五年二月二十六日、又やけにけり。治歴四年八月十四日事始ありしかども、造りいだされずして、後冷泉院崩御なりぬ。後三條院の御宇、延久四年四月十五日造り出して、文人詩を作り奉り、伶人樂を奏して遷幸なし奉る。今は世末になて、國の力も皆衰たれば、その後
+はつひに造られず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%90%8C%E5%8D%81#tk-11-28-nlp_gloss-27">11</a></p>
+      <p class="occurrence-context">さる程に建久元年十一月七日鎌倉殿上洛して、同九日正二位大納言に成り給ふ。同十一日大納言の右大將を兼じ給へり。やがて兩職を辭て十二月四日關東へ下向。
+建久三年三月十三日法皇崩御なりにけり。御歳六十六。瑜珈振鈴の響は其夜を限り、
+一乘案誦の御聲は其曉に終ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%90%8C%E5%8D%81#tk-11-29-nlp_gloss-23">11</a></p>
+      <p class="occurrence-context">同六年三月十三日大佛供養有るべしとて二月中に鎌倉殿又御上洛あり。同十二日大佛殿へ參せ給ひたりけるが、梶原を召て「手かいの門の南の方に大衆なん十人を隔てゝ怪しばうだる者の見えつる。召捕て參らせよ。」と宣ひければ、梶原承てやがて召具して參りたり。鬚をば剃て髻をば切らぬ男也。「何者ぞ。」ととひ給へば、「是程運命盡果て候ぬる上はとかう申すに及ばず。是は平家の侍薩摩中務家資と申者にて候。」「それは何と思ひてかくは成りたるぞ。」「もしやとねらひ申候つる也。」「志の程はゆゝしかりけり。」とて供養果てて都へ入せ給ひて、六條河原にて切られにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%90%8C%E5%8D%81#tk-2-58-nlp_gloss-80">2</a></p>
+      <p class="occurrence-context">太政入道源大夫判官季貞を以て、知行し給べき庄園状共數多遣はす。先さこそ有らめとて、百疋百兩に米を積でぞ贈られける。出仕の料にとて、雜色牛飼牛車迄、沙汰し遣はさる。行高手の舞足の踏どころも覺えず、こはされば夢かや夢かとぞ驚かれける。同十七日五位の侍中に補せられて、左少辨に成かへり給ふ。今年五十一、今更若やぎ給ひけり。唯片時の榮花とぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%90%8C%E5%8D%81#tk-3-25-nlp_gloss-26">3</a></p>
+      <p class="occurrence-context">さる程に前右大將宗盛卿、法皇の御事をたりふし申されければ、入道相國漸思直て、同十三日鳥羽殿を出奉り、八條烏丸美福門院の御所へ御幸なし奉る。今三日が中の御悦とは泰親是をぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%8D%81#tk-4-53-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">同十日、大將軍權亮少將維盛、右近衞中將になり給ふ。「討手の大將と聞えしかども、させるし出たる事もおはせず。是は何事の勸賞ぞや。」と人々ささやき合へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%8D%81#tk-7-53-nlp_gloss-31">7</a></p>
+      <p class="occurrence-context">同十二月十日法皇は五條内裏を出させ給ひて、大膳大夫成忠が宿所、六條西洞院へ御幸なる。同十三日歳末の御修法在けり。其次に叙位除目行はれて、木曾がはからひに、人々の官ども、思樣に成おきけり。平家は西國に、兵衞佐は東國に、木曾は都に張行ふ。前漢後漢の間、王莽が世を討取て、十八年治たりしが如し。四方の關々皆閉たれば、公の御貢物をもたてまつらず、秋の年貢ものぼらねば、京中の上下の諸人只少水の魚にことならず。あぶなながら歳暮て、壽永も三年になりにけり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>とぞ申</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>とぞ申</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>and so called</li>
+      
+      <li>was called</li>
+      
+      <li>called (honorific)</li>
+      
+      <li>say (humble, with quotative particle)</li>
+      
+      <li>thus said</li>
+      
+      <li>said</li>
+      
+      <li>called</li>
+      
+      <li>is called</li>
+      
+      <li>so said</li>
+      
+      <li>so saying</li>
+      
+      <li>called (so)</li>
+      
+      <li>that (quotative) they say</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (22)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-1-40-nlp_gloss-11">1</a></p>
+      <p class="occurrence-context">あまりに色のくろかりければ、見る人黒帥とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-1-127-nlp_gloss-13">1</a></p>
+      <p class="occurrence-context">これは花山院殿に上臈女房にて廊の御方とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-2-111-nlp_gloss-14">2</a></p>
+      <p class="occurrence-context">其弟子に慧慶律師をば、時の人小いかめ房とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-2-359-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">」とぞ申されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-4-150-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-4-180-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-4-324-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">」とぞ申されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-4-703-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">前右大將宗盛卿の子息侍從清宗三位して、三位侍從とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-4-725-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">此時は未兵庫頭とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-5-14-nlp_gloss-16">5</a></p>
+      <p class="occurrence-context">輙う人の參通ふべき事も無れば、童部は、籠の御所とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-5-29-nlp_gloss-30">5</a></p>
+      <p class="occurrence-context">異國の軍を靖めさせ給ひて、歸朝の後筑前國三笠郡にして、皇子御誕生、其所をば宇美宮とぞ申たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-5-124-nlp_gloss-18">5</a></p>
+      <p class="occurrence-context">是唯事にあらずとて陰陽師に占はせられければ重き御愼とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-6-53-nlp_gloss-164">6</a></p>
+      <p class="occurrence-context">供奉の人々は聞附られざりけれども、主上聞召て、
+「今叫ぶ者は何者ぞ。きと見て參れ。」と仰ければ、上臥したる殿上人、上日の者に
+仰す。走り散て尋ぬれば、或辻に、怪の女童のながもちの蓋提て泣にてぞ有ける。「いかに。」と問へば、「主の女房の、院の御所に侍はせ給ふが、此程やうやうにし
+て、したてられつる御裝束が持て參る程に、只今男の二三人詣來て、奪取て罷りぬる
+ぞや。今は御裝束が有ばこそ、御所にもさぶらはせ給はめ。はかばかしう立宿せ給ふ
+べき親い御方も坐さず。此事思ひつゞくるに泣也。」とぞ申ける。さて彼女童を具し
+て參り、此由奏聞しければ、主上聞召て、「あな無慚。如何なる者のしわざにてか有
+らん。堯の代の民は、堯の心のすなほなるを以て心とするが故に皆すなほ也。今の代
+の民は、朕が心を以て心とするが故に、かたましき者朝に在て罪を犯す。此吾恥に非
+ずや。」とぞ仰ける。「さて取られつらん衣は何色ぞ。」と御尋あれば、「然々の
+色。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-7-591-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">」とぞ申されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-9-800-nlp_gloss-4">9</a></p>
+      <p class="occurrence-context">名をば小枝とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-10-86-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">」とぞ申されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-10-279-nlp_gloss-4">10</a></p>
+      <p class="occurrence-context">名をば松蔭とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-11-415-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-11-422-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-11-489-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">」とぞ申たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-11-630-nlp_gloss-21">11</a></p>
+      <p class="occurrence-context">親呑まるるものは子悲み、子呑まるゝものは親悲み、村南村北に哭する聲絶えずとぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E3%81%A8%E3%81%9E%E7%94%B3#tk-12-59-nlp_gloss-5">12</a></p>
+      <p class="occurrence-context">されば惡別當とぞ申ける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

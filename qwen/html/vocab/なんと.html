@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>なんと</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>なんと</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>evil</li>
+      
+      <li>wonderful</li>
+      
+      <li>wonder</li>
+      
+      <li>how</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (4)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E3%81%AA%E3%82%93%E3%81%A8#tk-1-37-nlp_gloss-98">1</a></p>
+      <p class="occurrence-context">同廿二日福原へ下著給ひたりければ、太政入道瀬尾太郎兼康に仰て、備中國へぞ流されける。兼康は宰相の還聞給はん所を恐れて、道すがらも樣々に痛り慰め奉る。され共、少將少も慰み給ふ事もなし。夜晝只佛の御名をのみ唱て父の事をぞ嘆かれける。
+新大納言は、備前の兒島に御座けるを、預の武士難波次郎經遠是は猶舟津近うて惡かりなんとて、地へ渡奉り、備前備中兩國の境、庭瀬の郷有木の別所と云ふ山寺に置奉る。備中の瀬尾と、備前の有木の別所の間は、僅五十町に足ぬ所なれば、丹波少將其方の風もさすが懷うや思はれけむ、或時兼康を召て、「是より大納言殿の御渡有なる備中の有木の別所へは、如何程の道ぞ。」と問給へば、直に知せ奉ては、惡かりなんと思ひけむ、「片道十二三で候。」と申。其時少將涙をはらはらと流いて、「日本は昔三十三箇國にて有けるを、中比六十六箇國には分られたんなり。さ云ふ備前備中備後も、本は一國にて有ける也。又東に聞ゆる出羽陸奧兩國も、昔は六十六郡が一國にてありけるを、其時十二郡を割分て、出羽の國とは立られたり。されば實方中將、奧州へ流されたりける時、此國の名所阿古耶の松と云所を見ばやとて、國中を尋ありきけるが、尋かねて歸りける道に、老翁の一人行逢たりければ『やゝ御邊はふるい人とこそ見奉れ、當國の名所に阿古屋の松と云ふ所やしりたる。』と問に、『全く當國の内には候はず、出羽の國にや候らん。』と申ければ、『さては御邊も知ざりけり。世末に成て、國の名所をも早皆呼失ひけるにこそ。』とて、空しく過んとしければ、老翁中將の袖を控へて、『あはれ君は、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E3%81%AA%E3%82%93%E3%81%A8#tk-11-5-nlp_gloss-203">11</a></p>
+      <p class="occurrence-context">さる程に九郎判官には鎌倉殿より大名十人つけられたりけれども、内々御不審を蒙り給ふ由聞えしかば、心を合せて一人づつ皆下り果にけり。兄弟なる上、殊に父子の契をして去年の正月木曾義仲を追討せしより以降度々平家を攻落し、今年の春滅し果てゝ一天を靜め、四海を澄す。勸賞行はるべき所に、如何なる仔細有て、かゝる聞えあるらんと、上一人を始め奉り下萬民に至るまで、不審をなす。此事は、去春攝津國渡邊より舟汰して八島へ渡り給ひし時、逆櫓立うたてじの論をして、大きに欺かれたりしを、梶原遺恨に思ひて常は讒言しけるに依て也。定て謀反の心もあるらん。大名共差上せば、宇治勢田の橋をも引き、京中の噪ぎと成て、中々惡かりなんとて土佐房正俊を召て「和僧上て、物詣する樣にてたばかり討て。」と宣ひければ正俊畏て承り、宿所へも歸らず、御前を立て軈て京へぞ上りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E3%81%AA%E3%82%93%E3%81%A8#tk-3-58-nlp_gloss-34">3</a></p>
+      <p class="occurrence-context">同廿三日の曉、宮は此の寺ばかりでは叶ふまじ、山門は心替し、南都は未參らず。後日に成ては惡かりなんとて、三井寺を出させ給ひて、南都へぞ入せ座ます。此宮は蝉折、小枝と聞えし漢竹の笛を二つ持せ給へり。彼蝉折と申は、昔鳥羽院の御時金を千兩、宋朝の御門へ、送らせ給ひたりければ、返報と覺くて、生たる蝉の如くに、節の附たる笛竹を、一節贈らせ給ふ。如何が是程の重寶をば左右なうはゑらすべきとて、
+三井寺の大進僧正覺宗に仰せて、壇上に立て、七日加持して、彫せ給へる御笛也。或
+時高松中納言實平卿參て、此御笛を吹れけるに、尋常の笛の樣に思忘て、膝より下に
+置れたりければ、笛や尤けん、其時蝉折にけり。さてこそ蝉折とは付られたれ。笛の
+御器量たるに依て、此宮御相傳有けり。されども今を限とや思食れけん、金堂の彌勒
+に參らさせおはします。龍華の曉、値遇の御爲かと覺えて、哀也し事共なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E3%81%AA%E3%82%93%E3%81%A8#tk-7-25-nlp_gloss-327">7</a></p>
+      <p class="occurrence-context">平家は緒方の三郎維義が三萬餘騎の勢にて、既に寄すと聞えしかば、取物も取あへず、太宰府をこそ落給へ。さしも憑しかりつる天滿天神の注連の邊を心細も立離れ、駕輿丁も無れば、葱花鳳輦は唯名のみ聞きて、主上腰輿にぞ召れける。國母を始め奉て、止事なき女房達、袴の裾を取り大臣殿以下の卿相雲客、指貫のそば挾み、水城の戸を出で、歩跣にて我さきに前にと、箱崎の津へこそ落給へ。折節降る雨車軸の如し、吹く風砂をあぐとかや。落る涙降る雨、分きて何れも見えざりけり。住吉、箱崎、香椎、宗像、伏拜み、唯主上舊都の還幸とのみぞ祈られける。たるみ山、鶉濱などいふ峨々たる嶮難を凌ぎ渺々たる平沙へぞ趣き給ふ。何つ習はしの御事なれば、御足より出づる血は砂を染め、紅の袴は色をまし、白袴はすそ紅にぞなりにける。彼玄弉三藏の流沙葱嶺を凌れけん苦も、是には爭かまさるべき。されども其は求法の爲なれば、自他の利益も有けん。是は怨敵の故なれば、後世の苦、且思ふこそ悲けれ。原田大夫種直は二千餘騎で平家の御ともにまゐる。山鹿兵藤次秀遠數千騎で平家の御むかひにまゐりけるが、種直秀遠以外に不和になりければ、種直はあしかりなんとて道より引かへす。あし屋の津といふ處をすぎさせ給ふにもこれは我が都より福原へ通し時、里の名なればとていづれの里よりもなつかしう今更あはれをぞもよほされける。新羅、百濟、高麗、契丹、雲の終海の終迄も、落行ばやとはおぼしけれども波風向うて叶はねば、兵藤次秀遠に具せられて、山賀城にぞ籠り給ふ。山賀へも又敵寄すと聞えしかば、小舟共に召て、通夜豐前國、柳浦へぞ渡り給ふ。爰に、内裏造るべき由沙汰有しかども、分限無かりければ造られず。又長門より源氏寄と聞えしかば、海士小舟に取乘て、海にぞ浮び給ひける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

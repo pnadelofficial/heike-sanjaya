@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>書か</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>書か</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>wrote</li>
+      
+      <li>written</li>
+      
+      <li>write</li>
+      
+      <li>painted</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (21)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E6%9B%B8%E3%81%8B#tk-0-72-nlp_gloss-144">0</a></p>
+      <p class="occurrence-context">平大納言時忠卿、その時はいまだ左衞門督にておはしけるが、上卿に立つ。大講堂の庭に三塔會合して、上卿を取てひはらんとす。「しや冠打ち落せ、その身を搦めて、湖に沈めよ。」などぞ僉議しける。既にかうと見えけるに、時忠卿、「暫くしづまられ候へ。衆徒の御中へ申すべきこと有り。」とて、懷より小硯疊紙を取出し、一筆書いて大衆の中へ遣す。是を披いて見れば、「衆徒の濫惡を致すは魔縁の所行なり。明王の制止を加ふるは、善逝の加護なり。」とこそ書かれたれ。是を見て、ひはるに及ばず、皆尤々と同じて、谷々へおり、坊々へぞ入にける。一紙一句をもて、三塔三千の憤をやすめ、公私の耻を逃れ給へる時忠卿こそゆゝしけれ。人々も山門の大衆は、發向のかまびすしきばかりかと思たれば、理も存知したりけりとぞ、感ぜられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%9B%B8%E3%81%8B#tk-1-41-nlp_gloss-489">1</a></p>
+      <p class="occurrence-context">大納言の北方は、都の北山雲林院の邊にしのびてぞ御座ける。さらぬだに、住馴ぬ處は物うきに、いとゞしのばれければ、過行く月日も明し兼ね暮し煩ふ樣なりけり。女房侍多かりけれども、或は世を恐れ、或は人目をつゝむ程に、問訪ふ者一人もなし。され共其中に、源左衞門尉信俊と云ふ侍一人、情殊に深かりければ、常に訪奉る。或時北方信俊を召て、「まことや是には備前の兒島にと聞えしが、此程聞ば有木の別所とかやに御座なり。如何にもして今一度はかなき筆の跡をも奉り、御音信をも聞ばや。」とこそ宣ひけれ。信俊涙を押へ申けるは、「幼少より、御憐を蒙て、片時も離れ参せ候はず。御下の時も、何共して御供仕らうと申候しが、六波羅より容されねば力及候はず。召され候し御聲も耳に留り、諫められ參らせし御詞も肝に銘じて片時も忘れ參らせ候はず。縱此身は如何なる目にも遇候へ。疾々御文賜はて參り候はん。」とぞ申ける。北方斜ならず悦で、やがて書てぞたうだりける。少人々も面々に御文有り。信俊此を賜はて、遙々と備前國有木の別所へ尋下る。先預の武士難波次郎經遠に案内を云ければ、志の程を感じて、やがて見參に入たりけり。大納言入道殿は、唯今も都の事をのみ宣出し、歎沈で御座ける所に、「京より信俊が參て候。」と申入たりければ、「夢かや。」とて聞もあへず、起なほり、「是へ／＼。」と召されければ、信俊參て見奉るに、先御住ひの心憂さもさる事にて、墨染の御袂を見奉るにぞ、信俊目もくれ心も消て覺えける。北方の仰蒙し次第、細々と申て、御文とりいだいて奉る。是を開けて見給へば、水莖の跡は、涙にかき暮て、そことは見ね共、「少き人々の餘に戀悲み給ふ有樣、我身も盡ぬ思に堪忍べうもなし。」と書かれたれば、日來の戀しさは、事の數ならずとぞ悲み給ふ。かくて四五日過ければ、信俊「是に候て、御最後の御有樣見參せん。」と申ければ、預の武士難波次郎經遠、叶まじき由頻に申せば、力及ばで、「さらば上れ。」とこそ宣けれ。「我は近う失はれんずらむ。此世になき者と聞ば、相構て我後世とぶらへ。」とぞ宣ける。御返事かいてたうだりければ、信俊是を賜て、「又こそ參候はめ。」とて暇申て出ければ、「汝が又來ん度を待つくべしとも覺えぬぞ。あまりにしたはしくおぼゆるに、暫暫。」と宣ひて、度々呼ぞ返されける。さても有べきならねば、信俊涙を抑つゝ、都へ歸のぼりけり。北方に文參らせたりければ、是を開て御覽ずるに、早出家し給たると覺敷て、御髮の一房文の奧に有けるを、二目とも見給はず。形見こそ中々今はあたなれとて、臥まろびてぞ泣かれける。少き人々も、聲々に泣き悲み給けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9B%B8%E3%81%8B#tk-10-7-nlp_gloss-273">10</a></p>
+      <p class="occurrence-context">夜半許に、立文持たる男に行連て物語し給。此男夜の事ではあり、敵とは夢にも知らず。御方の兵共の八島へ參ると思ひけるやらん。打解て細々と物語をぞしける。「其文はいづくぞ。」「八島の大臣殿へ參り候。」「誰かまゐらせらるゝぞ。」「京より女房の參らせられ候。」「何事なるらん。」と宣へば、「別の事はよも候はじ。源氏既に淀河尻に出向うて候へば、それをこそ告げ申され候らめ。」「げにさぞ有らん。是も八島へ參るが、いまだ案内を知らぬに、じんじよせよ。」と宣へば、「是は度々參て候間、案内は存知して候。御供つかまつらん。」と申せば判官、「其文取れ。」とて、文ばいとらせ「しやつからめよ。罪作に頸なきそ。」とて、山中の木に縛附てぞ通られける。さて文を明て見給へば、げにも女房の文とおぼしくて、「九郎はすゝどき男士にて侍ふなれば、大風大波をも嫌はず寄せ侍らんと覺えさぶらふ。御勢ども散さで用心せさせ給へ。」とぞ書かれたる。判官、「是は義經に天の與へ給ふ文也。鎌倉殿に見せ申さん。」とて深う納て置れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9B%B8%E3%81%8B#tk-10-58-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">とぞ書かれたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9B%B8%E3%81%8B#tk-10-63-nlp_gloss-960">10</a></p>
+      <p class="occurrence-context">本三位中將重衡卿は、狩野介宗茂に預られて、去年より伊豆國におはしけるを、南都の大衆頻に申ければ、「さらば渡せ。」とて、源三位入道頼政の孫、伊豆藏人大夫頼兼に仰せて、終に奈良へぞ遣しける。都へは入られずして、大津より山科通りに、醍醐路を經て行けば、日野は近かりけり。此重衡卿の北方と申は鳥飼中納言惟實の女、五條大納言國綱の養子、先帝の御乳母、大納言佐殿とぞ申ける。三位中將一谷で生捕にせられ給ひし後も、先帝に附まゐらせておはせしが、壇浦にて海にいらせ給ひしかば、武士の荒氣なきにとらはれて、舊里に歸り姉の大夫三位に同宿して、日野と云所におはしけり。中將の露の命、草葉の末にかゝて、消やらぬときゝ給へば、夢ならずして今一度見もし見えもする事もやと思れけれども、其も叶はねば、泣より外の慰めなくて明し暮し給ひけり。三位中將、守護の武士に宣ひけるは、「此程事に觸て情ふかう芳心おはしつるこそ、あり難う嬉しけれ。同くは最後に今一度芳恩蒙りたき事あり。我は一人の子なければ、此世に思ひおく事なし。年頃相具したりし女房の、日野と云ふ所に有りと聞く。今一度對面して、後生の事をも申置ばやと思ふ也。」とて片時のいとまをこはれけり。武士共さすが岩木ならねば、各涙を流しつゝ、「何かは苦う候べき。」とて許し奉る。中將斜ならず悦で、「大納言佐殿の御局は是に渡せ給候やらん。本三位中將殿の唯今奈良へ御通り候が、立ながら見參に入らばやと仰候。」と、人を入て言はせければ、北方聞もあへず、「いづらやいづら。」とて、走出て見給へば、藍摺の直垂に、折烏帽子著たる男の、痩黒みたるが、縁に依り居たるぞ、そなりける。北方御簾の際近くよて「如何に夢かや現か、是へ入せ給へ。」と宣ける御聲を聞き給ふに、いつしか、先立つ物は涙也。大納言佐殿は、目もくれ心も消果てしばしは物ものたまはず。三位中將、御簾打かついで、泣々宣ひけるは、「去年の春一谷で如何にも成べかりし身の、責ての罪の報いにや生ながら捕られて大路を渡され、京鎌倉に恥をさらすだに口惜きに、果は奈良の大衆の手に渡されて、斬るべしとて罷り候。如何にもして、今一度御姿を見奉らばやと思ひつるに、今は露ばかりも思置事なし。出家して形見に髮をもたてまつらばやと思へども、許されなければ力及ばず。」とて、額の髮を少し引きわけて口の及ぶ所をくひ切て、「是を形見に御覽ぜよ。」とてたてまつり給へば、北の方は日頃覺束なくおはしけるより今一入悲の色をぞ増し給ふ。「誠に別れ奉りし後は越前三位のうへの樣に、水の底にも沈むべかりしが、正しうこの世におはせぬ人とも聞ざりしかば、もし不思議にて今一度かはらぬ姿を見もし見えもやすると思ひてこそ、憂ながら今迄もながらへて在りつるに、今日を限りにておはせんずらん悲さよ。いまゝで延つるはもしやと思ふ憑みもありつる物を。」とて、昔今の事ども宣ひかはすにつけても、唯盡せぬ物は涙也。「餘りの御姿のしをれてさぶらふに、たてまつりかへよ。」とて袷の小袖に淨衣をそへて出されたりければ、三位中將是を著かへて、元著給へる物どもをば、「形見に御覽ぜよ。」とて置かれけり、北の方、「それもさる事にてさぶらへども、はかなき筆の跡こそ、永き世の形見にてさぶらへ。」とて、御硯を出されたりければ中將泣々一首の歌をぞ書かれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-6-nlp_gloss-198">2</a></p>
+      <p class="occurrence-context">御使は丹左衞門尉基康と云者なり。船より上て「是に都より流され給し丹波少將殿平判官入道殿やおはする。」と、聲々にぞ尋ける。二人の人々は、例の熊野詣して無りけり。俊寛僧都一人殘りけるが、是を聞き、「餘に思へば夢やらん、又天魔波旬の我心を誑さんとて言やらん、現共覺ぬ物かな。」とて、周章ふためき走ともなく、倒るともなく、急ぎ御使の前に走り向ひ、「何ごとぞ、是こそ京より流されたる俊寛よ。」と名乘給へば、雜色が頸に懸させたる文袋より、入道相國の許文取出いて奉る。披いて見れば、「重科免遠流、早可成歸洛思。依中宮御産御祈被行非常赦。然間鬼界島流人少將成經、康頼法師赦免。」と計書かれて、俊寛と云文字はなし。禮紙にぞ有らんとて、禮紙を見るにも見えず。奧より端へ讀み、端より奧へ讀けれ共、二人と計書かれて、三人とはかゝれず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-6-nlp_gloss-240">2</a></p>
+      <p class="occurrence-context">御使は丹左衞門尉基康と云者なり。船より上て「是に都より流され給し丹波少將殿平判官入道殿やおはする。」と、聲々にぞ尋ける。二人の人々は、例の熊野詣して無りけり。俊寛僧都一人殘りけるが、是を聞き、「餘に思へば夢やらん、又天魔波旬の我心を誑さんとて言やらん、現共覺ぬ物かな。」とて、周章ふためき走ともなく、倒るともなく、急ぎ御使の前に走り向ひ、「何ごとぞ、是こそ京より流されたる俊寛よ。」と名乘給へば、雜色が頸に懸させたる文袋より、入道相國の許文取出いて奉る。披いて見れば、「重科免遠流、早可成歸洛思。依中宮御産御祈被行非常赦。然間鬼界島流人少將成經、康頼法師赦免。」と計書かれて、俊寛と云文字はなし。禮紙にぞ有らんとて、禮紙を見るにも見えず。奧より端へ讀み、端より奧へ讀けれ共、二人と計書かれて、三人とはかゝれず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-17-nlp_gloss-301">2</a></p>
+      <p class="occurrence-context">抑平家安藝の嚴島を信じ始られける事は如何にと云に、鳥羽院の御宇に清盛公未安藝守たりし時、安藝國を以て、高野の大塔を修理せよとて、渡邊遠藤六郎頼方を雜掌に附られ、六年に修理畢ぬ。修理畢て後、清盛高野へ上り、大塔拜み、奧院へ參られたりければ、何くより來る共なき老僧の、眉には霜を垂れ、額に浪を疊み、鹿杖の兩股なるにすがて、出來給へり。稍久しう御物語せさせ給ふ。「昔より今にいたる迄此れは密宗をひかへて退轉なし。天下に又も候はす。大塔既に修理終候たり。さては、安藝の嚴島、越前の氣比の宮は、兩界の垂跡で候が、氣比の宮は榮たれ共、嚴島はなきが如くに荒果て候。此次に、奏聞して修理せさせ給へ。さだにも候はば、官加階は肩を竝ぶる人、有まじきぞ。」とて立れけり。此老僧の居給へる所に異香薫じたり。人を附て見せ給へば、三町許は見給て其後は掻消すやうに失せ給ぬ。是唯人には非ず。
+すなはち大師にて坐けりと、彌々尊く思召し、娑婆世界の思出にとて、高野の金堂に曼陀羅を書かれけるが、西曼陀羅をば、常明法印といふ繪師に書せらる。東曼陀羅をば、清盛書んとて、自筆にかゝれけるが、何とかおもはれけん、八葉の中尊の寶冠をば我首の血を出いて、書かれけるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-17-nlp_gloss-359">2</a></p>
+      <p class="occurrence-context">抑平家安藝の嚴島を信じ始られける事は如何にと云に、鳥羽院の御宇に清盛公未安藝守たりし時、安藝國を以て、高野の大塔を修理せよとて、渡邊遠藤六郎頼方を雜掌に附られ、六年に修理畢ぬ。修理畢て後、清盛高野へ上り、大塔拜み、奧院へ參られたりければ、何くより來る共なき老僧の、眉には霜を垂れ、額に浪を疊み、鹿杖の兩股なるにすがて、出來給へり。稍久しう御物語せさせ給ふ。「昔より今にいたる迄此れは密宗をひかへて退轉なし。天下に又も候はす。大塔既に修理終候たり。さては、安藝の嚴島、越前の氣比の宮は、兩界の垂跡で候が、氣比の宮は榮たれ共、嚴島はなきが如くに荒果て候。此次に、奏聞して修理せさせ給へ。さだにも候はば、官加階は肩を竝ぶる人、有まじきぞ。」とて立れけり。此老僧の居給へる所に異香薫じたり。人を附て見せ給へば、三町許は見給て其後は掻消すやうに失せ給ぬ。是唯人には非ず。
+すなはち大師にて坐けりと、彌々尊く思召し、娑婆世界の思出にとて、高野の金堂に曼陀羅を書かれけるが、西曼陀羅をば、常明法印といふ繪師に書せらる。東曼陀羅をば、清盛書んとて、自筆にかゝれけるが、何とかおもはれけん、八葉の中尊の寶冠をば我首の血を出いて、書かれけるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-23-nlp_gloss-152">2</a></p>
+      <p class="occurrence-context">明れば治承三年正月下旬に丹波少將成經、肥前國鹿瀬庄を立て、都へと急がれけれ共餘寒猶烈しく、海上も痛く荒ければ、浦傅島傅して、きさらぎ十日比にぞ、備前の兒島に著給ふ。其より父大納言殿の住給ける處を尋いりて見給ふに、竹の柱、舊たる障子なんどに書置れたる筆のすさびを見給て、「人の形見には手跡に過たる物ぞなき。
+書置給はすば、爭か是を見るべき。」とて、康頼入道と二人、讀では泣き、泣いては
+讀む。「安元三年七月廿日出家、同廿六日、信俊下向。」とも書かれたり。さてこそ
+源左衞門尉信俊が參りたりけるも知れけれ。そばなる壁には、「三尊來迎便有り、九
+品往生疑なし。」とも書かれたり。此形見を見給てこそ、「さすが欣求淨土の望も御
+座けり。」と、限なき歎の中にも、聊頼しげには宣けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-23-nlp_gloss-193">2</a></p>
+      <p class="occurrence-context">明れば治承三年正月下旬に丹波少將成經、肥前國鹿瀬庄を立て、都へと急がれけれ共餘寒猶烈しく、海上も痛く荒ければ、浦傅島傅して、きさらぎ十日比にぞ、備前の兒島に著給ふ。其より父大納言殿の住給ける處を尋いりて見給ふに、竹の柱、舊たる障子なんどに書置れたる筆のすさびを見給て、「人の形見には手跡に過たる物ぞなき。
+書置給はすば、爭か是を見るべき。」とて、康頼入道と二人、讀では泣き、泣いては
+讀む。「安元三年七月廿日出家、同廿六日、信俊下向。」とも書かれたり。さてこそ
+源左衞門尉信俊が參りたりけるも知れけれ。そばなる壁には、「三尊來迎便有り、九
+品往生疑なし。」とも書かれたり。此形見を見給てこそ、「さすが欣求淨土の望も御
+座けり。」と、限なき歎の中にも、聊頼しげには宣けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-25-nlp_gloss-83">2</a></p>
+      <p class="occurrence-context">其後はよもすがら康頼入道と二人、墓の廻を行道して念佛申し、明ぬれば新う壇築き、釘貫せさせ、前に假屋作り、七日七夜、念佛申し經書て結願には大なる卒塔婆を立て、「過去聖靈出離生死、證大菩提」と書て、年號月日の下に、「孝子成經」と書かれたれば、賤山賤の心無も、子に過たる寶はなしとて、涙を流し、袖を絞ぬは無りけり。年去年來れ共、忘難きは撫育の昔の恩。夢の如く幻の如し。盡難きは戀慕の今の涙なり。三世十方の佛陀の聖衆も憐み給ひ、亡魂尊靈も、如何に嬉しと覺しけん。「今暫候て、念佛の功をも積べう候へ共、都に待つ人共も心元なう候らん。又こそ參候は。」とて、亡者に暇申つゝ、泣々そこをぞ立れける。草陰にても名殘惜うや思はれけん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9B%B8%E3%81%8B#tk-2-33-nlp_gloss-383">2</a></p>
+      <p class="occurrence-context">僧都現にて有けりと思定て、「抑去年少將や判官入道が迎にも、是等が文と云ふ事もなし。今汝が便にも、音信の無きはかう共謂ざりけるか。」有王涙に咽び俯して、暫は物も申さず。良有て起上り、涙を抑へて申けるは、「君の西八條へ出させ給しかば、やがて追捕の官人參て、御内の人々搦取り、御謀反の次第を尋て、失果て候ぬ。北方は少き人を隱しかねまゐらせ給ひて、鞍馬の奧に忍ばせ給て候しに、此童計こそ時々參て宮仕つかまつり候しが、何も御歎の愚なる事は候はざりしかども、稚き人は、餘に戀參させ給て、參り候度毎に、『有王よ、鬼界が島とかやへ我具して參れ。』とむづからせ給候しが、過候し二月に、もがさと申す事に失させ給ぬ。北方は其歎と申し是の御事と申し、一方ならぬ御思に沈ませ給ひ、日に添へて弱らせ給候しが、同三月二日の日遂にはかなく成せ給ぬ。今は姫御前ばかり、奈良の姨御前の御許に御渡り候。是に御文賜はて候。」とて取出いて奉る。開て見給へば、有王が申にたがはず書れたり。奧には、「などや三人流されたる人の、二人は召還されて候に、今迄御上り候はぬぞ。哀高きも卑きも、女の身ばかり心うかりける物はなし。男の身にて候はば、渡せ給ふ島へも、などか尋ね參らで候ふべき。此有王御伴にて、急ぎ上せ給へ。」とぞ書かれたる。「是見よ、有王。此子が文の書樣のはかなさよ。己を伴にて、急ぎ上れと書たるこそ恨しけれ。心に任せたる俊寛が身ならば、何とてか三年の春秋をば送るべき。今年は十二に成とこそ思に、是程はかなくては、人にも見え、宮仕をもして、
+身をも扶くべきか。」とて泣れけるにこそ、人の親の心は闇にあらね共、子を思ふ道
+に迷ふ程も知れけれ。「此島へ流されて後は、暦も無れば月日の換り行をも知らず、
+唯自ら花の散り、葉の落るを見て、春秋を辨へ、蝉の聲麥秋を送れば夏と思ひ、雪の積を冬と知る。白月黒月の變行を見ては、三十日を辨へ、指を折て數れば、今年は六に成と思つる稚き者も早先立けるごさんなれ。西八條へ出し時、此子が我も行うと慕しを、軈て歸うずるぞと拵へ置しが、今の樣に覺るぞや。其を限と思はましかば、今暫もなどか見ざらん。親と成り、子と成り、夫婦の縁を結も、皆此世一に限ぬ契ぞかし。などさらば、其等が左樣に先立けるを、今迄夢幻にも知せざりけるぞ。人目も愧ず如何にもして、命生うと思しも、是等を今一度見ばやと思ふ爲也。姫が事計こそ心苦けれ共、其も生身なれば、歎ながらも過んずらん。さのみ存て、己に憂目を見せんも我身ながらも強顏かるべし。」とて、自らの食事を止め、偏に彌陀の名號を唱へて、臨終正念をぞ祈られける。有王渡て廿三日と云に、其庵の内にて遂に終り給ぬ。歳三十七とぞ聞えし。有王空き姿に取附き、天に仰ぎ地に俯し、泣悲め共かひぞなき。心の行程泣あきて、「軈て後世の御供仕るべう候へども、此世には姫御前ばかりこそ御渡候へ。後世弔ひまゐらすべき人も候はず。暫存て、弔ひ參せ候はんとて、臥戸を改めず、庵を切懸け、松の枯枝、蘆の枯葉を取掩ひ、藻鹽の煙と成し奉り、荼毘事終にければ、白骨を拾ひ、頸に懸け、又商人船の便に、九國の地へぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%9B%B8%E3%81%8B#tk-4-37-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">とぞ書かれたる。此院宣をば、錦の袋に入れて、石橋山の合戰の時も、兵衞佐殿頸に懸られたりけるとかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%9B%B8%E3%81%8B#tk-5-31-nlp_gloss-186">5</a></p>
+      <p class="occurrence-context">入道相國の北の方、二位殿の夢に見給ひける事こそ恐しけれ。譬へば、猛火の夥う燃たる車を門の内へ遣入たり。前後に立たる者は或は馬の面の樣なる者も有り、或は牛の面の樣なる者も有り。車の前には、無と云ふ文字ばかりぞ見えたる鐡の札をぞ立たりける。二位殿夢の心に、「あれは何よりぞ。」と御尋あれば、「閻魔の廳より平家太政入道殿の御迎に參て候。」と申す。「さて、其札は何といふ札ぞ。」と問せ給へば、「南閻浮提金銅十六丈の盧遮那佛燒亡し給へる罪に依て、無間の底に堕給ふべき由、閻魔の廳に御さだめ候が、無をば書かれて、間の字をば未だ書れぬ也。」とぞ申ける。二位殿打驚き、汗水になり、是を人に語給へば、聞く人皆身の毛よだちけり。靈佛靈社に、金銀七寶を投げ、馬鞍鎧冑弓箭太刀刀に至る迄、取出し運出して祈られけれども、其驗も無りけり。男女の君達、跡枕に指つどひて、如何にせんと歎悲み給へども叶べしとも見えざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%9B%B8%E3%81%8B#tk-5-38-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">とぞ書かれたる。尊慧いなみ申べき事ならねば、左右なう領承の請文を書て奉ると覺て、覺にけり。偏に死去の思なして、院主の光影房に此事を語る。皆人奇特の思ひをなす。尊慧口には彌陀の名號を唱へ、心に引攝の悲願を念ず。やう／＼二十五日の夜陰に及で常住の佛前にいたり例の如く脇息に倚懸て念佛讀經す。子刻に及で眠切なるが故に、住房に歸て打臥す。丑刻許に又先の如くに淨衣裝束なる鬼二人來て、はや／＼參らるべしと勸る間、閻王宣を辭せんとすれば、甚其恐有り。參詣せんとすれば、更に衣鉢なし。此思をなす時、法衣自然に身に纒て肩に懸り、天より金の鉢下る。二人の童子、二人の從僧、十人の下僧、七寶の大車、寺坊の前に現ず。尊慧なのめならず喜で即時に車に乘る。從僧等西北の方に向て空を翔て、程なく閻魔王宮にいたりぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%9B%B8%E3%81%8B#tk-6-44-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">とぞ書かれたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%9B%B8%E3%81%8B#tk-6-73-nlp_gloss-280">6</a></p>
+      <p class="occurrence-context">村上聖代應和の比ほひ、三五夜中の新月白く冴え、凉風颯々たりし夜半に、御門清凉殿にして、玄象をぞ遊されける。時に影の如くなる者、御前に參じて、優にけだかき聲にて、唱歌を目出たう仕る。御門御琵琶を差置かせ給て、「抑汝は如何なる者ぞ。何くより來れるぞ。」と御尋あれば、「是は昔貞敏に三曲を傳へし大唐の琵琶博士、廉妾夫と申す者で候が、三曲の中、祕曲を一曲殘せるに依て、魔道に沈淪仕て候。今御琵琶の御撥音妙に聞えて侍る間、參入仕る處也。願くは此曲を君に授け奉り、佛果菩提を證すべき」由申て、御前に立られたる青山を取り、轉手をねぢて、祕曲を君に授け奉る。三曲の中に上玄、石上是也。其後は、君も臣も恐させ給て、此御琵琶を遊し彈く事もせさせ給はず、御室へ參せられたりけるを、經正の幼少の時御最愛の童形たるに依て、下し預りたりけるとかや。甲は紫藤の甲、夏山の嶺の緑の木間より、有明の月の出るを、撥面に書かれたりける故にこそ、青山とは附られたれ。玄象にも相劣らぬ希代の名物なりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%9B%B8%E3%81%8B#tk-8-51-nlp_gloss-2">8</a></p>
+      <p class="occurrence-context">忠度と書かれたりけるにこそ、薩摩守とは知てけれ。太刀の先に貫ぬき、高く差上げ、大音聲を揚て、「此日來平家の御方と聞えさせ給つる薩摩守殿をば、岡部の六彌太忠純討奉たるぞや。」と名乘ければ、敵も御方も是を聞いて、「あないとほし、武藝にも歌道にも達者にておはしつる人を。あたら大將軍を。」とて、涙を流し袖をぬらさぬは無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%B8%E3%81%8B#tk-9-11-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">とぞ書かれたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9B%B8%E3%81%8B#tk-9-13-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">とこそ書かれたれ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

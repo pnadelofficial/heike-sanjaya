@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>八島</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>八島</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Yashima</li>
+      
+      <li>Yashima (place name)</li>
+      
+      <li>the eight islands (of Japan)</li>
+      
+      <li>the eight islands</li>
+      
+      <li>Yashima (a place name, referring to the island of Yashima)</li>
+      
+      <li>Yashima (a place name)</li>
+      
+      <li>the island of Yashima (a place in Sanuki province, site of the Battle of Yashima)</li>
+      
+      <li>Yashima (a place name, referring to a location in modern Kagawa Prefecture)</li>
+      
+      <li>Yashima (a place name, referring to a location in present-day Kagawa Prefecture)</li>
+      
+      <li>Yashima (the island in Sanuki province, site of a battle in the Genpei War)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (30)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%AB%E5%B3%B6#tk-8-246-nlp_gloss-15">8</a></p>
+      <p class="occurrence-context">重能が沙汰として、四國の内を催して讃岐の八島にかたの樣なる板屋の内裏や、御所をぞ造せける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%AB%E5%B3%B6#tk-8-349-nlp_gloss-2">8</a></p>
+      <p class="occurrence-context">牛車は八島の大臣殿の牛車也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%AB%E5%B3%B6#tk-8-367-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">平家は讃岐の八島に有ながら、山陽道八箇國、南海道六箇國、都合十四箇國をぞ討取ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%AB%E5%B3%B6#tk-8-369-nlp_gloss-46">8</a></p>
+      <p class="occurrence-context">討手の大將には矢田判官代義清、侍大將には、信濃國の住人海野彌平四郎行廣、都合其勢七千餘騎山陽道へ馳下り、備中國水島が渡に舟を浮べて、八島へ既に寄んとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%AB%E5%B3%B6#tk-8-468-nlp_gloss-18">8</a></p>
+      <p class="occurrence-context">さる程に木曾殿は備中國萬壽の庄にて勢汰へして、八島へ既に寄むとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%AB%E5%B3%B6#tk-8-596-nlp_gloss-12">8</a></p>
+      <p class="occurrence-context">」と御尋ありければ、信濃國の住人八島四郎行綱と名乘申。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%AB%E5%B3%B6#tk-9-407-nlp_gloss-33">9</a></p>
+      <p class="occurrence-context">大將軍小松新三位中將、同少將、丹後侍從、面目なうや思はれけん、播磨國高砂より舟に乘て、讃岐の八島へ渡給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%AB%E5%B3%B6#tk-9-867-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">明れば十四日、八島へ著んとての宵打過ぐるまで臥給ひたりけるが、ふけゆくまゝに舟の中もしづまりければ、北方乳母の女房に宣ひけるは、「このほどは、三位討れぬと聞つれども、誠とも思はで有つるが、此暮程より、さも有らんと思定めて有ぞとよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-34-nlp_gloss-20">10</a></p>
+      <p class="occurrence-context">』と問候つれば、『其は軍已前より大事の御痛とて、八島に御渡候間、此度は向はせ給候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-80-nlp_gloss-7">10</a></p>
+      <p class="occurrence-context">仰下されけるは、「八島へ歸りたくば、一門の中へ言送て、三種神器を都へ返し入れ奉れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-163-nlp_gloss-15">10</a></p>
+      <p class="occurrence-context">去程に平三左衞門重國、御坪の召次花方、八島に參て、院宣をたてまつる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-316-nlp_gloss-7">10</a></p>
+      <p class="occurrence-context">此のぢやうでは、八島の大臣殿の見參にも入ぬと覺え候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-416-nlp_gloss-14">10</a></p>
+      <p class="occurrence-context">さる程に、小松三位中將維盛卿は、身がらは八島にありながら、心は都へ通れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-533-nlp_gloss-18">10</a></p>
+      <p class="occurrence-context">良有て、舍人武里を召て、「おのれはとう／＼是より八島へ歸れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-545-nlp_gloss-22">10</a></p>
+      <p class="occurrence-context">武里「君の如何にもならせおはしまさん樣を見參せて後こそ、八島へも參り候はめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%AB%E5%B3%B6#tk-10-761-nlp_gloss-16">10</a></p>
+      <p class="occurrence-context">昔は九重の上にて、春の花を玩び、今は八島の浦にして、秋の月に悲む。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-8-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">さる程に八島には、隙ゆく駒の足疾くして、正月も立ち二月にも成りぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-24-nlp_gloss-23">11</a></p>
+      <p class="occurrence-context">同二月三日九郎大夫判官義經、都を立て、攝津國渡邊より舟ぞろへして、八島へ既に寄んとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-66-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">やがて八島の案内者に具せんずるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-90-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">判官近藤六親家を召て、「八島には平家の勢如何程有ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-96-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">是より八島へはいか程の道ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-102-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">御方の兵共の八島へ參ると思ひけるやらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-112-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">是も八島へ參るが、いまだ案内を知らぬに、じんじよせよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-126-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">其より丹生屋、白鳥、打過／＼、八島の城へ寄給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-127-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">又近藤六親家を召て、「八島の館の樣は、如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-132-nlp_gloss-58">11</a></p>
+      <p class="occurrence-context">
+                  八島には、阿波民部重能が嫡子、田内左衞門教能、河野四郎が、召せども參らぬを責んとて、三千餘騎で伊豫へ越えたりけるが河野をば討漏して家子郎等百五十餘人が首きて、八島の内裏へ參せたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-314-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">さる程に、八島に殘留たる二百餘騎の兵共、後馳に馳來る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-329-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">昨日八島に寄せて御所内裏皆燒拂ひ、大臣殿父子生捕にし奉り能登殿は自害し給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%AB%E5%B3%B6#tk-11-346-nlp_gloss-24">11</a></p>
+      <p class="occurrence-context">同廿二日辰の刻ばかり渡邊に殘り留たる二百餘艘の船共、梶原を先として、八島の磯にぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%85%AB%E5%B3%B6#tk-12-512-nlp_gloss-9">12</a></p>
+      <p class="occurrence-context">小松殿の御子丹後侍從忠房は八島の軍より落て行末も知らずおはせしが、紀伊國の住人湯淺權守宗重を憑んで湯淺の城にぞ籠られける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

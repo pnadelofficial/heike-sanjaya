@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>同心</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>agreement</li>
+      
+      <li>same heart; accord; agreement</li>
+      
+      <li>complicity</li>
+      
+      <li>to be of the same mind</li>
+      
+      <li>agreeing</li>
+      
+      <li>united</li>
+      
+      <li>same mind</li>
+      
+      <li>of one mind</li>
+      
+      <li>siding with</li>
+      
+      <li>allied</li>
+      
+      <li>allying with</li>
+      
+      <li>of the same mind</li>
+      
+      <li>united in purpose</li>
+      
+      <li>to side with</li>
+      
+      <li>united in heart</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (29)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%90%8C%E5%BF%83#tk-1-565-nlp_gloss-12">1</a></p>
+      <p class="occurrence-context">平治にも、越後中將とて、信頼卿に同心の間、既に誅せらるべかりしを、小松殿やう／＼に申て、首をつぎ給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%BF%83#tk-4-36-nlp_gloss-21">4</a></p>
+      <p class="occurrence-context">其上此嚴島をば平家斜ならず、崇敬ひ給ふ間、上には平家に御同心、下には法皇の何となう鳥羽殿に押籠られて渡らせ給ふ、入道相國の謀反の心をも和げ給へとの御祈念の爲とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%BF%83#tk-4-143-nlp_gloss-23">4</a></p>
+      <p class="occurrence-context">攝津國には多田藏人行綱こそ候へども、新大納言成親卿の謀反の時、同心しながら返り忠したる不當人で候へば申に及ばず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%BF%83#tk-4-330-nlp_gloss-6">4</a></p>
+      <p class="occurrence-context">」「抑朝敵頼政に同心せむとや思ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%BF%83#tk-4-335-nlp_gloss-26">4</a></p>
+      <p class="occurrence-context">競涙をはら／＼と流いて、「相傳の好はさる事で候へ共、いかが朝敵となれる人に同心をばし候べき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%BF%83#tk-4-387-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">」と、一味同心に僉議して、山へも奈良へも、牒状をこそ遣しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%90%8C%E5%BF%83#tk-4-427-nlp_gloss-25">4</a></p>
+      <p class="occurrence-context">願くは、衆徒、内には佛法の破滅を助け、外には惡逆の伴類を退けば、同心の至り、本懷に足ぬべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%90%8C%E5%BF%83#tk-5-692-nlp_gloss-16">5</a></p>
+      <p class="occurrence-context">都には又高倉宮園城寺へ入御の時、南都の大衆同心して、剩へ御迎に參る候、是以て朝敵なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%90%8C%E5%BF%83#tk-6-244-nlp_gloss-48">6</a></p>
+      <p class="occurrence-context">同十二日、鎭西より飛脚到來、宇佐大宮司公通が申けるは、九州の者共、緒方三郎を始として、臼杵、戸次、松浦黨 に至る迄、一向平家を背いて源氏に同心の由申たりければ、「東國北國の背だに有に、こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%90%8C%E5%BF%83#tk-6-246-nlp_gloss-36">6</a></p>
+      <p class="occurrence-context">同十六日に、伊豫國より飛脚到來、去年の冬比より、河野四郎通清を初として、四國の者共皆平家を背いて、源氏に同心の間、備後國の住人、額の入道西寂、平家に志深かりければ、伊豫國へ押渡り、道前道後のさかひ、高直城にて、河野四郎通清を討候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%90%8C%E5%BF%83#tk-6-254-nlp_gloss-22">6</a></p>
+      <p class="occurrence-context">熊野別當湛増も、平家の重恩の身なりしが、其も背いて源氏に同心の由聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%90%8C%E5%BF%83#tk-6-454-nlp_gloss-14">6</a></p>
+      <p class="occurrence-context">物の身にしみて面白事は神も人も同心也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-316-nlp_gloss-30">7</a></p>
+      <p class="occurrence-context">」と宣へば手書に具せられたる大夫坊覺明進出て申けるは、「山門の衆徒は三千候、必一味同心なる事は候はず、皆思々心々に候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-317-nlp_gloss-16">7</a></p>
+      <p class="occurrence-context">或は源氏に附んと申す衆徒も候らん、或は平家に同心せんと云ふ大衆も候らん、牒状を遣して御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-347-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">抑天台の衆徒、平家に同心か、源氏に與力か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-353-nlp_gloss-23">7</a></p>
+      <p class="occurrence-context">庶幾三千の衆徒神の爲、佛の爲、國の爲、君の爲に源氏に同心して兇徒を誅し、鴻化に浴せん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-360-nlp_gloss-16">7</a></p>
+      <p class="occurrence-context">或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-368-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">何ぞ當山獨宿運盡ぬる平家に同心して、運命開くる源氏を背かんや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-369-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">須く平家値遇の義を翻して、源氏合力の旨に任ずべき由、一味同心に僉議して、返牒を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-394-nlp_gloss-23">7</a></p>
+      <p class="occurrence-context">山王大師に祈誓して、三千の衆徒を語らはばやとて、一門公卿十人、同心連署の願書を書いて、山門へ送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-399-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">加之奸謀に與して、同心を致す源氏等、義仲、行家以下黨を結て數あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-433-nlp_gloss-16">7</a></p>
+      <p class="occurrence-context">大衆誠に、事の體を憐けれども、「既に源氏に同心の返牒を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%90%8C%E5%BF%83#tk-7-444-nlp_gloss-28">7</a></p>
+      <p class="occurrence-context">郎等に楯六郎親忠、手書に大夫坊覺明、六千餘騎で、天台山に競登り、三千の衆徒皆同心して、唯今都へ攻入る由申たりける故也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%90%8C%E5%BF%83#tk-8-169-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">一味同心して、追出すべき由、宣ひ遣されたりければ、頼經朝臣是を當國の住人緒方三郎維義に下知す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%90%8C%E5%BF%83#tk-9-338-nlp_gloss-22">9</a></p>
+      <p class="occurrence-context">又伊豫國の住人河野四郎通信、豐後國の住人臼杵次郎惟高、緒方三郎惟義、同心して都合其勢二千餘人、備前國へ押渡り、今木城にぞ籠ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%90%8C%E5%BF%83#tk-10-744-nlp_gloss-12">10</a></p>
+      <p class="occurrence-context">「鎭西より、臼杵、戸次、松浦黨、同心して押渡る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%90%8C%E5%BF%83#tk-11-13-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">「鎭西より、臼杵、戸次、松浦黨同心して、押渡る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%90%8C%E5%BF%83#tk-11-490-nlp_gloss-59">11</a></p>
+      <p class="occurrence-context">阿波民部重能は、此三箇年が間、平家に能々忠を盡し、度々の合戰に命を惜まず防ぎ戰ひけるが、子息田内左衞門を生捕にせられて、いかにも叶はじとや思ひけん、忽に心替りして、源氏に同心してんげり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%90%8C%E5%BF%83#tk-12-385-nlp_gloss-51">12</a></p>
+      <p class="occurrence-context">さる程に北條四郎六代御前具し奉て下りけるに、鎌倉殿御使鏡宿にて行合たりけるに、「如何に」と問へば、「十郎藏人殿、信太三郎先生殿、九郎判官殿に同心の由聞え候。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

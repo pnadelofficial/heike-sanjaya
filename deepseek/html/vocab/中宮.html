@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中宮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>中宮</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>the Empress</li>
+      
+      <li>Empress (the title of the consort of the emperor)</li>
+      
+      <li>Empress</li>
+      
+      <li>Empress (the consort of an emperor)</li>
+      
+      <li>the Empress or the consort of the Emperor</li>
+      
+      <li>the Empress&#39;s palace</li>
+      
+      <li>the Empress (residence of the Empress Dowager)</li>
+      
+      <li>the Empress (or the Empress Dowager)</li>
+      
+      <li>the Empress Dowager</li>
+      
+      <li>empress</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (36)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E4%B8%AD%E5%AE%AE#tk-1-761-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">中宮は御車に奉て、行啓あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-7-nlp_gloss-12">3</a></p>
+      <p class="occurrence-context">去程に入道相國の御女建禮門院、其比は未中宮と聞えさせ給しが、御惱とて、雲の上、天が下の歎にてぞ在ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-10-nlp_gloss-5">3</a></p>
+      <p class="occurrence-context">主上今年十八、中宮は二十二に成せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-16-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">六月一日、中宮御著帶有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-19-nlp_gloss-5">3</a></p>
+      <p class="occurrence-context">かゝりし程に、中宮は月の重るに隨て、御身を苦うせさせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-28-nlp_gloss-17">3</a></p>
+      <p class="occurrence-context">
+                  門脇宰相か樣の事共傳聞いて、小松殿に申されけるは、「中宮御産の御祈樣々に候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-32-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">中宮御惱の御事、承及ぶ如くんば、殊更成親卿が死靈などと聞え候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-34-nlp_gloss-34">3</a></p>
+      <p class="occurrence-context">人の念ひを休させ給はば、思召す事も叶ひ、人の願を叶へさせ給はば、御願も既成就して中宮やがて、皇子御誕生有て、家門の榮花彌盛に候べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-104-nlp_gloss-15">3</a></p>
+      <p class="occurrence-context">さる程に同年十一月十二日の寅の刻より、中宮御産の氣坐すとて、京中六波羅ひしめきあへり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-116-nlp_gloss-3">3</a></p>
+      <p class="occurrence-context">此大臣は中宮の御兄にて坐ける上、父子の御契なれば、御馬參せ給ふも理なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-124-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">かゝりしか共、中宮は隙なく頻らせ給ふばかりにて、御産も頓に成遣ず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-126-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">頭中將重衡卿、其時は未中宮亮にておはしけるが、御簾の内よりつと出て、御産平安、皇子御誕生候ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-130-nlp_gloss-3">3</a></p>
+      <p class="occurrence-context">小松殿、中宮の御方に參せ給て、金錢九十九文、皇子の御枕に置き、「天を以て父とし、地を以て母と定め給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-158-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">中宮は日數經にければ、六波羅より内裏へ參せ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-160-nlp_gloss-40">3</a></p>
+      <p class="occurrence-context">位に即奉て、外祖父、
+外祖母と仰れん。」と願ける。我が崇奉る安藝の嚴島に申さんとて、月詣を始て、祈
+り申されければ、中宮やがて、御懷姙有て、思ひのごとく皇子にて坐けるこそ目出度
+けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-181-nlp_gloss-22">3</a></p>
+      <p class="occurrence-context">白河院御在位の御時、京極大殿の御娘の后に立せ給て、賢子の中宮とて、御最愛有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-184-nlp_gloss-23">3</a></p>
+      <p class="occurrence-context">「安う候」とて三井寺に歸り、百日肝膽を摧て祈申されければ、中宮軈て百日の内に御懷姙有て、承保元年十二月十六日。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-212-nlp_gloss-21">3</a></p>
+      <p class="occurrence-context">」とて、比叡山に歸り上り、山王大師に、百日肝膽を摧て祈申ければ、中宮軈て百日の内に御懷姙有て、承暦三年七月九日、御産平安、皇子御誕生有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-602-nlp_gloss-27">3</a></p>
+      <p class="occurrence-context">參議皇太后宮權大夫兼右兵衞督藤原光能、大藏卿右京大夫兼伊豫守高階康經、藏人左少辨兼中宮權大進藤原基親、三官共に停めらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E4%B8%AD%E5%AE%AE#tk-3-694-nlp_gloss-15">3</a></p>
+      <p class="occurrence-context">入道相國は、かく散々にし散されたれ共、御娘中宮にてまします。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-126-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">中宮は弘徽殿より仁壽殿へ遷らせ給ひて、高御座へ參せ給ひける御有樣、目出度かりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-312-nlp_gloss-9">4</a></p>
+      <p class="occurrence-context">或時小松殿參内の次に、中宮の御方へ参せ給ひたりけるに、八尺許有ける蛇が、大臣の指貫の左の輪を這廻りけるを、重盛騒がば、女房達も騒ぎ、中宮も驚せ給ひなんずと思召し、左の手で蛇の尾を押へ、右の手で首を取り、直衣の袖の中に引入れ、些ともさわがず、つい立て、「六位や候、六位や候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-312-nlp_gloss-47">4</a></p>
+      <p class="occurrence-context">或時小松殿參内の次に、中宮の御方へ参せ給ひたりけるに、八尺許有ける蛇が、大臣の指貫の左の輪を這廻りけるを、重盛騒がば、女房達も騒ぎ、中宮も驚せ給ひなんずと思召し、左の手で蛇の尾を押へ、右の手で首を取り、直衣の袖の中に引入れ、些ともさわがず、つい立て、「六位や候、六位や候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%B8%AD%E5%AE%AE#tk-4-446-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">女子或は中宮職に備り、或は准后の宣を蒙る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-6-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">中宮、一院、上皇、御幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-716-nlp_gloss-29">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「さらば南都を攻よや。」とて、大將軍には頭中將重衡、副將軍には中宮亮通盛、都
+合其勢四萬餘騎で南都へ發向す。大衆老少嫌はず七千餘人甲の緒をしめ、奈良坂、般
+若寺、二箇所の路を掘切て、堀ほり垣楯かき、逆茂木引て待かけたり。平家は四萬餘
+騎を二手に分て、奈良坂、般若寺、二箇所の城郭に押寄て、鬨をどとつくる。大衆は
+皆歩立打物なり。官軍は馬にてかけまはしかけまはし、あそここゝに追懸／＼指つめ
+引つめ散々に射ければ、防ぐ所の大衆數を盡いて討れにけり。卯刻に矢合して一日戰
+ひ暮す。夜に入て、奈良坂、般若寺、二箇所の城郭共に破れぬ。落行く衆徒の中に、
+坂四郎永覺と云ふ惡僧あり。打物持ても弓箭を取ても力の強さも七大寺十五大寺に勝
+たり。萌黄威の腹巻の上に、黒絲威の鎧を重てぞ著たりける。帽子甲に五枚甲の緒を
+しめて、左右の手には茅の葉の樣に反たる白柄の大長刀、黒漆の大太刀持つまゝに、
+同宿十餘人前後にたて、てがいの門より打て出でたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%B8%AD%E5%AE%AE#tk-5-748-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">中宮一院上皇攝政以下の人々は、「惡僧をこそ滅すとも、伽藍を破滅すべしや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B8%AD%E5%AE%AE#tk-6-55-nlp_gloss-4">6</a></p>
+      <p class="occurrence-context">建禮門院の未中宮にておはしましける時なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B8%AD%E5%AE%AE#tk-6-61-nlp_gloss-9">6</a></p>
+      <p class="occurrence-context">中にも哀成し御事は、中宮の御方に候はせ給ふ女房の召使ける上童、思はざる外、龍顏に咫尺する事有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B8%AD%E5%AE%AE#tk-6-91-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">申慰參せんとて、中宮の御方より小督殿と申す女房を參せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B8%AD%E5%AE%AE#tk-6-106-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">入道相國是を聞き、中宮と申も御女也、冷泉少將も聟也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B8%AD%E5%AE%AE#tk-6-466-nlp_gloss-16">6</a></p>
+      <p class="occurrence-context">治承四年の五節は福原にて行はれけるに、殿上人中宮の御方へ推參ありしが、或雲客の「竹湘浦に斑なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B8%AD%E5%AE%AE#tk-6-559-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">同十二月廿四日、中宮院號蒙せ給ひて、建禮門院とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E4%B8%AD%E5%AE%AE#tk-8-47-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">建禮門院の未だ中宮にてまし／＼ける時其御方に宮仕給ひしを、主上常は召れける程に、うち續き宮あまた出來させ給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E4%B8%AD%E5%AE%AE#tk-8-49-nlp_gloss-16">8</a></p>
+      <p class="occurrence-context">信隆卿内々うれしうは思はれけれども、平家にも憚り、中宮にも恐れ參せて、もてなし奉る事もおはせざりしを、入道相國の北方八條の二位殿、「苦しかるまじ、我育て參せて、儲の君にして奉らむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B8%AD%E5%AE%AE#tk-9-924-nlp_gloss-29">9</a></p>
+      <p class="occurrence-context">此女房十六と申し安元の春の比、女院法勝寺へ花見の御幸有しに、通盛卿其時は未だ中宮の亮にて供奉せられたりけるが、此女房を只一目見て、哀れと思ひ初けるより、其面影のみ身にひしと立傍て、忘るゝ隙も無りければ、常は歌を詠み、文を盡して戀悲しみ給へど、玉章の數のみ積りて、取入給ふ事もなし。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

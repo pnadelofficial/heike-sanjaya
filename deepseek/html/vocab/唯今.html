@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>唯今</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>唯今</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>just now</li>
+      
+      <li>now</li>
+      
+      <li>this very moment</li>
+      
+      <li>right now</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (42)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%94%AF%E4%BB%8A#tk-1-421-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">小松殿「何によてか、唯今さる事あるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%94%AF%E4%BB%8A#tk-1-573-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">唯今漏きこえて、天下の大事に及び候ひなんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%94%AF%E4%BB%8A#tk-2-148-nlp_gloss-8">2</a></p>
+      <p class="occurrence-context">「夜は遙に更ぬらん、唯今如何に、何事ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%94%AF%E4%BB%8A#tk-2-241-nlp_gloss-36">2</a></p>
+      <p class="occurrence-context">定て北面の者共が中にこそ有らむなど、思はじ事なう案じ續けて坐けるに、後の方より足音の高らかにしければ、すは唯今我命を失はむとて、武士共が參るにこそと待給に、入道自ら板敷高らかに踏鳴し、大納言の坐ける後の障子を、さとあけられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%94%AF%E4%BB%8A#tk-2-429-nlp_gloss-9">2</a></p>
+      <p class="occurrence-context">「子ならざらむ者は、誰か唯今我身の上をさしおいて、是程までは悦べき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%94%AF%E4%BB%8A#tk-2-465-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">旗竿共引そばめ／＼、馬の腹帶を固め、甲の緒を縮め、唯今皆打立んずる氣色共なるに、小松殿烏帽子直衣に、大文の指貫のそば取て、さやめき入給へば、事の外にぞ見えられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%94%AF%E4%BB%8A#tk-2-532-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">」とて、つい立て中門に出で侍共に仰られけるは、「唯今重盛が申しつる事をば、汝等承ずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%94%AF%E4%BB%8A#tk-2-741-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">大納言入道殿は、唯今も都の事をのみ宣出し、歎沈で御座ける所に、「京より信俊が參て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%94%AF%E4%BB%8A#tk-3-12-nlp_gloss-20">3</a></p>
+      <p class="occurrence-context">若皇子にてわたらせ給はば、如何に目出度からんと、平家の人々は唯今皇子御誕生の有樣に、勇悦びあはれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%94%AF%E4%BB%8A#tk-3-449-nlp_gloss-13">3</a></p>
+      <p class="occurrence-context">前右大將宗盛卿の方樣の人は、世は唯今大將殿へ參りなんずとぞ悦ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%94%AF%E4%BB%8A#tk-4-369-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">唯今參うずるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%94%AF%E4%BB%8A#tk-4-575-nlp_gloss-74">4</a></p>
+      <p class="occurrence-context">秩父、足利、中違て、常は合戰を爲候しに、大手は長井渡、搦手は古我杉渡より寄せ候ひしに、爰に上野國の住人、新田入道、足利に語はれて、杉の渡より寄んとて儲たる舟共を秩父が方より皆破れて、申候しは、「唯今爰を渡さずば、長き弓箭の疵なるべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%94%AF%E4%BB%8A#tk-5-408-nlp_gloss-37">5</a></p>
+      <p class="occurrence-context">暫はどこにも行ふべかりしが、さはなくして、又勸進帳を捧て、勸めけるが、さらば唯も無して、「あはれこの世の中は、唯今亂れ、君も臣も皆滅失んずる物を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%94%AF%E4%BB%8A#tk-5-438-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">唯今天の責蒙んずる龍神共かな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%94%AF%E4%BB%8A#tk-6-259-nlp_gloss-2">6</a></p>
+      <p class="occurrence-context">世は唯今失なんずとて、必平家の一門ならねども、心有る人々の歎き悲まぬは無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%94%AF%E4%BB%8A#tk-6-605-nlp_gloss-12">6</a></p>
+      <p class="occurrence-context">東國北國の源氏共、蜂の如くに起合ひ、唯今都へ責上らんとするに、か樣に波の立つやらん、風の吹やらんも知ぬ體にて花やかなりし事共、中々云ふかひなうぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%94%AF%E4%BB%8A#tk-7-48-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">されば怨敵を目の前に平らげ、凶徒を唯今責落さむ事も、疑なしと悦で、又船に取乘て、竹生島をぞ出られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%94%AF%E4%BB%8A#tk-7-440-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">唯今敵の打入たる樣なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%94%AF%E4%BB%8A#tk-7-444-nlp_gloss-32">7</a></p>
+      <p class="occurrence-context">郎等に楯六郎親忠、手書に大夫坊覺明、六千餘騎で、天台山に競登り、三千の衆徒皆同心して、唯今都へ攻入る由申たりける故也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%94%AF%E4%BB%8A#tk-7-696-nlp_gloss-8">7</a></p>
+      <p class="occurrence-context">況や是は今日を最後、唯今限の事なれば、行くも止まるも、互に袖をぞ濕しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%94%AF%E4%BB%8A#tk-8-54-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">此宮の御運は唯今開かせ給はんずる者を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%94%AF%E4%BB%8A#tk-9-198-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">一條次郎、「唯今名乘は、大將軍ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%94%AF%E4%BB%8A#tk-9-426-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">唯今も上の山より源氏さと落し候なば、取る物も取あへ候はじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%94%AF%E4%BB%8A#tk-9-600-nlp_gloss-10">9</a></p>
+      <p class="occurrence-context">其時下人ども、「河原殿兄弟唯今城の内へ眞先懸て討れ給ひぬるぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%94%AF%E4%BB%8A#tk-9-646-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">唯今の矢一つでは、敵十人は防んずる物を、罪作りに、矢だうなに。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%94%AF%E4%BB%8A#tk-10-37-nlp_gloss-21">10</a></p>
+      <p class="occurrence-context">風の吹日は今日もや船に乘り給らんと肝を消し、軍といふ時は、唯今もや討たれ給らんと心を盡す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%94%AF%E4%BB%8A#tk-10-236-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">唯今は爭か許すべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%94%AF%E4%BB%8A#tk-10-361-nlp_gloss-14">10</a></p>
+      <p class="occurrence-context">三位中將守護の武士に宣ひけるは、「さても唯今の女房は優なりつる者哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%94%AF%E4%BB%8A#tk-10-585-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">唯今大臣の大將待かけ給へる人とこそ見奉りしに、今日はかくやつれ果給へる御有樣、兼ては思寄ざりしをや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%94%AF%E4%BB%8A#tk-10-604-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">唯今も思出るぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%94%AF%E4%BB%8A#tk-10-633-nlp_gloss-72">10</a></p>
+      <p class="occurrence-context">無二の懇念を致して、若は一反、若は十反も唱へ給ふ物ならば、彌陀如來、六十萬億那由多恒河沙の御身を縮め、丈六八尺の御形にて觀音勢至、無數の聖衆、化佛菩薩、百重千重に圍繞し、伎樂歌詠して、唯今極樂の東門を出て來迎し給はむずれば、御身こそ蒼海の底に沈むと思召るゝとも、紫雲の上にのぼり給ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-205-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">」とて、尋出し、「手負の唯今落入に、一日經書て弔へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-797-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">唯今客人のこうずるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-998-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">本三位中將殿の唯今奈良へ御通り候が、立ながら見參に入らばやと仰候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-1042-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">「知時こそ唯今最後の御有樣見參せ候はんとて、是まで參りて候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-1056-nlp_gloss-8">11</a></p>
+      <p class="occurrence-context">抑罪報たち所に報い、運命唯今を限りとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-1060-nlp_gloss-19">11</a></p>
+      <p class="occurrence-context">一念彌陀佛、即滅無量罪、願くは逆縁を以て順縁とし、唯今最後の念佛に依て、九品託生を遂べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%94%AF%E4%BB%8A#tk-11-1062-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">日來の惡行はさる事なれども、唯今の有樣を見奉に、數千人の大衆も、守護の武士も、皆涙をぞ流しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%94%AF%E4%BB%8A#tk-12-91-nlp_gloss-27">12</a></p>
+      <p class="occurrence-context">宿所には鞍おき馬ども、ひしと引立て、大幕の内には、矢負、弓張、者共皆具足して唯今寄んと出立候ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%94%AF%E4%BB%8A#tk-12-227-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">唯今もや失ひつらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%94%AF%E4%BB%8A#tk-12-238-nlp_gloss-7">12</a></p>
+      <p class="occurrence-context">」と問ひ給へば「唯今までは別の御事も候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%94%AF%E4%BB%8A#tk-12-242-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">唯今までは別の事も候はず。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

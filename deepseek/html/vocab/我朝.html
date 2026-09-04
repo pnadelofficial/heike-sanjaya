@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我朝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>我朝</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>our court</li>
+      
+      <li>our dynasty</li>
+      
+      <li>our country</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (17)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%88%91%E6%9C%9D#tk-1-362-nlp_gloss-3">1</a></p>
+      <p class="occurrence-context">然れども我朝には、神武天皇より以降、人皇七十餘代に及まで、いまだ二代の后に立たせ給へる例を聞かず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E6%9C%9D#tk-2-43-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">さすが我朝は粟散邊地の境、濁世末代といひながら、澄憲是を附屬して、法衣の袂を絞りつゝ、都へ歸のぼられける心の中こそ尊けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E6%9C%9D#tk-2-313-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">一年故少納言入道信西が執權の時に相當て、我朝には嵯峨皇帝の御時、右兵衞督藤原仲成を誅られてより以來、保元までは、君二十五代の間、行はれざりし死罪を始て執行ひ、宇治の惡左府の死骸を掘おこいて、實檢せられたりし事などは餘なる御政とこそ覺え候しか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E6%9C%9D#tk-2-478-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">さすが我朝は邊地粟散の境と申ながら、天照大神の御子孫、國の主として、天兒屋根命の末、朝の政を司どり給ひしより以降、太政大臣の官に至る人の、甲冑をよろふ事禮儀を背にあらずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E6%9C%9D#tk-2-860-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">我朝にも南都七大寺荒果て、八宗九宗も跡絶え、愛宕高雄も昔は堂塔軒を竝たりしか共、一夜の中に荒にしかば、天狗の栖と成り果てぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E6%9C%9D#tk-2-871-nlp_gloss-41">2</a></p>
+      <p class="occurrence-context">佛滅度の後、天竺に留らせ給ふ事、五百餘歳、佛法東漸の理にて、百濟國に移らせ給ひて、一千歳の後、百濟の帝齊明王、我朝の帝欽明天皇の御宇に及で、彼國より此國へ移らせ給ひて、攝津國難波の浦にして、星霜を送らせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%88%91%E6%9C%9D#tk-3-125-nlp_gloss-216">3</a></p>
+      <p class="occurrence-context">入道相國、
+二位殿、胸に手を置て、こはいかにせんとぞあきれ給ふ。人の物申しけれども、唯と
+もかくも好樣にとぞ宣ける。さり共「軍の陣ならば、是程淨海は臆せじ物を。」とぞ
+後には仰られける。御驗者は、房覺性運兩僧正、春堯法印、豪禪、實專兩僧都、各僧
+伽の句どもあげ、本寺本山の三寶、年來所持の本尊達、責ふせ々々々もまれけり。誠
+にさこそはと覺えて尊かりける中に法皇は、折しも新熊野へ御幸なるべきにて、御精
+進の次なりける間、錦帳近く御座有て、千手經を打上遊されけるにこそ、今一際事替
+て、さしも躍狂ふ御よりまし共が縛も、暫打靜けれ。法皇仰なりけるは、「如何なる
+御物氣なり共、此老法師がかくて候はんには、爭か近附奉るべき。就中に今現るる所
+の怨靈共は、皆我朝恩によて、人と成し者共ぞかし。縱報謝の心をこそ存ぜず共、豈
+障碍を成すべきや。速に罷退き候へ。」とて女人生産し難からん時に臨で、邪魔遮障
+し、苦忍難からんにも、心を致して大悲呪を稱誦せば、鬼神退散して、安樂に生ぜん
+と遊いて、皆水精の御數珠を推揉せ給へば、御産平安のみならず、皇子にてこそ坐け
+れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%88%91%E6%9C%9D#tk-3-535-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">我朝にも、間近く見候し事ぞかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%91%E6%9C%9D#tk-4-21-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">異國には、周の成王三歳、晉の穆帝二歳、我朝には、近衞院三歳、六條院二歳、是皆襁褓の中に包まれて、衣帶を正うせざりしかども、或は攝政負て位に即け、或は母后抱て朝に臨むと見えたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%88%91%E6%9C%9D#tk-5-178-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">夫れ我朝に朝敵の始めを尋ぬれば日本磐余彦尊の御宇四年、紀州名草郡、高雄村に一つの蜘蛛有り、身短く足手長くて、力人に勝れたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%88%91%E6%9C%9D#tk-5-738-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">我朝はいふに及ばず、天竺震旦にも、是程の法滅有るべしともおぼえず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%88%91%E6%9C%9D#tk-8-132-nlp_gloss-20">8</a></p>
+      <p class="occurrence-context">」時忠「さもさうず、還俗の國王の樣、異國にも先蹤有らん、我朝には先天武天皇未だ東宮の御時、大伴皇子に憚からせ給て、鬢髮を剃り、芳野の奧に忍ばせ給せたりしかども、大伴皇子を亡して、終には位に即せ給ひき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E6%9C%9D#tk-10-226-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">人王八十一代の御宇に當て、我朝神代の靈寶、遂に空しく異國の寶となさんか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E6%9C%9D#tk-10-234-nlp_gloss-12">10</a></p>
+      <p class="occurrence-context">げにも重衡卿一人を惜みて、さしもの我朝の重寶三種の神器を、返し入れ奉るべしとも覺えねば、此御請文の趣は、兼てより思ひ設られたりしかども、未左右を申されざりつる程は、何となういぶせく思はれけるに、請文既に到來して、關東へ下向せらるべきに定まりしかば、何の憑も弱り果て萬心細う都の名殘も今更惜思はれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E6%9C%9D#tk-10-578-nlp_gloss-16">10</a></p>
+      <p class="occurrence-context">抑權現當山に跡を垂させまし／＼てより以來、我朝の貴賤上下歩を運び首を傾け掌を合せて利生に關らずといふことなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E6%9C%9D#tk-10-811-nlp_gloss-32">10</a></p>
+      <p class="occurrence-context">「昔より今にいたるまで馬にて河を渡す兵はありといへども、馬にて海を渡す事、天竺震旦は知らず我朝には稀代のためし也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E6%9C%9D#tk-11-978-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">我朝に於は未だ其先蹤を聞かず。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

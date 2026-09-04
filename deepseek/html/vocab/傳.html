@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>傳</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>傳</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>hear</li>
+      
+      <li>transmit</li>
+      
+      <li>to hear (transmitted)</li>
+      
+      <li>to hear (and learn about)</li>
+      
+      <li>transmitted</li>
+      
+      <li>to transmit; to pass on (the verb stem of 傳へ聞いて, meaning &#39;heard and passed on&#39;)</li>
+      
+      <li>hear and transmit</li>
+      
+      <li>feelings</li>
+      
+      <li>tradition</li>
+      
+      <li>handed down</li>
+      
+      <li>to transmit; to convey (in the phrase &#39;傳に&#39;, meaning &#39;even to mention&#39; or &#39;to deign to acknowledge&#39;)</li>
+      
+      <li>to hear</li>
+      
+      <li>news</li>
+      
+      <li>post-horse</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (40)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%82%B3#tk-1-5-nlp_gloss-63">1</a></p>
+      <p class="occurrence-context">近く本朝をうかがふに、承平の將門、天慶の純友、康和の義親、平治の信頼、此等はおごれる心もたけき事も皆とりどりにこそありしかども、まぢかくは六波羅の入道、前太政大臣平朝臣清盛公と申し人のありさま、傳へうけたまはるこそ心も詞も及ばれね。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%82%B3#tk-1-18-nlp_gloss-3">1</a></p>
+      <p class="occurrence-context">忠盛是を傳へ聞て、「われ右筆の身にあらず、武勇の家に生れて、今不慮の恥にあはむ事、家の爲、身の爲、こゝろうかるべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%82%B3#tk-2-301-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">是皆延喜の聖代、安和の御門の御僻事とぞ申傳へたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%82%B3#tk-2-925-nlp_gloss-52">2</a></p>
+      <p class="occurrence-context">是を浦に持て出て、「南無歸命頂禮、梵天帝釋、四大天王、けんろう地神、王城の鎭守諸大明神、殊には熊野權現、嚴島大明神、せめては一本なり共、都へ傳てたべ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%82%B3#tk-2-988-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">李少卿此由を傳聞いて、恨深うぞ成にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%82%B3#tk-3-28-nlp_gloss-5">3</a></p>
+      <p class="occurrence-context">
+                  門脇宰相か樣の事共傳聞いて、小松殿に申されけるは、「中宮御産の御祈樣々に候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%82%B3#tk-3-224-nlp_gloss-40">3</a></p>
+      <p class="occurrence-context">土の少し高き所に少將袖掻合せ、生たる人に申樣に、泣々申されけるは、「遠き御守と成せ御座して候事をば、島にて幽に傳へ承しか共、心に任せぬ憂世なれば、急ぎ參る事も候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%82%B3#tk-3-484-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">「あはれ是は家に傳はれる小烏と云ふ太刀やらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%82%B3#tk-3-686-nlp_gloss-14">3</a></p>
+      <p class="occurrence-context">中にも高野に坐ける宰相入道成頼、か樣の事共を傳へ聞いて、「あはれ心疾も世を遁たる物かな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%82%B3#tk-4-14-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">傳はれる御物共しな％＼司々請取て新帝の皇居五條内裡へ渡し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%82%B3#tk-4-289-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">前右大將是を傳聞き仲綱の許へ使者を立て、「聞え候名馬を見候はばや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%82%B3#tk-4-307-nlp_gloss-9">4</a></p>
+      <p class="occurrence-context">」など宣ひければ、伊豆守是を傳聞き、「身にかへて思ふ馬なれども、權威について取るゝだにも有に、馬故仲綱が天下の笑れ草と成んずる事こそ安からね。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%82%B3#tk-4-503-nlp_gloss-21">4</a></p>
+      <p class="occurrence-context">彼鷄鳴高き所に走上り、鷄の鳴眞似をしたりければ、關路の鷄聞傳て、皆鳴ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%82%B3#tk-4-518-nlp_gloss-106">4</a></p>
+      <p class="occurrence-context">如何が是程の重寶をば左右なうはゑらすべきとて、
+三井寺の大進僧正覺宗に仰せて、壇上に立て、七日加持して、彫せ給へる御笛也。或
+時高松中納言實平卿參て、此御笛を吹れけるに、尋常の笛の樣に思忘て、膝より下に
+置れたりければ、笛や尤けん、其時蝉折にけり。さてこそ蝉折とは付られたれ。笛の
+御器量たるに依て、此宮御相傳有けり。されども今を限とや思食れけん、金堂の彌勒
+に參らさせおはします。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%82%B3#tk-5-144-nlp_gloss-14">5</a></p>
+      <p class="occurrence-context">中にも高野に坐ける宰相入道成頼、か樣の事共を傳へ聞て、「すは平家の代は、やう／＼末に成ぬるは、嚴島大明神の、平家の方人し給ひけると云ふは其謂れ有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%82%B3#tk-5-736-nlp_gloss-13">5</a></p>
+      <p class="occurrence-context">親りに見奉る者、更に眼を當ず、遙に傳聞く人は、肝魂を失へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%82%B3#tk-6-97-nlp_gloss-58">6</a></p>
+      <p class="occurrence-context">御座ける局の邊、御簾のあたりを彼方此方へ行き通りたゝずみ歩き給へども、小督殿吾君に召されん上は、少將いかにいふとも、詞をもかはし文を見べきにもあらずとて、傳の情をだにも懸られず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%82%B3#tk-7-397-nlp_gloss-36">7</a></p>
+      <p class="occurrence-context">旨趣如何となれば、叡山は是桓武天皇の御宇、傳教大師入唐歸朝の後、圓頓の教を此所に廣め、遮那の大戒を其内に傳てより以降、專ら佛法繁昌の靈崛として、鎭護國家の道場に備ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%82%B3#tk-7-407-nlp_gloss-29">7</a></p>
+      <p class="occurrence-context">自今以後、山門に悦あらば一門の悦とし、社家に憤あらば一家の憤として、各子孫に傳へて永く失墜せじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%82%B3#tk-7-413-nlp_gloss-24">7</a></p>
+      <p class="occurrence-context">然る間邪謀逆心の賊、手を軍門につかね、暴逆殘害の輩、首を京土に傳へん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%82%B3#tk-7-616-nlp_gloss-41">7</a></p>
+      <p class="occurrence-context">彼青山と申す御琵琶は、昔仁明天皇御宇、嘉祥三年の春、掃部頭貞敏渡唐の時、大唐の琵琶博士廉妾夫に逢ひ、三曲を傳へて歸朝せしに、玄象、獅子丸、青山、三面の琵琶を相傳して渡りけるが、龍神や惜み給ひけん、浪風荒く立ければ、獅子丸をば海底に沈めぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%82%B3#tk-7-622-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">」と御尋あれば、「是は昔貞敏に三曲を傳へし大唐の琵琶博士、廉妾夫と申す者で候が、三曲の中、祕曲を一曲殘せるに依て、魔道に沈淪仕て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%82%B3#tk-7-700-nlp_gloss-17">7</a></p>
+      <p class="occurrence-context">如何に況や、汝等は一旦隨ひ付く門客にあらず、累祖相傳の家人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%82%B3#tk-8-125-nlp_gloss-37">8</a></p>
+      <p class="occurrence-context">其よりしてこそ山門には聊の事にも、惠亮腦を碎けば、二帝位に即き給ひ、尊位智劍を振しかば、菅相納受し給ふとも傳たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%82%B3#tk-8-128-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">平家は西國にて是を傳聞きぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%82%B3#tk-9-295-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">傳に聞く、虎狼の國衰て諸侯蜂の如く起し時、はい公先に咸陽宮へ入と云へども、項羽が後に來らん事を恐て、妻は美人をも犯かさず、金銀珠玉をも掠めず、徒に凾谷の關を守て、漸漸に敵を滅して天下を治する事を得たりき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%82%B3#tk-9-351-nlp_gloss-33">9</a></p>
+      <p class="occurrence-context">正月廿九日、範頼義經院參して、平家追討の爲に西國へ發向すべき由奏聞しけるに、「本朝には神代より傳れる三の御寶あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%82%B3#tk-9-799-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">經盛相傳せられたりしを、敦盛器量たるに依て、持たれたりけるとかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-213-nlp_gloss-26">10</a></p>
+      <p class="occurrence-context">曩祖平將軍貞盛、相馬小次郎將門を追討せしより以降、東八箇國を鎭めて、子々孫々に傳へ、朝敵の謀臣を誅罰して代々世々に至るまで、朝家の聖運を守り奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-283-nlp_gloss-72">10</a></p>
+      <p class="occurrence-context">四宮河原に成ぬれば、爰は昔延喜第四の王子、蝉丸の、關の嵐に心を清し、琵琶をひき給ひしに、博雅の三位といひし人、風の吹日も吹ぬ日も、雨の降る夜も降ぬ夜も三年が間歩を運び、立聞て、彼の三曲を傳へけん藁屋の床の古へも、思遣られて哀也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-288-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">侍從、三位中將を見奉て、「昔は傳にだに思召寄らざりしに、今日はかゝる所にいらせ給ふ不思議さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-427-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">父是を傳聞いて、「世に有ん者の婿子になして出仕なんどをも、心安うせさせんとすれば、世になき者を思ひ初めて。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-436-nlp_gloss-4">10</a></p>
+      <p class="occurrence-context">横笛是を傳聞いて、「我をこそ捨め、樣をさへ替けん事の恨めしさよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-459-nlp_gloss-7">10</a></p>
+      <p class="occurrence-context">瀧口入道か樣の事を傳へ聞、彌深う行澄して居たりければ、父も不孝を許けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-541-nlp_gloss-18">10</a></p>
+      <p class="occurrence-context">抑唐皮と云ふ鎧、小烏と云ふ太刀は、平將軍貞盛より、當家に傳へて、維盛迄は嫡々九代に相當る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%82%B3#tk-10-815-nlp_gloss-32">10</a></p>
+      <p class="occurrence-context">八島には浦吹く風も烈しく、磯打つ波も高かりければ、兵も攻來らず、商客の行通ふも稀なれば、都の傳も聞まほしく、何しか空かき曇り、霰打散り、いとゞ消入る心地ぞし給ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%82%B3#tk-11-607-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">吾朝には神代より傳はれる靈劍三あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%82%B3#tk-11-898-nlp_gloss-34">11</a></p>
+      <p class="occurrence-context">便宜を伺ひ高聞に達せしめ、秘計をめぐらし誤なき由をゆうせられ、赦免に預らば、積善の餘慶家門に及び、榮華を永く子孫に傳へん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%82%B3#tk-11-1050-nlp_gloss-18">11</a></p>
+      <p class="occurrence-context">中將是を引へつゝ、佛に向ひ奉て申されけるは、「傳聞く、調達が三逆を作り、八萬藏の聖教を燒滅したりしも、終には天王如來の記べつに預り、所作の罪業誠に深しといへども、聖教に値遇せし逆縁朽ずして却て得道の因となる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%82%B3#tk-12-481-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">やがて傳馬立させ乘奉て上るほどに、其夜は江口の長者が許に泊て夜もすがら使を走らかす。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

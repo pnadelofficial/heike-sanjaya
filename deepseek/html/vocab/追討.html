@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>追討</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>追討</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>pursue and attack</li>
+      
+      <li>pursuit and subjugation</li>
+      
+      <li>pursuit and punishment</li>
+      
+      <li>subjugation</li>
+      
+      <li>pursuit and attack</li>
+      
+      <li>subdue</li>
+      
+      <li>punitive expedition</li>
+      
+      <li>chase and attack</li>
+      
+      <li>pursue and punish</li>
+      
+      <li>pursue and subjugate</li>
+      
+      <li>chastisement</li>
+      
+      <li>to pursue and attack</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (38)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%BF%BD%E8%A8%8E#tk-1-417-nlp_gloss-19">1</a></p>
+      <p class="occurrence-context">何者の申出したりけるやらむ、一院、山門の大衆に仰せて、平家を追討せらるべしと聞えし程に、軍兵内裏に參じて、四方の陣頭を警固す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%BF%BD%E8%A8%8E#tk-2-447-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">此後も讒奏する者あらば、當家追討の院宣下されつと覺るぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%BF%BD%E8%A8%8E#tk-4-707-nlp_gloss-7">4</a></p>
+      <p class="occurrence-context">源茂仁、頼政法師父子追討の賞とぞ除書には有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%BF%BD%E8%A8%8E#tk-5-513-nlp_gloss-15">5</a></p>
+      <p class="occurrence-context">關も昔の跡と詠る事は、平將軍貞盛、將門追討の爲に、東國へ下向せし事を、思ひ出て讀たりけるにや、最優うぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%BF%BD%E8%A8%8E#tk-5-517-nlp_gloss-27">5</a></p>
+      <p class="occurrence-context">承平天慶の蹤跡も、年久う成て准へ難しとて、今度は讃岐守正盛が、前對馬守源義親追討の爲に、出雲國へ下向せし例とて、鈴ばかり賜て、皮の袋に入て、雜色が頸に懸させてぞ下られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%BF%BD%E8%A8%8E#tk-5-647-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">昔將門追討の爲に、平將軍貞盛、田原藤太秀里、うけ給て坂東へ發向したりしかども、將門容易う亡難かりしかば、重て討手を下すべしと、公卿僉議あて、宇治民部卿忠文、清原重藤、軍監と云ふ官を給て下られけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-232-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">是は木曽追討せられんずる謀とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-264-nlp_gloss-28">6</a></p>
+      <p class="occurrence-context">公卿殿上人も、武官に備り、弓箭に携らん人々は、宗盛卿を大將軍にて、東國北國の凶徒等追討すべき由仰下さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-522-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">朝恩の忝さに、木曽追討の爲に、都合三萬餘騎同六月十五日門出して、明る十六日の卯刻にすでに討立んとしけるに、夜半許、俄に大風吹き、大雨降り、雷おびたゞしう鳴て、天晴て後雲井に大なる聲のしはがれたるを以て、「南閻浮提金銅十六丈の盧遮那佛燒亡し奉る平家の方人する者爰に有り、召取や。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-543-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">是は將門追討の例とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-544-nlp_gloss-5">6</a></p>
+      <p class="occurrence-context">九月一日、純友追討の例とて、鐵の鎧甲を伊勢大神宮へ參せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-570-nlp_gloss-17">6</a></p>
+      <p class="occurrence-context">何者の申出したりけるやらん、一院山門の大衆に仰て、平家を追討せらるべしと聞えし程に、軍兵内裏へ參て、四方の陣頭を警固す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-580-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">まことには山門大衆平家を追討せんといふ事もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%BF%BD%E8%A8%8E#tk-6-591-nlp_gloss-9">6</a></p>
+      <p class="occurrence-context">同九月二日、城四郎長茂木曽追討の爲に、越後、出羽、會津四郡の兵共を引率して、都合其勢四萬餘騎、信濃國へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-1-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">兵衞佐木曾追討の爲に、其勢十萬餘騎で、信濃國へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-23-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">先木曾冠者義仲を追討して其後兵衞佐を討んとて、北陸道へ討手を遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-291-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">是によて大野東人を大將軍にて、廣嗣追討せられし時、始めて大神宮へ行幸なりけるとかや、其例とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-293-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">追討せられし時も、御方の凶賊落行き、皆亡て後、件の馬に打乘て、海中へ馳入けるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-386-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">然則、冥には十二神將、醫王善逝の使者として凶賊追討の勇士にあひ加り、顯には三千の衆徒、暫く修學鑽仰の勤節を止て、惡侶治罰の官軍を扶けしめん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-401-nlp_gloss-26">7</a></p>
+      <p class="occurrence-context">これによて或は累代勳功の跡を逐ひ、或は當時弓馬の藝に任せて、速に賊徒を追討し、凶黨を降伏すべき由、苟くも勅命を含んで類に征伐を企つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%BF%BD%E8%A8%8E#tk-7-645-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">」など、度々誓状を以て申されける上、平家追討の爲に討手の使の上る度ごとに、「相構て池殿の侍共に向て弓引な。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%BF%BD%E8%A8%8E#tk-8-25-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">前内大臣宗盛公以下、平家の一族追討すべき由仰下さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%BF%BD%E8%A8%8E#tk-8-304-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">急ぎ追討すべき由の院宣を給はるべう候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%BF%BD%E8%A8%8E#tk-8-509-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">急ぎ追討せさせ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%BF%BD%E8%A8%8E#tk-9-9-nlp_gloss-15">9</a></p>
+      <p class="occurrence-context">同正月十一日、木曾左馬頭義仲院參して、平家追討の爲に、西國へ發向すべき由奏聞す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%BF%BD%E8%A8%8E#tk-9-351-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">正月廿九日、範頼義經院參して、平家追討の爲に西國へ發向すべき由奏聞しけるに、「本朝には神代より傳れる三の御寶あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%BF%BD%E8%A8%8E#tk-9-486-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">平家追討の後、鎌倉殿に中違うて、奧州で討れ給ひし時鷲尾三郎義久とて、一所で死ける兵也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%BF%BD%E8%A8%8E#tk-10-213-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">曩祖平將軍貞盛、相馬小次郎將門を追討せしより以降、東八箇國を鎭めて、子々孫々に傳へ、朝敵の謀臣を誅罰して代々世々に至るまで、朝家の聖運を守り奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%BF%BD%E8%A8%8E#tk-10-665-nlp_gloss-7">10</a></p>
+      <p class="occurrence-context">是は木曾左馬頭義仲追討の賞とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%BF%BD%E8%A8%8E#tk-10-765-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">同九月十二日、參河守範頼、平家追討の爲にとて、西國へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E8%BF%BD%E8%A8%8E#tk-11-4-nlp_gloss-32">11</a></p>
+      <p class="occurrence-context">判官宿所に歸て東國の軍兵どもに宣ひけるは、「義經鎌倉殿の御代官として院宣を承はて、平家を追討すべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E8%BF%BD%E8%A8%8E#tk-11-328-nlp_gloss-27">11</a></p>
+      <p class="occurrence-context">義盛教能に打雙て、「且聞給ても有るらん、鎌倉殿の御弟九郎大夫判官殿院宣を承て、平家追討の爲に、西國へ向はせ給て候が、一昨日阿波國勝浦にて、御邊の伯父櫻間介殿討たれ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E8%BF%BD%E8%A8%8E#tk-11-866-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">判官、思はれけるは「去年の正月木曾義仲を追討せしよりこのかた一谷壇浦に至るまで命を棄てゝ平家を責め落し、内侍所、璽の御箱事故なく返入奉り、大將軍父子生捕にして、具して是迄下りたらんには、縱如何なる不思議ありとも、一度はなどか對面なかるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E8%BF%BD%E8%A8%8E#tk-11-889-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">然れども交契忽に純熟して、平家の一族追討の爲に上洛せしむる手合に、木曾義仲を誅戮の後、平氏をかたむけんが爲に、或時は峨々たる巖石に駿馬に鞭うち、敵の爲に命をほろぼさん事を顧みず、或時は漫々たる大海に風波の難を凌ぎ、海底に沈まん事を痛まずして、屍を鯨鯢の鰓にかく。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E8%BF%BD%E8%A8%8E#tk-11-909-nlp_gloss-19">11</a></p>
+      <p class="occurrence-context">されば廿餘年迄、さてこそ罷過候しかども朝敵となり給て追討すべき由院宣を給はる間、さのみ王地に孕まれて、詔命を背くべきにもあらねば、力不及、加樣に見參に入給ぬるこそ、本意に候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%BF%BD%E8%A8%8E#tk-12-71-nlp_gloss-19">12</a></p>
+      <p class="occurrence-context">兄弟なる上、殊に父子の契をして去年の正月木曾義仲を追討せしより以降度々平家を攻落し、今年の春滅し果てゝ一天を靜め、四海を澄す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%BF%BD%E8%A8%8E#tk-12-155-nlp_gloss-23">12</a></p>
+      <p class="occurrence-context">明る八日院參して伊豫守源義經、備前守同行家、信太三郎先生同義教、追討すべき由奏聞しければやがて院宣を下されけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%BF%BD%E8%A8%8E#tk-12-156-nlp_gloss-38">12</a></p>
+      <p class="occurrence-context">去二日は、義經が申請る旨に任せて、頼朝を背べき由廳の御下文成され、同八日は、頼朝卿の申状に依て、義經追討の院宣を下さる。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

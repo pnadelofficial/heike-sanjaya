@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>太宰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>太宰</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Dazai (title of a government post; governor of the Dazai-fu)</li>
+      
+      <li>Dazai (a place name or administrative office)</li>
+      
+      <li>Dazaifu (the government office in Kyushu)</li>
+      
+      <li>Dazai (proper noun, likely referring to a person&#39;s name or title)</li>
+      
+      <li>Dazai (a government post, Governor of the Dazai headquarters in Kyushu)</li>
+      
+      <li>Dazai (proper noun, a place name)</li>
+      
+      <li>Dazai (proper noun, referring to the Dazaifu administrative office or the title of its governor)</li>
+      
+      <li>Dazai (the provincial governor of Dazai, an administrative region in Kyushu)</li>
+      
+      <li>Dazaifu</li>
+      
+      <li>Dazai (government office)</li>
+      
+      <li>Dazai (Governor-General of the Dazai-fu, an administrative office in Kyushu)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (12)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%AA%E5%AE%B0#tk-1-81-nlp_gloss-34">1</a></p>
+      <p class="occurrence-context">保元々年七月に宇治の左府代をみだり給し時、安藝守とて御方にて勳功ありしかば、播磨守にうつて同三年太宰大貳になる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%A4%AA%E5%AE%B0#tk-1-650-nlp_gloss-39">1</a></p>
+      <p class="occurrence-context">御裁斷遲かりければ、さも可然公卿殿上人は、「あはれとく御裁許あるべきものを、昔より山門の訴訟は他に異なり、大藏卿爲房、太宰の權帥季仲は、さしも朝家の重臣たりしかども、山門の訴訟によて、流罪せられにき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%AA%E5%AE%B0#tk-2-699-nlp_gloss-2">2</a></p>
+      <p class="occurrence-context">筑紫の太宰府より都へ、腹赤の使の上るこそ、かた路十五日とは定たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%AA%E5%AE%B0#tk-3-149-nlp_gloss-165">3</a></p>
+      <p class="occurrence-context">御産によて、六波羅へ參らせ給ふ人々、關白松殿、太政大臣妙音院、左大臣大炊御門、右大臣月輪殿、内大臣小松殿、左大將實定、源大納言定房、三條大納言實房、五條大納言國綱、藤大納言實國、按察使資方、中御門中納言宗家、花山院中納言兼雅、源中納言雅頼、權中納言實綱、藤中納言資長、池中納言頼盛、左衞門督時忠、別當忠親、左宰相中將實家、右宰相中將實宗、新宰相中將通親、平宰相教盛、六角宰相家通、堀川宰相頼定、左大辨宰相長方、右大辨三位俊經、左兵衞督重教、右兵衞督光能、皇太后宮大夫朝方、左京大夫長教、太宰大貳親宣、新三位實清、以上三十三人、右大辨の外は直衣なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%AA%E5%AE%B0#tk-3-576-nlp_gloss-48">3</a></p>
+      <p class="occurrence-context">
+同十六日入道相國、此日來思立給へる事なれば、關白殿を始奉て、太政大臣以下の公
+卿、殿上人、四十三人が官職を停て、追籠らる。關白殿をば、太宰帥に遷て、鎭西へ
+流し奉る。かゝらん世には、とてもかくても有なんとて、鳥羽の邊、古川と云ふ所に
+て、御出家有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%A4%AA%E5%AE%B0#tk-5-180-nlp_gloss-55">5</a></p>
+      <p class="occurrence-context">其より以降野心を狹んで、朝威を滅んとする輩、大石の山丸、大山王子、守屋の大臣、山田の石河、蘇我の入鹿、大友の眞鳥、文屋の宮田、橘の逸勢、氷上の川繼、伊豫の親王、太宰少貳藤原の廣嗣、惠美の押勝、早良の太子、井上の皇后、藤原仲成、平將門、藤原純友、安倍貞任、對馬守源義親、惡佐府、惡衞門督に至る迄、すべて廿餘人。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%A4%AA%E5%AE%B0#tk-6-459-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">彼僧都は、父、山蔭中納言、太宰大貳に成て鎭西へ下られける時、二歳なりしを、繼母惡であからさまに抱くやうにして、海に落し入殺さんとしけるを、死にける誠の母、存生の時、桂の鵜飼が鵜の餌にせんとて、龜を取て殺さんとしけるを著給へる小袖を脱ぎ、龜にかへ、放たれたりしが、其恩を報ぜんと、此若君落し入けるを水の上に浮び來て、甲に乘てぞ扶けたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A4%AA%E5%AE%B0#tk-7-289-nlp_gloss-37">7</a></p>
+      <p class="occurrence-context">され共、代々の御門臨幸は無りしに、奈良の御門の御時左大臣不比等の孫、參議式部卿宇合の子、右近衞權少將兼太宰少貳藤原廣嗣と云ふ人有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%A4%AA%E5%AE%B0#tk-7-294-nlp_gloss-24">7</a></p>
+      <p class="occurrence-context">其亡靈あれて、怖き事共多かりける中に、天平十六年六月十八日、筑前國御笠郡、太宰府の觀世音寺、供養せられし導師には、[_][2]玄ばう僧正とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A4%AA%E5%AE%B0#tk-8-205-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">維義が次男、野尻次郎維村を使者で、太宰府へ申けるは、「平家は重恩の君にてましませば、甲を脱ぎ弦を弛いて參るべう候へども、一院の御定に速に九國内を逐出し參らせよと候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A4%AA%E5%AE%B0#tk-8-218-nlp_gloss-28">8</a></p>
+      <p class="occurrence-context">平家は緒方の三郎維義が三萬餘騎の勢にて、既に寄すと聞えしかば、取物も取あへず、太宰府をこそ落給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%A4%AA%E5%AE%B0#tk-12-170-nlp_gloss-47">12</a></p>
+      <p class="occurrence-context">十二の年、父の朝臣失せ給ひしかば、孤にておはせしかども、次第に昇進滯らず、三事の顯要を兼帶して、夕郎の貫首を經、參議、大辨、太宰帥正二位大納言に至れり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

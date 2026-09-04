@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>僉議</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>僉議</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>deliberation</li>
+      
+      <li>all agreed</li>
+      
+      <li>unanimous agreement</li>
+      
+      <li>discussed</li>
+      
+      <li>consultation</li>
+      
+      <li>agreed</li>
+      
+      <li>deliberated</li>
+      
+      <li>consulted</li>
+      
+      <li>deliberate</li>
+      
+      <li>all deliberated</li>
+      
+      <li>unanimous opinion</li>
+      
+      <li>all opinions</li>
+      
+      <li>all discussed</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (20)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%83%89%E8%AD%B0#tk-0-34-nlp_gloss-193">0</a></p>
+      <p class="occurrence-context">故近衞院の后、太皇太后宮と申しは大炊御門右大臣公能公の御娘なり。先帝に後れ奉らせ給ひて後は、九重の外、近衞川原の御所にぞ移り住ませ給ひける。前の后の宮にて、幽なる御在樣にて渡らせ給ひしが、永歴のころほひは、御年二十二三にもやならせたまひけん、御盛りも少し過させおはしますほどなり。されども、天下第一の美人の聞えまし／＼ければ、主上色にのみ染める御心にて、竊に高力士に詔して、外宮に引き求めしむるに及んで、この大宮へ御艶書あり。大宮敢て聞食しもいれず。されば、ひたすらはやほに現はれて、后御入内あるべきよし、右大臣家に宣旨を下さる。此事天下に於て、異なる勝事なれば、公卿僉議あり、各意見をいふ。「先づ異朝の先蹤をとぶらふに、震旦の則天皇后は、唐の太宗の后、高宗皇帝の繼母なり。太宗崩御の後、高宗の后に立ち給へることあり。それは異朝の先規たる上、別段の事なり。然れども我朝には、神武天皇より以降、人皇七十餘代に及まで、いまだ二代の后に立たせ給へる例を聞かず。」と、諸卿一同に申されけり。上皇も然るべからざるよし、こしらへ申させ給へば、主上仰なりけるは、「天子に父母なし、我十善の戒功によて、萬乘の寶位をたもつ、是程のこと、などか叡慮に任せざるべき。」とて、やがて御入内の日、宣下せられける上は、力及ばせ給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%83%89%E8%AD%B0#tk-0-40-nlp_gloss-260">0</a></p>
+      <p class="occurrence-context">さる程に、同七月廿七日、上皇竟に崩御なりぬ。御歳二十三。蕾める花の散れるが如し。玉の簾、錦の帳のうち、皆御涙に咽ばせ給ふ。やがて、その夜、香隆寺の艮、蓮臺野の奧、船岡山にをさめ奉る。御葬送の時、延暦寺、興福寺の大衆、額打論といふ事しいだして、互に狼藉に及ぶ。一天の君崩御なて後、御墓所へわたし奉る時の作法は、南北二京の大衆悉く供奉して、御墓所の廻に、わが寺々の額をうつことあり。先づ聖武天皇の御願、爭ふべき寺なければ、東大寺の額をうつ。次に淡海公の御願とて、興福寺の額をうつ。北京には、興福寺に向へて延暦寺の額をうつ。次に天武天皇の御願、教待和尚、智證大師の草創とて、園城寺の額をうつ。然るを山門の大衆、いかがおもひけん、先例を背て、東大寺の次ぎ、興福寺のうへに、延暦寺の額を打つ間、南都の大衆、とやせましかやうせましと僉議するところに、興福寺の西金堂の衆、觀音房、勢至房とて聞えたる大惡僧二人ありけり。觀音房は黒絲威の腹卷に、白柄の長刀くきみじかに取り、勢至房は、萠黄威の腹卷に、黒漆の大太刀もて、二人つと走出で、延暦寺の額をきて落し、散々に打わり、「うれしや水、なるは瀧の水、日はてるとも、絶えずとうたへ。」とはやしつゝ、南都の衆徒の中へぞ入りにける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%83%89%E8%AD%B0#tk-0-68-nlp_gloss-38">0</a></p>
+      <p class="occurrence-context">若大衆共は、「何でうその義あるべき、只此陣より神輿を入れ奉れ。」といふ族多かりけれども、老僧のなかに、三塔一の僉議者と聞えし、攝津の堅者豪雲進み出て申けるは、「尤もさいはれたり。神輿を先立て參らせて、訴訟をいたさば、大勢の中をうち破てこそ、後代の聞えもあらむずれ。就中にこの頼政の卿は、六孫王より以降、源氏嫡々の正統、弓矢を取て未だ其不覺を聞かず。凡武藝にも限らず、歌道にも勝れたり。近衞院御在位の時、當座の御會ありしに、『深山花』といふ題を出されたりけるに、人々讀煩ひしに、此頼政卿、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%83%89%E8%AD%B0#tk-0-69-nlp_gloss-41">0</a></p>
+      <p class="occurrence-context">といふ名歌仕て、御感に預る程のやさしき男に、時に臨んで、いかがなさけなう耻辱をば與ふべき。此神輿かき返し奉れや。」と僉議しければ、數千人の大衆、先陣より後陣まで、皆尤々とぞ同じける。さて神輿を先立てまゐらせて、東の陣頭待賢門より入れ奉らむとしければ、狼藉忽に出來て、武士ども散々に射奉る。十禪師の御輿にも、矢どもあまた射立たり。神人宮仕射殺され、衆徒多く疵を被る。をめき叫ぶ聲梵天までも聞え、堅牢地神も驚くらんとぞ覺えける。大衆神輿をば、陣頭に振り棄て奉り、泣く／＼本山へ歸り上る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%83%89%E8%AD%B0#tk-0-70-nlp_gloss-16">0</a></p>
+      <p class="occurrence-context">藏人の左少辨兼光に仰せて、殿上にて、俄に公卿僉議あり。保安四年七月に、神輿入洛の時は座主に仰せて、赤山の社へ入れ奉る。又保延四年四月に、神輿入洛の時は、祇園の別當に仰せて、祇園の社へ入れ奉る。今度は保延の例たるべしとて、祇園の別當權大僧都澄兼に仰て、秉燭に及で、祇園の社へ入奉る。神輿に立つ所の箭をば、神人してこれを拔かせらる。山門の大衆、日吉の神輿を陣頭へ振奉ること、永久より以降、治承までは六箇度なり。毎度に武士を召てこそ防がれけれども神輿射奉ること、是始とぞ奉る。「靈神怒をなせば、災害岐に滿つといへり。怖し怖し。」とぞ人々申合はれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E5%83%89%E8%AD%B0#tk-0-71-nlp_gloss-165">0</a></p>
+      <p class="occurrence-context">同十四日夜半ばかり、山門の大衆、又下洛すと聞えしかば、夜中に主上腰輿に召して、院の御所法住寺殿へ行幸なる。中宮は御車に奉て、行啓あり。小松の大臣、直衣に箭負て供奉せらる。嫡子權亮少將維盛、束帶に平胡録負て參られけり。關白殿を始め奉て、太政大臣以下の公卿、殿上人、我も／＼と馳せ參る。凡京中の貴賤、禁中の上下、噪ぎのゝしること夥し。山門には神輿に箭立ち、神人宮仕射殺され、衆徒多く疵を被りしかば、大宮、二宮以下、講堂、中堂、すべて諸堂一宇も殘さず皆燒拂て、山野にまじはるべきよし、三千一同に僉議しけり。是によて大衆の申す所、御はからひあるべしと聞えしかば、山門の上綱等、子細を衆徒に觸れむとて、登山したりけるを、大衆おこて西坂本より皆おかへす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%83%89%E8%AD%B0#tk-1-7-nlp_gloss-218">1</a></p>
+      <p class="occurrence-context">爰に西塔の住侶、戒淨坊の阿闇梨祐慶といふ惡僧あり。長七尺計有けるが、黒革縅の鎧の、大荒目に金まぜたるを、草摺ながに著成て、冑をば脱ぎ法師原に持せつゝ、白柄の大長刀杖につき、「あけられ候へ。」とて、大衆の中を押分々々先座主のおはしける所へつと參りたり。大の眼を見瞋し、暫にらまへ奉り、「その御心でこそ、かゝる御目にも逢せ給へ。とう／＼召るべう候。」と申ければ、怖さに急ぎのり給ふ。大衆取得奉る嬉さに、賤き法師原にはあらで、止事なき修學者ども、舁捧奉り喚き叫んで上けるに、人はかはれ共祐慶はかはらず、前輿舁て、長刀の柄も輿の轅も、碎けよと取まゝに、さしも嶮しき東坂平地を行が如く也。大講堂の庭に輿舁居て、僉議しけるは、「抑我等粟津に行向て、貫首をば奪とゞめ奉りぬ。すでに勅勘を蒙りて、流罪せられ給ふ人をとりとゞめ奉て、貫首に用申さん事、如何有べからん。」と僉議す。戒淨坊阿闇梨、又先の如くに進み出て僉議しけるは、「夫當山は日本無雙の靈地、鎭護國家の道場、山王の御威光盛にして、佛法王法牛角也。されば衆徒の意趣に至るまで、雙なく、賤き法師原までも、世以て輕しめず。況や智慧高貴にして、三千の貫首たり。今は徳行おもうして一山の和尚たり。罪なくして罪を蒙る。是山上洛中の憤り、興福園城の嘲に非ずや。此時顯密の主を失て、數輩の學侶、螢雪の勤怠らむ事心うかるべし。詮ずる所、祐慶張本に稱せられ、禁獄流罪もせられ、首を刎られん事、今生の面目冥土の思出なるべし。」とて、雙眼より涙をはら／＼と流す、大衆尤々とぞ同じける。其よりしてこそ、祐慶をばいかめ房とはいはれけれ。其弟子に慧慶律師をば、時の人小いかめ房とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%83%89%E8%AD%B0#tk-1-7-nlp_gloss-282">1</a></p>
+      <p class="occurrence-context">爰に西塔の住侶、戒淨坊の阿闇梨祐慶といふ惡僧あり。長七尺計有けるが、黒革縅の鎧の、大荒目に金まぜたるを、草摺ながに著成て、冑をば脱ぎ法師原に持せつゝ、白柄の大長刀杖につき、「あけられ候へ。」とて、大衆の中を押分々々先座主のおはしける所へつと參りたり。大の眼を見瞋し、暫にらまへ奉り、「その御心でこそ、かゝる御目にも逢せ給へ。とう／＼召るべう候。」と申ければ、怖さに急ぎのり給ふ。大衆取得奉る嬉さに、賤き法師原にはあらで、止事なき修學者ども、舁捧奉り喚き叫んで上けるに、人はかはれ共祐慶はかはらず、前輿舁て、長刀の柄も輿の轅も、碎けよと取まゝに、さしも嶮しき東坂平地を行が如く也。大講堂の庭に輿舁居て、僉議しけるは、「抑我等粟津に行向て、貫首をば奪とゞめ奉りぬ。すでに勅勘を蒙りて、流罪せられ給ふ人をとりとゞめ奉て、貫首に用申さん事、如何有べからん。」と僉議す。戒淨坊阿闇梨、又先の如くに進み出て僉議しけるは、「夫當山は日本無雙の靈地、鎭護國家の道場、山王の御威光盛にして、佛法王法牛角也。されば衆徒の意趣に至るまで、雙なく、賤き法師原までも、世以て輕しめず。況や智慧高貴にして、三千の貫首たり。今は徳行おもうして一山の和尚たり。罪なくして罪を蒙る。是山上洛中の憤り、興福園城の嘲に非ずや。此時顯密の主を失て、數輩の學侶、螢雪の勤怠らむ事心うかるべし。詮ずる所、祐慶張本に稱せられ、禁獄流罪もせられ、首を刎られん事、今生の面目冥土の思出なるべし。」とて、雙眼より涙をはら／＼と流す、大衆尤々とぞ同じける。其よりしてこそ、祐慶をばいかめ房とはいはれけれ。其弟子に慧慶律師をば、時の人小いかめ房とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-3-nlp_gloss-216">3</a></p>
+      <p class="occurrence-context">同き三月上旬に、上皇安藝國嚴島へ御幸成るべしと聞えけり。帝王位をすべらせ給ひて、諸社の御幸の始には、八幡賀茂春日などへこそ成せ給ふに、安藝國までの御幸は如何にと、人不審をなす。或人の申けるは、「白河院は熊野へ御幸、後白河は日吉の社へ御幸なる。既に知ぬ、叡慮に有と云事を。」御心中に深き御立願有り。其上此嚴島をば平家斜ならず、崇敬ひ給ふ間、上には平家に御同心、下には法皇の何となう鳥羽殿に押籠られて渡らせ給ふ、入道相國の謀反の心をも和げ給へとの御祈念の爲とぞ聞えし。山門の大衆憤り申す。「石清水、賀茂、春日へならずば、我山の山王へこそ御幸は成るべけれ。安藝國への御幸は何の習ぞや。其儀ならば神輿を振下し奉て、御幸を留め奉れ。」と僉議しければ、是に依て暫御延引有けり。入道相國やう／＼になだめたまへば、山門の大衆靜りぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-42-nlp_gloss-130">3</a></p>
+      <p class="occurrence-context">三井寺には、貝鐘鳴いて、大衆僉議す。「近日世上の體を案ずるに、佛法の衰微、王
+法の牢籠正に此時に當れり。今度清盛入道が暴惡を戒めずば、何の日をか期すべき。
+宮此に入御の御事、正八幡宮の衞護、新羅大明神の冥助に非ずや。天衆地類も影向を
+垂れ、佛力神力も降伏を加へ坐す事などか無るべき。抑北嶺は圓宗一味の學地、南都
+は夏臘得度の戒場也。牒送の處に、などか與せざるべき。」と、一味同心に僉議して、山へも奈良へも、牒状をこそ遣しけれ。先山門への状に云、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-54-nlp_gloss-21">3</a></p>
+      <p class="occurrence-context">其中に平家の祈しける一如房阿闍梨眞海、弟子同宿數十人引具し、僉議の庭に進出で申けるは、「かう申せば、平家の方人とや思召され候らん。縱さも候へ。いかゞ衆徒の義をやぶり、我寺の名をも惜では候ふべき。昔は源平左右に爭て、朝家の御守たりしかども、近來は源氏の運傾き、平家世を取て二十餘年、天下に靡ぬ草木も候はず。内々の館の有樣も、小勢にてはたやすう攻落しがたし。よく／＼外に謀を運して、勢を催し、後日に寄らるべうや候らん。」と、程を延さんが爲に、長々とぞ僉議したる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-54-nlp_gloss-161">3</a></p>
+      <p class="occurrence-context">其中に平家の祈しける一如房阿闍梨眞海、弟子同宿數十人引具し、僉議の庭に進出で申けるは、「かう申せば、平家の方人とや思召され候らん。縱さも候へ。いかゞ衆徒の義をやぶり、我寺の名をも惜では候ふべき。昔は源平左右に爭て、朝家の御守たりしかども、近來は源氏の運傾き、平家世を取て二十餘年、天下に靡ぬ草木も候はず。内々の館の有樣も、小勢にてはたやすう攻落しがたし。よく／＼外に謀を運して、勢を催し、後日に寄らるべうや候らん。」と、程を延さんが爲に、長々とぞ僉議したる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-55-nlp_gloss-40">3</a></p>
+      <p class="occurrence-context">爰に乘圓房阿闍梨慶秀と云老僧あり。衣の下に腹卷を著、大なる打刀前垂に差ほらし、かしら包んで、白柄の大長刀杖につき、僉議の庭に進出でて申けるは、「證據を外に引くべからず。我寺の本願天武天皇は未だ春宮の御時、大友王子にはゞからせ給ひて、芳野の奧をいでさせ給ひ、大和國宇多郡を過させ給ひけるには、其勢僅に十七騎、去共伊賀伊勢に打越え、美濃尾張の勢を以て、大友王子を亡して、終に位に即せ給ひき。『窮鳥懷に入る。人倫是を憐む』と云ふ本文有り。自餘は知らず、慶秀が門徒に於ては、今夜六波羅に押寄て、打死せよや。」とぞ僉議しける。圓滿院大輔源覺、進出て申けるは、「僉議ばし多し、夜の更るに、急げや進め。」とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-57-nlp_gloss-87">3</a></p>
+      <p class="occurrence-context">宮入せ給て後は大關小關堀切て、堀ほり逆茂木引いたりければ、堀に橋渡し、逆茂木ひき除などしける程に、時刻おし移て、關路の鷄啼あへり。伊豆守宣けるは、「爰で鳥鳴ては、六波羅は白晝にこそ寄んずれ、如何せん。」と宣へば、圓滿院大輔源覺、又先の如く進出て僉議しけるは、「昔秦昭王のとき、孟嘗君召禁られたりしに、后の御助に依て、兵三千人を引具して、逃免れけるに、函谷關に至れり。鷄啼ぬ限は、關の戸を開く事なし。孟嘗君が三千の客の中に、てんかつと云ふ兵有り。鷄の啼眞似をありがたくしければ鷄鳴とも云れけり。彼鷄鳴高き所に走上り、鷄の鳴眞似をしたりければ、關路の鷄聞傳て、皆鳴ぬ。其時關守鳥の虚音にばかされて、關の戸開てぞ通しける。是も敵の謀にや鳴すらん、唯寄よ。」とぞ申ける。かゝりし程に、五月の短夜ほの％＼とこそ明にけれ。伊豆守宣けるは、「夜討にこそさりともと思つれ共、晝軍には如何にも叶ふまじ。あれ呼返せや。」とて、搦手は如意が嶺よりよび返す。大手は松坂より取て返す。若大衆共、「是は一如房阿闍梨が長僉議にこそ夜は明たれ。
+押寄せて其坊きれ。」とて、坊を散々にきる。防ぐ處の弟子同宿、數十人討れぬ。一
+如房阿闍梨這々六波羅に參て老眼より涙を流いて此由訴申けれ共、六波羅には軍兵數萬騎馳集て騒ぐ事もなかりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%83%89%E8%AD%B0#tk-3-57-nlp_gloss-317">3</a></p>
+      <p class="occurrence-context">宮入せ給て後は大關小關堀切て、堀ほり逆茂木引いたりければ、堀に橋渡し、逆茂木ひき除などしける程に、時刻おし移て、關路の鷄啼あへり。伊豆守宣けるは、「爰で鳥鳴ては、六波羅は白晝にこそ寄んずれ、如何せん。」と宣へば、圓滿院大輔源覺、又先の如く進出て僉議しけるは、「昔秦昭王のとき、孟嘗君召禁られたりしに、后の御助に依て、兵三千人を引具して、逃免れけるに、函谷關に至れり。鷄啼ぬ限は、關の戸を開く事なし。孟嘗君が三千の客の中に、てんかつと云ふ兵有り。鷄の啼眞似をありがたくしければ鷄鳴とも云れけり。彼鷄鳴高き所に走上り、鷄の鳴眞似をしたりければ、關路の鷄聞傳て、皆鳴ぬ。其時關守鳥の虚音にばかされて、關の戸開てぞ通しける。是も敵の謀にや鳴すらん、唯寄よ。」とぞ申ける。かゝりし程に、五月の短夜ほの％＼とこそ明にけれ。伊豆守宣けるは、「夜討にこそさりともと思つれ共、晝軍には如何にも叶ふまじ。あれ呼返せや。」とて、搦手は如意が嶺よりよび返す。大手は松坂より取て返す。若大衆共、「是は一如房阿闍梨が長僉議にこそ夜は明たれ。
+押寄せて其坊きれ。」とて、坊を散々にきる。防ぐ處の弟子同宿、數十人討れぬ。一
+如房阿闍梨這々六波羅に參て老眼より涙を流いて此由訴申けれ共、六波羅には軍兵數萬騎馳集て騒ぐ事もなかりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%83%89%E8%AD%B0#tk-5-3-nlp_gloss-38">5</a></p>
+      <p class="occurrence-context">但しかたのやうにても御齋會は在べきにて僧名の沙汰在しに、南都の僧綱は闕官せられぬ、北京の僧綱を以て行はるべきかと公卿僉議あり。さればとて南都をも捨果させたまふべきならねば、三論宗の學生、成法已講が勸修寺に忍つゝ隱れ居たりけるを召出されて、御齋會形のごとくに行はる。上皇は、去去年法皇の鳥羽殿におしこめられさせ給し御事、去年高倉宮の討たれさせ給し御有樣、都遷とて淺間しかりし天下の亂れ、加樣の事共御心苦しう思食されけるより御惱つかせ給ひて、常は煩しう聞えさせ給ひしが、東大寺興福寺の亡びぬるよし聞召されて、御惱彌重らせ給ふ。法皇斜ならず御歎有し程に、同正月十四日六波羅池殿にて、上皇終に崩御成ぬ。御宇十二年、徳政千萬端、詩書仁義の廢ぬる道を興し、理世安樂の絶たる跡を繼給ふ。三明六通の羅漢も免れ給はず、幻術變化の權者も遁ぬ道なれば、有爲無常の習なれども、理過てぞ覺えける。やがて其夜東山の麓、清閑寺へ遷し奉り、夕の煙とたぐへ、春の霞と上らせ給ひぬ。澄憲法印御葬送に參會んと、急ぎ山より下られけるが、はや空しき煙と成らせ給ふを見參せて、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%83%89%E8%AD%B0#tk-5-29-nlp_gloss-6">5</a></p>
+      <p class="occurrence-context">同廿三日、公卿僉議あり。前右大將宗盛卿申されけるは坂東へ討手は向たりと云ども、させる爲出したる事も候はず。今度は宗盛大將軍を承て、向べき由申されければ、諸卿色代して、「ゆゝしう候なん。」と申されけり。公卿殿上人も、武官に備り、弓箭に携らん人々は、宗盛卿を大將軍にて、東國北國の凶徒等追討すべき由仰下さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%83%89%E8%AD%B0#tk-6-29-nlp_gloss-14">6</a></p>
+      <p class="occurrence-context">案の如く、山門の大衆此状を披見して、僉議區々也。或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。思々異議區々也。老僧共の僉議しけるは、詮ずる所、我等專金輪聖主天長地久と祈奉る。平家は當代の御外戚、山門に於て歸敬を致さる。去れば今に至る迄彼繁昌を祈誓す。然りといへども惡行法に過て、萬人是を背く。討手を國々へ遣すと云へ共、却て異賊の爲にほろぼさる。源氏は近年より以降、度々の軍に討勝て、運命開けんとす。何ぞ當山獨宿運盡ぬる平家に同心して、運命開くる源氏を背かんや。須く平家値遇の義を翻して、源氏合力の旨に任ずべき由、一味同心に僉議して、返牒を送る。木曾殿又家の子郎等を召集めて、覺明に此返牒を開かせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%83%89%E8%AD%B0#tk-6-29-nlp_gloss-50">6</a></p>
+      <p class="occurrence-context">案の如く、山門の大衆此状を披見して、僉議區々也。或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。思々異議區々也。老僧共の僉議しけるは、詮ずる所、我等專金輪聖主天長地久と祈奉る。平家は當代の御外戚、山門に於て歸敬を致さる。去れば今に至る迄彼繁昌を祈誓す。然りといへども惡行法に過て、萬人是を背く。討手を國々へ遣すと云へ共、却て異賊の爲にほろぼさる。源氏は近年より以降、度々の軍に討勝て、運命開けんとす。何ぞ當山獨宿運盡ぬる平家に同心して、運命開くる源氏を背かんや。須く平家値遇の義を翻して、源氏合力の旨に任ずべき由、一味同心に僉議して、返牒を送る。木曾殿又家の子郎等を召集めて、覺明に此返牒を開かせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%83%89%E8%AD%B0#tk-6-29-nlp_gloss-188">6</a></p>
+      <p class="occurrence-context">案の如く、山門の大衆此状を披見して、僉議區々也。或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。思々異議區々也。老僧共の僉議しけるは、詮ずる所、我等專金輪聖主天長地久と祈奉る。平家は當代の御外戚、山門に於て歸敬を致さる。去れば今に至る迄彼繁昌を祈誓す。然りといへども惡行法に過て、萬人是を背く。討手を國々へ遣すと云へ共、却て異賊の爲にほろぼさる。源氏は近年より以降、度々の軍に討勝て、運命開けんとす。何ぞ當山獨宿運盡ぬる平家に同心して、運命開くる源氏を背かんや。須く平家値遇の義を翻して、源氏合力の旨に任ずべき由、一味同心に僉議して、返牒を送る。木曾殿又家の子郎等を召集めて、覺明に此返牒を開かせらる。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

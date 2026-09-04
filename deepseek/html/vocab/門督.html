@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>門督</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>門督</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>chief of the Left Gate Guards</li>
+      
+      <li>commander of the gate guards</li>
+      
+      <li>Commander of the Left Palace Guards</li>
+      
+      <li>chief of the Gate Guards</li>
+      
+      <li>Chief of the Right Gate Guards</li>
+      
+      <li>Captain of the Right Gate Guards</li>
+      
+      <li>Commander of the Left Gate Guards</li>
+      
+      <li>Gate Commander (a title/rank; here referring to the person holding the position of head of the imperial gate guards)</li>
+      
+      <li>Commander of the Right Gate Guards</li>
+      
+      <li>commander of the Right Military Guard</li>
+      
+      <li>commander of the Right Military Guards</li>
+      
+      <li>chief of the Palace Guards (Right Division)</li>
+      
+      <li>commander of the Right Gate Guards</li>
+      
+      <li>Commander of the Left Palace Gate Guards</li>
+      
+      <li>Commander of the Gate Guards</li>
+      
+      <li>chief of the Right Military Guards</li>
+      
+      <li>commander of the imperial guard</li>
+      
+      <li>chief of the palace gates</li>
+      
+      <li>chief of the palace guards (specifically, the Right Division of the Inner Palace Guards)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (24)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%96%80%E7%9D%A3#tk-1-768-nlp_gloss-11">1</a></p>
+      <p class="occurrence-context">平大納言時忠卿、その時はいまだ左衞門督にておはしけるが、上卿に立つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%96%80%E7%9D%A3#tk-2-623-nlp_gloss-20">2</a></p>
+      <p class="occurrence-context">山門の大衆おびただしう呪咀すと聞えしか共、同二年正月五日、右衞門督を兼して、檢非違使の別當に成給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%96%80%E7%9D%A3#tk-3-149-nlp_gloss-97">3</a></p>
+      <p class="occurrence-context">御産によて、六波羅へ參らせ給ふ人々、關白松殿、太政大臣妙音院、左大臣大炊御門、右大臣月輪殿、内大臣小松殿、左大將實定、源大納言定房、三條大納言實房、五條大納言國綱、藤大納言實國、按察使資方、中御門中納言宗家、花山院中納言兼雅、源中納言雅頼、權中納言實綱、藤中納言資長、池中納言頼盛、左衞門督時忠、別當忠親、左宰相中將實家、右宰相中將實宗、新宰相中將通親、平宰相教盛、六角宰相家通、堀川宰相頼定、左大辨宰相長方、右大辨三位俊經、左兵衞督重教、右兵衞督光能、皇太后宮大夫朝方、左京大夫長教、太宰大貳親宣、新三位實清、以上三十三人、右大辨の外は直衣なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%96%80%E7%9D%A3#tk-5-180-nlp_gloss-94">5</a></p>
+      <p class="occurrence-context">其より以降野心を狹んで、朝威を滅んとする輩、大石の山丸、大山王子、守屋の大臣、山田の石河、蘇我の入鹿、大友の眞鳥、文屋の宮田、橘の逸勢、氷上の川繼、伊豫の親王、太宰少貳藤原の廣嗣、惠美の押勝、早良の太子、井上の皇后、藤原仲成、平將門、藤原純友、安倍貞任、對馬守源義親、惡佐府、惡衞門督に至る迄、すべて廿餘人。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%96%80%E7%9D%A3#tk-7-419-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">正三位行右衞門督兼近江遠江守平朝臣清宗</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%96%80%E7%9D%A3#tk-7-664-nlp_gloss-22">7</a></p>
+      <p class="occurrence-context">前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%96%80%E7%9D%A3#tk-8-22-nlp_gloss-14">8</a></p>
+      <p class="occurrence-context">勘解由小路中納言經房卿、檢非違使別當左衞門督實家院の殿上の簀子に候て、義仲行家を召す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%96%80%E7%9D%A3#tk-9-834-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">」とて、御子衞門督のおはしける方を御覽じて、涙ぐみ給へば、幾らも竝居たりける平家の侍ども、心有も心なきも、皆鎧の袖をぞぬらしける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-527-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">右衞門督是を見てやがて飛入給けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-530-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">大臣殿は、「右衞門督沈まば我も沈まむ、助かり給はゞ我も助らむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-532-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">右衞門督も「父しづみ給はゞ吾もしづまむ、助かり給はば我もたすからむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-533-nlp_gloss-30">11</a></p>
+      <p class="occurrence-context">」と思ひて、互に目を見かはし游ぎありき給ふ程に、伊勢三郎義盛、小船をつと漕寄せ、先づ右衞門督を、熊手に懸て引上げ奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-582-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">生捕には、前内大臣宗盛公、平大納言時忠、右衞門督清宗、内藏頭信基、讃岐中將時實、兵部少輔雅明、大臣殿の八歳になり給ふ若公、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨融圓、侍には源大夫判官季貞、攝津判官盛澄、橘内左衞門季康、藤内左衞門信康、阿波民部重能父子、以上三十八人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-675-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">右衞門督は、白き直垂にて、父の車の後にぞ乘られたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-680-nlp_gloss-17">11</a></p>
+      <p class="occurrence-context">されども四方見廻して最思ひ沈める氣色もおはせず、右衞門督はうつぶして目も見上給はず、思ひ入たる氣色也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-707-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">軈て此平大納言もその時は左衞門督にておはしき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-713-nlp_gloss-23">11</a></p>
+      <p class="occurrence-context">夜になれども、裝束もくつろげ給はず、袖を片敷て臥給ひたりけるが、御子右衞門督に、御袖を打著せ給ふを、まぼり奉る源八兵衞、江田源三、熊井太郎是を見て、「哀高も賤きも恩愛の道程悲しかりける事はなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-788-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">』と云ひし事の不便さに、『あの右衞門督をば朝敵を平げん時は、大將軍をせさせ、是をば副將軍をせさせんずれば。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-792-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">右衞門督も[_][3]なき給へは乳母も袖を絞けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-796-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">右衞門督是を見て涙を押へて宣ひけるは、「やゝ副將御前、今夜は疾々歸れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-926-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">右衞門督は、「なじかは命をいくべき、か樣に熱き比[_][5]なれは、頸の損せぬ樣にはからひて京近うなて切らんずるにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-933-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">大臣殿涙をはら／＼と流いて、「抑右衞門督はいづくに候やらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-957-nlp_gloss-69">11</a></p>
+      <p class="occurrence-context">大臣殿然るべき善知識哉と思食し、忽に妄念を飜へして西に向ひ手を合せ、高聲に念佛し給ふ處に、橘右馬允公長、太刀を引そばめて左の方より御後に立廻り、既に斬奉らんとしければ、大臣殿念佛を停めて、「右衞門督も既にか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%96%80%E7%9D%A3#tk-11-964-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">其後右衞門督をも、聖前の如くに戒持せ奉り、念佛勸め申。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

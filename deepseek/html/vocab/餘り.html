@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>餘り</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>餘り</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>too much</li>
+      
+      <li>excessively</li>
+      
+      <li>over</li>
+      
+      <li>excess</li>
+      
+      <li>more than</li>
+      
+      <li>over/above</li>
+      
+      <li>so much</li>
+      
+      <li>too</li>
+      
+      <li>after</li>
+      
+      <li>excessive</li>
+      
+      <li>the excess</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (37)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%A4%98%E3%82%8A#tk-1-175-nlp_gloss-26">1</a></p>
+      <p class="occurrence-context">入道出あひ對面して「今日の見參はあるまじかりつるを、祇王が何と思ふやらん、餘りに申しすゝむる間、か樣に見參しつ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%A4%98%E3%82%8A#tk-1-258-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">」と思ふに、知らせじと押ふる袖のひまよりも餘りて涙ぞこぼれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%A4%98%E3%82%8A#tk-2-288-nlp_gloss-37">2</a></p>
+      <p class="occurrence-context">平治にも已に誅せらるべきにて候しが、御恩を以て頸をつがれ參せ、正二位の大納言に上て、歳已に四十に餘り候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%A4%98%E3%82%8A#tk-2-782-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">餘りに何とやらん心細うて徒然なるに。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%A4%98%E3%82%8A#tk-2-821-nlp_gloss-30">2</a></p>
+      <p class="occurrence-context">」「徳大寺殿の御參候うて七日こもらせ給ひて御上り候を一日路送り參せて候へば、さりとては餘りに、名殘の惜きに、今一日路二日路と仰られて、是まで召具せられて候ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%A4%98%E3%82%8A#tk-3-128-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">入道餘りの嬉さに、聲をあげてぞ泣ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%A4%98%E3%82%8A#tk-3-136-nlp_gloss-5">3</a></p>
+      <p class="occurrence-context">入道相國嬉さの餘りに、砂金千兩、富士の綿二千兩、法皇へ進上せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%A4%98%E3%82%8A#tk-3-463-nlp_gloss-18">3</a></p>
+      <p class="occurrence-context">當家は保元平治より以降、度々の朝敵を平げて、勸賞身に餘り、忝く一天の君の御外戚として、一族の昇進六十餘人。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%A4%98%E3%82%8A#tk-5-24-nlp_gloss-19">5</a></p>
+      <p class="occurrence-context">其より以降、代々の帝王、都を他國他所へ遷さるゝ事三十度に餘り、四十度に及べり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%A4%98%E3%82%8A#tk-5-122-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">彼大頭餘りに強く睨まれ奉り、霜露などの日に當て消る樣に、跡かたもなく成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%A4%98%E3%82%8A#tk-6-293-nlp_gloss-45">6</a></p>
+      <p class="occurrence-context">入道相國、さしも日來はゆゝしげに坐しかども、誠に苦げにて、息の下に宣ひけるは、「われ保元平治より以來、度々の朝敵を平げ、勸賞身に餘り、忝くも帝祖太政大臣に至り、榮花子孫に及ぶ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E9%A4%98%E3%82%8A#tk-6-457-nlp_gloss-9">6</a></p>
+      <p class="occurrence-context">其子に如無僧都とて智慧才覺身に餘り、徳行持律の僧おはしけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%A4%98%E3%82%8A#tk-7-46-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">忝なく嬉しさの餘りに、なくなくかうぞ思續け給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%A4%98%E3%82%8A#tk-7-261-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">」木曾殿、「其ならば、今は七十にも餘り、白髮にこそ成ぬらんに、鬢鬚の黒いは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%A4%98%E3%82%8A#tk-7-483-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">」と平大納言時忠卿下知せられけれども、餘りに遽噪いで、取落す物ぞ多かりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%A4%98%E3%82%8A#tk-7-525-nlp_gloss-49">7</a></p>
+      <p class="occurrence-context">」と、聲々に申されければ、三位中將馬に打乘て出給ふが、猶引返し、縁の際へうち寄せて、弓の弭で御簾をさと掻揚げ、「是御覽ぜよ各、少き者共が餘りに慕ひ候を、とかうこしらへ置んと仕る程に、存の外の遲參。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%A4%98%E3%82%8A#tk-7-599-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">餘りに名殘は惜しう候へども、さしもの名物を、田舎の塵に成ん事口惜う候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%A4%98%E3%82%8A#tk-8-12-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">圓融房には、餘りに參りつどひて、堂上堂下門外門内、隙はさまなく充々たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%A4%98%E3%82%8A#tk-8-52-nlp_gloss-12">8</a></p>
+      <p class="occurrence-context">法印平家に具せられて、西國へ落し時、餘りに遽噪いで、北方をも宮をも京都に棄置參せて下られたりしが、西國より急ぎ人を上せて、「女房宮具し參せて、よく／＼くだり給べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%A4%98%E3%82%8A#tk-8-57-nlp_gloss-35">8</a></p>
+      <p class="occurrence-context">されども四宮位に即せ給ひて後、其情をも思召し出でさせ給はず、朝恩もなくして年月を送けるが、せめて思ひの餘りにや二首の歌を詠うで、禁中に落書をぞしたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%A4%98%E3%82%8A#tk-8-155-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">さる程に九月十日餘りに成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%A4%98%E3%82%8A#tk-8-553-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">餘りに遽噪いで、弓取る者は矢を知らず、矢取る者は弓を知らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%A4%98%E3%82%8A#tk-9-140-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">」と申ければ、成忠餘りの嬉しさに、築垣より急ぎ跳りおるゝとて、腰をつき損じたりけれども、痛さは嬉さに紛て覺えず、這々參て、此由奏聞してければ、法皇大に御感在てやがて門を開かせて入られけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%A4%98%E3%82%8A#tk-9-208-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">」と宣ひけれども、猶落も行ざりけるが、餘りに言はれ奉て、「あはれ好らう敵がな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%A4%98%E3%82%8A#tk-9-404-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">平家の方には、餘りに遽噪いで、弓取る者は矢を知らず、矢取る者は弓を知らず、馬に當られじと中を明てぞ通しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%A4%98%E3%82%8A#tk-9-582-nlp_gloss-63">9</a></p>
+      <p class="occurrence-context">河原太郎弟の次郎を呼で云ひけるは、
+「大名は我と手を下さねども、家人の高名を以て名譽とす。我等は自手を下さずは叶
+ひがたし。敵を前に置ながら、矢一つだにも射ずして待居たるが、餘りに心もとなく
+覺ゆるに、高直は先づ城の中へ紛れ入て、一矢射んと思ふなり。されば千萬が一も生
+て歸らん事有がたし。わ殿は殘り留て、後の證人にたて。」と云ひければ、河原次郎
+涙をはら／＼と流いて「口惜い事を宣ふ者哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%A4%98%E3%82%8A#tk-9-667-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">餘りのいぶせさに目を塞いでぞ落しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%A4%98%E3%82%8A#tk-9-940-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">餘りに人の心強きも中々怨と成るものを。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%A4%98%E3%82%8A#tk-10-323-nlp_gloss-17">10</a></p>
+      <p class="occurrence-context">當家は保元平治より以來度々の朝敵を平げ、勸賞身に餘り、辱く一天の君の御外戚として、一族の昇進六十餘人、廿餘年の以來は樂み榮え申ばかりなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%A4%98%E3%82%8A#tk-10-721-nlp_gloss-10">10</a></p>
+      <p class="occurrence-context">」と申す人ありと聞き給ひて、餘りの覺束なさに、とかくして八島へ人を奉り給ひたりければ、いそぎも立歸らず、夏過秋にもなりぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%A4%98%E3%82%8A#tk-11-258-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">餘りの面白さに、感に堪ざるにやと覺しくて船の中より、年五十許なる男の、黒革威の鎧著て白柄の長刀持たるが、扇立たりける所に立てまひすましたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%A4%98%E3%82%8A#tk-11-724-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">餘り秘して子の親方には教へずして堀川天皇御在位の時傳へ參て死去したりしを、君親方に教へさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%A4%98%E3%82%8A#tk-11-849-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">道すがらも餘りに心細げにおはしければ、判官情ある人にて、樣々に慰め奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%A4%98%E3%82%8A#tk-11-1012-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">「餘りの御姿のしをれてさぶらふに、たてまつりかへよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%A4%98%E3%82%8A#tk-11-1057-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">後悔千萬悲しんでも餘りあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%A4%98%E3%82%8A#tk-12-280-nlp_gloss-46">12</a></p>
+      <p class="occurrence-context">縱ひ末の世に如何なるあた敵になるとも、いかゞ是を失ひ奉るべきと悲しうおぼえければ、北條に宣ひけるは、「此若君を見奉るに、先世の事にや候らん、餘りに最愛う思ひ奉り候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%A4%98%E3%82%8A#tk-12-502-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">」と、宣ひけるこそ餘りの事なれ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

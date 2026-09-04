@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>法印</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>法印</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>dharma seal (title of a high-ranking Buddhist priest)</li>
+      
+      <li>dharma seal (honorific title for a high-ranking Buddhist priest)</li>
+      
+      <li>the Buddhist title Dharma Seal</li>
+      
+      <li>dharma seal (a title given to high-ranking Buddhist priests)</li>
+      
+      <li>Dharma seal (a Buddhist title)</li>
+      
+      <li>Dharma seal (a high-ranking Buddhist priestly title)</li>
+      
+      <li>Dharma seal (a high-ranking Buddhist ecclesiastical title)</li>
+      
+      <li>Dharma seal</li>
+      
+      <li>the title of a high-ranking Buddhist priest</li>
+      
+      <li>high priest</li>
+      
+      <li>a Buddhist priest of high rank</li>
+      
+      <li>a Buddhist priest of the highest rank</li>
+      
+      <li>seal of the Law (a Buddhist priestly title)</li>
+      
+      <li>a Buddhist priest of the highest rank (hōin)</li>
+      
+      <li>the seal of the Law (i.e., a high-ranking Buddhist monk)</li>
+      
+      <li>a high-ranking Buddhist monk (specifically, a title given to eminent priests)</li>
+      
+      <li>the highest rank of Buddhist priest</li>
+      
+      <li>title of a Buddhist priest</li>
+      
+      <li>the title of a high-ranking Buddhist monk</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (22)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%B3%95%E5%8D%B0#tk-1-587-nlp_gloss-23">1</a></p>
+      <p class="occurrence-context">此法勝寺の執行と申すは、京極の源大納言雅俊の卿の孫、木寺の法印寛雅には子なりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%B3%95%E5%8D%B0#tk-1-667-nlp_gloss-7">1</a></p>
+      <p class="occurrence-context">結願の導師には、仲胤法印、その比はいまだ仲胤供奉と申しが、高座に上り、かね打ならし、表白の詞にいはく、「我等なたねの二葉よりおふし立て給ふ神達、後二條の關白殿に、鏑矢一つ放ち當て給へ、大八王子權現。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-111-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">仙源法印、是を敬白す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-123-nlp_gloss-3">3</a></p>
+      <p class="occurrence-context">猶佛所の法印に仰て、御身等身の藥師竝に五大尊の像を作り始らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-125-nlp_gloss-74">3</a></p>
+      <p class="occurrence-context">入道相國、
+二位殿、胸に手を置て、こはいかにせんとぞあきれ給ふ。人の物申しけれども、唯と
+もかくも好樣にとぞ宣ける。さり共「軍の陣ならば、是程淨海は臆せじ物を。」とぞ
+後には仰られける。御驗者は、房覺性運兩僧正、春堯法印、豪禪、實專兩僧都、各僧
+伽の句どもあげ、本寺本山の三寶、年來所持の本尊達、責ふせ々々々もまれけり。誠
+にさこそはと覺えて尊かりける中に法皇は、折しも新熊野へ御幸なるべきにて、御精
+進の次なりける間、錦帳近く御座有て、千手經を打上遊されけるにこそ、今一際事替
+て、さしも躍狂ふ御よりまし共が縛も、暫打靜けれ。法皇仰なりけるは、「如何なる
+御物氣なり共、此老法師がかくて候はんには、爭か近附奉るべき。就中に今現るる所
+の怨靈共は、皆我朝恩によて、人と成し者共ぞかし。縱報謝の心をこそ存ぜず共、豈
+障碍を成すべきや。速に罷退き候へ。」とて女人生産し難からん時に臨で、邪魔遮障
+し、苦忍難からんにも、心を致して大悲呪を稱誦せば、鬼神退散して、安樂に生ぜん
+と遊いて、皆水精の御數珠を推揉せ給へば、御産平安のみならず、皇子にてこそ坐け
+れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-154-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">御弟子覺誓僧都、法印に擧せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-156-nlp_gloss-17">3</a></p>
+      <p class="occurrence-context">仁和寺の御室さゝへ申させ給ふによて、法眼圓良、法印に成さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-174-nlp_gloss-36">3</a></p>
+      <p class="occurrence-context">
+すなはち大師にて坐けりと、彌々尊く思召し、娑婆世界の思出にとて、高野の金堂に曼陀羅を書かれけるが、西曼陀羅をば、常明法印といふ繪師に書せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-525-nlp_gloss-12">3</a></p>
+      <p class="occurrence-context">」とて出られければ、其とき入道、「法印よべ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-527-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">喚かへいて、「やゝ、法印の御房、淨海が申所は僻事か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-558-nlp_gloss-16">3</a></p>
+      <p class="occurrence-context">」とて、且は腹立し、且は落涙し給へば、法印怖うも又哀にも覺て、汗水に成り給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-561-nlp_gloss-44">3</a></p>
+      <p class="occurrence-context">鹿谷に寄合たりし事を正しう見聞れしかば、其人數とて、只今も召や籠られんずらんと思ふに、龍の鬚を撫で虎の尾を蹈む心地はせられけれども、法印もさる怖い人で、些もさわがず、申されけるは、「誠に度々の御奉公淺からず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-574-nlp_gloss-3">3</a></p>
+      <p class="occurrence-context">」とて、法印を譽ぬ人こそ無かりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-575-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">法印御所へ參て、此由奏聞せられければ、法皇も道理至極して、仰下るゝ方もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-657-nlp_gloss-89">3</a></p>
+      <p class="occurrence-context">又靜憲法印、入道相國の西八條の邸に行て、「夕法皇の鳥羽殿へ御幸成て候なるに、
+御前に人一人も候はぬ由承るが餘に淺ましう覺え候。何か苦う候べき、靜憲ばかりは
+御ゆるされ候へかし。參り給はん。」と申されければ、「とう／＼、御房は事あやま
+つまじき人なれば。」とて許されけり。法印鳥羽殿へ參て、門前にて車よりおり、門
+の内へさし入給へば、折しも法皇、御經を打上々々遊されける御聲も、殊にすごう聞えさせ給ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-658-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">法印のつと參られたれば、遊ばされける御經に、御涙のはら／＼とかゝらせ給を見參せて、法印餘の悲さに、裘代の袖を顏に押當て、泣々御前へぞ參られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-658-nlp_gloss-30">3</a></p>
+      <p class="occurrence-context">法印のつと參られたれば、遊ばされける御經に、御涙のはら／＼とかゝらせ給を見參せて、法印餘の悲さに、裘代の袖を顏に押當て、泣々御前へぞ參られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-660-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">「如何にや法印御房、君は昨日の朝、法住寺殿にて、供御聞召されて後は、よべも今朝も聞召も入ず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B3%95%E5%8D%B0#tk-3-663-nlp_gloss-7">3</a></p>
+      <p class="occurrence-context">」とのたまへば、法印涙を押て申されけるは、「何事も限有る事にて候へば、平家樂みさかえて二十餘年。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B3%95%E5%8D%B0#tk-4-80-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">座主尊永、法印になさる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%B3%95%E5%8D%B0#tk-7-607-nlp_gloss-31">7</a></p>
+      <p class="occurrence-context">餘に名殘を惜みて、桂河の端迄打送り、さてもあるべきならねば其より暇請うて泣々別れ給ふに、法印かうぞ思續け給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B3%95%E5%8D%B0#tk-8-52-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">法印平家に具せられて、西國へ落し時、餘りに遽噪いで、北方をも宮をも京都に棄置參せて下られたりしが、西國より急ぎ人を上せて、「女房宮具し參せて、よく／＼くだり給べし。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

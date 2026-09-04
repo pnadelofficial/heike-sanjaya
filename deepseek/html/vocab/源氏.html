@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>源氏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>源氏</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>the Genji clan</li>
+      
+      <li>Genji clan</li>
+      
+      <li>Genji</li>
+      
+      <li>Genji (the Minamoto clan)</li>
+      
+      <li>Minamoto clan</li>
+      
+      <li>the Genji (the Minamoto clan)</li>
+      
+      <li>Minamoto clan (Genji)</li>
+      
+      <li>the Minamoto clan</li>
+      
+      <li>Genji (Minamoto clan)</li>
+      
+      <li>the Genji (Minamoto clan)</li>
+      
+      <li>the Minamoto clan (or the Genji)</li>
+      
+      <li>the Genji clan (Minamoto clan)</li>
+      
+      <li>the Genji (clan)</li>
+      
+      <li>the Genji clan (the Minamoto clan)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (170)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%BA%90%E6%B0%8F#tk-1-344-nlp_gloss-65">1</a></p>
+      <p class="occurrence-context">昔より今に至るまで、源平兩氏朝家に召しつかはれて、王化に隨はず、自朝權を輕んずる者には、互に誡を加しかば、代の亂れもなかりしに、保元に爲義きられ、平治に義朝誅せられて後は、末々の源氏ども、或は流され、或は失はれ、今は平家の一類のみ繁昌して、頭をさし出す者なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%BA%90%E6%B0%8F#tk-1-492-nlp_gloss-5">1</a></p>
+      <p class="occurrence-context">頼政、光基など申源氏共にあざむかれて候はんには、誠に一門の耻辱でも候ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%BA%90%E6%B0%8F#tk-1-586-nlp_gloss-38">1</a></p>
+      <p class="occurrence-context">近江中將入道蓮淨俗名成正、法勝寺の執行俊寛僧都、山城守基兼、式部大輔雅綱、平判官康頼、宗判官信房、新平判官資行、攝津國源氏多田藏人行綱を始として北面の輩多く與力したりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%BA%90%E6%B0%8F#tk-1-662-nlp_gloss-33">1</a></p>
+      <p class="occurrence-context">是によて日吉の社司、延暦寺の寺官、都合三十餘人、申文をささげて陣頭へ參じけるを後二條關白殿、大和源氏中務權少輔頼春に仰せてふせがせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%BA%90%E6%B0%8F#tk-1-716-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">源氏には、大内守護の源三位頼政卿、渡邊の省授をむねとして、その勢僅に三百餘騎、北の門、縫殿の陣を固め給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%BA%90%E6%B0%8F#tk-1-738-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">就中にこの頼政の卿は、六孫王より以降、源氏嫡々の正統、弓矢を取て未だ其不覺を聞かず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-140-nlp_gloss-20">4</a></p>
+      <p class="occurrence-context">若思召し立せ給ひて、令旨を下させ給ふ物ならば、悦をなして馳參らむずる源氏共こそ多う候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-160-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">同四月二十八日都を立て近江國より始めて美濃、尾張の源氏共に次第に觸て行程に、五月十日伊豆の北條に下りつき流人前兵衞佐殿に令旨奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-163-nlp_gloss-40">4</a></p>
+      <p class="occurrence-context">其比の熊野別當湛増は、平家に志し深かりけるが、何とかして漏れ聞きたりけん、新宮の十郎義盛こそ、高倉宮の令旨賜はて美濃尾張の源氏共觸れ催し、既に謀反を起なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-164-nlp_gloss-8">4</a></p>
+      <p class="occurrence-context">那智新宮の者共は、定て源氏の方人をぞせんずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-168-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">閧作り矢合して、源氏の方にはとこそ射れ、平家の方にはかうこそ射れと、互に矢叫の聲の退轉もなく、鏑の鳴止む隙もなく、三日が程こそ戰うたれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-270-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">源氏の世に成て、東國へ下り、梶原平三景時について、事の根元一一次第に申ければ、鎌倉殿神妙なりと感じおぼしめして、能登國に御恩蒙りけるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-479-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">昔は源平左右に爭て、朝家の御守たりしかども、近來は源氏の運傾き、平家世を取て二十餘年、天下に靡ぬ草木も候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-699-nlp_gloss-45">4</a></p>
+      <p class="occurrence-context">」と、後三條院、御遺詔有しかども、白河院如何思召されけん、終に位にも即け參らさせ給はず、責ての御事には、資仁親王の御子に、源氏の姓を授け參らさせ給て、無位より一度に三位に叙して、軈て中將に成參らさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%BA%90%E6%B0%8F#tk-4-700-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">一世の源氏、無位より三位する事嵯峨皇帝の御子、陽院の大納言定卿の外は是始とぞ承る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-78-nlp_gloss-28">5</a></p>
+      <p class="occurrence-context">やう／＼秋も半に成行ば、福原の新都にまします人々、名所の月を見んとて、或は源氏の大將の昔の迹を忍つゝ、須磨より明石の浦傳ひ、淡路のせとを押渡り、繪島が磯の月を見る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-93-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">源氏の宇治の巻には、優婆塞宮の御娘、秋の名殘を惜み、琵琶を調べて、夜もすがら心を澄し給しに、有明の月の出けるを、堪ずや思ほしけん、揆にて招き給ひけんも、今こそ思ひ知られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-148-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">其も平家亡び、源氏の世盡なん後、大織冠の御末、執柄家の君達の、天下の將軍に成給べきか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-157-nlp_gloss-10">5</a></p>
+      <p class="occurrence-context">三浦大介義明が子共、三百餘騎で源氏方をして、湯井小坪の浦で戰ふに、畠山軍にまけて、武藏國へ引退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-569-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">甲斐信濃の源氏ども馳來て一つになる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-572-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">常陸源氏佐竹太郎が雜色、主の使に文持て京へ上るを、平家の先陣上總守忠清是を留て、持たる文を奪取り明て見れば、女房の許への文也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-578-nlp_gloss-10">5</a></p>
+      <p class="occurrence-context">昨日黄瀬川にて、人の申つるは、源氏の御勢二十萬騎とこそ申候つれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-596-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">甲斐信濃の源氏共、案内は知て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-604-nlp_gloss-23">5</a></p>
+      <p class="occurrence-context">明日は源平富士川にて、矢合と定めたりけるに、夜に入て、平家の方より源氏の陣を見渡せば、伊豆駿河の人民百姓等が、軍に怖て、或は野に入り山に隱れ、或は舟に取乘て、海河に浮び、營の火見えけるを、平家の兵共「あなおびただしの源氏の陣の遠火の多さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-604-nlp_gloss-78">5</a></p>
+      <p class="occurrence-context">明日は源平富士川にて、矢合と定めたりけるに、夜に入て、平家の方より源氏の陣を見渡せば、伊豆駿河の人民百姓等が、軍に怖て、或は野に入り山に隱れ、或は舟に取乘て、海河に浮び、營の火見えけるを、平家の兵共「あなおびただしの源氏の陣の遠火の多さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-616-nlp_gloss-9">5</a></p>
+      <p class="occurrence-context">あくる二十四日卯の刻に、源氏大勢廿萬騎、富士川に押寄て、天も響き大地も搖ぐ程に、閧をぞ三箇度作りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-691-nlp_gloss-8">5</a></p>
+      <p class="occurrence-context">同十二月二十三日、近江源氏の背きしを攻んとて、大將軍には左兵衞督知盛、薩摩守忠度、都合其勢二萬餘騎で、近江國へ發向して、山本、柏木、錦古里など云ふ溢れ源氏共一々に皆攻落し、やがて美濃尾張へ越え給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%BA%90%E6%B0%8F#tk-5-691-nlp_gloss-53">5</a></p>
+      <p class="occurrence-context">同十二月二十三日、近江源氏の背きしを攻んとて、大將軍には左兵衞督知盛、薩摩守忠度、都合其勢二萬餘騎で、近江國へ發向して、山本、柏木、錦古里など云ふ溢れ源氏共一々に皆攻落し、やがて美濃尾張へ越え給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-203-nlp_gloss-14">6</a></p>
+      <p class="occurrence-context">さる程に、其比信濃國に、木曽冠者義仲と云ふ源氏有りと聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-222-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">平家の末に成る折を得て、源氏の年來の素懷を遂んとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-244-nlp_gloss-46">6</a></p>
+      <p class="occurrence-context">同十二日、鎭西より飛脚到來、宇佐大宮司公通が申けるは、九州の者共、緒方三郎を始として、臼杵、戸次、松浦黨 に至る迄、一向平家を背いて源氏に同心の由申たりければ、「東國北國の背だに有に、こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-246-nlp_gloss-34">6</a></p>
+      <p class="occurrence-context">同十六日に、伊豫國より飛脚到來、去年の冬比より、河野四郎通清を初として、四國の者共皆平家を背いて、源氏に同心の間、備後國の住人、額の入道西寂、平家に志深かりければ、伊豫國へ押渡り、道前道後のさかひ、高直城にて、河野四郎通清を討候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-254-nlp_gloss-20">6</a></p>
+      <p class="occurrence-context">熊野別當湛増も、平家の重恩の身なりしが、其も背いて源氏に同心の由聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-265-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">同二十七日前右大將宗盛卿源氏遂討の爲に、東國へ既に門出と聞えしが、入道相國違例の心地とて、留り給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-497-nlp_gloss-20">6</a></p>
+      <p class="occurrence-context">同三月十日、美濃國の目代、都へ早馬を以て申けるは、東國の源氏共すでに尾張國迄攻上り、道を塞ぎ、人を通さぬ由申たりければ、やがて討手を差遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-500-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">源氏の方には十郎藏人行家、兵衞佐の弟卿公義圓、都合其勢六千餘騎、尾張河を中に隔て、源平兩方に陣をとる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-501-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">同十六日の夜半ばかり、源氏の勢六千餘騎河を渡て、平家三萬餘騎が中へをめいて懸入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-505-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">」とて責め給へば、源氏の勢殘少なに討なされ、大將軍行家辛き命生て河より東へ引退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-507-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">平家やがて河を渡て、源氏を追物射に射て行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-508-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">源氏あそこ此で歸し合せ／＼防けれ共、敵は大勢、御方は無勢也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-511-nlp_gloss-8">6</a></p>
+      <p class="occurrence-context">』とこそ云ふに、今度の源氏の策、愚なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-520-nlp_gloss-8">6</a></p>
+      <p class="occurrence-context">東國には草も木も皆源氏にぞ靡きける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-557-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">源氏の代と成て後、鎌倉殿「神妙なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-594-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">信濃源氏、井上九郎光盛が謀に、俄に赤旗七旒作り三千餘騎を七手に分ち、あそこの峯、こゝの洞より赤旗ども手に／＼指揚て寄ければ、城四郎是を見て、「あはや此國にも平家の方人する人有けりと、力附ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-605-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">東國北國の源氏共、蜂の如くに起合ひ、唯今都へ責上らんとするに、か樣に波の立つやらん、風の吹やらんも知ぬ體にて花やかなりし事共、中々云ふかひなうぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%BA%90%E6%B0%8F#tk-6-614-nlp_gloss-27">6</a></p>
+      <p class="occurrence-context">南都北嶺の大衆、熊野金峯山の僧徒、伊勢大神宮の祭主神官に至る迄、一向平家を背いて、源氏に心を通しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-83-nlp_gloss-22">7</a></p>
+      <p class="occurrence-context">先づ旗差を先だてゝ、白旗を差あげたらば平家是を見て、『あはや源氏の先陣は向たるは。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-139-nlp_gloss-26">7</a></p>
+      <p class="occurrence-context">憑哉八幡大菩薩の眞實の志二なきをや遙に照覧し給けん、雲の中より山鳩三つ飛來て源氏の白旗の上に翩翻す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-147-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏も進まず、平家も進まず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-148-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏の方より、精兵十五騎楯の面に進ませて、十五騎が上矢の鏑を、平家の陣へぞ射入たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-150-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏三十騎を出いて、射さすれば、平家三十騎を出いて、三十の鏑を射返す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-152-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">互に勝負をせんと疾りけれ共、源氏の方より制して、勝負をせさせず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-153-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏はか樣にして日を暮し、平家の大勢を倶利迦羅谷へ追落さうとたばかりけるを、少しも悟らずして、共に會釋ひ日を暮すこそはかなけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-188-nlp_gloss-27">7</a></p>
+      <p class="occurrence-context">先實盛が許に寄合たりける日、齋藤別當申けるは、「倩此世中の在樣を見るに、源氏の御方は強く、平家の御方は、負色に見えさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-208-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏の方より今井四郎三百余騎でうちむかふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-231-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏の方より、仁科、高梨、山田次郎、五百餘騎で馳向ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-317-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">或は源氏に附んと申す衆徒も候らん、或は平家に同心せんと云ふ大衆も候らん、牒状を遣して御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-330-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">近境の源氏、猶參候せず、況や遠境に於てをや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-334-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">是によて東國北國の源氏等、各參洛を企て、平家を亡さんと欲す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-347-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">抑天台の衆徒、平家に同心か、源氏に與力か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-353-nlp_gloss-21">7</a></p>
+      <p class="occurrence-context">庶幾三千の衆徒神の爲、佛の爲、國の爲、君の爲に源氏に同心して兇徒を誅し、鴻化に浴せん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-360-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-367-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏は近年より以降、度々の軍に討勝て、運命開けんとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-368-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">何ぞ當山獨宿運盡ぬる平家に同心して、運命開くる源氏を背かんや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-369-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">須く平家値遇の義を翻して、源氏合力の旨に任ずべき由、一味同心に僉議して、返牒を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-399-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">加之奸謀に與して、同心を致す源氏等、義仲、行家以下黨を結て數あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-433-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">大衆誠に、事の體を憐けれども、「既に源氏に同心の返牒を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-441-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">明て後聞えしは、美濃源氏、佐渡衞門尉重貞と云ふ者有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-449-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">源氏の方には、十郎藏人行家、數千騎で宇治橋より入るとも聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-451-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">攝津河内の源氏等雲霞の如くに同う都へ亂入由聞えしかば、平家の人々此上は唯一所にて如何にも成給へとて、方々へ向られたる討手共都へ皆呼返れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-654-nlp_gloss-17">7</a></p>
+      <p class="occurrence-context">凡は兵衞佐許こそ、芳心は存ぜらるゝとも、自餘の源氏共は如何あらんずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-673-nlp_gloss-13">7</a></p>
+      <p class="occurrence-context">肥後守[_][6]貞能ほ、川尻に源氏待と聞て、蹴散さんとて、五百餘騎で發向したりけるが、僻事なれば歸り上る程に、宇度野の邊にて行幸に參り合ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%BA%90%E6%B0%8F#tk-7-685-nlp_gloss-35">7</a></p>
+      <p class="occurrence-context">貞能は、西八條の燒跡に、大幕ひかせ一夜宿したりけれども、歸り入給ふ平家の君達一所も坐ねば、さすが心細うや思ひけん、源氏の馬の蹄に懸じとて、小松殿の御墓掘せ、御骨に向ひ奉て、泣々申けるは、「あな淺まし、御一門の御果御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-7-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">平家は落ぬれど、源氏は未だ入替らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-16-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">近江源氏山本の冠者義高、白旗差て先陣に供奉す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-20-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">攝津國河内の源氏共雲霞の如くに同く都へ亂入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-21-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">凡京中には源氏の勢充々たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-69-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">其外源氏十餘人、受領、檢非違使、靱負尉、兵衞尉に成れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-235-nlp_gloss-3">8</a></p>
+      <p class="occurrence-context">又長門より源氏寄と聞えしかば、海士小舟に取乘て、海にぞ浮び給ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-236-nlp_gloss-27">8</a></p>
+      <p class="occurrence-context">小松殿の三男、左の中將清經は、本より何事も思入れける人なれば「都をば源氏が爲に攻落され、鎭西をば維義が爲に追出さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-251-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">遠松に白鷺のむれ居るを見ては、源氏の旗を擧るかと疑ひ、野雁の遼海に鳴を聞ては、兵共の終夜船を漕かと驚かる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-292-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">内侍には一門の源氏上座して、末座には大名小名次居たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-293-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">源氏の座上に泰定を居らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-372-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">是を見て、源氏の舟五百餘艘ほしあげたるををめき叫んで下けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-384-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">源氏の方の侍大將海野彌平四郎討れにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-386-nlp_gloss-30">8</a></p>
+      <p class="occurrence-context">平家は鞍置馬を船の中に立られたりければ、船差寄せ馬共引下し、打乘／＼をめいて懸ければ、源氏の勢大將軍は討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-487-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">平家の侍共、「源氏の大將に組めや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-495-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">凡京中には源氏の勢滿々て、在々所々に入取多し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-499-nlp_gloss-12">8</a></p>
+      <p class="occurrence-context">衣裳をはぐ迄はなかりし者を、平家に源氏替へ劣りしたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-514-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">信濃源氏村上の三郎判官代是も木曾を背いて法皇へ參りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-555-nlp_gloss-8">8</a></p>
+      <p class="occurrence-context">七條が末は攝津國の源氏の固たりけるが、七條を西へ落て行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-557-nlp_gloss-39">8</a></p>
+      <p class="occurrence-context">」と御所より披露せられたりければ、在洛の者共、屋根ゐに楯をつき、おそへの石を取聚て、待懸たる處に、攝津國源氏の落けるを、「あはや落人よ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-569-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">木曾を背て、院方へ參たる信濃源氏、村上三郎判官代も討れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-604-nlp_gloss-30">8</a></p>
+      <p class="occurrence-context">院方に候ける近江守源藏人仲兼、其勢五十騎ばかりで法住寺殿の西の門を固めて防ぐ處に、近江源氏山本冠者義高、馳來たり、「如何に各今は誰をかばはんとて軍をばし給ふぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%BA%90%E6%B0%8F#tk-8-654-nlp_gloss-2">8</a></p>
+      <p class="occurrence-context">殿は源氏で渡せ給に、其こそ叶ひ候まじけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-308-nlp_gloss-14">9</a></p>
+      <p class="occurrence-context">中にも阿波讃岐の在廳ども、平家を背いて、源氏に付むとしけるが、「抑我等は昨日今日まで、平家に隨うたるものの、今日始めて源氏の方へ参りたりとも、よも用ゐられじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-308-nlp_gloss-39">9</a></p>
+      <p class="occurrence-context">中にも阿波讃岐の在廳ども、平家を背いて、源氏に付むとしけるが、「抑我等は昨日今日まで、平家に隨うたるものの、今日始めて源氏の方へ参りたりとも、よも用ゐられじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-316-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">其國に源氏二人有り、故六條判官爲義が末子、賀茂冠者義嗣、淡路冠者義久と聞えしを、西國の兵共大將に憑んで、城廓を構へて待處に、能登殿やがて押寄攻給へば、一日戰ひ賀茂冠者討死す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-332-nlp_gloss-14">9</a></p>
+      <p class="occurrence-context">又淡路國の住人安摩六郎忠景、平家を背いて、源氏に心を通しけるが、大船二艘に兵粮米物具、積で都の方へ上る程に、能登殿福原にて、これをきゝ、小舟十艘計おし浮べて追はれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-335-nlp_gloss-16">9</a></p>
+      <p class="occurrence-context">紀伊國の住人園邊兵衞忠康、これも平家を背いて源氏につかんとしけるが、安摩六郎が能登殿に攻られ奉て、吹飯に有と聞えしかば、其勢百騎計で馳來て一つになる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-378-nlp_gloss-3">9</a></p>
+      <p class="occurrence-context">さる程に源氏は四日寄べかりしが、故入道相國の忌日と聞て、佛事を遂させんが爲に寄ず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-403-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">夜半ばかりに、源氏一萬騎、おしよせて、鬨をどと作る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-405-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">源氏は落行く敵をあそこに追懸け、こゝに追詰め攻ければ、平家の軍兵矢庭に五百餘騎討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-426-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">唯今も上の山より源氏さと落し候なば、取る物も取あへ候はじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-431-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">五日の暮方に、源氏昆陽野を立て、漸々生田森に攻近づく。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-432-nlp_gloss-15">9</a></p>
+      <p class="occurrence-context">雀松原、御影の松、昆陽野の方を見渡せば、源氏手々に陣を取て、遠火を燒く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-438-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">源氏は、あそこに陣取て馬休め、こゝに陣取て馬飼などしける程に急がず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-581-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">大手生田森にも、源氏五萬餘騎で固たりけるが、其勢の中に、武藏國の住人、河原太郎、河原次郎といふ者有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-587-nlp_gloss-24">9</a></p>
+      <p class="occurrence-context">河原太郎大音聲を揚て、「武藏國の住人、河原太郎私市高直、同次郎盛直、源氏の大手生田森の先陣ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-640-nlp_gloss-4">9</a></p>
+      <p class="occurrence-context">かかりしかども、源氏大手ばかりでは叶ふべし共見えざりしに、九郎御曹司搦手に回て七日の日の明ぼのに、一谷の後、鵯越に打上り既に落さんとし給ふに、其勢にや驚たりけん、男鹿二つ妻鹿一つ、平家の城廓一谷へぞ落たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-642-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">如何樣にも、上の山より源氏落すにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-700-nlp_gloss-10">9</a></p>
+      <p class="occurrence-context">「倩此世中の在樣を見るに、源氏の御方は強く、平家の御方は負け色に見えさせ給たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-706-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">源氏憑うとは思はず、源氏又盛俊に憑れうともよも思はじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-706-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">源氏憑うとは思はず、源氏又盛俊に憑れうともよも思はじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%BA%90%E6%B0%8F#tk-9-849-nlp_gloss-23">9</a></p>
+      <p class="occurrence-context">一谷、生田森、山の傍、海の汀にて射られ斬られて死ぬるはしらず、源氏の方に斬懸らるゝ頸ども、二千餘人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-322-nlp_gloss-19">10</a></p>
+      <p class="occurrence-context">昔は源平左右にあらそひて、朝家の御かためなりしかども、近比源氏の運傾きたりし事は事新しう初めて申べきにあらず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-519-nlp_gloss-12">10</a></p>
+      <p class="occurrence-context">』と仰蒙り候は、當時の如くは、皆源氏の郎等共こそ候なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-620-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">源氏の先祖、伊豫入道頼義は、勅命に依て、奧州の夷安倍貞任宗任を責んとて十二年が間に人の頸を斬る事、一萬六千餘人。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-671-nlp_gloss-37">10</a></p>
+      <p class="occurrence-context">」と、度々誓状を以て申されければ、一門をも引別れて落留り給ひたりけるが、「兵衞佐ばかりこそかうは思はれけれ共、自餘の源氏共は、如何あらんずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-712-nlp_gloss-35">10</a></p>
+      <p class="occurrence-context">同十八日、肥後守定能が伯父、平田入道定次を大將として、伊賀伊勢兩國の住人等、近江國へ打出たりければ、源氏末葉等發向して、合戰を致す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-767-nlp_gloss-74">10</a></p>
+      <p class="occurrence-context">平家の方には大將軍小松新三位中將資盛、同少將有盛、丹後侍從忠房、侍大將には飛騨三郎左衞門景經、越中次郎兵衞盛次、上總五郎兵衞忠光、惡七兵衞景清を先として、五百餘艘の兵船に取乘て、備前の小島に著と聞えしかば、源氏室を立て、是も備前國、西河尻、藤戸に陣をぞ取たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-769-nlp_gloss-13">10</a></p>
+      <p class="occurrence-context">舟無くしては輙う渡すべき樣無かりければ、源氏の大勢向の山に宿していたづらに日數を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-772-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">源氏「安からぬ事也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-789-nlp_gloss-20">10</a></p>
+      <p class="occurrence-context">同二十六日の辰刻ばかり、平家又小船に乘て漕出させ扇を上て「源氏爰を渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-804-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">源氏の兵共、是を事共せず、甲のしころを傾け、平家の舟に乘移り／＼をめき叫んで責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-808-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">源氏は小島に打上て、人馬の息をぞ休めける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-810-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">源氏は心は猛う思へども、舟なければ、追て責め戰はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%BA%90%E6%B0%8F#tk-10-823-nlp_gloss-15">10</a></p>
+      <p class="occurrence-context">去ぬる治承養和の比より、諸國七道の人民百姓等、源氏の爲に惱され平家の爲に亡され、家かまどを棄て山林にまじはり、春は東作の思を忘れ、秋は西收の營にも及ばず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-85-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の兵是を事ともせず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-110-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏既に淀河尻に出向うて候へば、それをこそ告げ申され候らめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-146-nlp_gloss-32">11</a></p>
+      <p class="occurrence-context">其外の人々思ひ／＼に取乘て、或は一町許、或は七八段、五六段など漕出したる處に、源氏の兵共、直甲七八十騎、惣門の前のなぎさにつと出來たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-156-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の兵共、弓手になしては射て通り、馬手になしては射て通り、上げ置いたる船の陰を、馬休め所にして、[_][1]をめき叫んて責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-159-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">大臣殿、侍どもを召て、「抑源氏が勢如何程あるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-170-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">今日の源氏の大將軍は誰人でおはしますぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-189-nlp_gloss-18">11</a></p>
+      <p class="occurrence-context">中にも九郎大夫判官を射倒さむとねらはれけれども、源氏の方にも心得て、
+奧州の佐藤三郎兵衞嗣信、同四郎兵衞忠信、伊勢三郎義盛、源八廣綱、江田源三、熊
+井太郎、武藏坊辨慶など云ふ一人當千の兵共、吾も吾もと馬の首を立竝て大將軍の矢
+面に塞りければ、力及び給はず。「矢面の雜人原そこのき給へ。」とて、差詰引詰
+散々に射給へば、矢場に鎧武者十餘騎計射落さる。中にも眞先に進んだる奧州の佐藤
+三郎兵衞が弓手の肩を馬手の脇へつと射拔れて、暫もたまらず、馬より、倒にどうと
+落つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-211-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">
+                  さる程に、阿波讃岐に平家を背て、源氏を待ける者共、あそこの嶺、こゝの洞より、十四五騎廿騎、うちつれ／＼參りければ、判官程なく三百餘騎にぞ成にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-246-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">陸には源氏轡を竝べて、是を見る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-257-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">陸には源氏箙を扣てどよめきけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-261-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">平家の方には音もせず、源氏の方には又箙を扣いて、どよめきけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-290-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の兵共勝に乘て、馬の太腹ひたる程に、打入々々責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-298-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">わう弱たる弓を、敵取持て、『是こそ源氏の大將九郎義經が弓よ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-301-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">さる程に日暮ければ、平家の船は沖に浮めば源氏は陸に引退いて、むれ高松の中なる野山に、陣をぞ取たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-302-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の兵共、此三日が間は臥ざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-307-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">夜討にだにもしたらば源氏なじかはたまるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-315-nlp_gloss-8">11</a></p>
+      <p class="occurrence-context">平家是を見て、「すはや源氏の大勢の續くは。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-325-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">伊勢三郎義盛使者を立て申けるは「是は源氏の大將軍九郎大夫判官殿の御内に、伊勢三郎義盛と申者で候が、大將に申べき事有て、是まで罷向て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-362-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏阿波國勝浦に著て八島の軍に打勝ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-363-nlp_gloss-8">11</a></p>
+      <p class="occurrence-context">平家引島に著と聞えしかば、源氏は同國の内、追津に著こそ不思議なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-364-nlp_gloss-26">11</a></p>
+      <p class="occurrence-context">熊野別當湛増は、平家重恩の身なりしが、忽に其恩を忘れて「平家へや參るべき、源氏へや參るべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-369-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">さてこそ源氏へ參らんと思定めけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-370-nlp_gloss-50">11</a></p>
+      <p class="occurrence-context">一門の者共相催し、都合其勢二千餘人、二百餘艘の船に乘り連て、若王子の御正體を船に乘參せ、旗の横上には、金剛童子を書奉て、壇浦へ寄するを見て、源氏も平家も共にをがむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-371-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">されども源氏の方へ附ければ、平家興覺てぞ思はれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-372-nlp_gloss-20">11</a></p>
+      <p class="occurrence-context">又伊豫國の住人、河野四郎通信、百五十艘の兵船に乘連て漕來り、源氏と一つに成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-374-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の船は三千艘、平家の船は千餘艘、唐船少々相交れり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-375-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の勢は重れば、平家の勢は落ぞ行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-398-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">門司、赤間、壇の浦は、たぎりて落る潮なれば、源氏の船は潮に向うて心ならず押落さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-443-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏は三千餘艘の船なれば勢の數、さこそ多かりけめども、處々より射ければ何くに精兵有とも見えず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-447-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の方にも和田小太郎義盛、船には乘らず、馬に打乘てなぎさに引へ、甲をば脱いで人にもたせ、鐙の鼻蹈そらし、よ引て射ければ、三町が内との物は外さずつよう射けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-462-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">」と宣へば「甲斐源氏に安佐里與一殿こそ、精兵にてましまし候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-478-nlp_gloss-24">11</a></p>
+      <p class="occurrence-context">されども、平家の方には、十善帝王三種の神器を帶して渡らせ給へば、源氏如何あらんずらんとあぶなう思ひけるに、暫は白雲かと覺しくて、虚空に漂ひけるが、雲にては無りけり、主もなき白旗一流舞下て、源氏の船の舳に、竿附の緒のさはる程にぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-478-nlp_gloss-65">11</a></p>
+      <p class="occurrence-context">されども、平家の方には、十善帝王三種の神器を帶して渡らせ給へば、源氏如何あらんずらんとあぶなう思ひけるに、暫は白雲かと覺しくて、虚空に漂ひけるが、雲にては無りけり、主もなき白旗一流舞下て、源氏の船の舳に、竿附の緒のさはる程にぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-482-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">又源氏の方より江豚といふ魚、一二千這うて、平家の方へぞ向ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-485-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">」と仰られければ「此江豚見かへり候はば、源氏滅び候べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-490-nlp_gloss-57">11</a></p>
+      <p class="occurrence-context">阿波民部重能は、此三箇年が間、平家に能々忠を盡し、度々の合戰に命を惜まず防ぎ戰ひけるが、子息田内左衞門を生捕にせられて、いかにも叶はじとや思ひけん、忽に心替りして、源氏に同心してんげり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-491-nlp_gloss-25">11</a></p>
+      <p class="occurrence-context">平家の方にははかりごとに、好き人をば兵船に乘せ、雜人共を唐船に乘せて、源氏心にくさに唐船を攻めば、中に取籠て討んと支度せられたりけれども、阿波民部が囘忠の上は、唐船には目も懸けず、大將軍のやつし乘給へる兵船をぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-494-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">さる程に四國鎭西の兵共、皆平家を背いて、源氏に附く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-499-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">源氏の兵共既に平家の船に乘移りければ、水主梶取共、射殺され、切殺されて船を直すに及ばず、船底に倒伏しにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-550-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">」と心得て、打物莖短に取て、源氏の船に乘り移り、をめき叫んで責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%BA%90%E6%B0%8F#tk-11-690-nlp_gloss-25">11</a></p>
+      <p class="occurrence-context">年比恩を蒙り、父祖の時より祗候したりし輩の有繋身のすてがたさに、多くは源氏についたりしかども、昔の好み忽にわするべきにもあらねば、さこそ悲しう思ひけめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%BA%90%E6%B0%8F#tk-12-167-nlp_gloss-9">12</a></p>
+      <p class="occurrence-context">平家に結ぼほれたりし人々も、源氏の世の強りし後は或文を下し、或使者を遣し、樣々諂ひ給ひしかども、此人はさもし給はず。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

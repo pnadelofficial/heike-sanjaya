@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九郎</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>九郎</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Kuro</li>
+      
+      <li>Kuro (a personal name, referring to Minamoto no Yoshitsune)</li>
+      
+      <li>Kuro (personal name)</li>
+      
+      <li>Kuro (ninth son; here referring to Minamoto no Yoshitsune)</li>
+      
+      <li>Kuro (a personal name, referring to Minamoto no Yoshitsune&#39;s childhood name)</li>
+      
+      <li>Kurō (proper name, referring to Minamoto no Yoshitsune)</li>
+      
+      <li>Kuro (a personal name, likely referring to a male warrior)</li>
+      
+      <li>Kurō</li>
+      
+      <li>Kuro (a male given name)</li>
+      
+      <li>Kuro (personal name; specifically, Minamoto no Yoshitsune&#39;s childhood name, here used as an epithet)</li>
+      
+      <li>Kuro (proper noun; ninth son)</li>
+      
+      <li>Kurō (a name)</li>
+      
+      <li>Kuro (a personal name, likely referring to a specific character; here glossed as &#39;Kuro&#39;)</li>
+      
+      <li>Kuro (a personal name)</li>
+      
+      <li>Kuro (a personal name, specifically referring to Minamoto no Yoshitsune)</li>
+      
+      <li>Kurō (a given name)</li>
+      
+      <li>Kurō (personal name)</li>
+      
+      <li>Kuro (a proper name, referring to Minamoto no Yoshitsune)</li>
+      
+      <li>Kuro (a proper name)</li>
+      
+      <li>Kurō (proper name)</li>
+      
+      <li>Kuro (a name, literally &#39;ninth son&#39;)</li>
+      
+      <li>Kuro (proper name; ninth son)</li>
+      
+      <li>Kuro (a proper name, referring to a person named Kuro)</li>
+      
+      <li>Kuro (a personal name, likely referring to Minamoto no Yoshitsune&#39;s childhood name)</li>
+      
+      <li>Kuro (personal name; here refers to Minamoto no Yoshitsune&#39;s title, 九郎判官殿, meaning &#39;Lord Kuro the Judge&#39;)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (33)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E4%B9%9D%E9%83%8E#tk-6-594-nlp_gloss-4">6</a></p>
+      <p class="occurrence-context">信濃源氏、井上九郎光盛が謀に、俄に赤旗七旒作り三千餘騎を七手に分ち、あそこの峯、こゝの洞より赤旗ども手に／＼指揚て寄ければ、城四郎是を見て、「あはや此國にも平家の方人する人有けりと、力附ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B9%9D%E9%83%8E#tk-9-146-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">大膳太夫成忠仰せを承て、九郎義經を大床の際へ召て、合戰の次第を委く御尋あれば、義經畏て申けるは、「義仲が謀叛の事、頼朝大に驚き、範頼義經を始めとして、むねとの兵三十餘人其勢六萬餘騎を參せ候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%B9%9D%E9%83%8E#tk-9-409-nlp_gloss-20">9</a></p>
+      <p class="occurrence-context">大臣殿は安藝右馬助能行を使者で、平家の君達の方々へ、「九郎義經こそ三草の手を責落いて、既に亂入候なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B9%9D%E9%83%8E#tk-10-29-nlp_gloss-55">10</a></p>
+      <p class="occurrence-context">今暫も見參すべう候つれども、よにくはしう案内知り參せたる者の申候つるは、『小松殿の君達は今度の合戰には、播磨と丹波の境で候なる三草山を固めさせ給ひて候けるが、九郎義經に破られて、新三位中將殿、小松少將殿、丹波侍從殿は、播磨の高砂より御船に召して、讃岐の八島へ渡らせ給て候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%B9%9D%E9%83%8E#tk-10-813-nlp_gloss-23">10</a></p>
+      <p class="occurrence-context">同二十七日、都には九郎判官義經、檢非違使五位尉になされて、九郎大夫判官とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-0-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">
+                  元歴二年正月十日、九郎大夫判官義經院御所へ參て、大藏卿泰經朝臣を以て奏聞せられけるは、「平家は神明にも放たれ奉り、君にもすてられ參せて、帝都を出で波の上に漂ふ落人となれり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-24-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">同二月三日九郎大夫判官義經、都を立て、攝津國渡邊より舟ぞろへして、八島へ既に寄んとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-119-nlp_gloss-20">11</a></p>
+      <p class="occurrence-context">さて文を明て見給へば、げにも女房の文とおぼしくて、「九郎はすゝどき男士にて侍ふなれば、大風大波をも嫌はず寄せ侍らんと覺えさぶらふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-151-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">九郎大夫判官其日の裝束には、赤地の錦の直垂に、紫裾濃の鎧著て、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓の眞中取て、船の方を睨へ、大音聲を上て、「一院の御使、檢非違使五位尉源義經」と名乘る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-171-nlp_gloss-29">11</a></p>
+      <p class="occurrence-context">」伊勢三郎義盛歩ませ出て申けるは、「事も愚かや、清和天皇十代の御末、鎌倉殿の御弟九郎大夫判官殿ぞかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-189-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">中にも九郎大夫判官を射倒さむとねらはれけれども、源氏の方にも心得て、
+奧州の佐藤三郎兵衞嗣信、同四郎兵衞忠信、伊勢三郎義盛、源八廣綱、江田源三、熊
+井太郎、武藏坊辨慶など云ふ一人當千の兵共、吾も吾もと馬の首を立竝て大將軍の矢
+面に塞りければ、力及び給はず。「矢面の雜人原そこのき給へ。」とて、差詰引詰
+散々に射給へば、矢場に鎧武者十餘騎計射落さる。中にも眞先に進んだる奧州の佐藤
+三郎兵衞が弓手の肩を馬手の脇へつと射拔れて、暫もたまらず、馬より、倒にどうと
+落つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-298-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">わう弱たる弓を、敵取持て、『是こそ源氏の大將九郎義經が弓よ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-325-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">伊勢三郎義盛使者を立て申けるは「是は源氏の大將軍九郎大夫判官殿の御内に、伊勢三郎義盛と申者で候が、大將に申べき事有て、是まで罷向て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-328-nlp_gloss-17">11</a></p>
+      <p class="occurrence-context">義盛教能に打雙て、「且聞給ても有るらん、鎌倉殿の御弟九郎大夫判官殿院宣を承て、平家追討の爲に、西國へ向はせ給て候が、一昨日阿波國勝浦にて、御邊の伯父櫻間介殿討たれ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-347-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">「四國は皆九郎大夫判官に攻め落されぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-360-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">さる程に、九郎大夫判官義經周防の地に押渡て、兄の參河守と一に成る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-417-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">九郎は色白うせい小きが、向齒の殊に差出てしるかんなるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-444-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">大將軍九郎大夫判官眞先に進で戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-586-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">同四月三日、九郎大夫判官義經、源八廣綱を以て、院の御所へ奏聞せられけるは、去三月二十四日、豐前國田浦門司關、長門國壇浦赤間關にて、平家を責め落し三種神器事故なう返し入れ奉るの由、申されたりければ、院中の上下騒動す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-591-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">同十四日、九郎大夫判官義經、平氏男女の生捕共相具して上りけるが、播磨國明石浦にぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-748-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">平大納言時忠卿父子も、九郎判官の宿所近うぞおはしける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-769-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">九郎ばかりしては、爭か世をばしづむべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-775-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">
+                  同五月七日、九郎大夫判官平氏の生捕共相具して關東へ下向と聞えしかば、大臣殿判官の許へ使者を立てゝ、「明日關東へ下向と承候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-845-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">
+                  さる程に大臣殿父子は九郎大夫判官に具せられて七日の曉關東へ下給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-859-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">但し御弟九郎大夫判官殿こそ、終の御敵とは見えさせ給候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-861-nlp_gloss-103">11</a></p>
+      <p class="occurrence-context">生捕も死捕も義經にこそ見すべきに、
+物の用にもあひ給はぬ蒲殿の方へ見參に入べき樣やある。本三位中將殿こなたへたば
+ずば參て給はるべし。』とて既に軍出來候はんとし候しを、景時が土肥に心を合せて、
+三位中將殿を土肥次郎に預けて後こそ靜まり給て候しか。」と語り申ければ、鎌倉殿
+打頷いて、「今日九郎が鎌倉へ入なるに、各用意し給へ。」と仰られければ大名小名
+馳集て、程なく數千騎に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-863-nlp_gloss-21">11</a></p>
+      <p class="occurrence-context">鎌倉殿は隨兵七重八重に居ゑ置いて我身は其中におはしながら「九郎はすゝどきをのこなれば此疊の下よりも這出んずる者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%B9%9D%E9%83%8E#tk-11-918-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">去程に九郎大夫判官樣々に陳じ申されけれども、景時が讒言に依て、鎌倉殿更に分明の御返事もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E4%B9%9D%E9%83%8E#tk-12-122-nlp_gloss-12">12</a></p>
+      <p class="occurrence-context">」とて、判官に參せられたりけるが「内々九郎が振舞見て、我に知せよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E4%B9%9D%E9%83%8E#tk-12-126-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">「わ殿も九郎がまねし給ふなよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E4%B9%9D%E9%83%8E#tk-12-136-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">同十一月二日、九郎大夫判官院御所へ參て、大藏卿泰經朝臣を以て、奏聞しけるは「義經君の御爲に奉公の忠を致す事、事あたらしう始て申上るに及候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E4%B9%9D%E9%83%8E#tk-12-385-nlp_gloss-47">12</a></p>
+      <p class="occurrence-context">さる程に北條四郎六代御前具し奉て下りけるに、鎌倉殿御使鏡宿にて行合たりけるに、「如何に」と問へば、「十郎藏人殿、信太三郎先生殿、九郎判官殿に同心の由聞え候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E4%B9%9D%E9%83%8E#tk-12-400-nlp_gloss-12">12</a></p>
+      <p class="occurrence-context">」とて、平六が聟の小笠原十郎國久、殖原九郎、桑原次郎、服部平六を先として其勢三十餘騎、天王寺へ發向す。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

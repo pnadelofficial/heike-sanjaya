@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大神</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>大神</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>great deity</li>
+      
+      <li>Great deity</li>
+      
+      <li>Great Deity</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (20)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%A5%9E#tk-2-478-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">さすが我朝は邊地粟散の境と申ながら、天照大神の御子孫、國の主として、天兒屋根命の末、朝の政を司どり給ひしより以降、太政大臣の官に至る人の、甲冑をよろふ事禮儀を背にあらずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%A4%A7%E7%A5%9E#tk-2-491-nlp_gloss-21">2</a></p>
+      <p class="occurrence-context">今是等の莫大の御恩を思召忘れて、猥しく法皇を傾け参らせ給はん事、天照大神、正八幡宮の神慮にも背き候ひなんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%A5%9E#tk-3-131-nlp_gloss-14">3</a></p>
+      <p class="occurrence-context">御命は方士東方朔が齡を保ち、御心には天照大神入替らせ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%A5%9E#tk-3-519-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">天照大神春日大明神の神慮の程も量がたし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%A4%A7%E7%A5%9E#tk-3-665-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">天照大神、正八幡宮爭か捨まゐらせさせ給ふべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%A4%A7%E7%A5%9E#tk-4-135-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">「君は天照大神四十八世の御末神武天皇より七十八代に當せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%A4%A7%E7%A5%9E#tk-4-155-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">天照大神の御告やらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A4%A7%E7%A5%9E#tk-8-127-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">其外は皆天照大神の御はからひとぞ承はる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%A4%A7%E7%A5%9E#tk-8-208-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">天照大神正八幡宮も、吾君をこそ守り參させ給らめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-636-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">是を取て天照大神に奉り給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-640-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">大神是をえて、天の御門の御寶とし給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-642-nlp_gloss-38">11</a></p>
+      <p class="occurrence-context">第九代の帝開化天皇の御時までは一殿におはしましけるを、第十代の帝崇神天皇の御宇に及で、靈威に怖れて天照大神を大和國笠縫里磯垣の廣きに移し奉り給ひし時、此劍をも天照大神の社壇に籠め奉らせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-642-nlp_gloss-57">11</a></p>
+      <p class="occurrence-context">第九代の帝開化天皇の御時までは一殿におはしましけるを、第十代の帝崇神天皇の御宇に及で、靈威に怖れて天照大神を大和國笠縫里磯垣の廣きに移し奉り給ひし時、此劍をも天照大神の社壇に籠め奉らせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-645-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">天の村雲劍は崇神天皇より景行天皇まで三代は天照大神の社壇に崇め置かれたりけるを、景行天皇の御宇四十年六月に東夷反逆の間、御子日本武尊、御心も剛に御力も人に勝れておはしければ、清撰に當てあづまへ下り給ひし時、天照大神へ詣て御暇申させ給ひけるに、御妹いつきの尊を以て謹而怠事なかれとて靈劍を尊にさづけ申給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-645-nlp_gloss-71">11</a></p>
+      <p class="occurrence-context">天の村雲劍は崇神天皇より景行天皇まで三代は天照大神の社壇に崇め置かれたりけるを、景行天皇の御宇四十年六月に東夷反逆の間、御子日本武尊、御心も剛に御力も人に勝れておはしければ、清撰に當てあづまへ下り給ひし時、天照大神へ詣て御暇申させ給ひけるに、御妹いつきの尊を以て謹而怠事なかれとて靈劍を尊にさづけ申給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-665-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">其時の有職の人々申合はれけるは「昔天照大神百王を守らんと御誓ひ有ける其誓未だ改らずして石清水の御流れ未だ盡せざるゆゑ、日輪の光未地に落させ給はず、末代澆季なりとも帝運の究まる程の事はあらじかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-726-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">抑内侍所と申は、昔、天照大神天の岩戸に閉籠らんとせさせ給ひし時、如何にもして我容をうつし置きて御子孫に見て奉らんとて御鏡を鑄給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-731-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">さて天照大神天の岩戸に閉ぢ籠らせ給ひて天下暗やみと成たりしに、八百萬の神達神集に集て岩戸の口にて御神樂を奏し給ひければ、天照大神感に堪させ給はず、岩戸を細目に開き見給ふに、互に顏の白く見えけるより面白といふ詞は始まりけるとぞ承はる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-731-nlp_gloss-40">11</a></p>
+      <p class="occurrence-context">さて天照大神天の岩戸に閉ぢ籠らせ給ひて天下暗やみと成たりしに、八百萬の神達神集に集て岩戸の口にて御神樂を奏し給ひければ、天照大神感に堪させ給はず、岩戸を細目に開き見給ふに、互に顏の白く見えけるより面白といふ詞は始まりけるとぞ承はる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%A4%A7%E7%A5%9E#tk-11-741-nlp_gloss-23">11</a></p>
+      <p class="occurrence-context">右の御膝をつき左の御袖を廣げてなく／＼申させ給ひけるは「昔天照大神百王を守らんと御誓有ける其御誓いまだ改らずんば神鏡實頼が袖に宿らせ給へ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>齋藤</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>齋藤</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Saitō</li>
+      
+      <li>Saitō (a surname)</li>
+      
+      <li>Saitō (a Japanese surname)</li>
+      
+      <li>Saito (a surname)</li>
+      
+      <li>Saitō (proper noun; name of two brothers, Saitō Go and Saitō Roku)</li>
+      
+      <li>Saito</li>
+      
+      <li>Saitō (a surname; here referring to Saitō Go and Saitō Roku, two brothers named Saitō)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (49)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%BD%8B%E8%97%A4#tk-5-583-nlp_gloss-16">5</a></p>
+      <p class="occurrence-context">又大將軍權亮少將維盛、東國の案内者とて、長井齋藤別當實盛を召て、「やや實盛、汝程の強弓精兵、八箇國に如何程有ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%BD%8B%E8%97%A4#tk-5-584-nlp_gloss-7">5</a></p>
+      <p class="occurrence-context">」と問ひ給へば、齋藤別當あざ笑て申けるは、「左候へば、君は實盛を大矢と思召し候か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%BD%8B%E8%97%A4#tk-5-609-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">齋藤別當が申つる樣に、定めて搦手もまはるらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-50-nlp_gloss-17">7</a></p>
+      <p class="occurrence-context">彼城郭に籠る勢、平泉寺長吏齋明威儀師、稻津新介、齋藤太、林六郎光明、富樫入道佛誓、土田、武部、宮崎、石黒、入善、佐美を始として、六千餘騎こそ籠けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-64-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">稻津新介、齋藤太、林六郎光明、富樫入道佛誓こゝをば落て、猶平家を背き加賀國に引退き、白山河内に引籠る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-187-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">宗との者には俣野五郎景久、長井齋藤別當實盛、伊藤九郎助氏、浮巣三郎重親、眞下四郎重直、是等は暫く軍の有ん時迄休まんとて、日毎に寄合々々、巡酒をしてぞ慰みける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-188-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">先實盛が許に寄合たりける日、齋藤別當申けるは、「倩此世中の在樣を見るに、源氏の御方は強く、平家の御方は、負色に見えさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-191-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">次日浮巣三郎が許に寄合たりける時、齋藤別當、「さても昨日申し事は如何に、各。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-196-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">」と申ければ、齋藤別當あざ笑て、「誠には各の御心共をがな引奉んとてこそ申たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-235-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">又武藏國の住人長井齋藤別當實盛御方は皆落行けども、只一騎返合返合防ぎ戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-245-nlp_gloss-25">7</a></p>
+      <p class="occurrence-context">」とて、押竝る處に、手塚が郎黨、後馳に馳來て、主を討せじと中に隔たり、齋藤別當にむずと組む。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-249-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">齋藤別當心は猛く思へども、軍にはしつかれぬ、其上老武者では有り、手塚が下に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-255-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">」と申せば、木曾殿「あはれ是は齋藤別當で有ござんなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-260-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">樋口次郎唯一目見て、「あな無慚や、齋藤別當で候けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-264-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">齋藤別當、兼光に逢て、常は物語に仕候し、『六十に餘て、軍の陣へ向はん時は、鬢鬚を黒う染て、若やがうと思ふ也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-270-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">錦の直垂を著たりける事は、齋藤別當最後の暇申に大臣殿へ參て申けるは、「實盛が身一つの事では候はねども、一年東國へ向ひ候し時、水鳥の羽音に驚いて矢一つだにも射ずして、駿河國の蒲原より迯上て候し事、老後の恥辱、唯此事候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-278-nlp_gloss-18">7</a></p>
+      <p class="occurrence-context">昔の朱買臣は、錦の袂を會稽山に翻し、今の齋藤別當は、其名を来た國の巷に揚とかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-527-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">こゝに齋藤五、齋藤六とて、兄は十九、弟は十七に成る侍あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-527-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">こゝに齋藤五、齋藤六とて、兄は十九、弟は十七に成る侍あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%BD%8B%E8%97%A4#tk-7-528-nlp_gloss-35">7</a></p>
+      <p class="occurrence-context">三位中將の御馬の左右のみづつきに取著き、何く迄も御とも仕るべき由申せば、三位中將宣ひけるは、
+「己等が父齋藤別當北國へ下し時、汝等が頻に伴せうと云しかども、存ずる旨が有ぞ
+とて、汝等を留置き、北國へ下て遂に討死したりけるは、かゝるべかりける事を、故い者で、兼て知たりけるにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%BD%8B%E8%97%A4#tk-10-21-nlp_gloss-17">10</a></p>
+      <p class="occurrence-context">小松三位中將維盛卿の若君六代御前に附たてまつたる齋藤五、齋藤六、あまりの覺束なさに、樣を窶して見ければ、頸共は見知り奉たれども、三位中將殿の御頸は見え給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%BD%8B%E8%97%A4#tk-10-21-nlp_gloss-20">10</a></p>
+      <p class="occurrence-context">小松三位中將維盛卿の若君六代御前に附たてまつたる齋藤五、齋藤六、あまりの覺束なさに、樣を窶して見ければ、頸共は見知り奉たれども、三位中將殿の御頸は見え給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%BD%8B%E8%97%A4#tk-10-28-nlp_gloss-3">10</a></p>
+      <p class="occurrence-context">良有て、齋藤五涙を抑へて申けるは、「此一兩年は隱居候て、人にもいたく見知れ候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%BD%8B%E8%97%A4#tk-10-423-nlp_gloss-3">10</a></p>
+      <p class="occurrence-context">三條の齋藤左衞門茂頼が子に、齋藤瀧口時頼と云ひし者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%BD%8B%E8%97%A4#tk-10-423-nlp_gloss-12">10</a></p>
+      <p class="occurrence-context">三條の齋藤左衞門茂頼が子に、齋藤瀧口時頼と云ひし者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-192-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、走り廻て見けれども、武士ども四方を打圍み、いづかたより出し奉るべしともおぼえず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-192-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、走り廻て見けれども、武士ども四方を打圍み、いづかたより出し奉るべしともおぼえず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-215-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、御輿の左右に附いてぞ參りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-215-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、御輿の左右に附いてぞ參りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-236-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤六歸り參りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-248-nlp_gloss-10">12</a></p>
+      <p class="occurrence-context">かくて遙に時刻推移りければ、齋藤六、「時の程も覺束なう候に、歸參らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-250-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤六暇申て罷り出づ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-287-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、是をきゝ聖を生身の佛の如く思ひて、手を合て涙を流す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-287-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、是をきゝ聖を生身の佛の如く思ひて、手を合て涙を流す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-294-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">」とてひしめきければ、齋藤五、齋藤六、手を握り肝魂を碎けども、聖も未だ見え給はず、使者をだにも上せねば、思ふばかりぞ無りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-294-nlp_gloss-9">12</a></p>
+      <p class="occurrence-context">」とてひしめきければ、齋藤五、齋藤六、手を握り肝魂を碎けども、聖も未だ見え給はず、使者をだにも上せねば、思ふばかりぞ無りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-317-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、涙にくれて行先も見えねども、最後の所までと思ひつゝ泣々御供に參りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-317-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六、涙にくれて行先も見えねども、最後の所までと思ひつゝ泣々御供に參りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-335-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六をちかう召て、「我如何にも成りなん後、汝等都に歸て、穴賢、道にてきられたりとは申すべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-335-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六をちかう召て、「我如何にも成りなん後、汝等都に歸て、穴賢、道にてきられたりとは申すべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-339-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">稍有て齋藤五「君におくれまゐらせて後命生て安穩に都まで上りつくべしとも覺候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-359-nlp_gloss-19">12</a></p>
+      <p class="occurrence-context">二三遍推返し々々讀で後、「神妙々々」とて打置れければ、齋藤五、齋藤六はいふに及ばず、北條の家子郎等共も皆悦の涙をぞ流しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-359-nlp_gloss-22">12</a></p>
+      <p class="occurrence-context">二三遍推返し々々讀で後、「神妙々々」とて打置れければ、齋藤五、齋藤六はいふに及ばず、北條の家子郎等共も皆悦の涙をぞ流しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-361-nlp_gloss-153">12</a></p>
+      <p class="occurrence-context">
+「『此若君の父三位中將殿は、初度の戰の大將軍也。誰申とも叶ふまじ。』と宣ひつ
+れば『文覺が心を破ては、爭か冥加もおはすべき。』など惡口申つれども、猶『叶ま
+じ。』とて、那須野の狩に下り給し間、剩文覺も狩場の供して、漸々に申てこひ請た
+り。いかに遲うおぼしつらん。」と申されければ、北條「廿日と仰せられ候ひし御約
+束の日數も過候ぬ。鎌倉殿の御宥れなきよと存じて、具し奉て下る程に、かしこうぞ、
+爰にて誤ち仕候らんに。」とて、鞍置て引せたる馬共に齋藤五、齋藤六を乘せて上せ
+らる。我身も遙に打送り奉て、「暫く御供申たう候へども、鎌倉殿に指て申べき大事
+共候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-361-nlp_gloss-156">12</a></p>
+      <p class="occurrence-context">
+「『此若君の父三位中將殿は、初度の戰の大將軍也。誰申とも叶ふまじ。』と宣ひつ
+れば『文覺が心を破ては、爭か冥加もおはすべき。』など惡口申つれども、猶『叶ま
+じ。』とて、那須野の狩に下り給し間、剩文覺も狩場の供して、漸々に申てこひ請た
+り。いかに遲うおぼしつらん。」と申されければ、北條「廿日と仰せられ候ひし御約
+束の日數も過候ぬ。鎌倉殿の御宥れなきよと存じて、具し奉て下る程に、かしこうぞ、
+爰にて誤ち仕候らんに。」とて、鞍置て引せたる馬共に齋藤五、齋藤六を乘せて上せ
+らる。我身も遙に打送り奉て、「暫く御供申たう候へども、鎌倉殿に指て申べき大事
+共候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-371-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤六、築地を越え、門を開て入奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-378-nlp_gloss-5">12</a></p>
+      <p class="occurrence-context">」と申ければ、齋藤五急ぎ長谷へ參て尋あひ奉り、此由申ければ、母上、乳母の女房つや／＼現とも覺え給はず、「是はされば夢かや夢か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-507-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六も同じ樣に出立て、御供申けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E9%BD%8B%E8%97%A4#tk-12-507-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">齋藤五、齋藤六も同じ樣に出立て、御供申けり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

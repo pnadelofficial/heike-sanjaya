@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生捕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>生捕</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>captured alive</li>
+      
+      <li>capture alive</li>
+      
+      <li>taken alive</li>
+      
+      <li>capture</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (35)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%94%9F%E6%8D%95#tk-4-245-nlp_gloss-65">4</a></p>
+      <p class="occurrence-context">力及ばず、大手を廣て、高倉面の小門より走り出んとする所に、大長刀持たる男一人寄合ひたり、信連長刀に乘んと、飛で懸るが、乘損じて、股をぬい樣に貫かれて、心は猛く思へども、大勢の中に取籠られて、生捕にこそせられけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%94%9F%E6%8D%95#tk-4-381-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">今度三井寺へ寄たらんに、如何にもして先づ競めを生捕にせよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%94%9F%E6%8D%95#tk-4-632-nlp_gloss-13">4</a></p>
+      <p class="occurrence-context">競瀧口をば平家の侍共、如何にもして、生捕にせんとうかゞひけれ共、競も先に心えて、散散に戰ひ、大事の手負ひ、腹掻切てぞ死にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E7%94%9F%E6%8D%95#tk-5-640-nlp_gloss-152">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「大將軍權亮少將維盛をば鬼界が島へ流すべし、侍大將上總守忠清をば死罪に行へ。」
+とぞ宣ひける。同九日平家の侍共、老少參會して、「忠清が死罪の事、いかゞ有ら
+ん。」と評定す。中に主馬判官盛國進出でて申けるは、「忠清は昔より不覺人とは承
+り及ばず、あれが十八歳と覺え候、鳥羽殿の寶藏に五畿内の惡黨二人、迯籠て候しを、
+寄て搦めうと申す者候はざりしに、此忠清白晝に唯一人築地を越え、はね入て、一人
+をば討取り、一人をば生捕て、後代に名を揚たりし者にて候。今度の不覺は、徒事と
+も覺え候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%94%9F%E6%8D%95#tk-6-241-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">子息石川判官代義兼は、痛手負て生捕にせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%94%9F%E6%8D%95#tk-6-251-nlp_gloss-38">6</a></p>
+      <p class="occurrence-context">西寂が方にも三百餘人有ける者共、俄の事なれば、思も設けず周章ふためきけるを、立合ふ者をば射伏せ切伏せ、先西寂を生捕して、伊豫國へ押渡り、父が討れたる高直城へさげて行き、鋸で頸を切たりとも聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%94%9F%E6%8D%95#tk-6-407-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">生捕にせんと思て、歩倚る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E7%94%9F%E6%8D%95#tk-7-162-nlp_gloss-196">7</a></p>
+      <p class="occurrence-context">」
+と云ふ族多かりけれ共、大勢の傾立ちぬるは、左右なう取て返す事難ければ、倶利迦
+羅谷へ、我先にとぞ落しける。ま先に落したる者が見えねば、此谷の底に、道の有に
+こそとて、親落せば子も落し、兄落せば弟も續く。主落せば家子郎等落しけり。馬に
+は人、人には馬、落重り落重りさばかり深き谷一つを、平家の勢七萬餘騎でぞ填たり
+ける。巖泉血を流し、死骸岳を成せり。されば其谷の邊には、矢の穴刀の瑕殘て今に
+有りとぞ承はる。平家には宗と憑まれたりける上總大夫判官忠綱、飛騨大夫判官景高、
+河内判官秀國も、此谷に埋もれて失にけり。備中國住人瀬尾太郎兼康といふ聞ゆる大
+力も、そこにて加賀國住人藏光次郎成澄が手に懸て、生捕にせらる。越前國火打が城
+にて、返忠したりける平泉寺の長吏齋明威儀師も捕はれぬ。木曾殿「あまりに憎きに
+其法師をば先切れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%94%9F%E6%8D%95#tk-8-376-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">北國の奴原に生捕られんをば、心憂とは思はずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%94%9F%E6%8D%95#tk-8-390-nlp_gloss-30">8</a></p>
+      <p class="occurrence-context">平家の侍備中國住人瀬尾太郎兼康は、北國の戰ひに、加賀國の住人藏光次郎成澄が手にかゝて、生捕にせられたりしを、成澄が弟藏光三郎成氏に預けられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%94%9F%E6%8D%95#tk-8-433-nlp_gloss-31">8</a></p>
+      <p class="occurrence-context">瀬尾太郎たゞ主從三騎に打なされ、板倉河の端に著て、みとろ山の方へ落行く程に北國で、瀬尾生捕にしたりし藏光次郎成澄、弟は討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%94%9F%E6%8D%95#tk-8-435-nlp_gloss-7">8</a></p>
+      <p class="occurrence-context">瀬尾に於ては、又生捕に仕候はん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%94%9F%E6%8D%95#tk-8-461-nlp_gloss-29">8</a></p>
+      <p class="occurrence-context">郎等も主にちとも劣ず戰ひけるが、大事の手あまた負ひ戰ひ疲れて、自害せんとしけるが、生捕にこそせられけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%94%9F%E6%8D%95#tk-8-572-nlp_gloss-31">8</a></p>
+      <p class="occurrence-context">按察大納言資方卿の孫、播磨少將雅方も、鎧に立烏帽子で軍の陣へ出られたりけるが、樋口次郎に生捕にせられ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-66-nlp_gloss-4">10</a></p>
+      <p class="occurrence-context">同十四日、生捕本三位中將重衡卿、六條を東へわたされけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-118-nlp_gloss-63">10</a></p>
+      <p class="occurrence-context">知時持て、内裏へ參りたりけれども、晝は人目の繁ければ、其邊近き小屋に立入て、日を待暮し、局の下口邊にたゝずんで聞けば、此人の聲と覺しくて、「いくらもある人の中に三位中將しも生捕にせられて大路を渡さるゝ事よ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-167-nlp_gloss-27">10</a></p>
+      <p class="occurrence-context">すべからく頼朝の朝臣申請る旨に任せて、死罪に行るべしといへども、獨親族に別て、既に生捕となる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-185-nlp_gloss-4">10</a></p>
+      <p class="occurrence-context">中將一谷で生捕にせられぬと聞し後は肝魂も身に副はず、如何にもして此世にて今一度あひ見るべきと思へども、夢にだに見えねば、いとどむねせきて、湯水も喉へ入れられず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-282-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">西國より生捕にせられ、都へ返るだに口惜きに、今又關の東へ趣かれけん心の中、推量られて哀也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-420-nlp_gloss-33">10</a></p>
+      <p class="occurrence-context">是より山傳ひに都へ上て、戀しき人々を、今一度見もし見えばやとは思へ共、「本三位中將の生捕にせられて大路を渡され、京鎌倉恥をさらすだに口惜きに、此身さへ囚れて、父の尸に血をあやさん事も心うし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%94%9F%E6%8D%95#tk-10-731-nlp_gloss-9">10</a></p>
+      <p class="occurrence-context">本三位中將殿の樣に、生捕にせられて、都へかへらせ給ひたらば、如何ばかり心憂かるべきに、高野にて御ぐしおろし熊野へ參らせ給ひ、後世の事よく／＼申させおはしまし、臨終正念にて失せさせ給ひける御事、歎の中の御悦也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-329-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">昨日八島に寄せて御所内裏皆燒拂ひ、大臣殿父子生捕にし奉り能登殿は自害し給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-490-nlp_gloss-35">11</a></p>
+      <p class="occurrence-context">阿波民部重能は、此三箇年が間、平家に能々忠を盡し、度々の合戰に命を惜まず防ぎ戰ひけるが、子息田内左衞門を生捕にせられて、いかにも叶はじとや思ひけん、忽に心替りして、源氏に同心してんげり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-520-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">平大納言、生捕にせられておはしけるが、「あれは内侍所の渡らせ給ふぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-561-nlp_gloss-22">11</a></p>
+      <p class="occurrence-context">能登殿大音聲を上て、「我と思はん者共は寄て教經に組で生捕にせよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-582-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">生捕には、前内大臣宗盛公、平大納言時忠、右衞門督清宗、内藏頭信基、讃岐中將時實、兵部少輔雅明、大臣殿の八歳になり給ふ若公、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨融圓、侍には源大夫判官季貞、攝津判官盛澄、橘内左衞門季康、藤内左衞門信康、阿波民部重能父子、以上三十八人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-591-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">同十四日、九郎大夫判官義經、平氏男女の生捕共相具して上りけるが、播磨國明石浦にぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-653-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">生捕の夷共をば御子武彦尊を以て御門へたてまつらせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-671-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">同廿六日、平氏の生捕共京へ入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-709-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">今日は月卿雲客一人もしたがはず、同じく壇浦にて生捕にせられたりし侍共廿餘人白き直垂著て、馬の上にしめつけてぞ渡されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-775-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">
+                  同五月七日、九郎大夫判官平氏の生捕共相具して關東へ下向と聞えしかば、大臣殿判官の許へ使者を立てゝ、「明日關東へ下向と承候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-777-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">生捕の中に、八歳の童と附られて候ひしものは、未だ此世に候やらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-861-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">生捕も死捕も義經にこそ見すべきに、
+物の用にもあひ給はぬ蒲殿の方へ見參に入べき樣やある。本三位中將殿こなたへたば
+ずば參て給はるべし。』とて既に軍出來候はんとし候しを、景時が土肥に心を合せて、
+三位中將殿を土肥次郎に預けて後こそ靜まり給て候しか。」と語り申ければ、鎌倉殿
+打頷いて、「今日九郎が鎌倉へ入なるに、各用意し給へ。」と仰られければ大名小名
+馳集て、程なく數千騎に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-866-nlp_gloss-52">11</a></p>
+      <p class="occurrence-context">判官、思はれけるは「去年の正月木曾義仲を追討せしよりこのかた一谷壇浦に至るまで命を棄てゝ平家を責め落し、内侍所、璽の御箱事故なく返入奉り、大將軍父子生捕にして、具して是迄下りたらんには、縱如何なる不思議ありとも、一度はなどか對面なかるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%94%9F%E6%8D%95#tk-11-987-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">三位中將一谷で生捕にせられ給ひし後も、先帝に附まゐらせておはせしが、壇浦にて海にいらせ給ひしかば、武士の荒氣なきにとらはれて、舊里に歸り姉の大夫三位に同宿して、日野と云所におはしけり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

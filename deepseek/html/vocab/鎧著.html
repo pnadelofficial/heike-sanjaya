@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鎧著</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>鎧著</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>wearing armor</li>
+      
+      <li>wear (armor)</li>
+      
+      <li>armor-wearing</li>
+      
+      <li>armor</li>
+      
+      <li>armor wearing</li>
+      
+      <li>wear</li>
+      
+      <li>wearing</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (37)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%8E%A7%E8%91%97#tk-2-439-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">[_][2]筑後守貞能は木蘭地の直垂に緋縅の鎧著て、御前に畏て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%8E%A7%E8%91%97#tk-2-463-nlp_gloss-40">2</a></p>
+      <p class="occurrence-context">門前にて車よりおり、門の内へ指入て見給へば、入道腹卷を著給ふ上は一門の卿相雲客數十人、各色々の直垂に、思々の鎧著て、中門の廊に二行に著座せられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%8E%A7%E8%91%97#tk-2-542-nlp_gloss-35">2</a></p>
+      <p class="occurrence-context">淀、羽束師、宇治、岡屋、日野、勸修寺、醍醐、小栗栖、梅津、桂、大原、靜原、芹生の里に溢居たる兵共或は鎧著て、未甲を著ぬもあり、或は矢負て未弓を持たぬもあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%8E%A7%E8%91%97#tk-4-545-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">堂衆の中に、筒井の淨妙明秀は、褐の直垂に、黒革威の鎧著て、五枚甲の緒をしめ、黒漆の太刀を帶き、二十四差たる黒ほろの矢負ひ、塗籠籐の弓に、好む白柄の大長刀取副て、橋の上にぞ進んだる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%8E%A7%E8%91%97#tk-4-599-nlp_gloss-13">4</a></p>
+      <p class="occurrence-context">足利は、朽葉の綾の直垂に、赤革威の鎧著て、高角打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、重籐の弓持て、連錢蘆毛なる馬に、柏木にみゝづく打たる金覆輪の鞍置てぞ乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%8E%A7%E8%91%97#tk-4-611-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">其中に緋威の鎧著たる武者が三人、網代に流れ懸て淘けるを、伊豆守見給ひて、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E9%8E%A7%E8%91%97#tk-4-618-nlp_gloss-66">4</a></p>
+      <p class="occurrence-context">三位入道七十に餘て軍して、弓手の膝口を射させ、痛手なれば、心靜かに自害せんとて、平等院の門の内へ引退いて、敵おそひかゝりければ、次男源大夫判官兼綱、紺地の錦の直垂に、唐綾威の鎧著て、白葦毛なる馬に乘り、父を延さんと、返合せ／＼防戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%8E%A7%E8%91%97#tk-5-499-nlp_gloss-14">5</a></p>
+      <p class="occurrence-context">道中には、赤地の錦の直垂に、萌黄絲威の鎧著て、連錢蘆毛なる馬に、金覆輪の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E9%8E%A7%E8%91%97#tk-5-500-nlp_gloss-17">5</a></p>
+      <p class="occurrence-context">副將軍薩摩守忠度は、紺地の錦の直垂に、黒糸威の鎧著て、黒き馬の太う逞に沃懸地の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%8E%A7%E8%91%97#tk-7-105-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">覺明が爲體、あかぢの直垂に黒革威の鎧著て、黒漆の太刀を帶き、二十四差たる黒ほろの矢負ひ、塗籠籐の弓脇に挾み、甲をば脱ぎ高紐に懸け、箙より小硯疊紙取出し、木曾殿の御前に畏て願書を書く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%8E%A7%E8%91%97#tk-7-236-nlp_gloss-16">7</a></p>
+      <p class="occurrence-context">存ずる旨有ければ、赤地の錦の直垂に、萠黄威の鎧著て、鍬形打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓持て、連錢葦毛なる馬に金覆輪の鞍置てぞ乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%8E%A7%E8%91%97#tk-7-594-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">經正其日は、紫地の錦の直垂に、萠黄匂の鎧著て、長覆輪の太刀を帶き、切斑の矢負ひ、滋籘の弓脇に挾み、甲をば脱高紐にかけ、御前の御坪に畏る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%8E%A7%E8%91%97#tk-8-23-nlp_gloss-12">8</a></p>
+      <p class="occurrence-context">木曾は赤地の錦の直垂に、唐綾威の鎧著て、いか物作の太刀を帶き、切斑の矢負ひ、滋籐の弓脇に挾み、甲をば脱ぎ高紐にかけて候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%8E%A7%E8%91%97#tk-8-24-nlp_gloss-13">8</a></p>
+      <p class="occurrence-context">十郎藏人は、紺地の錦の直垂に、緋威の鎧著て、金造りの太刀を帶き、大中黒の矢負ひ、塗籠籐の弓脇に挾み、是も甲をば脱ぎ高紐にかけ、ひざまついて候ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%8E%A7%E8%91%97#tk-8-273-nlp_gloss-16">8</a></p>
+      <p class="occurrence-context">三浦介がその日の裝束にはかちの直垂に、黒絲威の鎧著て、いか物造の大太刀はき、廿四差たる大中黒の矢負ひ、滋籐の弓脇に挾み、甲をば脱ぎ高紐にかけ、腰を曲めて院宣を請取る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-100-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">魚綾の直垂に緋威の鎧著て、連錢葦毛なる馬に、金覆輪の鞍置て乘たる、敵の眞先にぞ進だるを「爰にかくるは如何なる人ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-141-nlp_gloss-20">9</a></p>
+      <p class="occurrence-context">九郎義經其日の裝束には、赤地の錦の直垂に、紫裳濃の鎧著て、鍬形打たる甲の緒しめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓の鳥打を紙を廣さ一寸許に切て、左卷にぞ卷たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-191-nlp_gloss-21">9</a></p>
+      <p class="occurrence-context">木曾左馬頭其日の裝束には、赤地の錦の直垂に、唐綾威の鎧著て、鍬形打たる甲の緒しめ、いか物作の大太刀帶き、石打の矢の、其日の軍に射て、少々殘たるを、首高に負なし、滋籐の弓持て、聞る木曾の鬼葦毛と云ふ馬の究て太う逞に金覆輪の鞍置て乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-504-nlp_gloss-10">9</a></p>
+      <p class="occurrence-context">熊谷は、かちの直垂に、赤革威の鎧著て、紅の母衣を懸け、ごんだ栗毛と云ふ聞ゆる名馬にぞ乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-505-nlp_gloss-15">9</a></p>
+      <p class="occurrence-context">小次郎は、澤潟を一しほすたる直垂に、節繩目の鎧著て、西樓と云ふ白月毛なる馬に乘たりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-539-nlp_gloss-159">9</a></p>
+      <p class="occurrence-context">熊谷は先に名乘たれとも、平山が聞くに名乘んとや思ひけん、又掻楯の際に歩ませ寄り、大音聲を揚て、
+「以前に名乘つる武藏國の住人、熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。
+我と思はん平家の侍共、直家に落合へや落合へ。」とぞのゝしたる。是を聞て、「い
+ざや通夜名乘る熊谷親子をひさげて來ん。」とて、進む平家の侍誰々ぞ。越中次郎兵
+衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清、後藤内定經、是を始めてむねとの兵廿餘
+騎、木戸を開いて懸出たり。こゝに平山滋目結の直垂に、緋威の鎧著て、二つ引兩の
+母衣をかけ、目糟毛と云ふ聞る名馬にぞ乘たりける。旗差は黒革縅の鎧に、甲猪頸に
+著ないて、さび月毛なる馬にぞ乘たりける。「保元平治兩度の合戰に先がけたりし武
+藏國の住人、平山武者所季重。」と名乘て、旗差と二騎馬の鼻をならべてをめいてか
+く。熊谷蒐れば、平山續き、平山蒐れば熊谷續く。互にわれ劣じと、入替々々、もみ
+                  にもうで、火出る程ぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-555-nlp_gloss-23">9</a></p>
+      <p class="occurrence-context">是を聞いて、越中次郎兵衞、好む裝束なれば、紺村濃の直垂に、赤威の鎧著て、白葦毛なる馬に乘り、熊谷父子に目を懸て、歩ませ寄る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-712-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">暫しあて、黒革威の鎧著て、月毛なる馬に乘たる武者一騎、馳來る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-723-nlp_gloss-26">9</a></p>
+      <p class="occurrence-context">薩摩守忠度は、一谷の西手の大將軍にて坐けるが、紺地の錦の直垂に、黒絲威の鎧著て黒き馬の太う逞きに、沃懸地の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-747-nlp_gloss-28">9</a></p>
+      <p class="occurrence-context">三位中將、その日の裝束にはかちんに白う黄なる絲をもて、群千鳥繍たる直垂に、紫下濃の鎧著て、童子鹿毛といふ聞ゆる名馬に、乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-748-nlp_gloss-17">9</a></p>
+      <p class="occurrence-context">乳母子の後藤兵衞盛長は、滋目結の直垂に、緋威の鎧著て三位中將の秘藏せられたる夜目無月毛に乘せられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-766-nlp_gloss-21">9</a></p>
+      <p class="occurrence-context">」とて、磯の方へ歩まする處に、練貫に鶴縫たる直垂に、萠黄匂の鎧著て、鍬形打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓持て、連錢蘆毛なる馬に、黄覆輪の鞍置て乘たる武者一騎、沖なる船に目を懸て、海へさと打入れ、五六段計泳がせたるを熊谷、「あれは、大將軍とこそ見參せ候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-838-nlp_gloss-4">9</a></p>
+      <p class="occurrence-context">大の男の鎧著ながら、馬より船へがばと飛乘らうに、なじかは好かるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E9%8E%A7%E8%91%97#tk-9-842-nlp_gloss-32">9</a></p>
+      <p class="occurrence-context">越前三位通盛卿は、山手の大將軍にておはしけるが、其日の裝束には、赤地の錦の直垂に唐綾威の鎧著て、黄河原毛なる馬に白覆輪の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E9%8E%A7%E8%91%97#tk-10-792-nlp_gloss-10">10</a></p>
+      <p class="occurrence-context">滋目結の直垂に黒絲威の鎧著て、白蘆毛なる馬に乘り、家子郎等七騎颯と打入て渡しけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-62-nlp_gloss-128">11</a></p>
+      <p class="occurrence-context">なぎさ近くなりしかば、
+ひた／＼と打乘て、喚てかくれば、渚に百騎許有ける者共、暫もこらへず、二町計颯
+と引てぞのきにける。判官汀に打立て、馬の息休めておはしけるが、伊勢三郎義盛を
+めして、「あの勢の中に、然るべい者やある。一人召て參れ。尋ぬべき事あり。」と
+宣へば、義盛畏て承り、唯一騎かたきの中へ馳入り何とかいひたりけん、年四十計な
+る男の、黒皮威の鎧著たるを、甲を脱せ、弓の弦弛せて、具して參りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-151-nlp_gloss-21">11</a></p>
+      <p class="occurrence-context">九郎大夫判官其日の裝束には、赤地の錦の直垂に、紫裾濃の鎧著て、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓の眞中取て、船の方を睨へ、大音聲を上て、「一院の御使、檢非違使五位尉源義經」と名乘る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-187-nlp_gloss-18">11</a></p>
+      <p class="occurrence-context">」とて鎧直垂は著給はず、唐卷染の小袖に、唐綾威の鎧著て、いか物作の大太刀帶き、二十四差たるたかうすべうの矢負ひ、滋籐の弓を持給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-229-nlp_gloss-22">11</a></p>
+      <p class="occurrence-context">かちに赤地の錦を以て、おほくびはた袖色へたる直垂に、萌黄威の鎧著て、足白の太刀を帶き、切斑の矢の其日の軍に射て少々殘たりけるを首高に負ひ成し薄切斑に鷹の羽作交たるぬた目の鏑をぞ指副たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-258-nlp_gloss-29">11</a></p>
+      <p class="occurrence-context">餘りの面白さに、感に堪ざるにやと覺しくて船の中より、年五十許なる男の、黒革威の鎧著て白柄の長刀持たるが、扇立たりける所に立てまひすましたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-429-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">」とて召しければ木蘭地の直垂に、洗革の鎧著て、御前に畏て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E9%8E%A7%E8%91%97#tk-11-546-nlp_gloss-26">11</a></p>
+      <p class="occurrence-context">矢種の有る程射盡して今日を最後とや思はれけん、赤地の錦の直垂に、唐綾威の鎧著て、いか物作りの大太刀拔、白柄の大長刀の鞘をはづし、左右に持て、なぎ廻り給ふに面を合する者ぞなき、多の者ども討たれにけり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>武藏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>武藏</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Musashi (province)</li>
+      
+      <li>Musashi (old province name)</li>
+      
+      <li>Musashi (province name)</li>
+      
+      <li>Musashi</li>
+      
+      <li>Musashi (a province name)</li>
+      
+      <li>Musashi (province name / surname)</li>
+      
+      <li>Musashi (a place name and also a person&#39;s name)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (26)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%AD%A6%E8%97%8F#tk-4-144-nlp_gloss-22">4</a></p>
+      <p class="occurrence-context">さりながら、其弟多田次郎朝實、手島冠者高頼、太田太郎頼基、河内國には、武藏權守入道義基、子息石河判官代義兼、大和國には、宇野七郎親治が子ども、太郎有治、次郎清治、三郎成治、四郎義治、近江國には、山本、柏木、錦古里、美濃、尾張には山田次郎重廣、河邊太郎重直、泉太郎重光、浦野四郎重遠、安食次郎重頼、其子太郎重資、木太三郎重長、開田判官代重國、矢島先生重高、其子太郎重行、甲斐國には、逸見冠者義清、其子太郎清光、武田太郎信義、加々美次郎遠光、同小次郎長清、一條次郎忠頼、板垣三郎兼信、逸見兵衞有義、武田五郎信光、安田三郎義定、信濃國には、大内太郎維義、岡田冠者親義、平賀冠者盛義、其子の四郎義信、故帶刀先生義方が次男、木曽冠者義仲、伊豆國には流人前右兵衞佐頼朝、常陸國には、信太三郎先生義教、佐竹冠者正義、其子太郎忠義、同三郎義宗、四郎高義、五郎義季、陸奧國には故左馬頭義朝が末子、九郎冠者義經、是皆六孫王の苗裔、多田新發意滿仲が後胤也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%AD%A6%E8%97%8F#tk-4-574-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">武藏と上野の境に、利根川と申候大河候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%AD%A6%E8%97%8F#tk-5-157-nlp_gloss-30">5</a></p>
+      <p class="occurrence-context">三浦大介義明が子共、三百餘騎で源氏方をして、湯井小坪の浦で戰ふに、畠山軍にまけて、武藏國へ引退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%AD%A6%E8%97%8F#tk-6-235-nlp_gloss-12">6</a></p>
+      <p class="occurrence-context">同九日、河内國石川郡に居住したりける武藏權守入道義基、子息石川判官代義兼、平家を背て、兵衞佐頼朝に心を通し既に東國へ落行べき由聞えしかば、入道相國やがて討手を遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%AD%A6%E8%97%8F#tk-6-237-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">城内には武藏權守入道義基、子息判官代義兼を先として、其勢百騎許には過ざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%AD%A6%E8%97%8F#tk-6-240-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">武藏權守入道義基討死す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%AD%A6%E8%97%8F#tk-7-24-nlp_gloss-60">7</a></p>
+      <p class="occurrence-context">大將軍には小松三位中將維盛、越前三位通盛、但馬守經正、薩摩守忠度、參河守知度、淡路守清房、侍大將には、越中前司盛俊、上總大夫判官忠綱、飛騨大夫判官景高、高橋判官長綱、河内判官秀國、武藏三郎左衞門有國、越中二郎兵衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清を先として、以上大將軍六人、しかるべき侍三百四十餘人、都合其勢十萬餘騎、壽永二年四月十七日辰の一點に都を立て、北國へこそ趣きけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%AD%A6%E8%97%8F#tk-7-71-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">搦手の大將軍は、薩摩守忠度、參河守知度、侍大將には、武藏三郎左衞門を先として、都合其勢三萬餘騎、能登越中の境なる志保の山へぞ懸かられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%AD%A6%E8%97%8F#tk-7-272-nlp_gloss-25">7</a></p>
+      <p class="occurrence-context">さらんにとては、實盛、本、越前國の者で候しかども、近年御領に就て、武藏の長井に居住せしめ候き。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%AD%A6%E8%97%8F#tk-7-664-nlp_gloss-94">7</a></p>
+      <p class="occurrence-context">前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-96-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">投上られて、たゝ直て、「武藏國の住人大串次郎重親、宇治河の先陣ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-210-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」とて、引へたる處に武藏國に聞えたる大力、御田八郎師重、三十騎許で出來たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-446-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">」と面々に申ければ、武藏國の住人平山武者所進み出でて、申けるは、「季重こそ案内は知て候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-516-nlp_gloss-16">9</a></p>
+      <p class="occurrence-context">」とて、掻楯の際に歩ませ寄り、大音聲を揚て、「武藏國の住人熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-539-nlp_gloss-39">9</a></p>
+      <p class="occurrence-context">熊谷は先に名乘たれとも、平山が聞くに名乘んとや思ひけん、又掻楯の際に歩ませ寄り、大音聲を揚て、
+「以前に名乘つる武藏國の住人、熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。
+我と思はん平家の侍共、直家に落合へや落合へ。」とぞのゝしたる。是を聞て、「い
+ざや通夜名乘る熊谷親子をひさげて來ん。」とて、進む平家の侍誰々ぞ。越中次郎兵
+衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清、後藤内定經、是を始めてむねとの兵廿餘
+騎、木戸を開いて懸出たり。こゝに平山滋目結の直垂に、緋威の鎧著て、二つ引兩の
+母衣をかけ、目糟毛と云ふ聞る名馬にぞ乘たりける。旗差は黒革縅の鎧に、甲猪頸に
+著ないて、さび月毛なる馬にぞ乘たりける。「保元平治兩度の合戰に先がけたりし武
+藏國の住人、平山武者所季重。」と名乘て、旗差と二騎馬の鼻をならべてをめいてか
+く。熊谷蒐れば、平山續き、平山蒐れば熊谷續く。互にわれ劣じと、入替々々、もみ
+                  にもうで、火出る程ぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-581-nlp_gloss-21">9</a></p>
+      <p class="occurrence-context">大手生田森にも、源氏五萬餘騎で固たりけるが、其勢の中に、武藏國の住人、河原太郎、河原次郎といふ者有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-587-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">河原太郎大音聲を揚て、「武藏國の住人、河原太郎私市高直、同次郎盛直、源氏の大手生田森の先陣ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-682-nlp_gloss-28">9</a></p>
+      <p class="occurrence-context">新中納言は、東に向かて戰ひ給ふ處に、山のそばより寄ける兒玉黨使者を上て、「君は武藏國司でまし／＼候し間、是は兒玉の者共が申候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-699-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">」と云ひければ、「武藏國の住人猪俣小平六則綱」と名乘る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-776-nlp_gloss-24">9</a></p>
+      <p class="occurrence-context">」
+と申せば、「汝は誰そ。」と問給ふ。「物其者では候はねども、武藏國の住人熊谷次
+郎直實。」と名乘申す。「さては汝に逢うては名乘まじいぞ。汝が爲には好い敵ぞ。
+名乘らずとも頸を取て人にとへ、見知うずるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-844-nlp_gloss-29">9</a></p>
+      <p class="occurrence-context">靜ならん處にて、自害せんとて、東に向て落給ふ程に、近江國の住人佐々木木村三郎成綱、武藏國の住人玉井四郎資景、彼是七騎が中に取籠られて終に討たれ給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%AD%A6%E8%97%8F#tk-9-860-nlp_gloss-57">9</a></p>
+      <p class="occurrence-context">北方の御船に參て申けるは、
+「君は湊河の下にて、敵七騎が中に取籠られて、終に討れさせ給ぬ。其中に殊に手を
+下て討參らせ候つるは、近江國の住人佐々木木村三郎成綱、武藏國の住人玉井四郎資景とこそ名乘申候つれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%AD%A6%E8%97%8F#tk-11-152-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">其次に伊豆國住人田代冠者信綱、武藏國住人金子十郎家忠、同與一親範、伊勢三郎義盛とぞ名乘たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%AD%A6%E8%97%8F#tk-11-182-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">去年の春、一谷にて、武藏相模の若殿原の手なみの程は見てん物を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%AD%A6%E8%97%8F#tk-11-268-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">」と宣へば、武藏國の住人、三穗屋四郎、同藤七、同十郎、上野國の住人、丹生の四郎、信濃國の住人、木曾の中次、五騎つれて、をめいて駈く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%AD%A6%E8%97%8F#tk-12-78-nlp_gloss-9">12</a></p>
+      <p class="occurrence-context">土佐房がのぼりたる由聞給ひ、武藏房辨慶を以て召されければ、やがてつれて參りたり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

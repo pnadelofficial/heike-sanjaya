@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有樣</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>有樣</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>state</li>
+      
+      <li>state of affairs</li>
+      
+      <li>condition</li>
+      
+      <li>appearance</li>
+      
+      <li>manner</li>
+      
+      <li>circumstances</li>
+      
+      <li>state; condition; appearance</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (26)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%89%E6%A8%A3#tk-2-138-nlp_gloss-44">2</a></p>
+      <p class="occurrence-context">弓袋の料に、送られたりける布共をば、直垂帷に裁縫せて、家子郎等共に著せつゝ、目うちしばたゝいて居たりけるが、倩平家の繁昌する有樣をみるに、當時輙く傾けがたし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%89%E6%A8%A3#tk-2-349-nlp_gloss-56">2</a></p>
+      <p class="occurrence-context">夜明れば馬車門に立なみ、賓客座に列て、遊戯れ舞躍り、世を世とも思ひ給はず、近き傍の人は、物をだに高く言はず、怖畏てこそ昨日までも有しに、夜の間に變る有樣、盛者必衰の理は目の前にこそ顯れけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%89%E6%A8%A3#tk-2-371-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">少將御所を罷出つるより、流るゝ涙つきせぬに、北方の有樣を見給ひてはいとゞ爲方なげにぞ見えられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%89%E6%A8%A3#tk-2-477-nlp_gloss-2">2</a></p>
+      <p class="occurrence-context">又御有樣、更現共覺候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%89%E6%A8%A3#tk-2-763-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">其最期の有樣やう／＼に聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%9C%89%E6%A8%A3#tk-2-785-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">大納言宣けるは、「倩此世の中の有樣を見るに、平家の世は彌盛なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%9C%89%E6%A8%A3#tk-3-12-nlp_gloss-25">3</a></p>
+      <p class="occurrence-context">若皇子にてわたらせ給はば、如何に目出度からんと、平家の人々は唯今皇子御誕生の有樣に、勇悦びあはれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%9C%89%E6%A8%A3#tk-3-266-nlp_gloss-41">3</a></p>
+      <p class="occurrence-context">」と宣へば、六條「是こそ」とばかり申て、袖を顏におし當て、涙を流しけるにこそ、「さては下りし時、心苦げなる有樣を見置しが、事故なく育けるよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%9C%89%E6%A8%A3#tk-3-704-nlp_gloss-17">3</a></p>
+      <p class="occurrence-context">巷を過る行人、征馬のいそがはしげなる氣色、浮世を渡る有樣も、思召し知られて哀也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%9C%89%E6%A8%A3#tk-4-480-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">内々の館の有樣も、小勢にてはたやすう攻落しがたし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%9C%89%E6%A8%A3#tk-5-557-nlp_gloss-10">5</a></p>
+      <p class="occurrence-context">平かに歸上ん事も、まことに危き有樣共にて、或は野原の露に宿をかり、或は高峯の苔に旅寢をし、山を越え河を重ね、日數歴れば、十月十六日には、駿河國清見が關にぞ著給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%9C%89%E6%A8%A3#tk-6-326-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">凡は最後の所勞の有樣こそうたてけれ共、直人とも覺ぬ事共多かりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9C%89%E6%A8%A3#tk-7-36-nlp_gloss-65">7</a></p>
+      <p class="occurrence-context">彼秦皇、漢武、或は童男丱女を遣はし、或は方士をして不死の藥を尋ね給ひしに、蓬莱を見ずばいなや歸らじと云て、徒に船の中にて老い、天水茫々として求る事を得ざりけん蓬莱洞の有樣もかくや在けんとぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9C%89%E6%A8%A3#tk-7-477-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">況や平家の人々の遽て噪がれける有樣、家々に敵の打入たりとも、限あれば是には過じとぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%9C%89%E6%A8%A3#tk-7-634-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">「年比の重恩を忘て、今此有樣を見果ぬ不當人をば、さなくとも有なん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%9C%89%E6%A8%A3#tk-9-585-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」とて、下人共呼寄せ、最後の有樣妻子の許へ、言遣はし、馬にも乘ず、げゞをはき、弓杖を突て、生田森の逆茂木を上こえ、城の中へぞ入たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9C%89%E6%A8%A3#tk-10-101-nlp_gloss-37">10</a></p>
+      <p class="occurrence-context">右馬允斜ならず悦で、急ぎ參て見奉れば、誠に思ひ入れ給へると覺しくて、御姿もいたくしをれ返て居給へる御有樣を見奉るに、知時涙も更に抑へ難し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9C%89%E6%A8%A3#tk-10-130-nlp_gloss-23">10</a></p>
+      <p class="occurrence-context">」とて走出でて、手づから文を取て見給へば、西國よりとられてありし有樣、今日明日とも知らぬ身の行末など、細々と書續け、奧には一首の歌ぞ有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9C%89%E6%A8%A3#tk-10-463-nlp_gloss-13">10</a></p>
+      <p class="occurrence-context">晉の七賢、漢の四晧が栖けん商山竹林の有樣も、是には過じとぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9C%89%E6%A8%A3#tk-10-500-nlp_gloss-5">10</a></p>
+      <p class="occurrence-context">汝等は如何なる有樣をしてもなどかすぎざるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%9C%89%E6%A8%A3#tk-10-642-nlp_gloss-31">10</a></p>
+      <p class="occurrence-context">」と泣々教訓しけれ共、後たてまつる悲しさに、後の御孝養の事も覺えず、船底に伏しまろび、をめき叫ける有樣は、昔悉達太子の檀特山に入せ給し時、舍匿舍人がこんでい駒を給はて、王宮に還りし悲も、是には過じとぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%9C%89%E6%A8%A3#tk-11-515-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">女院は此御有樣を御覽じて、御燒石、御硯左右の御懷に入て、海へ入せ給ひたりけるを、渡邊黨に源五馬允眤誰とは知り奉らねども、御髮を熊手に懸て、引上奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%9C%89%E6%A8%A3#tk-11-687-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">さしも恐をのゝきし人の今日の有樣、夢現とも分かねたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%9C%89%E6%A8%A3#tk-11-1062-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">日來の惡行はさる事なれども、唯今の有樣を見奉に、數千人の大衆も、守護の武士も、皆涙をぞ流しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%9C%89%E6%A8%A3#tk-12-383-nlp_gloss-15">12</a></p>
+      <p class="occurrence-context">やがて迎へとて高雄に置奉り、北の方の幽なる御有樣をも訪ひけるとこそ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%9C%89%E6%A8%A3#tk-12-508-nlp_gloss-22">12</a></p>
+      <p class="occurrence-context">先づ高野へ參り父の善知識したりける瀧口入道に尋合ひ御出家の次第臨終の有樣、委敷う聞給ひて、且うは其御跡もゆかしとて、熊野へ參給ひけり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

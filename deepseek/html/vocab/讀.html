@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>讀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>讀</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>read</li>
+      
+      <li>to read (a text aloud)</li>
+      
+      <li>reading</li>
+      
+      <li>to read</li>
+      
+      <li>read (recite)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (26)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%AE%80#tk-1-535-nlp_gloss-17">1</a></p>
+      <p class="occurrence-context">先づ八幡に百人の僧を籠て、眞讀の大般若を七日讀ませられける最中に、甲良の大明神の御前なる橘の木に、男山の方より山鳩三つ飛來て、食ひ合ひてぞ死にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%AE%80#tk-1-666-nlp_gloss-32">1</a></p>
+      <p class="occurrence-context">
+                  山門には、御裁斷遲々の間、七社の神輿を根本中堂に振上げ奉り、その御前にて、眞讀の大般若を七日讀で、關白殿を呪咀し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%AE%80#tk-1-740-nlp_gloss-30">1</a></p>
+      <p class="occurrence-context">近衞院御在位の時、當座の御會ありしに、『深山花』といふ題を出されたりけるに、人々讀煩ひしに、此頼政卿、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%AE%80#tk-2-47-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">嶺には一乘讀誦年經て、麓には七社の靈驗日新なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%AE%80#tk-2-256-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">是を取て二三返押返々々讀きかせ、「あなにくや、此上は何と陳ずべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E8%AE%80#tk-3-8-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">諸寺に御讀經始り、諸社へ官幣使を立らる、醫家藥を盡し、陰陽術を窮め、大法秘法一つとして殘る所なう修せられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E8%AE%80#tk-3-221-nlp_gloss-18">3</a></p>
+      <p class="occurrence-context">
+書置給はすば、爭か是を見るべき。」とて、康頼入道と二人、讀では泣き、泣いては
+讀む。「安元三年七月廿日出家、同廿六日、信俊下向。」とも書かれたり。さてこそ
+源左衞門尉信俊が參りたりけるも知れけれ。そばなる壁には、「三尊來迎便有り、九
+品往生疑なし。」とも書かれたり。此形見を見給てこそ、「さすが欣求淨土の望も御
+座けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%AE%80#tk-5-179-nlp_gloss-13">5</a></p>
+      <p class="occurrence-context">人民多く損害せしかば、官軍發向して、宣旨を讀かけ、葛の網を結で、終に是を掩ひ殺す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%AE%80#tk-5-184-nlp_gloss-6">5</a></p>
+      <p class="occurrence-context">昔は宣旨を向て讀ければ、枯たる草木も花咲き實なり、飛鳥も隨ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%AE%80#tk-5-343-nlp_gloss-11">5</a></p>
+      <p class="occurrence-context">」とて、勸進帳を引廣げ、高らかにこそ讀だりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%AE%80#tk-5-369-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">とこそ讀上たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%AE%80#tk-5-453-nlp_gloss-32">5</a></p>
+      <p class="occurrence-context">我は故池尼御前にかひなき命を助けられ奉て候へば、其後世を弔はん爲に、毎日に法華經一部轉讀する外は他事なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%AE%80#tk-5-513-nlp_gloss-31">5</a></p>
+      <p class="occurrence-context">關も昔の跡と詠る事は、平將軍貞盛、將門追討の爲に、東國へ下向せし事を、思ひ出て讀たりけるにや、最優うぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-197-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">さるままには彼一乘妙典の御讀誦も、怠らせ給はず、三密行法の御薫修も、積らせ給けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-324-nlp_gloss-19">6</a></p>
+      <p class="occurrence-context">人の失ぬる跡には、恠しの者も朝夕に鐘打鳴し、例時懺法讀む事は、常の習ひなれども、此禪門薨ぜられぬる後は、供佛施僧の營と云ふ事もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-335-nlp_gloss-19">6</a></p>
+      <p class="occurrence-context">去ぬる承安二年十二月廿二日の夜、脇息に倚懸り法華經讀奉りけるに、丑刻ばかりに夢ともなく現ともなく、年五十計なる男の淨衣に立烏帽子著て、草鞋脛巾したるが、立文を持て來れり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-350-nlp_gloss-24">6</a></p>
+      <p class="occurrence-context">やう／＼二十五日の夜陰に及で常住の佛前にいたり例の如く脇息に倚懸て念佛讀經す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-374-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">即蓋を開て是を悉く讀聞す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-380-nlp_gloss-59">6</a></p>
+      <p class="occurrence-context">尊慧なのめならず悦で、「日本の大相國と申す人攝津國和田御崎を點じて、四面十餘町に屋を作り、今日の十萬僧會の如く持經者を多くくつ請して、坊ごとに一面に座につき、説法讀經、丁寧に勤行を致され候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%AE%80#tk-6-568-nlp_gloss-24">6</a></p>
+      <p class="occurrence-context">四月十日、前權少僧都顯眞、日吉社にして、如法に法華經一萬部轉讀する事有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%AE%80#tk-8-543-nlp_gloss-14">8</a></p>
+      <p class="occurrence-context">知康大音聲を揚て、「昔は宣旨を向て讀ければ、枯たる草木も花咲き實生り惡鬼惡神も從ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%AE%80#tk-10-402-nlp_gloss-10">10</a></p>
+      <p class="occurrence-context">其朝兵衞佐殿折節、持佛堂に法華經讀でおはしける處へ、千手前參りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%AE%80#tk-10-577-nlp_gloss-6">10</a></p>
+      <p class="occurrence-context">霞のそこには法華讀誦の聲聞ゆ、靈鷲山とも申つべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%AE%80#tk-12-128-nlp_gloss-23">12</a></p>
+      <p class="occurrence-context">全く不忠なき由一日に十枚づゝの起請を晝は書き、夜は御坪の内にて讀上讀あげ百日に千枚の起請を書て參らせられたりけれども、叶はずして終に討たれ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%AE%80#tk-12-128-nlp_gloss-25">12</a></p>
+      <p class="occurrence-context">全く不忠なき由一日に十枚づゝの起請を晝は書き、夜は御坪の内にて讀上讀あげ百日に千枚の起請を書て參らせられたりけれども、叶はずして終に討たれ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%AE%80#tk-12-359-nlp_gloss-5">12</a></p>
+      <p class="occurrence-context">二三遍推返し々々讀で後、「神妙々々」とて打置れければ、齋藤五、齋藤六はいふに及ばず、北條の家子郎等共も皆悦の涙をぞ流しける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

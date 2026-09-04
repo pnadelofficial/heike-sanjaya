@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>相具</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>accompanying</li>
+      
+      <li>accompany</li>
+      
+      <li>together with</li>
+      
+      <li>together</li>
+      
+      <li>accompanied</li>
+      
+      <li>accompanied by</li>
+      
+      <li>bringing along</li>
+      
+      <li>having together</li>
+      
+      <li>taking along</li>
+      
+      <li>having with</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (20)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%9B%B8%E5%85%B7#tk-1-124-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">一人は七條修理大夫信隆卿に相具し給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%9B%B8%E5%85%B7#tk-1-252-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">一人參らむはあまりにものうしとて妹の祇女をも相具しけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%9B%B8%E5%85%B7#tk-2-308-nlp_gloss-13">2</a></p>
+      <p class="occurrence-context">事新しく候へども、重盛彼大納言が妹に相具して候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%9B%B8%E5%85%B7#tk-2-389-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">相具せさせて候者の、此程惱む事の候なるが、今朝より此歎を打そへては既に命も絶なんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%9B%B8%E5%85%B7#tk-2-704-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">さる程に法勝寺の執行俊寛僧都、平判官康頼、この少將相具して薩摩潟鬼界が島へぞ流されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%9B%B8%E5%85%B7#tk-2-888-nlp_gloss-36">2</a></p>
+      <p class="occurrence-context">此嶺は本宮、彼は新宮、是はそんぢやう其王子、彼王子など、王子々々の名を申て、康頼入道先達にて、丹波少將相具しつゝ、日ごとに熊野詣の眞似をして、歸洛の事をぞ祈ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%9B%B8%E5%85%B7#tk-4-667-nlp_gloss-15">4</a></p>
+      <p class="occurrence-context">此中納言は、女院の御乳母、宰相殿と申す女房に相具して、常は參り通れければ、日來は懷うこそ思召つるに、此宮の御事申しに參られたれば、今はあらぬ人の樣に疎しうぞ思召されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E7%9B%B8%E5%85%B7#tk-5-158-nlp_gloss-30">5</a></p>
+      <p class="occurrence-context">其後畠山が一族、河越、稻毛、小山田、江戸、葛西惣じて其外七黨の兵共、三千餘騎を相具して、三浦衣笠の城に押寄て攻め戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E7%9B%B8%E5%85%B7#tk-7-18-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">」とて、清水冠者を相具して、鎌倉へこそ歸られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E7%9B%B8%E5%85%B7#tk-7-650-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">女院の御乳母子宰相殿と申す女房に、相具し給へるに依てなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E7%9B%B8%E5%85%B7#tk-9-421-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">兄の越前三位通盛卿相具して、山の手をぞ固め給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%9B%B8%E5%85%B7#tk-10-141-nlp_gloss-22">10</a></p>
+      <p class="occurrence-context">三位中將是を見て、彌思や増り給ひけん、土肥次郎に宣ひけるは、「年比相具したりし女房に、今一度對面して、申たき事の有るは如何がすべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%9B%B8%E5%85%B7#tk-10-478-nlp_gloss-35">10</a></p>
+      <p class="occurrence-context">抑延喜帝の御時、御夢想の御告有て、檜皮色の御衣を參らせられしに、勅使中納言資澄卿、般若寺僧正觀賢を相具して、此御山に參り、御廟の扉を開いて、御衣を著せ奉らんとしけるに、霧厚く隔たて、大師拜まれさせ給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%9B%B8%E5%85%B7#tk-10-675-nlp_gloss-9">10</a></p>
+      <p class="occurrence-context">相傳專一の者なりけるが、相具してもくだらず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%9B%B8%E5%85%B7#tk-11-167-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">」とて、越中次郎兵衞盛次を相具して小船に取乘て燒拂ひたる惣門のなぎさに陣を取る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%9B%B8%E5%85%B7#tk-11-591-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">同十四日、九郎大夫判官義經、平氏男女の生捕共相具して上りけるが、播磨國明石浦にぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%9B%B8%E5%85%B7#tk-11-992-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">年頃相具したりし女房の、日野と云ふ所に有りと聞く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%9B%B8%E5%85%B7#tk-12-36-nlp_gloss-43">12</a></p>
+      <p class="occurrence-context">もし世に出でて尋ねらるゝ事もこそあれとて東山圓覺寺といふ所に、深う納めて置きたりけるを、文覺聞出して、彼紺掻男共に、相具して下りけるとかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%9B%B8%E5%85%B7#tk-12-151-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">都より相具したりける女房達十餘人、住吉の浦に捨置きたれば、松の下、砂の上に袴蹈しだき、袖を片敷て泣臥したりけるを、住吉の神官共あはれんで、皆京へぞ送りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%9B%B8%E5%85%B7#tk-12-154-nlp_gloss-27">12</a></p>
+      <p class="occurrence-context">同十一月七日鎌倉の源二位頼朝卿の代官として北條四郎時政、六萬餘騎を相具して都へ入。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

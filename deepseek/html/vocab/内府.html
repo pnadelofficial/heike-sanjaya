@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内府</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>内府</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Minister of the Interior (title of a high-ranking official)</li>
+      
+      <li>Minister of the Interior</li>
+      
+      <li>inner palace official</li>
+      
+      <li>the Minister of the Interior</li>
+      
+      <li>the Minister of the Interior (a title referring to the court official 内大臣, specifically here likely referring to the person with that title)</li>
+      
+      <li>Inner Minister (title for the Minister of the Center, referring to a high-ranking official)</li>
+      
+      <li>inner minister</li>
+      
+      <li>Inner Minister (a high-ranking official in the imperial court)</li>
+      
+      <li>Inner Minister</li>
+      
+      <li>Inner Minister (title of a high-ranking official, specifically the Minister of the Center)</li>
+      
+      <li>the Minister of the Interior (a title)</li>
+      
+      <li>the Minister of the Interior (Naifu), a high-ranking court official</li>
+      
+      <li>inner minister (the Minister of the Interior, a high-ranking official title)</li>
+      
+      <li>Inner Palace Minister</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (21)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-242-nlp_gloss-50">2</a></p>
+      <p class="occurrence-context">素絹の衣の、短らかなるに、白き大口ふみくゝみ、聖柄の刀押くつろげてさす儘に、以の外に怒れる氣色にて、大納言を暫睨まへ、「抑御邊は平治にも已に誅せらるべかりしを、内府が身にかへて申宥、頸を繼たてましは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-261-nlp_gloss-21">2</a></p>
+      <p class="occurrence-context">」と申ければ、入道相國大にいかて、「よし／＼、己らは内府が命をば重して、入道が仰をば輕うじけるごさんなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-466-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">入道ふし目に成て、あはれ例の内府が、世をへうする樣に振舞、大に諫ばやとこそ思はれけめども、さすが子ながらも、内には五戒を保て慈悲を先とし、外には五常を亂らず、禮儀を正しうし給ふ人なれば、あの姿に腹卷を著て向はむ事、面はゆう辱しうや思はれけん、障子を少し引立て、素絹の衣を腹卷の上に、周章著に著給たりけるが、胸板の金物の少しはづれて見えけるを藏さうと、頻に衣の胸を引ちがへ引ちがへぞし給ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-528-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">太政入道も、頼切たる内府はか樣に宣ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-546-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">其時入道大に驚き、貞能を召て、「内府は何と思ひて、是等をば呼とるやらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-551-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">」と申ければ、入道、内府に中違うては、惡かりなんとや思はれけん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%86%85%E5%BA%9C#tk-2-581-nlp_gloss-14">2</a></p>
+      <p class="occurrence-context">君の此由聞召て、「今に始ぬ事なれ共、内府が心の中こそ愧しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-528-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">先内府が身罷候ぬる事、當家の運命を計にも、入道隨分悲涙を押てこそ罷過候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-531-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">内府こそ手を下し身を碎て、度々の逆鱗をば休め參せて候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-532-nlp_gloss-10">3</a></p>
+      <p class="occurrence-context">其外臨時の御大事、朝夕の政務、内府程の功臣は有難うこそ候らめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-539-nlp_gloss-2">3</a></p>
+      <p class="occurrence-context">され共内府が中陰に、八幡の御幸有て御遊有き。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-541-nlp_gloss-12">3</a></p>
+      <p class="occurrence-context">縱入道が悲を御憐なく共、などか内府が忠を思召し忘させ給ふべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-542-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">縱内府が忠を思召忘させ給ふ共、爭か入道が嘆きを御憐無らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-545-nlp_gloss-27">3</a></p>
+      <p class="occurrence-context">次に越前國をば、子子孫孫まで、御變改有まじき由、御約束在て給はて候しを、内府に後て後、やがて召され候事は、何の過怠にて候やらむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-644-nlp_gloss-225">3</a></p>
+      <p class="occurrence-context">平治に信頼が、仕たりし樣に、火をかけて、人をば皆燒殺さるべしと聞えし間、上下の女房女童、物をだに打被かず、
+遽て噪で走出づ。法皇も大に驚かせおはします。前右大將宗盛卿、御車を寄て、「と
+う／＼めさるべう候。」と奏せられければ、法皇「こはされば何事ぞや。御とがある
+べし共思召さず。成親俊寛が樣に遠き國遙の島へも、遷遣んずるにこそ。主上さて渡
+せ給へば、政務の口入する計也。其もさるべからずば、自今以後さらでこそ有め。」
+と仰ければ、宗盛卿「其儀では候はず。世を靜ん程、鳥羽殿へ御幸成參せんと、父入
+道申候。」「さらば宗盛やがて御供に參れ。」と仰けれ共、父の禪門の氣色に畏を成
+て、參られず。「哀れ是に附ても、兄の内府には事外に劣たる者かな。一念もかゝる
+御目に逢べかりしを内府が身に代て制し停てこそ今日迄も心安かりつれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%86%85%E5%BA%9C#tk-3-644-nlp_gloss-243">3</a></p>
+      <p class="occurrence-context">平治に信頼が、仕たりし樣に、火をかけて、人をば皆燒殺さるべしと聞えし間、上下の女房女童、物をだに打被かず、
+遽て噪で走出づ。法皇も大に驚かせおはします。前右大將宗盛卿、御車を寄て、「と
+う／＼めさるべう候。」と奏せられければ、法皇「こはされば何事ぞや。御とがある
+べし共思召さず。成親俊寛が樣に遠き國遙の島へも、遷遣んずるにこそ。主上さて渡
+せ給へば、政務の口入する計也。其もさるべからずば、自今以後さらでこそ有め。」
+と仰ければ、宗盛卿「其儀では候はず。世を靜ん程、鳥羽殿へ御幸成參せんと、父入
+道申候。」「さらば宗盛やがて御供に參れ。」と仰けれ共、父の禪門の氣色に畏を成
+て、參られず。「哀れ是に附ても、兄の内府には事外に劣たる者かな。一念もかゝる
+御目に逢べかりしを内府が身に代て制し停てこそ今日迄も心安かりつれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%86%85%E5%BA%9C#tk-10-83-nlp_gloss-28">10</a></p>
+      <p class="occurrence-context">三位中將申されけるは、「重衡千人萬人が命にも、三種の神器を替參せんとは内府己下一門の者共一人もよも申候はじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%86%85%E5%BA%9C#tk-10-737-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">小松内府の事は愚に思ひ奉らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%86%85%E5%BA%9C#tk-10-738-nlp_gloss-25">10</a></p>
+      <p class="occurrence-context">其故は、故池の禪尼の使として、頼朝を流罪に申宥られしは、偏に彼内府の芳恩也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%86%85%E5%BA%9C#tk-12-524-nlp_gloss-22">12</a></p>
+      <p class="occurrence-context">其故は池の禪尼の使として頼朝を流罪に申宥られしは偏に彼内府の芳恩也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%86%85%E5%BA%9C#tk-12-531-nlp_gloss-77">12</a></p>
+      <p class="occurrence-context">三歳より大炊御門の左大臣經宗卿の養子にて異姓他人になり、武藝の道をば打棄てて文筆をのみ嗜て今年は十八に成り給ふを鎌倉殿より尋はなかりけれども、世に憚て追出されたりければ、先途を失ひ大佛の聖俊乘房のもとにおはして「我は是小松の内府の末の子に土佐守宗實と申者にて候。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

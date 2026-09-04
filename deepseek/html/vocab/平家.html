@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平家</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>平家</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>the Heike clan</li>
+      
+      <li>the Taira clan</li>
+      
+      <li>Taira clan</li>
+      
+      <li>the Heike (Taira clan)</li>
+      
+      <li>the Heike (the Taira clan)</li>
+      
+      <li>the Heike clan (Taira family)</li>
+      
+      <li>Heike (the Taira clan)</li>
+      
+      <li>the Heike</li>
+      
+      <li>Taira clan (Heike)</li>
+      
+      <li>Heike clan</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (368)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-92-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">平家かやうに繁昌せられけるも熊野權現の御利生とぞきこえし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-107-nlp_gloss-115">1</a></p>
+      <p class="occurrence-context">又いかなる賢王聖主の御政も攝政關白の御成敗も世にあまされたるいたづら者な
+どの、人のきかぬ處にてなにとなうそしり傾け申事は常の習なれども、此禪門世ざか
+りの程は聊いるかせにも申者なし。其故は入道相國のはかりごとに十四五六の童部を
+三百人そろへて、髮をかぶろにきりまはし、あかき直垂をきせて、めしつかはれける
+が、京中にみち／＼て、往反しけり。自ら平家の事あしざまに申者あれば、一人きゝ
+出さぬほどこそありけれ、餘黨に觸廻して、其家に亂入し資材雜具を追捕し、其奴を
+搦とて、六波羅へゐてまゐる。されば目に見、心に知るといへども、詞にあらはれて
+申者なし。六波羅殿の禿と云ひてしかば、道をすぐる馬車もよぎてぞ、通りける。禁
+門を出入すといへども姓名を尋らるゝに及ばず、京師の長吏これが為に目を側むとみ
+えたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-128-nlp_gloss-10">1</a></p>
+      <p class="occurrence-context">日本秋津島は纔に六十六箇國、平家知行の國三十餘箇國、既に半國にこえたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-156-nlp_gloss-24">1</a></p>
+      <p class="occurrence-context">佛御前申けるは「我天下に聞えたれども、當時さしもめでたうさかえさせ給ふ平家太政の入道殿へめされぬ事こそ本意なけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-270-nlp_gloss-17">1</a></p>
+      <p class="occurrence-context">と泣く／＼二返歌うたりければ、其座にいくらも並居たまへる平家一門の公卿、殿上人、諸大夫、侍に至るまで皆感涙をぞ流されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-344-nlp_gloss-81">1</a></p>
+      <p class="occurrence-context">昔より今に至るまで、源平兩氏朝家に召しつかはれて、王化に隨はず、自朝權を輕んずる者には、互に誡を加しかば、代の亂れもなかりしに、保元に爲義きられ、平治に義朝誅せられて後は、末々の源氏ども、或は流され、或は失はれ、今は平家の一類のみ繁昌して、頭をさし出す者なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-417-nlp_gloss-17">1</a></p>
+      <p class="occurrence-context">何者の申出したりけるやらむ、一院、山門の大衆に仰せて、平家を追討せらるべしと聞えし程に、軍兵内裏に參じて、四方の陣頭を警固す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-442-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">平家以外に過分に候間、天の御計らひにや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-459-nlp_gloss-12">1</a></p>
+      <p class="occurrence-context">此君の位につかせ給ぬるは、いよ／＼平家の榮花とぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-460-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">御母儀建春門院と申すは、平家の一門にてましますうへ、とりわき入道相國の北の方、二位殿の御妹なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-477-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">平家も又別して、朝家を恨み奉ることもなかりしほどに、世の亂れそめける根本は、去じ嘉應二年十月十六日に、小松殿の次男新三位中將資盛卿、その時はいまだ越前守とて十三になられけるが、雪ははだれに降たりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-511-nlp_gloss-2">1</a></p>
+      <p class="occurrence-context">是こそ平家の惡行の始なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-557-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">平家の次男に越えらるゝこそ安からね。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-559-nlp_gloss-4">1</a></p>
+      <p class="occurrence-context">いかにもして平家を亡し本望を遂げむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-569-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">かれに常は寄りあひ／＼、平家滅さむずる謀をぞ囘しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%B9%B3%E5%AE%B6#tk-1-714-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">平家には、小松の内大臣の左大將重盛公、其勢三千餘騎にて、大宮面の陽明、待賢、郁芳、三つの門をかため給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-138-nlp_gloss-40">2</a></p>
+      <p class="occurrence-context">弓袋の料に、送られたりける布共をば、直垂帷に裁縫せて、家子郎等共に著せつゝ、目うちしばたゝいて居たりけるが、倩平家の繁昌する有樣をみるに、當時輙く傾けがたし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-201-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">平家の侍共、道にて馳向ひ、「西八條へ召るゝぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-381-nlp_gloss-5">2</a></p>
+      <p class="occurrence-context">保元平治より以來、平家の人々、樂榮えのみ有て、愁歎はなかりしに、此宰相計こそ、由なき聟ゆゑに、かゝる歎をばせられけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-772-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">爰に徳大寺の大納言實定卿は、平家の次男宗盛卿に大將を越られて、暫籠居し給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-785-nlp_gloss-15">2</a></p>
+      <p class="occurrence-context">大納言宣けるは、「倩此世の中の有樣を見るに、平家の世は彌盛なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-794-nlp_gloss-8">2</a></p>
+      <p class="occurrence-context">譬ば安藝の嚴島をば、平家斜ならず崇敬はれ候に、何かは苦しう候べき、彼宮へ御參あり、御祈誓候へかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%B9%B3%E5%AE%B6#tk-2-812-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">内侍共「當社へは、平家の公達こそ御參候ふに、この御まゐりこそ珍しう候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-12-nlp_gloss-16">3</a></p>
+      <p class="occurrence-context">若皇子にてわたらせ給はば、如何に目出度からんと、平家の人々は唯今皇子御誕生の有樣に、勇悦びあはれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-69-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">平家の思忘かや、執筆の誤か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-161-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">抑平家安藝の嚴島を信じ始られける事は如何にと云に、鳥羽院の御宇に清盛公未安藝守たりし時、安藝國を以て、高野の大塔を修理せよとて、渡邊遠藤六郎頼方を雜掌に附られ、六年に修理畢ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-367-nlp_gloss-8">3</a></p>
+      <p class="occurrence-context">か樣に人の思歎の積ぬる平家の末こそ怖しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-461-nlp_gloss-8">3</a></p>
+      <p class="occurrence-context">」と問給へば、是は平家太政入道殿の御頭を惡行超過し給へるに依て、當社大明神の召取せ給て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-600-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">平家の惡行無りせば、今此瑞相を、爭か拜むべきとて、大臣感涙をぞ流されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-609-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">是も平家心よからざりければ、既に六波羅より押寄て搦捕るべしと聞えし間、子息江左衞門尉家成打具して、いづちともなく落行きけるが、稻荷山に打上り、馬より下て、父子言合けるは、「是より東國の方へ落くだり、伊豆國の流罪人前兵衞佐頼朝を憑ばやとは思へ共、其も當時は勅勘の人で、身一つだにも叶難う坐也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-610-nlp_gloss-4">3</a></p>
+      <p class="occurrence-context">日本國に、平家の庄園ならぬ所や有る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E5%B9%B3%E5%AE%B6#tk-3-663-nlp_gloss-28">3</a></p>
+      <p class="occurrence-context">」とのたまへば、法印涙を押て申されけるは、「何事も限有る事にて候へば、平家樂みさかえて二十餘年。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-36-nlp_gloss-6">4</a></p>
+      <p class="occurrence-context">其上此嚴島をば平家斜ならず、崇敬ひ給ふ間、上には平家に御同心、下には法皇の何となう鳥羽殿に押籠られて渡らせ給ふ、入道相國の謀反の心をも和げ給へとの御祈念の爲とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-36-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">其上此嚴島をば平家斜ならず、崇敬ひ給ふ間、上には平家に御同心、下には法皇の何となう鳥羽殿に押籠られて渡らせ給ふ、入道相國の謀反の心をも和げ給へとの御祈念の爲とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-127-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">平家の人々皆出仕せられける中に、小松殿の公達は、去年大臣失せ給ひし間、色にて籠居せられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-137-nlp_gloss-19">4</a></p>
+      <p class="occurrence-context">當世の體を見候に、上には從ひたる樣なれども、内々は平家を猜まぬ者や候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-138-nlp_gloss-7">4</a></p>
+      <p class="occurrence-context">御謀反起させ給ひて、平家を亡し、法皇のいつとなく鳥羽殿に押籠られて渡せ給ふ御心をも休め參せ、君も位に即せ給ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-148-nlp_gloss-22">4</a></p>
+      <p class="occurrence-context">君若思召立せ給て、令旨を賜づる者ならば、夜を日に續で馳上り、平家を滅さん事、時日を囘すべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-163-nlp_gloss-8">4</a></p>
+      <p class="occurrence-context">其比の熊野別當湛増は、平家に志し深かりけるが、何とかして漏れ聞きたりけん、新宮の十郎義盛こそ、高倉宮の令旨賜はて美濃尾張の源氏共觸れ催し、既に謀反を起なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-165-nlp_gloss-2">4</a></p>
+      <p class="occurrence-context">湛増は平家の御恩を、天山と蒙りたれば、爭で背奉べき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-166-nlp_gloss-11">4</a></p>
+      <p class="occurrence-context">那智新宮の者共に矢一つ射懸て、平家へ仔細を申さんとて、直甲一千人、新宮の湊へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-168-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">閧作り矢合して、源氏の方にはとこそ射れ、平家の方にはかうこそ射れと、互に矢叫の聲の退轉もなく、鏑の鳴止む隙もなく、三日が程こそ戰うたれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-192-nlp_gloss-24">4</a></p>
+      <p class="occurrence-context">然るを此人數に入られける事は、高倉宮の御謀反を、三位入道勸め申たりと、平家未知ざりけるに依て也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-264-nlp_gloss-6">4</a></p>
+      <p class="occurrence-context">幾らも竝居たりける平家の侍共、「哀剛の者哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-285-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">今年如何なる心にて、謀反をば起しけるぞといふに、平家の次男前右大將宗盛卿すまじき事をし給ひけるに依てなり、去ば人の世に有ばとて、すまじき事をもし、坐に言ふ間敷事をも言ふは能々思慮有るべき者なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-292-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">」とて、其後沙汰も無りしを、多く竝居たりける平家の侍共、「哀其馬は一昨日迄は候し者を、昨日も候ひし、今朝も庭乘し候つる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-308-nlp_gloss-29">4</a></p>
+      <p class="occurrence-context">」と、大に憤られければ、三位入道是を聞き伊豆守に向て、「何事の有べきと思侮て、平家の人どもが、さ樣のしれ事をいふにこそ有なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-476-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">其中に平家の祈しける一如房阿闍梨眞海、弟子同宿數十人引具し、僉議の庭に進出で申けるは、「かう申せば、平家の方人とや思召され候らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-476-nlp_gloss-35">4</a></p>
+      <p class="occurrence-context">其中に平家の祈しける一如房阿闍梨眞海、弟子同宿數十人引具し、僉議の庭に進出で申けるは、「かう申せば、平家の方人とや思召され候らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-479-nlp_gloss-21">4</a></p>
+      <p class="occurrence-context">昔は源平左右に爭て、朝家の御守たりしかども、近來は源氏の運傾き、平家世を取て二十餘年、天下に靡ぬ草木も候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-541-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">平家の方には是を見て、「あれ射取や者共」とて究竟の弓の上手共が矢先を汰へて差詰引詰散々に射る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-566-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">是を見て平家の方の侍大將上總守忠清、大將軍の御前に參て、「あれ御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-601-nlp_gloss-69">4</a></p>
+      <p class="occurrence-context">昔朝敵將門を亡し、勸賞蒙し俵藤太秀里に十代、足利太郎俊綱が子、又太郎忠綱、生年十七歳、か樣に無官無位なる者の、宮に向ひ參せて、弓を引き矢を放つ事天の恐少からず候へ共、弓も矢も冥加の程も、平家の御上にこそ候らめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-620-nlp_gloss-33">4</a></p>
+      <p class="occurrence-context">源大夫判官は、内甲も痛手なれども、聞る大力なりければ、童を取て押て頸を掻き、立上らんとする處に、平家の兵共、十四五騎ひし／＼と落重て、兼綱を討てけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-632-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">競瀧口をば平家の侍共、如何にもして、生捕にせんとうかゞひけれ共、競も先に心えて、散散に戰ひ、大事の手負ひ、腹掻切てぞ死にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-634-nlp_gloss-55">4</a></p>
+      <p class="occurrence-context">大太刀大長刀左右に持て、敵の中をうち破り、宇治川へ飛で入り、物具一つも捨ず、水の底を潜て、向の岸に渡り著き、高き所に登り、大音聲を揚て、「如何に平家の君達、是までは御大事かよう。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-648-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">平家の人々は宮竝びに三位入道の一族、三井寺の衆徒、都合五百餘人が頸、太刀長刀のさきに貫き、高く指上げ、夕に及で六波羅へ歸入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%B9%B3%E5%AE%B6#tk-4-786-nlp_gloss-15">4</a></p>
+      <p class="occurrence-context">かゝる天下の亂、國土の騒、徒事とも覺えず、平家の世末になりぬる先表やらんとぞ人申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-17-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">凡平家の惡行に於ては悉く極りぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-53-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">桓武天皇と申は平家の曩祖にて御座す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-55-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">尤平家の崇べき都也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-111-nlp_gloss-9">5</a></p>
+      <p class="occurrence-context">福原へ都を移されて後、平家の人々夢見も惡う、常は心噪ぎのみして、變化の者共多かりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-131-nlp_gloss-37">5</a></p>
+      <p class="occurrence-context">譬へば大内の神祇官とおぼしき所に、束帶正しき上臈達數多おはして、議定の樣なる事の有しに、末座なる人の、平家の方人すると覺しきを、其中より追立らるゝ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-134-nlp_gloss-16">5</a></p>
+      <p class="occurrence-context">其後座上に氣高げなる宿老のましましけるが、「此日來平家の預りたる節刀をば今は伊豆國の流人、頼朝に賜ばうずるなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-143-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">平家日比は朝家の御固にて、天下を守護せしかども、今は勅命に背けば、節刀をも召返さるゝにや、心細うぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-144-nlp_gloss-22">5</a></p>
+      <p class="occurrence-context">中にも高野に坐ける宰相入道成頼、か樣の事共を傳へ聞て、「すは平家の代は、やう／＼末に成ぬるは、嚴島大明神の、平家の方人し給ひけると云ふは其謂れ有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-144-nlp_gloss-40">5</a></p>
+      <p class="occurrence-context">中にも高野に坐ける宰相入道成頼、か樣の事共を傳へ聞て、「すは平家の代は、やう／＼末に成ぬるは、嚴島大明神の、平家の方人し給ひけると云ふは其謂れ有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-148-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">其も平家亡び、源氏の世盡なん後、大織冠の御末、執柄家の君達の、天下の將軍に成給べきか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-162-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">平家の人々、都移も早興醒ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-448-nlp_gloss-31">5</a></p>
+      <p class="occurrence-context">
+                  さる程に兵衞佐殿へ常は參て、昔今の物語ども申て慰む程に、ある時文學申しけるは、「平家には小松大臣殿こそ、心も剛に策も勝て坐しか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-449-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">平家の運命が末に成やらん、去年八月薨ぜられぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-475-nlp_gloss-73">5</a></p>
+      <p class="occurrence-context">實にも三日と云に、福原の新都へ上りつゝ前右兵衞督光能卿の許に、聊縁有ければ、其に行いて、「伊豆國の流人、前右兵衞佐頼朝こそ勅勘を許されて、院宣をだにも給はらば、八箇國の家人ども催し集めて、平家を亡し、天下を靜んと申候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-572-nlp_gloss-18">5</a></p>
+      <p class="occurrence-context">常陸源氏佐竹太郎が雜色、主の使に文持て京へ上るを、平家の先陣上總守忠清是を留て、持たる文を奪取り明て見れば、女房の許への文也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-602-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">」と申ければ、平家の兵共是を聞て、皆震ひわなゝきあへり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-604-nlp_gloss-19">5</a></p>
+      <p class="occurrence-context">明日は源平富士川にて、矢合と定めたりけるに、夜に入て、平家の方より源氏の陣を見渡せば、伊豆駿河の人民百姓等が、軍に怖て、或は野に入り山に隱れ、或は舟に取乘て、海河に浮び、營の火見えけるを、平家の兵共「あなおびただしの源氏の陣の遠火の多さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-604-nlp_gloss-71">5</a></p>
+      <p class="occurrence-context">明日は源平富士川にて、矢合と定めたりけるに、夜に入て、平家の方より源氏の陣を見渡せば、伊豆駿河の人民百姓等が、軍に怖て、或は野に入り山に隱れ、或は舟に取乘て、海河に浮び、營の火見えけるを、平家の兵共「あなおびただしの源氏の陣の遠火の多さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-608-nlp_gloss-47">5</a></p>
+      <p class="occurrence-context">其夜の夜半ばかり、富士の沼に幾らもむれ居たりける水鳥共が、何にか驚きたりけん、只一度にはと立ける羽音の、大風雷などの樣に聞えければ、平家の兵共、「すはやげんじの大勢の寄するは。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-617-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">平家の方には、音もせず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-627-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">平家續いても攻べけれども後もさすが覺束なしとて浮島原より引退き、相摸國へぞ歸られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-633-nlp_gloss-21">5</a></p>
+      <p class="occurrence-context">都の大將軍をば宗盛と云ひ、討手の大將をば權亮と云ふ間、平家をひら屋によみなして、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-640-nlp_gloss-43">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「大將軍權亮少將維盛をば鬼界が島へ流すべし、侍大將上總守忠清をば死罪に行へ。」
+とぞ宣ひける。同九日平家の侍共、老少參會して、「忠清が死罪の事、いかゞ有ら
+ん。」と評定す。中に主馬判官盛國進出でて申けるは、「忠清は昔より不覺人とは承
+り及ばず、あれが十八歳と覺え候、鳥羽殿の寶藏に五畿内の惡黨二人、迯籠て候しを、
+寄て搦めうと申す者候はざりしに、此忠清白晝に唯一人築地を越え、はね入て、一人
+をば討取り、一人をば生捕て、後代に名を揚たりし者にて候。今度の不覺は、徒事と
+も覺え候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-685-nlp_gloss-7">5</a></p>
+      <p class="occurrence-context">入道相國を始として平家一門の公卿殿上人我先にとぞ上られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-716-nlp_gloss-85">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「さらば南都を攻よや。」とて、大將軍には頭中將重衡、副將軍には中宮亮通盛、都
+合其勢四萬餘騎で南都へ發向す。大衆老少嫌はず七千餘人甲の緒をしめ、奈良坂、般
+若寺、二箇所の路を掘切て、堀ほり垣楯かき、逆茂木引て待かけたり。平家は四萬餘
+騎を二手に分て、奈良坂、般若寺、二箇所の城郭に押寄て、鬨をどとつくる。大衆は
+皆歩立打物なり。官軍は馬にてかけまはしかけまはし、あそここゝに追懸／＼指つめ
+引つめ散々に射ければ、防ぐ所の大衆數を盡いて討れにけり。卯刻に矢合して一日戰
+ひ暮す。夜に入て、奈良坂、般若寺、二箇所の城郭共に破れぬ。落行く衆徒の中に、
+坂四郎永覺と云ふ惡僧あり。打物持ても弓箭を取ても力の強さも七大寺十五大寺に勝
+たり。萌黄威の腹巻の上に、黒絲威の鎧を重てぞ著たりける。帽子甲に五枚甲の緒を
+しめて、左右の手には茅の葉の樣に反たる白柄の大長刀、黒漆の大太刀持つまゝに、
+同宿十餘人前後にたて、てがいの門より打て出でたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%B9%B3%E5%AE%B6#tk-5-723-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">平家の勢の中に播磨國の住人福井庄の下司、次郎太夫友方と云ふ者、楯を破り續松にして、在家に火をぞ懸けたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-211-nlp_gloss-21">6</a></p>
+      <p class="occurrence-context">「兵衞佐頼朝既に謀反を起し、東八箇國を討從へて、東海道より上り、平家を追落んとするなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-212-nlp_gloss-16">6</a></p>
+      <p class="occurrence-context">義仲も東山北陸兩道を從へ、今一日も先に平家を責落し、譬へば日本國に、二人の將軍と云はればや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-216-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">兼遠に具せられて常は都へ上り平家の人々の振舞在樣をも見伺ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-222-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家の末に成る折を得て、源氏の年來の素懷を遂んとす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-224-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家の人々漏れ聞て、「東國の背だに有に北國さへ、こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-235-nlp_gloss-24">6</a></p>
+      <p class="occurrence-context">同九日、河内國石川郡に居住したりける武藏權守入道義基、子息石川判官代義兼、平家を背て、兵衞佐頼朝に心を通し既に東國へ落行べき由聞えしかば、入道相國やがて討手を遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-244-nlp_gloss-42">6</a></p>
+      <p class="occurrence-context">同十二日、鎭西より飛脚到來、宇佐大宮司公通が申けるは、九州の者共、緒方三郎を始として、臼杵、戸次、松浦黨 に至る迄、一向平家を背いて源氏に同心の由申たりければ、「東國北國の背だに有に、こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-246-nlp_gloss-29">6</a></p>
+      <p class="occurrence-context">同十六日に、伊豫國より飛脚到來、去年の冬比より、河野四郎通清を初として、四國の者共皆平家を背いて、源氏に同心の間、備後國の住人、額の入道西寂、平家に志深かりければ、伊豫國へ押渡り、道前道後のさかひ、高直城にて、河野四郎通清を討候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-246-nlp_gloss-51">6</a></p>
+      <p class="occurrence-context">同十六日に、伊豫國より飛脚到來、去年の冬比より、河野四郎通清を初として、四國の者共皆平家を背いて、源氏に同心の間、備後國の住人、額の入道西寂、平家に志深かりければ、伊豫國へ押渡り、道前道後のさかひ、高直城にて、河野四郎通清を討候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-254-nlp_gloss-8">6</a></p>
+      <p class="occurrence-context">熊野別當湛増も、平家の重恩の身なりしが、其も背いて源氏に同心の由聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-282-nlp_gloss-11">6</a></p>
+      <p class="occurrence-context">」と御尋あれば、「閻魔の廳より平家太政入道殿の御迎に參て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-320-nlp_gloss-14">6</a></p>
+      <p class="occurrence-context">是は如何樣にも天狗の所爲と云ふ沙汰にて、平家の侍の中にはやりをの若者共、百餘人笑ふ聲について、尋行て見れば、院の御所法住寺殿に、此二三年は院も渡らせ給はず、御所預備前前司基宗と云ふ者有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-485-nlp_gloss-45">6</a></p>
+      <p class="occurrence-context">彼御所は去ぬる應保三年四月十五日に造り出されて、新比叡、新熊野なども間近う勸請し奉り、山水木立に至る迄思召まゝなりしが、此二三年は平家の惡行に依て、御幸もならず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-496-nlp_gloss-16">6</a></p>
+      <p class="occurrence-context">」とて懷中して宿所へ歸り、深う納て置れけるが、平家の惡行に依て、南都炎上の間、此行隆、辨の中に選ばれて、事始の奉行に參られける宿縁の程こそ目出たけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-501-nlp_gloss-17">6</a></p>
+      <p class="occurrence-context">同十六日の夜半ばかり、源氏の勢六千餘騎河を渡て、平家三萬餘騎が中へをめいて懸入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-502-nlp_gloss-15">6</a></p>
+      <p class="occurrence-context">明れば十七日寅刻より矢合して、夜の明る迄戰ふに、平家の方には些も騒がず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-507-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家やがて河を渡て、源氏を追物射に射て行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-514-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家やがて押寄せ攻給へば、こらへずして、そこをも、又、攻落れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-515-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家やがて續て攻給はば、參河遠江の勢は、隨つくべかりしに大將軍左兵衞督知盛、勞有て參河國より歸上らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-517-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家は去々年小松大臣薨ぜられぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-522-nlp_gloss-83">6</a></p>
+      <p class="occurrence-context">朝恩の忝さに、木曽追討の爲に、都合三萬餘騎同六月十五日門出して、明る十六日の卯刻にすでに討立んとしけるに、夜半許、俄に大風吹き、大雨降り、雷おびたゞしう鳴て、天晴て後雲井に大なる聲のしはがれたるを以て、「南閻浮提金銅十六丈の盧遮那佛燒亡し奉る平家の方人する者爰に有り、召取や。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-529-nlp_gloss-12">6</a></p>
+      <p class="occurrence-context">飛脚を以て、此由都へ申たりければ、平家の人々、大に噪がれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-548-nlp_gloss-28">6</a></p>
+      <p class="occurrence-context">又大元法承て修せられける安祥寺の實玄阿闍梨が御巻數を進じたりけるを、披見せられければ、平家調伏の由を註進したりけるぞ怖しき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-551-nlp_gloss-9">6</a></p>
+      <p class="occurrence-context">當世の體を見候ふに、平家專朝敵と見え給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-567-nlp_gloss-9">6</a></p>
+      <p class="occurrence-context">三月十日、除目行はれて、平家の人々大略官加階し給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-570-nlp_gloss-15">6</a></p>
+      <p class="occurrence-context">何者の申出したりけるやらん、一院山門の大衆に仰て、平家を追討せらるべしと聞えし程に、軍兵内裏へ參て、四方の陣頭を警固す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-573-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">山門に又聞えけるは、平家山攻んとて、數百騎の勢を率して登山すと聞えしかば、大衆皆東坂本へ降下て、「こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-580-nlp_gloss-5">6</a></p>
+      <p class="occurrence-context">まことには山門大衆平家を追討せんといふ事もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-581-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">平家山せめんといふ事もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-594-nlp_gloss-58">6</a></p>
+      <p class="occurrence-context">信濃源氏、井上九郎光盛が謀に、俄に赤旗七旒作り三千餘騎を七手に分ち、あそこの峯、こゝの洞より赤旗ども手に／＼指揚て寄ければ、城四郎是を見て、「あはや此國にも平家の方人する人有けりと、力附ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-602-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">同十六日、都には平家是をば事共し給はず前右大將宗盛卿、大納言に還著して、十月三日、内大臣に成給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-608-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">内辨をば平家の内大臣宗盛公勤めらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-614-nlp_gloss-22">6</a></p>
+      <p class="occurrence-context">南都北嶺の大衆、熊野金峯山の僧徒、伊勢大神宮の祭主神官に至る迄、一向平家を背いて、源氏に心を通しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%B9%B3%E5%AE%B6#tk-6-615-nlp_gloss-19">6</a></p>
+      <p class="occurrence-context">四方に宣旨を成下し、諸國に院宣遣せども、院宣宣旨も、皆平家の下知とのみ心得て隨附く者無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-6-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">御邊は東八箇國を打隨へて、東海道より攻上り、平家を追おとさむとし給ふ也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-7-nlp_gloss-17">7</a></p>
+      <p class="occurrence-context">義仲も東山北陸兩道を從へて、今一日も先に平家を攻落さむとする事でこそ有れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-8-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">なんの故に、御邊と義仲と中を違て、平家に笑れんとは思ふべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-19-nlp_gloss-30">7</a></p>
+      <p class="occurrence-context">さる程に、木曾、東山北陸兩道を隨がへて、五萬餘騎の勢にて既に京へ攻上る由聞えしかば、平家は去年よりして、「明年は、馬の草飼に附て、軍有べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-60-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">船なくしては輙う渡すべき樣無ければ、平家の大勢、向への山に宿して、徒に日數を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-61-nlp_gloss-13">7</a></p>
+      <p class="occurrence-context">城の内に在ける平泉寺長吏齋明威儀師、平家に志深かりければ、山の根を廻りて、
+消息を書き、蟇目の中に入れて忍びやかに平家の陣へぞ射入たる。「彼湖は往古の淵
+に非ず、一旦山川を塞上て候。夜に入、足輕共を遣て柵を切落させ給へ、水は程なく
+落べし。馬の足立好所で候へば急ぎ渡させ給へ。後矢は射て參らせむ。是は、平泉寺
+長吏齋明威儀師が申状。」とぞ書たりける。大將軍大に悦び、やがて足輕どもを遣し
+て、柵を切落す。おびたゞしう見えつれども、げにも山川なれば水は程なく落にけり。
+平家の大勢暫の[_][1]遲々にも及ばす、さと渡す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-61-nlp_gloss-40">7</a></p>
+      <p class="occurrence-context">城の内に在ける平泉寺長吏齋明威儀師、平家に志深かりければ、山の根を廻りて、
+消息を書き、蟇目の中に入れて忍びやかに平家の陣へぞ射入たる。「彼湖は往古の淵
+に非ず、一旦山川を塞上て候。夜に入、足輕共を遣て柵を切落させ給へ、水は程なく
+落べし。馬の足立好所で候へば急ぎ渡させ給へ。後矢は射て參らせむ。是は、平泉寺
+長吏齋明威儀師が申状。」とぞ書たりける。大將軍大に悦び、やがて足輕どもを遣し
+て、柵を切落す。おびたゞしう見えつれども、げにも山川なれば水は程なく落にけり。
+平家の大勢暫の[_][1]遲々にも及ばす、さと渡す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-61-nlp_gloss-160">7</a></p>
+      <p class="occurrence-context">城の内に在ける平泉寺長吏齋明威儀師、平家に志深かりければ、山の根を廻りて、
+消息を書き、蟇目の中に入れて忍びやかに平家の陣へぞ射入たる。「彼湖は往古の淵
+に非ず、一旦山川を塞上て候。夜に入、足輕共を遣て柵を切落させ給へ、水は程なく
+落べし。馬の足立好所で候へば急ぎ渡させ給へ。後矢は射て參らせむ。是は、平泉寺
+長吏齋明威儀師が申状。」とぞ書たりける。大將軍大に悦び、やがて足輕どもを遣し
+て、柵を切落す。おびたゞしう見えつれども、げにも山川なれば水は程なく落にけり。
+平家の大勢暫の[_][1]遲々にも及ばす、さと渡す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-63-nlp_gloss-8">7</a></p>
+      <p class="occurrence-context">平泉寺長吏齋明威儀師、平家に附て忠をいたす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-64-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">稻津新介、齋藤太、林六郎光明、富樫入道佛誓こゝをば落て、猶平家を背き加賀國に引退き、白山河内に引籠る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-65-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家やがて加賀に打越て、林、富樫が城郭二箇所燒拂ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-80-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">木曾宣ひけるは、「平家は定めて大勢なれば、砥浪山打越て、廣みへ出で懸合の軍にてぞ有んずらむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-83-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">先づ旗差を先だてゝ、白旗を差あげたらば平家是を見て、『あはや源氏の先陣は向たるは。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-88-nlp_gloss-16">7</a></p>
+      <p class="occurrence-context">其時義仲暫會釋ふ
+樣に持なして、日を待昏し、平家の大勢を倶利迦羅谷へ追落さうと思ふなり。」とて
+先白旗三十旒、先立てゝ黒坂の上にぞ打立たる。案の如く平家是を見て、「あはや源
+氏の先陣は向たるは、定めて大勢成らん。左右無う廣みへ打出なば、敵は
+案内者、我等は無案内也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-88-nlp_gloss-49">7</a></p>
+      <p class="occurrence-context">其時義仲暫會釋ふ
+樣に持なして、日を待昏し、平家の大勢を倶利迦羅谷へ追落さうと思ふなり。」とて
+先白旗三十旒、先立てゝ黒坂の上にぞ打立たる。案の如く平家是を見て、「あはや源
+氏の先陣は向たるは、定めて大勢成らん。左右無う廣みへ打出なば、敵は
+案内者、我等は無案内也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-147-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">源氏も進まず、平家も進まず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-148-nlp_gloss-25">7</a></p>
+      <p class="occurrence-context">源氏の方より、精兵十五騎楯の面に進ませて、十五騎が上矢の鏑を、平家の陣へぞ射入たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-149-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家又策とも知らず、十五騎を出いて、十五の鏑を射返す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-150-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">源氏三十騎を出いて、射さすれば、平家三十騎を出いて、三十の鏑を射返す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-153-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">源氏はか樣にして日を暮し、平家の大勢を倶利迦羅谷へ追落さうとたばかりけるを、少しも悟らずして、共に會釋ひ日を暮すこそはかなけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-155-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家後を顧みければ、白旗雲の如く差上あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-160-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">案のごとく平家。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-162-nlp_gloss-95">7</a></p>
+      <p class="occurrence-context">」
+と云ふ族多かりけれ共、大勢の傾立ちぬるは、左右なう取て返す事難ければ、倶利迦
+羅谷へ、我先にとぞ落しける。ま先に落したる者が見えねば、此谷の底に、道の有に
+こそとて、親落せば子も落し、兄落せば弟も續く。主落せば家子郎等落しけり。馬に
+は人、人には馬、落重り落重りさばかり深き谷一つを、平家の勢七萬餘騎でぞ填たり
+ける。巖泉血を流し、死骸岳を成せり。されば其谷の邊には、矢の穴刀の瑕殘て今に
+有りとぞ承はる。平家には宗と憑まれたりける上總大夫判官忠綱、飛騨大夫判官景高、
+河内判官秀國も、此谷に埋もれて失にけり。備中國住人瀬尾太郎兼康といふ聞ゆる大
+力も、そこにて加賀國住人藏光次郎成澄が手に懸て、生捕にせらる。越前國火打が城
+にて、返忠したりける平泉寺の長吏齋明威儀師も捕はれぬ。木曾殿「あまりに憎きに
+其法師をば先切れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-162-nlp_gloss-134">7</a></p>
+      <p class="occurrence-context">」
+と云ふ族多かりけれ共、大勢の傾立ちぬるは、左右なう取て返す事難ければ、倶利迦
+羅谷へ、我先にとぞ落しける。ま先に落したる者が見えねば、此谷の底に、道の有に
+こそとて、親落せば子も落し、兄落せば弟も續く。主落せば家子郎等落しけり。馬に
+は人、人には馬、落重り落重りさばかり深き谷一つを、平家の勢七萬餘騎でぞ填たり
+ける。巖泉血を流し、死骸岳を成せり。されば其谷の邊には、矢の穴刀の瑕殘て今に
+有りとぞ承はる。平家には宗と憑まれたりける上總大夫判官忠綱、飛騨大夫判官景高、
+河内判官秀國も、此谷に埋もれて失にけり。備中國住人瀬尾太郎兼康といふ聞ゆる大
+力も、そこにて加賀國住人藏光次郎成澄が手に懸て、生捕にせらる。越前國火打が城
+にて、返忠したりける平泉寺の長吏齋明威儀師も捕はれぬ。木曾殿「あまりに憎きに
+其法師をば先切れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-177-nlp_gloss-44">7</a></p>
+      <p class="occurrence-context">案のごとく十郎藏人行家、散々に懸なされ、引退いて、馬の息休むる處に、木曾殿「さればこそ」とて、荒手二萬餘騎、入かへて平家三萬餘騎が中へをめいて駈入り、揉に揉で、火出る程にぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-178-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家の兵共暫し支へて防ぎけれ共、こらへずして、そこをも遂に攻落さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-179-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家の方には大將軍參河守知度討れ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-186-nlp_gloss-23">7</a></p>
+      <p class="occurrence-context">
+                  一年石橋山の合戰の時、兵衞佐殿射奉し者共、都へにげ上て、平家の方にぞ候ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-188-nlp_gloss-33">7</a></p>
+      <p class="occurrence-context">先實盛が許に寄合たりける日、齋藤別當申けるは、「倩此世中の在樣を見るに、源氏の御方は強く、平家の御方は、負色に見えさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-195-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">景久に於ては、平家の御方にて、如何にも成らう。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-202-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">さる程に平家は人馬の息を休めて加賀國篠原に陣をとる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-204-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家の方には、畠山庄司重能、小山田別當有重、去る治承より今迄召籠められたりしを「汝らは故い者共也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-213-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">次に平家の方より、高橋判官長綱、五百餘騎で進んだり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-230-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">又平家の方より武藏三郎左衞門有國、三百騎許で喚てかく。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-312-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">懸け破て通ん事は安けれども、平家こそ當時は佛法とも云はず、寺を亡し、僧を失ひ、惡行をば致せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-313-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">其を守護の爲に上洛せん者が、平家と一つになればとて、山門の大衆に向て、軍せん事、少も違はぬ二の舞なるべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-317-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">或は源氏に附んと申す衆徒も候らん、或は平家に同心せんと云ふ大衆も候らん、牒状を遣して御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-321-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">義仲倩平家の惡逆を見るに、保元平治より以來、永く人臣の禮を失ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-334-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">是によて東國北國の源氏等、各參洛を企て、平家を亡さんと欲す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-347-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">抑天台の衆徒、平家に同心か、源氏に與力か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-360-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-363-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家は當代の御外戚、山門に於て歸敬を致さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-368-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">何ぞ當山獨宿運盡ぬる平家に同心して、運命開くる源氏を背かんや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-369-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">須く平家値遇の義を翻して、源氏合力の旨に任ずべき由、一味同心に僉議して、返牒を送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-372-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">凡平家の惡逆累年に及で朝廷の騒動止時なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-392-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">
+                  平家は是を夢にも知らずして、興福園城兩寺は、欝憤を含める折節なれば、語ふとも靡じ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-443-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">是に依て一門にはあたまれて、平家に諂ひけるが、其夜の夜半計六波羅に馳參て申けるは、木曾すでに北國より五萬餘騎で攻上り、比叡山東坂本に充滿て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-445-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家の人々[_][5]大に噪いで、方々へ討手を向けられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-451-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">攝津河内の源氏等雲霞の如くに同う都へ亂入由聞えしかば、平家の人々此上は唯一所にて如何にも成給へとて、方々へ向られたる討手共都へ皆呼返れけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-463-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">其夜法皇をば内々平家の取奉て、都の外へ落行べしといふ事を聞召されてや有けん、按察使大納言資方卿の子息右馬頭資時計御伴にて、竊に御所を出させ給ひ鞍馬へ御幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-465-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家の侍に橘内左衞門尉季康と云ふ者有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-477-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">況や平家の人々の遽て噪がれける有樣、家々に敵の打入たりとも、限あれば是には過じとぞ見えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-478-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">日頃は平家院をも内をも取參らせて、西國の方へ御幸行幸をも成したてまつらんと支度せられたりしに、かく打捨させ給ぬれば、憑む木の本に雨のたまらぬ心地ぞせられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-498-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">
+                  平家の侍越中次郎兵衞盛嗣是を承はて逐ひ留め參せんと頻に進み出けるが、人人に制せられて留まりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-536-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家都を落行に、六波羅、池殿、小松殿、八條、西八條以下、一門の卿相雲客の家々、二十餘箇所、次々の輩の宿所々々、京白川に四五萬の在家一度に火をかけて、皆燒拂ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-631-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家の侍越中次郎兵衞盛嗣、大臣殿の御前に馳參て「あれ、御覽候へ、池殿の御留まり候に、多の侍共の付參らせて、罷留まるが、奇怪に覺え候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-645-nlp_gloss-14">7</a></p>
+      <p class="occurrence-context">」など、度々誓状を以て申されける上、平家追討の爲に討手の使の上る度ごとに、「相構て池殿の侍共に向て弓引な。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-646-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">」と情を懸れば「一門の平家は運盡き既に都を落ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-663-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">落行く平家は誰々ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-683-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">京中に殘り留まる平家の餘黨を伐んとて、貞能が歸り入由聞えしかば、池大納言「頼盛が身の上でぞ有らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-685-nlp_gloss-18">7</a></p>
+      <p class="occurrence-context">貞能は、西八條の燒跡に、大幕ひかせ一夜宿したりけれども、歸り入給ふ平家の君達一所も坐ねば、さすが心細うや思ひけん、源氏の馬の蹄に懸じとて、小松殿の御墓掘せ、御骨に向ひ奉て、泣々申けるは、「あな淺まし、御一門の御果御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-694-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">
+                  平家は小松三位中將維盛卿の外は、大臣殿以下妻子を具せられけれ共、次樣の人共はさのみ引しろふに及ばねば、後會其期を知らず、皆打捨てぞ落行ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-699-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">平家は福原の舊都に著て、大臣殿然るべき侍共老少數百人召て仰られけるは、「積善の餘慶家に盡き、積惡の餘殃身に及ぶ故に、神明にも放たれ奉り、君にも捨られ參らせて、帝都を出て旅泊に漂ふ上は、何の憑みか有るべきなれ共、一樹の蔭に宿るも、前世の契淺からず、同じ流を掬ぶも、他生の縁尚深し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%B9%B3%E5%AE%B6#tk-7-722-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">壽永二年七月二十五日に、平家都を落果ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-7-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は落ぬれど、源氏は未だ入替らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-25-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">前内大臣宗盛公以下、平家の一族追討すべき由仰下さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-30-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">法皇は主上外戚の平家に取らはれさせ給て、西海の浪の上に漂はせ給ふ事を、御歎き有て、主上竝に三種の神器、都へ返入れ奉るべき由、西國へ院宣を下されたりけれども、平家用ゐ奉らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-30-nlp_gloss-56">8</a></p>
+      <p class="occurrence-context">法皇は主上外戚の平家に取らはれさせ給て、西海の浪の上に漂はせ給ふ事を、御歎き有て、主上竝に三種の神器、都へ返入れ奉るべき由、西國へ院宣を下されたりけれども、平家用ゐ奉らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-32-nlp_gloss-14">8</a></p>
+      <p class="occurrence-context">二宮をば、儲の君にし奉らんとて、平家いざなひ參らせて、西國へ落給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-49-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">信隆卿内々うれしうは思はれけれども、平家にも憚り、中宮にも恐れ參せて、もてなし奉る事もおはせざりしを、入道相國の北方八條の二位殿、「苦しかるまじ、我育て參せて、儲の君にして奉らむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-52-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">法印平家に具せられて、西國へ落し時、餘りに遽噪いで、北方をも宮をも京都に棄置參せて下られたりしが、西國より急ぎ人を上せて、「女房宮具し參せて、よく／＼くだり給べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-70-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">同十六日、平家の一門百六十餘人が官職を停て、殿上の御札を削らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-73-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">同八月十七日、平家は筑前國御笠郡太宰府にこそ著給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-74-nlp_gloss-7">8</a></p>
+      <p class="occurrence-context">菊池二郎高直は、都より平家の御供に候けるが、大津山の關開けて參らせんとて、肥後國へ打越えて、己が城に引籠り、召せ共／＼參らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-77-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家安樂寺へ參て、歌詠み連歌して、宮仕し給ひしに、本三位中將重衡卿、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-83-nlp_gloss-20">8</a></p>
+      <p class="occurrence-context">天に二の日なし、國に二人の王なしとは申せども、平家の惡行に依てこそ、京田舎に二人の王は坐けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-128-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は西國にて是を傳聞きぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-166-nlp_gloss-7">8</a></p>
+      <p class="occurrence-context">京より頼經の許へ、平家は神明にも放たれ奉り、君にも捨られ參せて、帝都を出で、浪の上に漂ふ落人となれり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-198-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家いまは筑紫に都を定め、内裏造るべきよし沙汰ありしに維義が謀反と聞えしかば、こは如何と噪がれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-205-nlp_gloss-18">8</a></p>
+      <p class="occurrence-context">維義が次男、野尻次郎維村を使者で、太宰府へ申けるは、「平家は重恩の君にてましませば、甲を脱ぎ弦を弛いて參るべう候へども、一院の御定に速に九國内を逐出し參らせよと候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-214-nlp_gloss-10">8</a></p>
+      <p class="occurrence-context">」とて、勢汰ふるなど聞えしかば、平家の侍源太夫判官季定、攝津判官守澄、「向後傍輩のため奇怪に候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-218-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は緒方の三郎維義が三萬餘騎の勢にて、既に寄すと聞えしかば、取物も取あへず、太宰府をこそ落給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-229-nlp_gloss-8">8</a></p>
+      <p class="occurrence-context">原田大夫種直は二千餘騎で平家の御ともにまゐる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-230-nlp_gloss-7">8</a></p>
+      <p class="occurrence-context">山鹿兵藤次秀遠數千騎で平家の御むかひにまゐりけるが、種直秀遠以外に不和になりければ、種直はあしかりなんとて道より引かへす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-244-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家の、小船どもに乘り給へる由承て、大船百餘艘點じて奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-245-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家是に乘移り、四國の地へぞ渡られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-301-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">「平家頼朝が威勢に恐て、都を落ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-367-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は讃岐の八島に有ながら、山陽道八箇國、南海道六箇國、都合十四箇國をぞ討取ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-371-nlp_gloss-16">8</a></p>
+      <p class="occurrence-context">海士船釣船かと見る程に、さはなくして、平家方より牒の使船也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-373-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は千餘艘でおし寄たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-374-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家の方の大手の大將軍には新中納言知盛卿、搦手の大將軍には能登守教經也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-386-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は鞍置馬を船の中に立られたりければ、船差寄せ馬共引下し、打乘／＼をめいて懸ければ、源氏の勢大將軍は討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-388-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は水島の軍に勝てこそ、會稽の恥をば雪けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-390-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家の侍備中國住人瀬尾太郎兼康は、北國の戰ひに、加賀國の住人藏光次郎成澄が手にかゝて、生捕にせられたりしを、成澄が弟藏光三郎成氏に預けられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-405-nlp_gloss-7">8</a></p>
+      <p class="occurrence-context">瀬尾が嫡子小太郎宗康は、平家の御方に候けるが、父が木曾殿より暇ゆるされて下ると聞えしかば、年比の郎等共催し聚め、其勢五十騎許迎に上る程に、播磨の國府で行あうて下る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-410-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">「兼康こそ暇賜て罷下れ、平家に志思ひ參せん人々は、兼康を先として木曾殿の下り給に矢一つ射懸奉れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-411-nlp_gloss-24">8</a></p>
+      <p class="occurrence-context">」と披露しければ、備前、備中、備後三箇國の兵共馬物具然るべき所從をば、平家の御方へ参せて、息みける老者共、或はかきの直垂につめ紐し、或は布の小袖に東折し、くさり腹卷綴り著て、山靱、高箙に矢共少々差し、掻負掻負瀬尾が許へ馳集る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-446-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">縦兼康命生て、再平家の御方へ参たりとも、同隷ども『兼康今は六十にあまりたる者の、幾程の命を惜うで、唯獨ある子を捨て落けるやらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-475-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は又木曾討むとて、大將軍には新中納言知盛卿、本三位中將重衡卿、侍大將には、越中次郎兵衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清、伊賀平内左衞門家長、都合其勢二萬餘騎千餘艘の舟に乘り播磨の地へ押渡りて、室山に陣をとる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-476-nlp_gloss-3">8</a></p>
+      <p class="occurrence-context">十郎藏人、平家と軍して木曾と中直せんとや思ひけむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-478-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は陣を五つに張る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-487-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家の侍共、「源氏の大將に組めや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-494-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は室山、水島二箇度の軍に勝てこそ、彌勢は附にけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-498-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">「平家の都におはせし時は、六波羅殿とて、唯おほかた怖しかりし計也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-499-nlp_gloss-10">8</a></p>
+      <p class="occurrence-context">衣裳をはぐ迄はなかりし者を、平家に源氏替へ劣りしたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-660-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家の時は四十三人をこそ停めたりしに是は四十九人なれば、平家の惡行には超過せり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-660-nlp_gloss-23">8</a></p>
+      <p class="occurrence-context">平家の時は四十三人をこそ停めたりしに是は四十九人なれば、平家の惡行には超過せり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-675-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">木曾左馬頭、平家の方へ使者を奉て、「都へ御上り候へ、一つに成て東國せめむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%B9%B3%E5%AE%B6#tk-8-687-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">平家は西國に、兵衞佐は東國に、木曾は都に張行ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-2-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家は讃岐國八島の磯におくり迎へて、年のはじめなれども元旦元三の儀式事宜からず、主上わたらせ給へども、節會も行はれず、四方拜もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-9-nlp_gloss-14">9</a></p>
+      <p class="occurrence-context">同正月十一日、木曾左馬頭義仲院參して、平家追討の爲に、西國へ發向すべき由奏聞す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-35-nlp_gloss-42">9</a></p>
+      <p class="occurrence-context">都へ上て木曾殿の御内に四天王と聞ゆる、今井、樋口、楯、根井に組んで死ぬるか、然らずば西國へ向うて、一人當千と聞る平家の侍共と軍して死なんとこそ思つれども、此御氣色では、それも詮なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-155-nlp_gloss-18">9</a></p>
+      <p class="occurrence-context">木曾は若しの事あらば、法皇を取參らせて、西國へ落下り、平家と一つに成らんとて、力者廿人汰へて持たりけれども、御所には九郎義經馳參て、守護し奉る由聞えしかば、「さらば」とて、數萬騎の大勢の中へをめいて懸入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-297-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">
+                  平家は去年の冬の比より、讃岐國八島磯を出て、攝津國難波潟へ押渡り、福原の舊都に居住して、西は一谷を城郭に構へ、東は生田森を大手の木戸口とぞ定めける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-307-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家福原へ渡給ひて後は、四國の兵ども隨ひ奉らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-308-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">中にも阿波讃岐の在廳ども、平家を背いて、源氏に付むとしけるが、「抑我等は昨日今日まで、平家に隨うたるものの、今日始めて源氏の方へ参りたりとも、よも用ゐられじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-308-nlp_gloss-30">9</a></p>
+      <p class="occurrence-context">中にも阿波讃岐の在廳ども、平家を背いて、源氏に付むとしけるが、「抑我等は昨日今日まで、平家に隨うたるものの、今日始めて源氏の方へ参りたりとも、よも用ゐられじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-309-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">いざや平家に矢一つ射懸て、其を面にして參らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-332-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">又淡路國の住人安摩六郎忠景、平家を背いて、源氏に心を通しけるが、大船二艘に兵粮米物具、積で都の方へ上る程に、能登殿福原にて、これをきゝ、小舟十艘計おし浮べて追はれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-335-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">紀伊國の住人園邊兵衞忠康、これも平家を背いて源氏につかんとしけるが、安摩六郎が能登殿に攻られ奉て、吹飯に有と聞えしかば、其勢百騎計で馳來て一つになる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-342-nlp_gloss-39">9</a></p>
+      <p class="occurrence-context">」と申されければ、福原より數萬騎の大勢を向らるゝ由聞えし程に、城の内の兵ども、手のきは戰ひ、分捕高名し究て、「平家は大勢でまします也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-350-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">大臣殿を始め奉て平家一門の公卿殿上人寄合ひて、能登殿毎度の高名をぞ一同に感じ合れける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-351-nlp_gloss-11">9</a></p>
+      <p class="occurrence-context">正月廿九日、範頼義經院參して、平家追討の爲に西國へ發向すべき由奏聞しけるに、「本朝には神代より傳れる三の御寶あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-383-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には大將軍小松新三位中將資盛、同少將有盛、丹後侍從忠房、備中守師盛、侍大將には平内兵衞清家、海老次郎盛方を初として、都合其勢三千餘騎、小野原より三里隔てゝ三草山の西の山口に陣をとる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-384-nlp_gloss-18">9</a></p>
+      <p class="occurrence-context">其夜の戌の刻ばかり、九郎御曹司、土肥次郎を召て、「平家は是より三里隔てて、三草山の西の山口に、大勢で引へたんなるは今夜夜討によすべきか、明日の軍か」と宣へば、田代冠者進み出でて申けるは、「明日の軍と延られなば、平家勢附候なんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-384-nlp_gloss-78">9</a></p>
+      <p class="occurrence-context">其夜の戌の刻ばかり、九郎御曹司、土肥次郎を召て、「平家は是より三里隔てて、三草山の西の山口に、大勢で引へたんなるは今夜夜討によすべきか、明日の軍か」と宣へば、田代冠者進み出でて申けるは、「明日の軍と延られなば、平家勢附候なんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-385-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家は三千餘騎、御方の御勢は一萬餘騎、遙の利に候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-399-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には、其夜、夜討にせんずるをば知らずして、「軍は定めて明日の軍でぞ有んずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-404-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には、餘りに遽噪いで、弓取る者は矢を知らず、矢取る者は弓を知らず、馬に當られじと中を明てぞ通しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-405-nlp_gloss-17">9</a></p>
+      <p class="occurrence-context">源氏は落行く敵をあそこに追懸け、こゝに追詰め攻ければ、平家の軍兵矢庭に五百餘騎討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-409-nlp_gloss-11">9</a></p>
+      <p class="occurrence-context">大臣殿は安藝右馬助能行を使者で、平家の君達の方々へ、「九郎義經こそ三草の手を責落いて、既に亂入候なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-434-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家も「遠火燒や。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-439-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には「今や寄する、今や寄する。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-469-nlp_gloss-4">9</a></p>
+      <p class="occurrence-context">」「是より平家の城廓一谷へ落さんと思ふは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-486-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家追討の後、鎌倉殿に中違うて、奧州で討れ給ひし時鷲尾三郎義久とて、一所で死ける兵也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-518-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には、「よし／＼音なせそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-539-nlp_gloss-61">9</a></p>
+      <p class="occurrence-context">熊谷は先に名乘たれとも、平山が聞くに名乘んとや思ひけん、又掻楯の際に歩ませ寄り、大音聲を揚て、
+「以前に名乘つる武藏國の住人、熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。
+我と思はん平家の侍共、直家に落合へや落合へ。」とぞのゝしたる。是を聞て、「い
+ざや通夜名乘る熊谷親子をひさげて來ん。」とて、進む平家の侍誰々ぞ。越中次郎兵
+衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清、後藤内定經、是を始めてむねとの兵廿餘
+騎、木戸を開いて懸出たり。こゝに平山滋目結の直垂に、緋威の鎧著て、二つ引兩の
+母衣をかけ、目糟毛と云ふ聞る名馬にぞ乘たりける。旗差は黒革縅の鎧に、甲猪頸に
+著ないて、さび月毛なる馬にぞ乘たりける。「保元平治兩度の合戰に先がけたりし武
+藏國の住人、平山武者所季重。」と名乘て、旗差と二騎馬の鼻をならべてをめいてか
+く。熊谷蒐れば、平山續き、平山蒐れば熊谷續く。互にわれ劣じと、入替々々、もみ
+                  にもうで、火出る程ぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-539-nlp_gloss-101">9</a></p>
+      <p class="occurrence-context">熊谷は先に名乘たれとも、平山が聞くに名乘んとや思ひけん、又掻楯の際に歩ませ寄り、大音聲を揚て、
+「以前に名乘つる武藏國の住人、熊谷次郎直實、子息の小次郎直家、一谷の先陣ぞや。
+我と思はん平家の侍共、直家に落合へや落合へ。」とぞのゝしたる。是を聞て、「い
+ざや通夜名乘る熊谷親子をひさげて來ん。」とて、進む平家の侍誰々ぞ。越中次郎兵
+衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清、後藤内定經、是を始めてむねとの兵廿餘
+騎、木戸を開いて懸出たり。こゝに平山滋目結の直垂に、緋威の鎧著て、二つ引兩の
+母衣をかけ、目糟毛と云ふ聞る名馬にぞ乘たりける。旗差は黒革縅の鎧に、甲猪頸に
+著ないて、さび月毛なる馬にぞ乘たりける。「保元平治兩度の合戰に先がけたりし武
+藏國の住人、平山武者所季重。」と名乘て、旗差と二騎馬の鼻をならべてをめいてか
+く。熊谷蒐れば、平山續き、平山蒐れば熊谷續く。互にわれ劣じと、入替々々、もみ
+                  にもうで、火出る程ぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-540-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の侍共、手痛うかけられて、叶はじとや思ひけん、城の内へさと引き、敵を外樣に成てぞ塞ぎける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-570-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には馬に乘たる武者はすくなし、やぐらの上に兵ども矢先を汰へて雨の降樣に射けれども、敵はすくなし、御方は多し、勢にまぎれて矢にも當らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-572-nlp_gloss-6">9</a></p>
+      <p class="occurrence-context">」と下知しけれども、平家の馬は、乘る事は繁く、飼事は稀なり、舟には久しう立たり、彫きたる樣なりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-589-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">平家の方には是を聞いて、「東國の武士程怖しかりける者はなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-640-nlp_gloss-61">9</a></p>
+      <p class="occurrence-context">かかりしかども、源氏大手ばかりでは叶ふべし共見えざりしに、九郎御曹司搦手に回て七日の日の明ぼのに、一谷の後、鵯越に打上り既に落さんとし給ふに、其勢にや驚たりけん、男鹿二つ妻鹿一つ、平家の城廓一谷へぞ落たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-671-nlp_gloss-11">9</a></p>
+      <p class="occurrence-context">村上判官代康國が手より火を出し、平家の屋形假屋を皆燒拂ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-697-nlp_gloss-17">9</a></p>
+      <p class="occurrence-context">」と云はれて、實もとや思ひけん、「是は本平家の一門たりしが、身不肖なるに依て、當時は侍に成たる越中前司盛俊と云ふ者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-700-nlp_gloss-16">9</a></p>
+      <p class="occurrence-context">「倩此世中の在樣を見るに、源氏の御方は強く、平家の御方は負け色に見えさせ給たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-705-nlp_gloss-22">9</a></p>
+      <p class="occurrence-context">」と云ければ、越中前司大に怒て、「盛俊身こそ不肖なれども、さすが平家の一門也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-721-nlp_gloss-35">9</a></p>
+      <p class="occurrence-context">か樣の時は論ずる事も有と思ひ、太刀の先に貫き、高く指上げ、大音聲を揚て、「此日比鬼神と聞えつる平家の侍越中前司盛俊をば、猪俣小平六則綱が討たるぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-727-nlp_gloss-14">9</a></p>
+      <p class="occurrence-context">「あはれ御方には銕附たる人はない者を、平家の君達でおはするにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-742-nlp_gloss-19">9</a></p>
+      <p class="occurrence-context">太刀の先に貫ぬき、高く差上げ、大音聲を揚て、「此日來平家の御方と聞えさせ給つる薩摩守殿をば、岡部の六彌太忠純討奉たるぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-764-nlp_gloss-10">9</a></p>
+      <p class="occurrence-context">軍破れにければ、熊谷次郎直實、「平家の君達助け船に乘らんと、汀の方へぞ落ち給ふらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%B9%B3%E5%AE%B6#tk-9-834-nlp_gloss-27">9</a></p>
+      <p class="occurrence-context">」とて、御子衞門督のおはしける方を御覽じて、涙ぐみ給へば、幾らも竝居たりける平家の侍ども、心有も心なきも、皆鎧の袖をぞぬらしける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-1-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">平家に結ぼほれたる人々は、我方樣に、如何なる憂目をか見んずらんと歎きあひ悲みあへり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-179-nlp_gloss-27">10</a></p>
+      <p class="occurrence-context">
+誠に心の中さこそおはしけめと推量られて哀也。さる程に平大納言時忠卿をはじめと
+して平家一門の公卿殿上人寄合ひ給ひて御請文の趣僉議せらる。二位殿は中將の文を
+顏に推當てゝ、人々の並居給へる後の障子を引明て、大臣殿の御前に倒臥し、泣々宣
+ひけるは「あの中將が京より言おこしたる事の無慚さよ。げにも心の中にいかばかり
+の事をか思ひ居たるらん。唯我に思ひ許して内侍所を、都へ入奉れ。」と宣へば、大
+臣殿、「誠に宗盛もさこそは存候へども、さすが世の聞えもいふがひなう候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-315-nlp_gloss-33">10</a></p>
+      <p class="occurrence-context">兵衞佐急ぎ見參して申されけるは、「抑君の御憤を息め奉り、父の恥を雪めんと思ひたちし上は、平家を滅さん事は案の内に候へども、正しく見參に入るべしとは存ぜず候き。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-339-nlp_gloss-5">10</a></p>
+      <p class="occurrence-context">兵衞佐も、「平家を別して私の敵と思ひ奉る事努々候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-406-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">「あの平家の人々は甲冑弓箭の外は他事なしとこそ日比は思ひたれば、此三位中將の琵琶の撥音、口ずさみ、終夜立聞て候に、優にわりなき人にておはしけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-409-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">平家は本より代々の歌人才人達で候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-714-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">平家重代相傳の家人にて、昔のよしみを忘ぬ事は哀なれども、思たつこそおほけなけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-742-nlp_gloss-4">10</a></p>
+      <p class="occurrence-context">さる程に、平家は讃岐の八島へ歸り給ひて後、「東國より荒手の軍兵數萬騎都に著て、攻下。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-760-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">まして平家の人々の心の中さこそはおはしけめと推量れてあはれ也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-765-nlp_gloss-10">10</a></p>
+      <p class="occurrence-context">同九月十二日、參河守範頼、平家追討の爲にとて、西國へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-767-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">平家の方には大將軍小松新三位中將資盛、同少將有盛、丹後侍從忠房、侍大將には飛騨三郎左衞門景經、越中次郎兵衞盛次、上總五郎兵衞忠光、惡七兵衞景清を先として、五百餘艘の兵船に取乘て、備前の小島に著と聞えしかば、源氏室を立て、是も備前國、西河尻、藤戸に陣をぞ取たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-770-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">平家の方よりはやりをの若者共小舟に乘て漕ぎいださせ、扇を上て、「こゝ渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-789-nlp_gloss-8">10</a></p>
+      <p class="occurrence-context">同二十六日の辰刻ばかり、平家又小船に乘て漕出させ扇を上て「源氏爰を渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-802-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">平家の方には「あはや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-804-nlp_gloss-17">10</a></p>
+      <p class="occurrence-context">源氏の兵共、是を事共せず、甲のしころを傾け、平家の舟に乘移り／＼をめき叫んで責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-807-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">一日戰暮して夜に入ければ、平家の舟は沖に浮ぶ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-809-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">あけければ平家は八島へ漕退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-818-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">おとゝし先帝の御禊の行幸には、平家の内大臣宗盛公、節下にておはせしが節下の幄屋につき、前に龍の旗立て居給ひたりし景氣、冠際、袖のかゝり、表袴のすそ迄も、殊に勝れて見え給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-821-nlp_gloss-14">10</a></p>
+      <p class="occurrence-context">木曾などには似ず、京慣てはありしか共、平家の中のえりくづよりも猶劣れり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-823-nlp_gloss-22">10</a></p>
+      <p class="occurrence-context">去ぬる治承養和の比より、諸國七道の人民百姓等、源氏の爲に惱され平家の爲に亡され、家かまどを棄て山林にまじはり、春は東作の思を忘れ、秋は西收の營にも及ばず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%B9%B3%E5%AE%B6#tk-10-825-nlp_gloss-11">10</a></p>
+      <p class="occurrence-context">參河守範頼、やがて續いて責給はゞ、平家は亡べかりしに、室、高砂に休居て、遊君遊女共召聚め、遊び戯れてのみ月日を送られけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-0-nlp_gloss-32">11</a></p>
+      <p class="occurrence-context">
+                  元歴二年正月十日、九郎大夫判官義經院御所へ參て、大藏卿泰經朝臣を以て奏聞せられけるは、「平家は神明にも放たれ奉り、君にもすてられ參せて、帝都を出で波の上に漂ふ落人となれり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-1-nlp_gloss-40">11</a></p>
+      <p class="occurrence-context">然るを此三箇年が間、責落さずして多くの國々を塞げらるゝ事口惜候へば、今度義經に於ては鬼界、高麗、天竺、震旦までも平家を責落ざらん限りは王城へ歸るべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-4-nlp_gloss-30">11</a></p>
+      <p class="occurrence-context">判官宿所に歸て東國の軍兵どもに宣ひけるは、「義經鎌倉殿の御代官として院宣を承はて、平家を追討すべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-78-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">此邊に、平家の後矢射つべい者はないか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-90-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">判官近藤六親家を召て、「八島には平家の勢如何程有ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-149-nlp_gloss-21">11</a></p>
+      <p class="occurrence-context">け上る潮の霞と共にしぐらうたる中より、白旗さと差上たれば、平家は運盡て、大勢とこそ見てんげれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-154-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の方には、「あれ射取れや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-211-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">
+                  さる程に、阿波讃岐に平家を背て、源氏を待ける者共、あそこの嶺、こゝの洞より、十四五騎廿騎、うちつれ／＼參りければ、判官程なく三百餘騎にぞ成にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-231-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">「如何に宗高、あの扇の眞中射て平家に見物せさせよかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-245-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">沖には平家船を一面に竝べて見物す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-256-nlp_gloss-30">11</a></p>
+      <p class="occurrence-context">夕日の輝いたるに皆紅の扇の日出したるが白波の上に漂ひ、浮ぬ沈ぬゆられければ、沖には平家ふなばたを扣て感じたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-261-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の方には音もせず、源氏の方には又箙を扣いて、どよめきけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-265-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家是を本意なしとや思ひけん、楯ついて一人、弓持て一人、長刀持て一人、武者三人なぎさにあがり、楯を衝て「敵寄せよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-283-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家是に心地なほして、「惡七兵衞討すな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-288-nlp_gloss-49">11</a></p>
+      <p class="occurrence-context">」とて、後藤兵衞父子、金子兄弟を先に立て、奧州の佐藤四郎兵衞、伊勢三郎を弓手馬手に立、田代冠者を後に立てゝ、八十餘騎をめいてかけ給へば、平家の兵ども、馬には乘らず、大略歩武者にてありければ、馬に當られじと引退いて、皆船へぞ乘りにける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-301-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">さる程に日暮ければ、平家の船は沖に浮めば源氏は陸に引退いて、むれ高松の中なる野山に、陣をぞ取たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-306-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の方には、能登守を大將にて、其勢五百餘騎夜討にせんと支度しけれども、越中次郎兵衞盛次と、海老次郎守方と先陣を爭ふ程に、其夜も空しくあけにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-309-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">明ければ、平家舟に取乘て當國志度浦へ漕退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-311-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家是を見て、「敵は小勢なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-315-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家是を見て、「すはや源氏の大勢の續くは。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-328-nlp_gloss-26">11</a></p>
+      <p class="occurrence-context">義盛教能に打雙て、「且聞給ても有るらん、鎌倉殿の御弟九郎大夫判官殿院宣を承て、平家追討の爲に、西國へ向はせ給て候が、一昨日阿波國勝浦にて、御邊の伯父櫻間介殿討たれ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-361-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家は長門國ひく島にぞつきにける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-363-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家引島に著と聞えしかば、源氏は同國の内、追津に著こそ不思議なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-364-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">熊野別當湛増は、平家重恩の身なりしが、忽に其恩を忘れて「平家へや參るべき、源氏へや參るべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-364-nlp_gloss-21">11</a></p>
+      <p class="occurrence-context">熊野別當湛増は、平家重恩の身なりしが、忽に其恩を忘れて「平家へや參るべき、源氏へや參るべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-370-nlp_gloss-52">11</a></p>
+      <p class="occurrence-context">一門の者共相催し、都合其勢二千餘人、二百餘艘の船に乘り連て、若王子の御正體を船に乘參せ、旗の横上には、金剛童子を書奉て、壇浦へ寄するを見て、源氏も平家も共にをがむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-371-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">されども源氏の方へ附ければ、平家興覺てぞ思はれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-374-nlp_gloss-8">11</a></p>
+      <p class="occurrence-context">源氏の船は三千艘、平家の船は千餘艘、唐船少々相交れり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-375-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">源氏の勢は重れば、平家の勢は落ぞ行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-392-nlp_gloss-42">11</a></p>
+      <p class="occurrence-context">されども判官には三浦介取附き奉り、梶原には土肥次郎つかみつき、兩人手を摺て申けるは、「是程の大事を前にかゝへながら、同士軍候はゞ平家力附候なんず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-399-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の船は潮に追てぞ出來たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-438-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家は千餘艘を三手に作る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-441-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の君達二百餘艘にて三陣に續き給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-446-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家御方勝ぬとて、頻に攻皷打て悦の鬨をぞ作りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-451-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の方に精兵多しといへども、さすが遠矢射る者は少かりけるやらん、稍久しう有て、伊豫國の住人仁井紀四郎親清召出され、此矢を給はて射返す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-457-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">」とて小舟に乘て漕出させ、平家の勢の中を差詰め引詰め散々にいければ多の者共射殺れ手負にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-478-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">されども、平家の方には、十善帝王三種の神器を帶して渡らせ給へば、源氏如何あらんずらんとあぶなう思ひけるに、暫は白雲かと覺しくて、虚空に漂ひけるが、雲にては無りけり、主もなき白旗一流舞下て、源氏の船の舳に、竿附の緒のさはる程にぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-482-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">又源氏の方より江豚といふ魚、一二千這うて、平家の方へぞ向ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-487-nlp_gloss-7">11</a></p>
+      <p class="occurrence-context">」と申も果ねば、平家の船の下を、直にはうて通りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-490-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">阿波民部重能は、此三箇年が間、平家に能々忠を盡し、度々の合戰に命を惜まず防ぎ戰ひけるが、子息田内左衞門を生捕にせられて、いかにも叶はじとや思ひけん、忽に心替りして、源氏に同心してんげり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-491-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家の方にははかりごとに、好き人をば兵船に乘せ、雜人共を唐船に乘せて、源氏心にくさに唐船を攻めば、中に取籠て討んと支度せられたりけれども、阿波民部が囘忠の上は、唐船には目も懸けず、大將軍のやつし乘給へる兵船をぞ攻たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-494-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">さる程に四國鎭西の兵共、皆平家を背いて、源氏に附く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-499-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">源氏の兵共既に平家の船に乘移りければ、水主梶取共、射殺され、切殺されて船を直すに及ばず、船底に倒伏しにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-586-nlp_gloss-46">11</a></p>
+      <p class="occurrence-context">同四月三日、九郎大夫判官義經、源八廣綱を以て、院の御所へ奏聞せられけるは、去三月二十四日、豐前國田浦門司關、長門國壇浦赤間關にて、平家を責め落し三種神器事故なう返し入れ奉るの由、申されたりければ、院中の上下騒動す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-670-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">御心ならず、平家に取られさせ給て、西海の波の上に漂はせ給ひ三年を過させ給ひしかば、御母儀も御乳母持明院の宰相も、御心苦しき事に思はれけるに、別の御事なく返り上らせ給ひたりしかば、差つどひて皆悦泣どもせられたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-719-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">三位をこそし給ふべかりしかども、平家のし給ひたりしを忌うて也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-764-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家滅びて、いつしか國々靜まり、人のかよふも煩なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-768-nlp_gloss-30">11</a></p>
+      <p class="occurrence-context">」などいふ事を源二位漏聞いて、「こは如何に、頼朝がよく計ひて、兵を指上すればこそ平家はたやすう滅びたれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-866-nlp_gloss-32">11</a></p>
+      <p class="occurrence-context">判官、思はれけるは「去年の正月木曾義仲を追討せしよりこのかた一谷壇浦に至るまで命を棄てゝ平家を責め落し、内侍所、璽の御箱事故なく返入奉り、大將軍父子生捕にして、具して是迄下りたらんには、縱如何なる不思議ありとも、一度はなどか對面なかるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-889-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">然れども交契忽に純熟して、平家の一族追討の爲に上洛せしむる手合に、木曾義仲を誅戮の後、平氏をかたむけんが爲に、或時は峨々たる巖石に駿馬に鞭うち、敵の爲に命をほろぼさん事を顧みず、或時は漫々たる大海に風波の難を凌ぎ、海底に沈まん事を痛まずして、屍を鯨鯢の鰓にかく。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-906-nlp_gloss-35">11</a></p>
+      <p class="occurrence-context">おはしける所に庭を一つ隔てゝ、向なる屋に居奉り、簾の中より見出し、比氣藤四郎義員を使者で申されけるは「平家の人々に別の意趣思奉る事努努候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-962-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">増て彼公長は、平家重代の家人新中納言の許に、朝夕祗候の侍也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%B9%B3%E5%AE%B6#tk-11-980-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">平家にとてぞ懸られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-0-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">
+                  平家皆滅び果てゝ西國も靜まりぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-45-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">同九月二十三日、平家の餘黨の都にあるを、國々へ遣はさるべき由鎌倉殿より公家へ申されたりければ、平大納言時忠卿能登國、子息讃岐中將時實上總國、内藏頭信基安藝國、兵部少輔正明隱岐國、二位僧都專親阿波國、法勝寺執行能圓備後國、中納言律師忠快武藏國とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-71-nlp_gloss-25">12</a></p>
+      <p class="occurrence-context">兄弟なる上、殊に父子の契をして去年の正月木曾義仲を追討せしより以降度々平家を攻落し、今年の春滅し果てゝ一天を靜め、四海を澄す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-129-nlp_gloss-35">12</a></p>
+      <p class="occurrence-context">其後北條四郎時政を大將として討手のぼると聞えしかば、判官殿鎭西の方へ落ばやと思ひ立ち給ふ處に緒方三郎維義は平家を九國の内へも入奉らず、逐出す程の威勢の者なりければ、判官「我に憑まれよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-153-nlp_gloss-9">12</a></p>
+      <p class="occurrence-context">忽に西の風吹ける事も、平家の怨靈の故とぞおぼえける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-167-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">平家に結ぼほれたりし人々も、源氏の世の強りし後は或文を下し、或使者を遣し、樣々諂ひ給ひしかども、此人はさもし給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-168-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">されば平家の時も法皇を鳥羽殿に押籠參せて後院の別當を置かれしにも、勘解由小路中納言、此經房卿二人をぞ後院の別當には成されたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-174-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">北條四郎策に「平家の子孫といはん人、尋出したらん輩に於ては、所望請ふに依べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-184-nlp_gloss-18">12</a></p>
+      <p class="occurrence-context">中にも小松三位中將殿若君、六代御前とておはす也、平家の嫡々なる上、年もおとなしうまします也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-190-nlp_gloss-37">12</a></p>
+      <p class="occurrence-context">」と思ひ、急ぎ走り歸てかくと申せば、次の日北條かしこに打向ひ、四方を打圍み、人をいれていはせけるは、「平家小松三位中將殿の若君六代御前、是におはしますと承はて、鎌倉殿の御代官に北條四郎時政と申者が、御迎に參て候、はや／＼出し參させ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-218-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">「此日來平家の子供取集めて、水に入るゝもあり、土に埋むもあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-258-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">起あがて泣々申けるは、「平家小松三位の中將の北方の親しうまします人の御子を養ひ奉るを、若中將殿の公達とや、人の申候ひけん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-270-nlp_gloss-15">12</a></p>
+      <p class="occurrence-context">北條申されけるは、「鎌倉殿の仰には、平家の子孫京中に多く忍んでありと聞く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-272-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">平家の嫡々なる上年もおとなしかんなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-499-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">服部平六平家の祗候の人たりしかば沒官せられたりける服部かへし給はてけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-513-nlp_gloss-4">12</a></p>
+      <p class="occurrence-context">是を聞いて平家に志思ひける越中次郎兵衞、上總五郎兵衞、惡七兵衞、飛騨四郎兵衞以下の兵共著き奉由聞えしかば、伊賀、伊勢兩國の住人等、我も我もと馳集る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-555-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">是は平家の侍薩摩中務家資と申者にて候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-560-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">平家の子孫は去文治元年冬の比一つ子二つ子をのこさず腹の内をあけて見ずと云ばかりに尋取て失ひてき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-562-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">平家都を落し時三歳にて棄置かれたりしを乳母の紀伊次郎兵衞爲教養ひ奉てこゝかしこに隱れありきけるが、備後國大田といふ所に忍びつゝ居たりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-582-nlp_gloss-0">12</a></p>
+      <p class="occurrence-context">平家の侍越中次郎兵衞盛嗣は但馬國へ落行て氣比四郎道弘が聟に成てぞ居たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-587-nlp_gloss-10">12</a></p>
+      <p class="occurrence-context">「但馬國の住人朝倉太郎大夫高清、平家の侍越中次郎兵衞盛嗣當國に居住の由聞食す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-594-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">「如何に汝は同平家の侍と云ながら故親にてあんなるに、何とてしなざりけるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-595-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">」「其れはあまりに平家の脆く滅て在し候間、若やとねらひ參らせ候つるなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%B9%B3%E5%AE%B6#tk-12-617-nlp_gloss-5">12</a></p>
+      <p class="occurrence-context">それよりしてこそ平家の子孫は永く絶にけれ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

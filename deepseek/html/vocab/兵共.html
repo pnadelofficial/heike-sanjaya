@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兵共</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>兵共</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>soldiers</li>
+      
+      <li>soldiers (derogatory)</li>
+      
+      <li>the soldiers</li>
+      
+      <li>warriors</li>
+      
+      <li>warriors (derogatory)</li>
+      
+      <li>soldiers (plural, pejorative)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (52)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%85%B5%E5%85%B1#tk-2-192-nlp_gloss-29">2</a></p>
+      <p class="occurrence-context">こは何事やらんと、胸打騒ぎ、車より下り、門の内に差入て見給へば、内にも、兵共隙はざまも無ぞ滿々たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%85%B5%E5%85%B1#tk-2-328-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">」と宣へば、兵共、皆舌を振て恐慄く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%85%B5%E5%85%B1#tk-2-384-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">少將をば、いつしか兵共打圍んで守護し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%85%B5%E5%85%B1#tk-2-542-nlp_gloss-32">2</a></p>
+      <p class="occurrence-context">淀、羽束師、宇治、岡屋、日野、勸修寺、醍醐、小栗栖、梅津、桂、大原、靜原、芹生の里に溢居たる兵共或は鎧著て、未甲を著ぬもあり、或は矢負て未弓を持たぬもあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E5%85%B5%E5%85%B1#tk-2-544-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">小松殿に噪ぐ事ありと聞えしかば、西八條に數千騎ありける兵共、入道にかうとも申も入ず、さざめき連て、皆小松殿へぞ馳たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%85%B5%E5%85%B1#tk-4-620-nlp_gloss-35">4</a></p>
+      <p class="occurrence-context">源大夫判官は、内甲も痛手なれども、聞る大力なりければ、童を取て押て頸を掻き、立上らんとする處に、平家の兵共、十四五騎ひし／＼と落重て、兼綱を討てけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%85%B5%E5%85%B1#tk-5-158-nlp_gloss-23">5</a></p>
+      <p class="occurrence-context">其後畠山が一族、河越、稻毛、小山田、江戸、葛西惣じて其外七黨の兵共、三千餘騎を相具して、三浦衣笠の城に押寄て攻め戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%85%B5%E5%85%B1#tk-5-562-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">八箇國の兵共皆兵衞佐に隨ひついて候なれば、何十萬騎か候はん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%85%B5%E5%85%B1#tk-5-604-nlp_gloss-73">5</a></p>
+      <p class="occurrence-context">明日は源平富士川にて、矢合と定めたりけるに、夜に入て、平家の方より源氏の陣を見渡せば、伊豆駿河の人民百姓等が、軍に怖て、或は野に入り山に隱れ、或は舟に取乘て、海河に浮び、營の火見えけるを、平家の兵共「あなおびただしの源氏の陣の遠火の多さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E5%85%B5%E5%85%B1#tk-5-608-nlp_gloss-49">5</a></p>
+      <p class="occurrence-context">其夜の夜半ばかり、富士の沼に幾らもむれ居たりける水鳥共が、何にか驚きたりけん、只一度にはと立ける羽音の、大風雷などの樣に聞えければ、平家の兵共、「すはやげんじの大勢の寄するは。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E5%85%B1#tk-6-221-nlp_gloss-8">6</a></p>
+      <p class="occurrence-context">是を始て、信濃一國の兵共、
+なびかぬ草木もなかりけり。上野國には故帶刀先生義方が好にて田子郡の兵共、皆隨
+附にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E5%85%B1#tk-6-221-nlp_gloss-31">6</a></p>
+      <p class="occurrence-context">是を始て、信濃一國の兵共、
+なびかぬ草木もなかりけり。上野國には故帶刀先生義方が好にて田子郡の兵共、皆隨
+附にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E5%85%B1#tk-6-227-nlp_gloss-6">6</a></p>
+      <p class="occurrence-context">思へば信濃一國の兵共こそ、隨附と云ふとも、越後國には、餘五將軍の末葉、城太郎助長、同四郎助茂、是等は兄弟共に多勢の者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E5%85%B1#tk-6-239-nlp_gloss-4">6</a></p>
+      <p class="occurrence-context">城の内の兵共、手のきは戰ひ、打死する者多かりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E5%85%B1#tk-6-591-nlp_gloss-22">6</a></p>
+      <p class="occurrence-context">同九月二日、城四郎長茂木曽追討の爲に、越後、出羽、會津四郡の兵共を引率して、都合其勢四萬餘騎、信濃國へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%85%B5%E5%85%B1#tk-6-600-nlp_gloss-17">6</a></p>
+      <p class="occurrence-context">城四郎が頼切たる越後の山太郎、會津の乘丹房と云ふ聞ゆる兵共、そこにて皆討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%85%B5%E5%85%B1#tk-7-14-nlp_gloss-57">7</a></p>
+      <p class="occurrence-context">」とて、土肥、梶原を先として、既に討手を差向らるゝ由聞えしかば、木曾眞實意趣なき由を顯さむが爲に、嫡子清水冠者義重とて、生年十一歳に成る小冠者に、海野、望月、諏訪、藤澤など云ふ聞ゆる兵共をつけて、兵衞佐の許へ遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%85%B5%E5%85%B1#tk-7-20-nlp_gloss-17">7</a></p>
+      <p class="occurrence-context">」と披露せられたりければ、山陰、山陽、南海、西海の兵共、雲霞の如くに馳參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%85%B5%E5%85%B1#tk-7-21-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">東山道は近江、美濃、飛騨の兵共は參たれ共、東海道は遠江より東は參らず、西は皆參りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%85%B5%E5%85%B1#tk-7-22-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">北陸道は若狹より北の兵共一人も參らず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%B5%E5%85%B1#tk-8-197-nlp_gloss-28">8</a></p>
+      <p class="occurrence-context">かゝる怖ろしき者の末なりければ國司の仰せを院宣と號して九州二島に囘し文をしければ然るべき兵共維義に隨ひ付く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%B5%E5%85%B1#tk-8-251-nlp_gloss-29">8</a></p>
+      <p class="occurrence-context">遠松に白鷺のむれ居るを見ては、源氏の旗を擧るかと疑ひ、野雁の遼海に鳴を聞ては、兵共の終夜船を漕かと驚かる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%B5%E5%85%B1#tk-8-411-nlp_gloss-15">8</a></p>
+      <p class="occurrence-context">」と披露しければ、備前、備中、備後三箇國の兵共馬物具然るべき所從をば、平家の御方へ参せて、息みける老者共、或はかきの直垂につめ紐し、或は布の小袖に東折し、くさり腹卷綴り著て、山靱、高箙に矢共少々差し、掻負掻負瀬尾が許へ馳集る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%85%B5%E5%85%B1#tk-8-428-nlp_gloss-23">8</a></p>
+      <p class="occurrence-context">今井四郎を始として楯、禰井、宮崎三郎、諏訪、藤澤などいふはやりをの兵共、甲の錣を傾けて射殺さるゝ人馬を取入れ引入れ堀を埋め、をめき叫んで責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-149-nlp_gloss-10">9</a></p>
+      <p class="occurrence-context">義仲は河原を上りに落候つるを、兵共に追せ候つれば、今は定めて討取候ぬらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-154-nlp_gloss-19">9</a></p>
+      <p class="occurrence-context">」と仰ければ義經畏り承はて、四方の門を固めて待程に、兵共馳集て、程なく一萬騎許に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-315-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">」とて攻め給へば、四國の兵共、人目ばかりに矢一つ射て、退んとこそ思ひけるに、手痛う攻られ奉て、叶はじとや思ひけん、遠負にして引退き、都の方へ逃上るが、淡路國福良の泊に著にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-316-nlp_gloss-27">9</a></p>
+      <p class="occurrence-context">其國に源氏二人有り、故六條判官爲義が末子、賀茂冠者義嗣、淡路冠者義久と聞えしを、西國の兵共大將に憑んで、城廓を構へて待處に、能登殿やがて押寄攻給へば、一日戰ひ賀茂冠者討死す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-390-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">兵共「暗さは暗し、如何せんずる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-443-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">兵共「是は聞ゆる惡所で有なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%85%B5%E5%85%B1#tk-9-729-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">是を見て百騎ばかりある兵共、國々の假武者なれば一騎も落合はず、我先にとぞ落ゆきける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E5%85%B5%E5%85%B1#tk-10-804-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">源氏の兵共、是を事共せず、甲のしころを傾け、平家の舟に乘移り／＼をめき叫んで責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-84-nlp_gloss-4">11</a></p>
+      <p class="occurrence-context">城の中の兵共、矢先をそろへて指つめ引つめ散々に射る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-88-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">判官防矢射ける兵共二十餘人が頸切懸て軍神に祭り、悦の鬨を作り、「門出よし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-102-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">御方の兵共の八島へ參ると思ひけるやらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-146-nlp_gloss-34">11</a></p>
+      <p class="occurrence-context">其外の人々思ひ／＼に取乘て、或は一町許、或は七八段、五六段など漕出したる處に、源氏の兵共、直甲七八十騎、惣門の前のなぎさにつと出來たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-156-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">源氏の兵共、弓手になしては射て通り、馬手になしては射て通り、上げ置いたる船の陰を、馬休め所にして、[_][1]をめき叫んて責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-189-nlp_gloss-63">11</a></p>
+      <p class="occurrence-context">中にも九郎大夫判官を射倒さむとねらはれけれども、源氏の方にも心得て、
+奧州の佐藤三郎兵衞嗣信、同四郎兵衞忠信、伊勢三郎義盛、源八廣綱、江田源三、熊
+井太郎、武藏坊辨慶など云ふ一人當千の兵共、吾も吾もと馬の首を立竝て大將軍の矢
+面に塞りければ、力及び給はず。「矢面の雜人原そこのき給へ。」とて、差詰引詰
+散々に射給へば、矢場に鎧武者十餘騎計射落さる。中にも眞先に進んだる奧州の佐藤
+三郎兵衞が弓手の肩を馬手の脇へつと射拔れて、暫もたまらず、馬より、倒にどうと
+落つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-209-nlp_gloss-13">11</a></p>
+      <p class="occurrence-context">弟の四郎兵衞を始として、是を見る兵共、皆涙をながし、「此君の御爲に命を失はん事、全く露塵程も、惜からず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-240-nlp_gloss-16">11</a></p>
+      <p class="occurrence-context">弓取直し、手綱かいくり、汀へ向いて歩ませければ、御方の兵共後を遙に見送て、「此若者一定仕り候ぬと覺候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-291-nlp_gloss-35">11</a></p>
+      <p class="occurrence-context">判官深入して戰ふ程に船の中より熊手を持て、判官の甲の錣に、からり／＼と二三度迄打懸けるを、御方の兵共、太刀長刀で打のけ／＼しける程に、如何したりけん、判官弓をかけ落されぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-292-nlp_gloss-18">11</a></p>
+      <p class="occurrence-context">うつぶして鞭をもて掻寄て、取う／＼とし給へば、兵共、「唯捨させ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-302-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">源氏の兵共、此三日が間は臥ざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-314-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">さる程に、八島に殘留たる二百餘騎の兵共、後馳に馳來る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-327-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">」と申ければ、三千餘騎の兵共、中を開てぞ通しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-391-nlp_gloss-36">11</a></p>
+      <p class="occurrence-context">判官の氣色を見て、奧州佐藤四郎兵衞忠信、伊勢三郎義盛、源八廣綱、江田源三、熊井太郎、武藏坊辨慶など云ふ一人當千の兵共、梶原を中に取籠て、我討とらんとぞ進ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-481-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">兵共皆此のごとし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-494-nlp_gloss-8">11</a></p>
+      <p class="occurrence-context">さる程に四國鎭西の兵共、皆平家を背いて、源氏に附く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-499-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">源氏の兵共既に平家の船に乘移りければ、水主梶取共、射殺され、切殺されて船を直すに及ばず、船底に倒伏しにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%85%B5%E5%85%B1#tk-11-522-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">」と宣へば、兵共みなのきにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%85%B5%E5%85%B1#tk-12-99-nlp_gloss-19">12</a></p>
+      <p class="occurrence-context">さる程に、江田源三、熊井太郎、武藏坊辨慶など云一人當千の兵共、やがて續いて責戰ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%85%B5%E5%85%B1#tk-12-572-nlp_gloss-4">12</a></p>
+      <p class="occurrence-context">城の内の兵共打物拔で走出で、或は討死する者もあり、或は痛手負て自害する者もあり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

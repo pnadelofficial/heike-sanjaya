@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>故郷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>故郷</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>hometown</li>
+      
+      <li>homeland</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (29)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-645-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">再び故郷に歸て、妻子を相見んことも有がたし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-889-nlp_gloss-18">2</a></p>
+      <p class="occurrence-context">「南無權現金剛童子、願は憐を垂させ御座して、故郷へかへし入させ給へ、妻子共をも今一度見せ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-922-nlp_gloss-2">2</a></p>
+      <p class="occurrence-context">康頼入道、故郷の戀しきまゝに、せめてのはかりごとに、千本の卒都婆を作り、あ字の梵字、年號月日、假名、實名、二首の歌をぞ書たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-965-nlp_gloss-21">2</a></p>
+      <p class="occurrence-context">田にいくらもありける鴈ども、蘇武に見馴て恐ざりければ、是等は皆我故郷へ通ふ者ぞかしと懷しさに、思ふ事を一筆書て、「相構て是漢王に上れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-980-nlp_gloss-18">2</a></p>
+      <p class="occurrence-context">十九年の星霜を送て、片足は切れながら、輿に舁れて、故郷へぞ歸りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-989-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">さりながら猶故郷を戀つゝ、君に不忠なき樣を一卷の書に作て參らせたりければ、「さては不愍の事ごさんなれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%95%85%E9%83%B7#tk-2-991-nlp_gloss-29">2</a></p>
+      <p class="occurrence-context">漢家の蘇武は、書を鴈の翅に附て舊里へ送り、本朝の康頼は、浪の便に歌を故郷に傳ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%95%85%E9%83%B7#tk-3-75-nlp_gloss-25">3</a></p>
+      <p class="occurrence-context">各の是に坐つる程こそ、春は燕、秋は田面の雁の音信る樣に、自ら故郷の事をも傳聞つれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%95%85%E9%83%B7#tk-3-253-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">故郷の花の言ふ世なりせば、如何に昔の事を問まし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%95%85%E9%83%B7#tk-3-270-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">故郷の軒の板間に苔むして、思し程は洩ぬ月かな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%95%85%E9%83%B7#tk-5-84-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">故郷の名殘とては、近衞河原の大宮ばかりぞまし／＼ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%95%85%E9%83%B7#tk-5-201-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">故郷に歸て、今一度母を見ん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%95%85%E9%83%B7#tk-5-333-nlp_gloss-65">5</a></p>
+      <p class="occurrence-context">かくて三七日の大願終に遂げにければ、那智に千日籠り、大峯三度、葛城二度、高野、粉川、金峯山、白山、立山、富士の嶽、伊豆、箱根、信濃の戸隱、出羽の羽黒、惣じて日本國殘る所なく行廻て、さすが猶故郷や戀しかりけん、都へ歸上たりければ、凡そ飛鳥も祈落す程の、やいばの驗者とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%95%85%E9%83%B7#tk-7-274-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">故郷へは錦を著て歸れと云ふ事の候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%95%85%E9%83%B7#tk-7-554-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">故郷には妻子所從等如何に歎き悲み候らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%95%85%E9%83%B7#tk-7-584-nlp_gloss-63">7</a></p>
+      <p class="occurrence-context">其後世靜て、千載集を撰ぜられけるに、忠度のありし有樣、言置し言の葉、今更思出て哀なりければ、彼の卷物の中に、さりぬべき歌幾らもありけれど、勅勘の人なれば、名字をば顯されず、「故郷花」といふ題にて詠まれたりける歌一首ぞ、讀人しらずと入られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%95%85%E9%83%B7#tk-7-671-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">故郷をやけのの原にかへり見て、末もけぶりのなみぢをぞ行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%95%85%E9%83%B7#tk-7-672-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">誠に故郷をば、一片の烟塵に隔つゝ、前途萬里の雲路に赴れけん人々の心の中、推量られて哀也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%95%85%E9%83%B7#tk-8-624-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">」とて、最後の在樣故郷へいひつかはし、只一騎、敵の中へ懸いり、大音聲あげて、名乘りけるは、「敦躬親王より九代の後胤、信濃守仲重が次男、信濃次郎藏人仲頼、生年廿七歳。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%95%85%E9%83%B7#tk-9-368-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">平氏既に福原迄攻上て都へ歸り入べき由聞えしかば、故郷に殘とゞまる人々、勇み悦ぶ事斜ならず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%95%85%E9%83%B7#tk-9-376-nlp_gloss-18">9</a></p>
+      <p class="occurrence-context">さる程に小松三位中將維盛卿は、年隔り日重るに隨ひて、故郷に留め置給ひし北の方少き人々の事をのみ歎き悲み給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-290-nlp_gloss-12">10</a></p>
+      <p class="occurrence-context">旅の空埴生の小屋のいぶせさに、故郷いかに戀しかるらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-292-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">故郷もこひしくもなし旅の空、都もつひのすみかならねば。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-417-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">故郷に留置給し北方少き人々の面影のみ、身に立そひて、忘るゝ隙も無りければ、「有にかひなき我身かな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-466-nlp_gloss-36">10</a></p>
+      <p class="occurrence-context">」と申ければ、三位中將宣ひけるは、「さればとよ、人なみ／＼に、都を出て、西國へ落下りたりしかども、故郷に留置し少者共の戀しさ、いつ忘るべしとも覺えねば、其物思ふ氣色の言ぬにしるくや見えけん、大臣殿も、二位殿も、此人は池大納言の樣に、二心有りなどとて思ひ隔て給ひしかば、有にかひなき吾身哉と、いとゞ心も留まらであくがれ出てこれまではのがれたるなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-570-nlp_gloss-9">10</a></p>
+      <p class="occurrence-context">」と申されける中にも、「故郷に留置し妻子安穩に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-597-nlp_gloss-22">10</a></p>
+      <p class="occurrence-context">己が一行引連て、今はと歸る雁がねの、越路を差て啼行も、故郷へ言づけせまほしく、蘇武が胡國の恨まで、思ひ殘せるくまもなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%95%85%E9%83%B7#tk-10-634-nlp_gloss-13">10</a></p>
+      <p class="occurrence-context">成佛得脱して、悟を開き給なば、娑婆の故郷に立歸て、妻子を引導き給はん事『還來穢國度人天』少しも疑あるべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%95%85%E9%83%B7#tk-12-69-nlp_gloss-39">12</a></p>
+      <p class="occurrence-context">昨日は西海の波の上に漂ひて、怨憎會苦の恨を扁舟の内に積み、今日は北國の雪の下に埋れて、愛別離苦の悲みを故郷の雲に重ねたり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

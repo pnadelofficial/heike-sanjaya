@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>衆徒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>衆徒</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>monk-soldiers</li>
+      
+      <li>monk soldiers</li>
+      
+      <li>monks</li>
+      
+      <li>monk-warriors</li>
+      
+      <li>warrior-monks</li>
+      
+      <li>monk warriors</li>
+      
+      <li>monks (warrior monks)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (47)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-412-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">」とはやしつゝ、南都の衆徒の中へぞ入りにける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-427-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">衆徒返り上りければ、一院六波羅より還御なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-648-nlp_gloss-3">1</a></p>
+      <p class="occurrence-context">三千の衆徒踵をつぎ、七社の神人袖を列ね、時々刻々の法施、祈念、言語道斷の事ども也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-721-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">衆徒の中へ使者を立てゝ、申送る旨あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-723-nlp_gloss-56">1</a></p>
+      <p class="occurrence-context">唱その日は、きちんの直垂に、小櫻を黄にかへいたる鎧著て、赤銅作の太刀を帶き、白羽の箭負ひ、滋籐の弓脇にはさみ、冑をばぬぎ高紐に掛け、神輿の御前に畏て申けるは、「衆徒の御中へ源三位殿の申せと候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-747-nlp_gloss-6">1</a></p>
+      <p class="occurrence-context">神人宮仕射殺され、衆徒多く疵を被る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-766-nlp_gloss-14">1</a></p>
+      <p class="occurrence-context">山門には神輿に箭立ち、神人宮仕射殺され、衆徒多く疵を被りしかば、大宮、二宮以下、講堂、中堂、すべて諸堂一宇も殘さず皆燒拂て、山野にまじはるべきよし、三千一同に僉議しけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-767-nlp_gloss-24">1</a></p>
+      <p class="occurrence-context">是によて大衆の申す所、御はからひあるべしと聞えしかば、山門の上綱等、子細を衆徒に觸れむとて、登山したりけるを、大衆おこて西坂本より皆おかへす。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-773-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">衆徒の御中へ申すべきこと有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%A1%86%E5%BE%92#tk-1-775-nlp_gloss-8">1</a></p>
+      <p class="occurrence-context">是を披いて見れば、「衆徒の濫惡を致すは魔縁の所行なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-1-nlp_gloss-13">2</a></p>
+      <p class="occurrence-context">既使廳の使を附て、今度神輿内裏へ振奉る衆徒の張本をめされける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-72-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">或は山田矢ばせの湖上に舟押出す衆徒も有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-77-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">衆徒とう／＼歸り上り給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-81-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">衆徒を育む志も深かりき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-88-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">」と申ければ、「昔こそ三千の衆徒の貫首たりしが、今はかゝる流人の身と成て、如何がやごとなき修學者、智慧深き大衆達には舁捧られては上るべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-102-nlp_gloss-2">2</a></p>
+      <p class="occurrence-context">されば衆徒の意趣に至るまで、雙なく、賤き法師原までも、世以て輕しめず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%A1%86%E5%BE%92#tk-2-133-nlp_gloss-45">2</a></p>
+      <p class="occurrence-context">此事新大納言成親卿以下近習の人々に仰合せられ、山責らるべしと聞えしかば、山門の大衆さのみ王地に孕れて、詔命をそむくべきにあらずとて、内々院宣に隨奉る衆徒もありなど聞えしかば、前座主明雲大僧正は妙光坊に坐けるが、大衆二心有ときいて、「終に如何なる目にか逢はむずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-277-nlp_gloss-8">4</a></p>
+      <p class="occurrence-context">「かひなき命の惜さに、衆徒を憑んで、入御あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-400-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">
+衆徒の僉議此の如し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-406-nlp_gloss-12">4</a></p>
+      <p class="occurrence-context">其上入道相國天台座主明雲大僧正に、衆徒を靜らるべき由宣ければ、座主急ぎ登山して、大衆をしづめ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-410-nlp_gloss-10">4</a></p>
+      <p class="occurrence-context">又手を空うして、一つも取ぬ衆徒も有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-419-nlp_gloss-20">4</a></p>
+      <p class="occurrence-context">爰に院宣と號して出したてまつるべき旨、
+責ありと云へども、衆徒一向是を惜み奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-427-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">願くは、衆徒、内には佛法の破滅を助け、外には惡逆の伴類を退けば、同心の至り、本懷に足ぬべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-428-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">衆徒の僉議かくの如し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-461-nlp_gloss-6">4</a></p>
+      <p class="occurrence-context">況や和國南北兩門の衆徒、何ぞ謀臣の邪類を掃はざらんや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%A1%86%E5%BE%92#tk-4-648-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">平家の人々は宮竝びに三位入道の一族、三井寺の衆徒、都合五百餘人が頸、太刀長刀のさきに貫き、高く指上げ、夕に及で六波羅へ歸入る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%A1%86%E5%BE%92#tk-5-712-nlp_gloss-4">5</a></p>
+      <p class="occurrence-context">「相構て、衆徒は狼藉を致すとも、汝等は致すべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%A1%86%E5%BE%92#tk-5-716-nlp_gloss-196">5</a></p>
+      <p class="occurrence-context">入道相國大に怒て、
+「さらば南都を攻よや。」とて、大將軍には頭中將重衡、副將軍には中宮亮通盛、都
+合其勢四萬餘騎で南都へ發向す。大衆老少嫌はず七千餘人甲の緒をしめ、奈良坂、般
+若寺、二箇所の路を掘切て、堀ほり垣楯かき、逆茂木引て待かけたり。平家は四萬餘
+騎を二手に分て、奈良坂、般若寺、二箇所の城郭に押寄て、鬨をどとつくる。大衆は
+皆歩立打物なり。官軍は馬にてかけまはしかけまはし、あそここゝに追懸／＼指つめ
+引つめ散々に射ければ、防ぐ所の大衆數を盡いて討れにけり。卯刻に矢合して一日戰
+ひ暮す。夜に入て、奈良坂、般若寺、二箇所の城郭共に破れぬ。落行く衆徒の中に、
+坂四郎永覺と云ふ惡僧あり。打物持ても弓箭を取ても力の強さも七大寺十五大寺に勝
+たり。萌黄威の腹巻の上に、黒絲威の鎧を重てぞ著たりける。帽子甲に五枚甲の緒を
+しめて、左右の手には茅の葉の樣に反たる白柄の大長刀、黒漆の大太刀持つまゝに、
+同宿十餘人前後にたて、てがいの門より打て出でたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%A1%86%E5%BE%92#tk-5-750-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">衆徒の頸ども本は大路を渡いて、獄門の木にかけらるべしと、聞えしかども、東大寺興福寺の亡ぬる淺ましさに沙汰にも及ばず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E8%A1%86%E5%BE%92#tk-6-10-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">衆徒は老たるも若きも、或は射殺され、或は斬殺され、或は煙の中を出でず、炎に咽んで多く亡にしかば、纔に殘る輩は山林に交り、跡を留る者一人もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-316-nlp_gloss-22">7</a></p>
+      <p class="occurrence-context">」と宣へば手書に具せられたる大夫坊覺明進出て申けるは、「山門の衆徒は三千候、必一味同心なる事は候はず、皆思々心々に候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-317-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">或は源氏に附んと申す衆徒も候らん、或は平家に同心せんと云ふ大衆も候らん、牒状を遣して御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-347-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">抑天台の衆徒、平家に同心か、源氏に與力か。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-348-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">若しかの逆徒を助けらるべくば、衆徒に向て合戰すべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-350-nlp_gloss-31">7</a></p>
+      <p class="occurrence-context">悲哉、平氏宸襟を惱し、佛法を滅す間、惡逆を靜めんが爲に、義兵を發す處に、忽ち三千の衆徒に向て、不慮の合戰を致さんことを。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-353-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">庶幾三千の衆徒神の爲、佛の爲、國の爲、君の爲に源氏に同心して兇徒を誅し、鴻化に浴せん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-360-nlp_gloss-7">7</a></p>
+      <p class="occurrence-context">或は源氏に附んといふ衆徒もあり、或は又平家に同心せんと云大衆もあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-381-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">吾山の衆徒、且且以て承悦す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-385-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">衆徒等が心中、唯賢察を垂れよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-386-nlp_gloss-32">7</a></p>
+      <p class="occurrence-context">然則、冥には十二神將、醫王善逝の使者として凶賊追討の勇士にあひ加り、顯には三千の衆徒、暫く修學鑽仰の勤節を止て、惡侶治罰の官軍を扶けしめん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-394-nlp_gloss-10">7</a></p>
+      <p class="occurrence-context">山王大師に祈誓して、三千の衆徒を語らはばやとて、一門公卿十人、同心連署の願書を書いて、山門へ送る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-431-nlp_gloss-12">7</a></p>
+      <p class="occurrence-context">山王大師是に憐を垂れ給ひ、三千の衆徒力を合せよと也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-435-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">」とて是を許容する衆徒もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%A1%86%E5%BE%92#tk-7-444-nlp_gloss-26">7</a></p>
+      <p class="occurrence-context">郎等に楯六郎親忠、手書に大夫坊覺明、六千餘騎で、天台山に競登り、三千の衆徒皆同心して、唯今都へ攻入る由申たりける故也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%A1%86%E5%BE%92#tk-8-4-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">かゝりしかば、衆徒も武士も、圓融房を守護し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%A1%86%E5%BE%92#tk-10-247-nlp_gloss-29">10</a></p>
+      <p class="occurrence-context">就中に南都炎上の事は、王命といひ武命といひ、君に仕へ世に隨ふ法遁かたくして、衆徒の惡行を靜めんが爲に罷向て候し程に、不慮に伽藍の滅亡に及候し事、力及ばぬ次第にて候へども、時の大將軍にて候ひし上は、責め一人に歸すとかや申候なれば、重衡一人が罪業にこそなり候ぬらめと覺え候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E8%A1%86%E5%BE%92#tk-10-321-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">衆徒の惡行をしづめんが爲に罷向て候し程に、不慮に伽藍滅亡に及候し事、力及ばぬ次第也。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

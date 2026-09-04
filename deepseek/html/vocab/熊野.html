@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>熊野</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>熊野</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Kumano</li>
+      
+      <li>Kumano (a place name, referring to the Kumano region or its shrines)</li>
+      
+      <li>Kumano (a place name, referring to the Kumano region&#39;s three shrines)</li>
+      
+      <li>Kumano (place name, referring to the Kumano shrines)</li>
+      
+      <li>Kumano (a place name referring to the Kumano region or its shrines)</li>
+      
+      <li>Kumano (place name)</li>
+      
+      <li>Kumano (a shrine name)</li>
+      
+      <li>Kumano (a sacred region in Japan)</li>
+      
+      <li>Kumano (a place name, referring to the Kumano region in Japan, famous for its shrines)</li>
+      
+      <li>Kumano (a place name, referring to the shrine in Tanabe)</li>
+      
+      <li>Kumano (a place name referring to the Kumano region or a shrine there, specifically new Kumano)</li>
+      
+      <li>Kumano (a place name)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (32)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%86%8A%E9%87%8E#tk-1-92-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">平家かやうに繁昌せられけるも熊野權現の御利生とぞきこえし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%86%8A%E9%87%8E#tk-1-93-nlp_gloss-21">1</a></p>
+      <p class="occurrence-context">其故は、古へ清盛公、いまだ安藝守たりし時、伊勢の海より船にて熊野へまゐられけるに、大きなる鱸の船にをどり入たりけるを、先達申けるは、「是は權現の御利生なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%86%8A%E9%87%8E#tk-2-614-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">熊野詣、天王寺詣などには、二瓦の三棟に造たる舟に乘り、次の船二三十艘漕つゞけてこそ有しに、今は怪かるかきすゑ屋形舟に、大幕引せ、見もなれぬ兵共に具せられて、今日を限に都を出て、浪路遙に赴れけん心の中、推量られて哀なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%86%8A%E9%87%8E#tk-2-882-nlp_gloss-9">2</a></p>
+      <p class="occurrence-context">丹波少將、康頼入道は、本より熊野信心の人なれば、如何にもして此島の内に熊野三所權現を勸請し奉て歸洛の事を祈申さばやと云に、僧都は天性不信第一の人にて是を用ゐず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%86%8A%E9%87%8E#tk-2-882-nlp_gloss-24">2</a></p>
+      <p class="occurrence-context">丹波少將、康頼入道は、本より熊野信心の人なれば、如何にもして此島の内に熊野三所權現を勸請し奉て歸洛の事を祈申さばやと云に、僧都は天性不信第一の人にて是を用ゐず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%86%8A%E9%87%8E#tk-2-893-nlp_gloss-44">2</a></p>
+      <p class="occurrence-context">維當れる歳次、治承元年丁酉、月のならび十月二月、日の數三百五十餘箇日、吉日良辰を擇で、掛卷も忝なく、日本第一大靈驗、熊野三所權現、飛瀧大薩たの教令、宇豆の廣前にして、信心の大施主、羽林藤原成經、並に沙彌性照、一心清淨の誠を致し三業相應の志を抽て、謹で以て敬白す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%86%8A%E9%87%8E#tk-2-919-nlp_gloss-44">2</a></p>
+      <p class="occurrence-context">」又或夜二人通夜して同じう目睡たりける夢に、沖より吹くる風の、二人が袂に木の葉を二つ吹懸たりけるを、何となう取て見ければ、御熊野の南木の葉にてぞ有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%86%8A%E9%87%8E#tk-2-925-nlp_gloss-35">2</a></p>
+      <p class="occurrence-context">是を浦に持て出て、「南無歸命頂禮、梵天帝釋、四大天王、けんろう地神、王城の鎭守諸大明神、殊には熊野權現、嚴島大明神、せめては一本なり共、都へ傳てたべ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%86%8A%E9%87%8E#tk-3-56-nlp_gloss-7">3</a></p>
+      <p class="occurrence-context">二人の人々は、例の熊野詣して無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%86%8A%E9%87%8E#tk-3-125-nlp_gloss-124">3</a></p>
+      <p class="occurrence-context">入道相國、
+二位殿、胸に手を置て、こはいかにせんとぞあきれ給ふ。人の物申しけれども、唯と
+もかくも好樣にとぞ宣ける。さり共「軍の陣ならば、是程淨海は臆せじ物を。」とぞ
+後には仰られける。御驗者は、房覺性運兩僧正、春堯法印、豪禪、實專兩僧都、各僧
+伽の句どもあげ、本寺本山の三寶、年來所持の本尊達、責ふせ々々々もまれけり。誠
+にさこそはと覺えて尊かりける中に法皇は、折しも新熊野へ御幸なるべきにて、御精
+進の次なりける間、錦帳近く御座有て、千手經を打上遊されけるにこそ、今一際事替
+て、さしも躍狂ふ御よりまし共が縛も、暫打靜けれ。法皇仰なりけるは、「如何なる
+御物氣なり共、此老法師がかくて候はんには、爭か近附奉るべき。就中に今現るる所
+の怨靈共は、皆我朝恩によて、人と成し者共ぞかし。縱報謝の心をこそ存ぜず共、豈
+障碍を成すべきや。速に罷退き候へ。」とて女人生産し難からん時に臨で、邪魔遮障
+し、苦忍難からんにも、心を致して大悲呪を稱誦せば、鬼神退散して、安樂に生ぜん
+と遊いて、皆水精の御數珠を推揉せ給へば、御産平安のみならず、皇子にてこそ坐け
+れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%86%8A%E9%87%8E#tk-3-395-nlp_gloss-35">3</a></p>
+      <p class="occurrence-context">」と申されければ、
+大臣「我所願既に成就しにけり。其淨衣敢て改むべからず。」とて、別して岩田河よ
+り、熊野へ悦の奉幣をぞ立られける。人怪しと思ひけれ共、其心を得ず。然に此公達、
+程なく、誠の色を著給けるこそ不思議なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%86%8A%E9%87%8E#tk-3-492-nlp_gloss-2">3</a></p>
+      <p class="occurrence-context">其後大臣熊野へ詣り下向して病つき、幾程もなくして遂に失給けるにこそ、實にもと思知られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%86%8A%E9%87%8E#tk-4-33-nlp_gloss-10">4</a></p>
+      <p class="occurrence-context">或人の申けるは、「白河院は熊野へ御幸、後白河は日吉の社へ御幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%86%8A%E9%87%8E#tk-4-142-nlp_gloss-30">4</a></p>
+      <p class="occurrence-context">「先京都には、出羽前司光信が子共、伊賀守光基、出羽判官光長、出羽藏人光重、出羽冠者光能、熊野には、故六條判官爲義が末子、十郎義盛とて隱て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%86%8A%E9%87%8E#tk-4-158-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">熊野に候十郎義盛を召て、藏人になさる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%86%8A%E9%87%8E#tk-4-163-nlp_gloss-2">4</a></p>
+      <p class="occurrence-context">其比の熊野別當湛増は、平家に志し深かりけるが、何とかして漏れ聞きたりけん、新宮の十郎義盛こそ、高倉宮の令旨賜はて美濃尾張の源氏共觸れ催し、既に謀反を起なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%86%8A%E9%87%8E#tk-4-186-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">かゝりける所に、熊野別當湛増、飛脚を以て、高倉宮の御謀反の由都へ申たりければ、前右大將宗盛卿大に騒で、入道相國折節福原に坐けるに、此由申されたりければ、聞きもあへず、やがて都へ馳のぼり、「是非に及べからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%86%8A%E9%87%8E#tk-4-772-nlp_gloss-55">4</a></p>
+      <p class="occurrence-context">燒る所、本覺院、成喜院、眞如院、花園院、普賢堂、大寶院、清瀧院、教待和尚本坊、竝に本尊等、八間四面の大講堂、鐘樓、經藏、灌頂堂、護法善神の社壇、新熊野の御寶殿、惣じて堂舎塔廟六百三十七宇、大津の在家一千八百五十三宇、智證の渡し給へる一切經七千餘卷、佛像二千餘體、忽に煙と成こそ悲しけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E7%86%8A%E9%87%8E#tk-5-307-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">熊野へ參り、那智籠せんとしけるが、行の試みに、聞ゆる瀑に暫くうたれて見んとて、瀑下へぞ參りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%86%8A%E9%87%8E#tk-6-423-nlp_gloss-19">6</a></p>
+      <p class="occurrence-context">此事奏聞せんと伺ひけれども、然るべき便宜も無りけるに、或時白河院熊野へ御幸なりけるが紀伊國絲鹿坂と云ふ所に、御輿かき居させ暫御休息有けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E7%86%8A%E9%87%8E#tk-6-485-nlp_gloss-22">6</a></p>
+      <p class="occurrence-context">彼御所は去ぬる應保三年四月十五日に造り出されて、新比叡、新熊野なども間近う勸請し奉り、山水木立に至る迄思召まゝなりしが、此二三年は平家の惡行に依て、御幸もならず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%86%8A%E9%87%8E#tk-8-532-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">先樋口次郎兼光二千餘騎で、新熊野の方へ搦手に差遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E7%86%8A%E9%87%8E#tk-8-549-nlp_gloss-16">8</a></p>
+      <p class="occurrence-context">さる程に搦手に差し遣はしたる樋口次郎兼光新熊野の方より、鬨の聲をぞ合せたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%86%8A%E9%87%8E#tk-10-469-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">但熊野へ參らんと思ふ宿願あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%86%8A%E9%87%8E#tk-10-564-nlp_gloss-6">10</a></p>
+      <p class="occurrence-context">大悲擁護の霞は、熊野山にたなびき、靈驗無雙の神明は、音無河に跡を垂る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%86%8A%E9%87%8E#tk-10-724-nlp_gloss-36">10</a></p>
+      <p class="occurrence-context">」と問給へば、「過にし三月十五日の曉八島を御出候て、高野へ參せ給ひて候けるが、高野にて御ぐしおろし、それより熊野へ參らせおはします。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%86%8A%E9%87%8E#tk-10-731-nlp_gloss-35">10</a></p>
+      <p class="occurrence-context">本三位中將殿の樣に、生捕にせられて、都へかへらせ給ひたらば、如何ばかり心憂かるべきに、高野にて御ぐしおろし熊野へ參らせ給ひ、後世の事よく／＼申させおはしまし、臨終正念にて失せさせ給ひける御事、歎の中の御悦也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E7%86%8A%E9%87%8E#tk-11-365-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">」とて、田邊の新熊野にて御神樂奏して、權現に祈誓し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%86%8A%E9%87%8E#tk-12-20-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">法皇はその折しも新熊野へ御幸成て、人多く打殺され觸穢出來にければ、急ぎ六波羅へ還御なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%86%8A%E9%87%8E#tk-12-412-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">藏人は熊野の方へ落けるが、只一人ついたりける侍、足を疾ければ、和泉國八木郷といふ處に逗留してこそ居たりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%86%8A%E9%87%8E#tk-12-508-nlp_gloss-41">12</a></p>
+      <p class="occurrence-context">先づ高野へ參り父の善知識したりける瀧口入道に尋合ひ御出家の次第臨終の有樣、委敷う聞給ひて、且うは其御跡もゆかしとて、熊野へ參給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%86%8A%E9%87%8E#tk-12-514-nlp_gloss-14">12</a></p>
+      <p class="occurrence-context">究竟の者共數百騎たてこもたる由聞えしかば、熊野別當、鎌倉殿より仰を蒙て兩三月が間、八箇度寄せて責戰ふ。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

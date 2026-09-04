@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我身</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>我身</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>myself</li>
+      
+      <li>my own body</li>
+      
+      <li>oneself</li>
+      
+      <li>my body</li>
+      
+      <li>one&#39;s own body/self</li>
+      
+      <li>my self</li>
+      
+      <li>one&#39;s own body</li>
+      
+      <li>I myself</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (54)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%88%91%E8%BA%AB#tk-1-256-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">我身に過つ事は無けれども、すてられたてまつるだにあるに、座敷をさへ下げらるゝ事の心うさよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%88%91%E8%BA%AB#tk-1-315-nlp_gloss-37">1</a></p>
+      <p class="occurrence-context">もとよりわらは推參の者にて、出され參らせ候ひしを、祇王御前の申状によてこそ、召し返されても候ふに、女のかひなきこと、我身を心に任せずして、おしとゞめられまゐらせし事心うゝさぶらひしが、いつぞや又めされまゐらせていまやううたひ給ひしにも思しられてこそさぶらへ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%88%91%E8%BA%AB#tk-1-316-nlp_gloss-2">1</a></p>
+      <p class="occurrence-context">いつか我身の上ならんと思へば、嬉しとは更におもはず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%88%91%E8%BA%AB#tk-1-334-nlp_gloss-21">1</a></p>
+      <p class="occurrence-context">我等が尼になりしをこそ世にためしなきことのやうに、人もいひ我身にも又思ひしか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%88%91%E8%BA%AB#tk-1-614-nlp_gloss-20">1</a></p>
+      <p class="occurrence-context">寺僧どもが境節湯をわかいて浴びけるを、亂入しておひあげ、我身あび、雜人共おろし、馬洗はせなどしけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-83-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">我身に誤つ事なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-185-nlp_gloss-14">2</a></p>
+      <p class="occurrence-context">」とのたまひつかはされたりければ、大納言我身の上とは、露しらず、「あはれ是は法皇の山攻らるべきよし、御結構有を、申とゞめられんずるにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-200-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">西光法師此事聞て、我身の上とや思ひけん、鞭を擧院の御所法住寺殿へ馳參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-272-nlp_gloss-4">2</a></p>
+      <p class="occurrence-context">新大納言は我身のかくなるにつけても、子息丹波の少將成經以下、をさなき人々如何なる目にか遭らむと、おもひやるにもおぼつかなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-373-nlp_gloss-25">2</a></p>
+      <p class="occurrence-context">「御乳に参り始候らひて、君をちの中より抱上参て、月日の重なるに隨ひて、我身の年の行をば歎ずして、君の成人しう成せ給ふ事をのみうれしう思ひ奉り、白地とは思へども、既に二十一年、片時も離れ参らせず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-429-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">「子ならざらむ者は、誰か唯今我身の上をさしおいて、是程までは悦べき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-577-nlp_gloss-22">2</a></p>
+      <p class="occurrence-context">實にはさせる事をも聞出されざりけれ共父を諫め被申つる詞に順ひ、我身に勢の著か、著ぬかの程をも知り、又父子軍をせんとにはあらねども、角して入道相國の謀反の志も和げ給ふとの謀也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-746-nlp_gloss-36">2</a></p>
+      <p class="occurrence-context">是を開けて見給へば、水莖の跡は、涙にかき暮て、そことは見ね共、「少き人々の餘に戀悲み給ふ有樣、我身も盡ぬ思に堪忍べうもなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%88%91%E8%BA%AB#tk-2-828-nlp_gloss-20">2</a></p>
+      <p class="occurrence-context">新大納言も、か樣に賢き計らひをばし給はで、由なき謀反おこいて、我身も滅び、子息所從に至るまで、かゝる憂目を見せ給ふこそうたてかりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%88%91%E8%BA%AB#tk-3-351-nlp_gloss-13">3</a></p>
+      <p class="occurrence-context">さのみ存て、己に憂目を見せんも我身ながらも強顏かるべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%88%91%E8%BA%AB#tk-3-560-nlp_gloss-2">3</a></p>
+      <p class="occurrence-context">其上我身も近習の仁也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%91%E8%BA%AB#tk-4-169-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">熊野別當湛増、家の子郎等多くうたせ、我身手負ひ、辛き命を生つゝ、本宮へこそ逃上りけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%91%E8%BA%AB#tk-4-730-nlp_gloss-0">4</a></p>
+      <p class="occurrence-context">我身は二重の狩衣に、山鳥の尾を以て作だる鋒矢二筋、滋籐の弓に取添て、南殿の大床に伺候す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%91%E8%BA%AB#tk-4-765-nlp_gloss-11">4</a></p>
+      <p class="occurrence-context">其後伊豆國賜はり、子息仲綱受領になし、我身三位して、丹波の五箇庄、若狹のとう宮河を知行して、さて坐べかりし人の、由なき謀反起て、宮をも失參せ我身も子孫も亡ぬるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%88%91%E8%BA%AB#tk-4-765-nlp_gloss-46">4</a></p>
+      <p class="occurrence-context">其後伊豆國賜はり、子息仲綱受領になし、我身三位して、丹波の五箇庄、若狹のとう宮河を知行して、さて坐べかりし人の、由なき謀反起て、宮をも失參せ我身も子孫も亡ぬるこそうたてけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%88%91%E8%BA%AB#tk-5-476-nlp_gloss-7">5</a></p>
+      <p class="occurrence-context">」兵衞督、「いさとよ、我身も當時は三官共に停られて、心苦しい折節なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%88%91%E8%BA%AB#tk-6-44-nlp_gloss-12">6</a></p>
+      <p class="occurrence-context">知らず、汝等、只今禁獄流罪にも及び、我身も如何なる逆鱗にか預らんずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%88%91%E8%BA%AB#tk-6-110-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">小督殿漏聞いて、「我身の事は爭でもありなん、君の御爲御心苦し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%88%91%E8%BA%AB#tk-6-601-nlp_gloss-0">6</a></p>
+      <p class="occurrence-context">我身手負ひ、辛き命生つゝ、河に傳うて越後國へ引退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%88%91%E8%BA%AB#tk-7-79-nlp_gloss-2">7</a></p>
+      <p class="occurrence-context">木曾我身は一萬餘騎で、をやべの渡をして、砥浪山の北のはづれはにふに陣をぞ取たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%88%91%E8%BA%AB#tk-7-138-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">と書て、我身を始めて、十三人が上矢の鏑と拔き、願書に取具して、大菩薩の御寶殿にぞ納めける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%88%91%E8%BA%AB#tk-7-560-nlp_gloss-18">7</a></p>
+      <p class="occurrence-context">薩摩守忠度は、いづくよりか歸られたりけん、侍五騎、童一人、我身共に七騎取て返し、五條の三位俊成卿の宿所におはして見給へば門戸をとぢて開かず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%88%91%E8%BA%AB#tk-8-492-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">されども、我身は手も負はず、家子郎等廿餘騎大略手負うて、播磨國高砂より船に乘り、おしいだいて和泉國吹飯の浦にぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-132-nlp_gloss-30">9</a></p>
+      <p class="occurrence-context">大將軍九郎義經、軍兵共に軍をばせさせ、院御所の覺束なきに、守護し奉らんとて、先づ我身共に直甲五六騎、六條殿へ馳參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-361-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">けふまでも有ばあるかの我身かは、夢の中にも夢をみるかな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-364-nlp_gloss-20">9</a></p>
+      <p class="occurrence-context">昔將門が東八箇國を討從へて、下總相馬郡に都を立て、我身を平親王と稱して百官をなしたりしには、歴博士ぞ無りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-377-nlp_gloss-45">9</a></p>
+      <p class="occurrence-context">商人の便に、おのづから文などの通ふにも、北方の都の御在樣、心苦う聞給ふに、さらば迎へとて、一所でいかにも成らばやとは思へども、我身こそあらめ、人の爲痛くてなど、思召し忍びて、明し暮し給ふにこそ、責ての志の深さの程も露れけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-414-nlp_gloss-20">9</a></p>
+      <p class="occurrence-context">」と、宣ひ遣されたりければ、能登殿の返事には「軍をば我身一つの大事ぞと思うてこそ好う候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-442-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">我身は三千餘騎で、一谷のうしろ鵯越を落さんと、丹波路より搦手にこそまはられけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-758-nlp_gloss-17">9</a></p>
+      <p class="occurrence-context">」とて、我馬に掻乘せ奉り、鞍の前輪にしめ附て、我身は乘替に乘てぞ歸りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-830-nlp_gloss-17">9</a></p>
+      <p class="occurrence-context">人の上で候はば、いかばかり、もどかしう存候べきに、我身の上に成ぬれば、よう命は惜い者で候けりと、今こそ思知られて候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%88%91%E8%BA%AB#tk-9-854-nlp_gloss-30">9</a></p>
+      <p class="occurrence-context">或は淡路のせとを漕通り、繪島磯に漂へば、波路幽に鳴渡り、友迷はせる小夜千鳥、是も我身の類哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E8%BA%AB#tk-10-47-nlp_gloss-19">10</a></p>
+      <p class="occurrence-context">是へ迎奉て、一所でいかにもならばやとは思へども、我身こそあらめ、御爲こゝろぐるしくて。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E8%BA%AB#tk-10-367-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">我身も家子郎等十餘人引具して參り、御前近う候けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E8%BA%AB#tk-10-415-nlp_gloss-45">10</a></p>
+      <p class="occurrence-context">されば中將南都へ渡されて斬れ給ひぬ、と聞えしかば、やがて樣をかへ、濃墨染にやつれ果て、信濃國善光寺に行すまして、彼後世菩提を弔ひ、我身も往生の素懷を遂けるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E8%BA%AB#tk-10-417-nlp_gloss-29">10</a></p>
+      <p class="occurrence-context">故郷に留置給し北方少き人々の面影のみ、身に立そひて、忘るゝ隙も無りければ、「有にかひなき我身かな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E8%BA%AB#tk-10-511-nlp_gloss-8">10</a></p>
+      <p class="occurrence-context">父のようて死候けるも、我身の冥加と覺え候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%88%91%E8%BA%AB#tk-10-680-nlp_gloss-28">10</a></p>
+      <p class="occurrence-context">大納言にがにがしう慙かしう思ひ給て、「誠に一門を引き別れて殘留りし事をば、我身ながらいみじとは思はねども、さすが身も捨難う、命も惜ければ憖に留りにき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-21-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">我身一つの事ならねば、心弱うあくがれ出でて、今日はかゝるうき目を見る口惜さよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-87-nlp_gloss-9">11</a></p>
+      <p class="occurrence-context">家子郎等に防矢射させ、我身は究竟の馬を持たりければ、打乘て稀有にして落にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-179-nlp_gloss-19">11</a></p>
+      <p class="occurrence-context">さ言ふわどのこそ、伊勢の鈴鹿山にて山だちして、妻子をも養ひ、我身も過けるとは聞しか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-506-nlp_gloss-59">11</a></p>
+      <p class="occurrence-context">」とて、
+聲々にをめき叫給ひけり。二位殿は此有樣を御覽じて日比思食設けたる事なれば、に
+ぶ色の二衣打覆き、練袴の傍高く挾み、伸璽を脇に挾み、寶劔を腰にさし、主上を抱
+奉て、「我身は女なりとも、敵の手にはかゝるまじ。君の御供に參る也。御志思ひ參
+せ給はん人々は、急ぎ續き給へ。」とて舟端へ歩み出られけり。主上は今年は八歳に
+成せ給へども御年の程より遙にねびさせ給ひて、御容美しくあたりも照り輝くばかり
+也。御ぐし黒う優々として御せなかすぎさせ給へり。あきれたる御樣にて、「尼ぜ、
+我をばいづちへ具してゆかんとするぞ。」と仰ければ、幼き君に向奉り涙を押へて申
+されけるは、「君は未知し召れさぶらはずや。先世の十善戒行の御力に依て、今萬乘
+の主と生させ給へども、惡縁に引かれて、御運既に盡させ給ひぬ。先づ東に向はせ給
+ひて、伊勢大神宮に御暇申させ給ひ、其後西方淨土の來迎に預らむと思食し、西に向はせ給ひて御念佛候ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-576-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">中納言に、鎧二領著せ奉り、我身も鎧二領著て、手を取組で海へぞ入にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-600-nlp_gloss-0">11</a></p>
+      <p class="occurrence-context">我身こそ明石浦に旅寢せめ、同じ浪にもやどる月哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-750-nlp_gloss-15">11</a></p>
+      <p class="occurrence-context">是を鎌倉の源二位に見えなば、人も多く損じ我身も命生らるまじ、如何せんずる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%88%91%E8%BA%AB#tk-11-863-nlp_gloss-12">11</a></p>
+      <p class="occurrence-context">鎌倉殿は隨兵七重八重に居ゑ置いて我身は其中におはしながら「九郎はすゝどきをのこなれば此疊の下よりも這出んずる者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%88%91%E8%BA%AB#tk-12-39-nlp_gloss-7">12</a></p>
+      <p class="occurrence-context">聖をば大床に立て、我身は庭に立て、父の頭を請取り給ふぞ哀なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%88%91%E8%BA%AB#tk-12-283-nlp_gloss-11">12</a></p>
+      <p class="occurrence-context">聖鎌倉殿を世にあらせ奉らんとて我身も流人でありながら院宣伺ひ奉らんとて京へ上るに、案内も知らぬ富士川の尻に夜渡り懸て、既に押流されんとしたりし事、高市の山にてひはぎにあひ、手をすて命ばかり生、福原の籠の御所へ參り、前右兵衞督光能卿に付き奉て院宣申出て奉りし時の御約束には、如何なる大事をも申せ、聖が申さん事をば、頼朝が一期の間は叶へんとこそ宣ひしか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%88%91%E8%BA%AB#tk-12-361-nlp_gloss-164">12</a></p>
+      <p class="occurrence-context">
+「『此若君の父三位中將殿は、初度の戰の大將軍也。誰申とも叶ふまじ。』と宣ひつ
+れば『文覺が心を破ては、爭か冥加もおはすべき。』など惡口申つれども、猶『叶ま
+じ。』とて、那須野の狩に下り給し間、剩文覺も狩場の供して、漸々に申てこひ請た
+り。いかに遲うおぼしつらん。」と申されければ、北條「廿日と仰せられ候ひし御約
+束の日數も過候ぬ。鎌倉殿の御宥れなきよと存じて、具し奉て下る程に、かしこうぞ、
+爰にて誤ち仕候らんに。」とて、鞍置て引せたる馬共に齋藤五、齋藤六を乘せて上せ
+らる。我身も遙に打送り奉て、「暫く御供申たう候へども、鎌倉殿に指て申べき大事
+共候。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

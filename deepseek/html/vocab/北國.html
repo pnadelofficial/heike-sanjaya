@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北國</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>北國</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>northern provinces</li>
+      
+      <li>Northern Provinces</li>
+      
+      <li>the northern provinces</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (33)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E5%8C%97%E5%9C%8B#tk-1-641-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">北國の方より雷おびたゞしく鳴て、都をさして鳴りのぼる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%8C%97%E5%9C%8B#tk-4-408-nlp_gloss-10">4</a></p>
+      <p class="occurrence-context">又入道相國、近江米二萬石、北國の織延絹三千匹、往來に寄らる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E5%8C%97%E5%9C%8B#tk-4-687-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">御乳母讃岐守重秀が御出家せさせ奉り、具し參らせて、北國へ落下りたりしを、木曽義仲上洛の時主にし進せんとて、具し奉て都へ上り、御元服せさせ參らせたりしかば、木曽が宮とも申けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%8C%97%E5%9C%8B#tk-6-224-nlp_gloss-15">6</a></p>
+      <p class="occurrence-context">平家の人々漏れ聞て、「東國の背だに有に北國さへ、こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%8C%97%E5%9C%8B#tk-6-244-nlp_gloss-57">6</a></p>
+      <p class="occurrence-context">同十二日、鎭西より飛脚到來、宇佐大宮司公通が申けるは、九州の者共、緒方三郎を始として、臼杵、戸次、松浦黨 に至る迄、一向平家を背いて源氏に同心の由申たりければ、「東國北國の背だに有に、こは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%8C%97%E5%9C%8B#tk-6-255-nlp_gloss-2">6</a></p>
+      <p class="occurrence-context">およそ東國北國悉く背きぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%8C%97%E5%9C%8B#tk-6-264-nlp_gloss-24">6</a></p>
+      <p class="occurrence-context">公卿殿上人も、武官に備り、弓箭に携らん人々は、宗盛卿を大將軍にて、東國北國の凶徒等追討すべき由仰下さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E5%8C%97%E5%9C%8B#tk-6-605-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">東國北國の源氏共、蜂の如くに起合ひ、唯今都へ責上らんとするに、か樣に波の立つやらん、風の吹やらんも知ぬ體にて花やかなりし事共、中々云ふかひなうぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-24-nlp_gloss-126">7</a></p>
+      <p class="occurrence-context">大將軍には小松三位中將維盛、越前三位通盛、但馬守經正、薩摩守忠度、參河守知度、淡路守清房、侍大將には、越中前司盛俊、上總大夫判官忠綱、飛騨大夫判官景高、高橋判官長綱、河内判官秀國、武藏三郎左衞門有國、越中二郎兵衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清を先として、以上大將軍六人、しかるべき侍三百四十餘人、都合其勢十萬餘騎、壽永二年四月十七日辰の一點に都を立て、北國へこそ趣きけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-114-nlp_gloss-9">7</a></p>
+      <p class="occurrence-context">」と宣ふ間、南都をば逃て北國へ落下り、木曾殿の手書して、大夫坊覺明とぞ名乘ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-201-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">されば其約束を違じとや、當座に有し者共、一人も殘らず北國にて皆死けるこそ無慚なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-206-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">」とて、北國へ向られたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-271-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">今度北國へ向ひては、討死仕候べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-284-nlp_gloss-27">7</a></p>
+      <p class="occurrence-context">上總守忠清、飛騨守景家はをとゝし入道相國薨ぜられける時、ともに出家したりけるが、今度北國にて子ども皆亡びぬときいて其のおもひのつもりにや、終に歎き死にぞ死にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-334-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">是によて東國北國の源氏等、各參洛を企て、平家を亡さんと欲す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-437-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">鎭西は、纔に平げども、東國、北國の軍如何にも靜まらず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-443-nlp_gloss-31">7</a></p>
+      <p class="occurrence-context">是に依て一門にはあたまれて、平家に諂ひけるが、其夜の夜半計六波羅に馳參て申けるは、木曾すでに北國より五萬餘騎で攻上り、比叡山東坂本に充滿て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-528-nlp_gloss-38">7</a></p>
+      <p class="occurrence-context">三位中將の御馬の左右のみづつきに取著き、何く迄も御とも仕るべき由申せば、三位中將宣ひけるは、
+「己等が父齋藤別當北國へ下し時、汝等が頻に伴せうと云しかども、存ずる旨が有ぞ
+とて、汝等を留置き、北國へ下て遂に討死したりけるは、かゝるべかりける事を、故い者で、兼て知たりけるにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-528-nlp_gloss-65">7</a></p>
+      <p class="occurrence-context">三位中將の御馬の左右のみづつきに取著き、何く迄も御とも仕るべき由申せば、三位中將宣ひけるは、
+「己等が父齋藤別當北國へ下し時、汝等が頻に伴せうと云しかども、存ずる旨が有ぞ
+とて、汝等を留置き、北國へ下て遂に討死したりけるは、かゝるべかりける事を、故い者で、兼て知たりけるにこそ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-664-nlp_gloss-174">7</a></p>
+      <p class="occurrence-context">前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E5%8C%97%E5%9C%8B#tk-7-678-nlp_gloss-3">7</a></p>
+      <p class="occurrence-context">木曾すでに北國より五萬餘騎で攻上り、比叡山東坂本に滿々たんなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-131-nlp_gloss-47">8</a></p>
+      <p class="occurrence-context">」と後悔せられければ、平大納言時忠卿、「さらむには木曾が主にしたてまつたる高倉宮の御子を、御乳母讃岐守重秀が、御出家せさせ奉り、具し參せて北國へ落下りしこそ、位には即け給はんずらめ」と宣へば、又或人々の申されけるは、「それは出家の宮をばいかゞ、位に即奉るべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-210-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">東國北國の凶徒等が頼朝義仲等に語らはれて、爲おほせたらば國を預けう、庄をたばんといふを、實と思ひて、其鼻豐後が下知に從はん事、然べからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-376-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">北國の奴原に生捕られんをば、心憂とは思はずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-390-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">平家の侍備中國住人瀬尾太郎兼康は、北國の戰ひに、加賀國の住人藏光次郎成澄が手にかゝて、生捕にせられたりしを、成澄が弟藏光三郎成氏に預けられたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-433-nlp_gloss-27">8</a></p>
+      <p class="occurrence-context">瀬尾太郎たゞ主從三騎に打なされ、板倉河の端に著て、みとろ山の方へ落行く程に北國で、瀬尾生捕にしたりし藏光次郎成澄、弟は討れぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-518-nlp_gloss-26">8</a></p>
+      <p class="occurrence-context">」と申せば、木曾大に怒て、「我信濃を出し時、小見、合田の戰より始めて、北國には、砥浪山、黒坂、鹽坂、篠原、西國には、福龍寺繩手、篠の迫、板倉が城を攻しかども、未だ敵に後を見せず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-530-nlp_gloss-0">8</a></p>
+      <p class="occurrence-context">北國の勢ども皆落下て、僅に六七千騎ぞ有ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E5%8C%97%E5%9C%8B#tk-8-630-nlp_gloss-6">8</a></p>
+      <p class="occurrence-context">「こは如何に、北國の凶徒かなど思しめしたれば神妙に參りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E5%8C%97%E5%9C%8B#tk-9-172-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">又龍華越に懸て、北國へとも聞えけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E5%8C%97%E5%9C%8B#tk-11-19-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">新中納言知盛卿宣ひけるは、「東國北國の者共も隨分重恩を蒙たりしかども、恩を忘れ、契を變じて、頼朝、義仲等に隨ひき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%8C%97%E5%9C%8B#tk-12-69-nlp_gloss-25">12</a></p>
+      <p class="occurrence-context">昨日は西海の波の上に漂ひて、怨憎會苦の恨を扁舟の内に積み、今日は北國の雪の下に埋れて、愛別離苦の悲みを故郷の雲に重ねたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E5%8C%97%E5%9C%8B#tk-12-150-nlp_gloss-11">12</a></p>
+      <p class="occurrence-context">奈良法師にせめられて、又都へ歸り入、北國にかゝて終に奧へぞ下られける。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

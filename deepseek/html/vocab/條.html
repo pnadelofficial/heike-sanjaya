@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>條</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>條</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>counter for long, slender objects</li>
+      
+      <li>article (counter for laws/items)</li>
+      
+      <li>article (counter for laws, clauses, or items)</li>
+      
+      <li>article</li>
+      
+      <li>clause/article</li>
+      
+      <li>article (counter for laws, articles, or items)</li>
+      
+      <li>street</li>
+      
+      <li>article (of law or decree)</li>
+      
+      <li>article; item (counter for documents)</li>
+      
+      <li>article; item; provision</li>
+      
+      <li>article (in this context, part of a title; specifically refers to Emperor Go-Nijō)</li>
+      
+      <li>article (counter for legal clauses)</li>
+      
+      <li>article (counter for items in a list)</li>
+      
+      <li>article (counter for legal provisions)</li>
+      
+      <li>article (used in place names)</li>
+      
+      <li>article (counter for items, here used as part of a proper noun &#39;Gojō&#39;)</li>
+      
+      <li>clause</li>
+      
+      <li>article (of a law or regulation)</li>
+      
+      <li>clause (of a law or document)</li>
+      
+      <li>article (of law)</li>
+      
+      <li>provisions</li>
+      
+      <li>article; item</li>
+      
+      <li>article (counter for provisions/articles of a law)</li>
+      
+      <li>article (counter for provisions, laws, or items)</li>
+      
+      <li>article (counter for articles/clauses)</li>
+      
+      <li>article (of law/regulation)</li>
+      
+      <li>article (of law or regulation); here used in the name &#39;Nijō-in&#39; (the Nijō Emperor&#39;s reign)</li>
+      
+      <li>article; clause (as in a legal or formal document)</li>
+      
+      <li>article (counter for items)</li>
+      
+      <li>article (counter for documents/items)</li>
+      
+      <li>article (counter for articles/items)</li>
+      
+      <li>matter</li>
+      
+      <li>article (counter for documents/articles)</li>
+      
+      <li>article; clause; item</li>
+      
+      <li>article; clause</li>
+      
+      <li>provisions; article</li>
+      
+      <li>article (of a document)</li>
+      
+      <li>article (counter for articles or clauses)</li>
+      
+      <li>article; item; clause</li>
+      
+      <li>reason</li>
+      
+      <li>article (counter for provisions/items of a law, or written clauses)</li>
+      
+      <li>counter for long, thin objects; here used as &#39;one&#39; in &#39;一條&#39; (one street)</li>
+      
+      <li>counter for long, slender objects (here used for roads)</li>
+      
+      <li>article (of a law or document)</li>
+      
+      <li>article (of a law or constitution)</li>
+      
+      <li>article (of a law or decree)</li>
+      
+      <li>article (counter for clauses or items)</li>
+      
+      <li>article/clause (counter for laws or provisions)</li>
+      
+      <li>article (counter for items, here used for a district)</li>
+      
+      <li>strand (of thread)</li>
+      
+      <li>kind</li>
+      
+      <li>counter for long, slender objects (used here for the number of places)</li>
+      
+      <li>clause (a counter for legal provisions; here, part of a proper noun)</li>
+      
+      <li>article (counter for documents/laws)</li>
+      
+      <li>article (counter for provisions/articles)</li>
+      
+      <li>thing</li>
+      
+      <li>provision</li>
+      
+      <li>clause/article (counter for articles of law or documents)</li>
+      
+      <li>articles (counter for provisions or items in a list)</li>
+      
+      <li>article (counter for legal or literary clauses)</li>
+      
+      <li>counter for laws or articles</li>
+      
+      <li>provisions; articles (counter for articles of law)</li>
+      
+      <li>counter for long, thin objects (used here as a proper noun component, &#39;Ichi-jo&#39;)</li>
+      
+      <li>counter for long, thin objects (here, a line or streak)</li>
+      
+      <li>article (counter for legal provisions/imperial decrees)</li>
+      
+      <li>article (counter for laws or provisions)</li>
+      
+      <li>article (of law), item, clause</li>
+      
+      <li>article; item (counter for articles/items)</li>
+      
+      <li>article (counter for laws, articles, or provisions)</li>
+      
+      <li>article (of law), provision</li>
+      
+      <li>article (counter for clauses in legal documents)</li>
+      
+      <li>article (classifier for legal clauses)</li>
+      
+      <li>Article (counter for articles/clauses); here used as part of the place name &#39;Nijō Inokuma&#39;</li>
+      
+      <li>circumstance</li>
+      
+      <li>article; item; (in this context, &#39;article&#39; or &#39;clause&#39; referring to a law or regulation)</li>
+      
+      <li>item</li>
+      
+      <li>one</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (205)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-50-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">兩條希代いまだきかざる狼藉なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-110-nlp_gloss-127">1</a></p>
+      <p class="occurrence-context">昔奈良の御門の御時、神龜五年、朝家に中衞の大將をはじめおかれ、大同四年に
+中衞を近衞と改られしよりこのかた、兄弟左右に相並事僅に三四箇度なり。文徳天皇
+の御時は左に良房右大臣左大將、右に良相、大納言の右大將、是は閑院の左大臣冬嗣
+の御子なり。朱雀院の御宇には左に實頼、小野宮殿、右に師輔、九條殿、貞信公の御
+子なり。御冷泉院の御時は、左に教通、大二條殿、右に頼宗、堀河殿、御堂の關白の
+御子なり。二條院の御宇には左に基房、松殿、右に兼實、月輪殿、法性寺殿の御子な
+り。是皆攝祿の臣の御子息、凡人にとりては其例なし。殿上
+の交をだにきらはれし人の子孫にて禁色雜袍をゆり、綾羅錦繍を身にまとひ、大臣大
+將になて、兄弟、左右に相並事、末代とはいひながら不思議なりし事どもなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-110-nlp_gloss-145">1</a></p>
+      <p class="occurrence-context">昔奈良の御門の御時、神龜五年、朝家に中衞の大將をはじめおかれ、大同四年に
+中衞を近衞と改られしよりこのかた、兄弟左右に相並事僅に三四箇度なり。文徳天皇
+の御時は左に良房右大臣左大將、右に良相、大納言の右大將、是は閑院の左大臣冬嗣
+の御子なり。朱雀院の御宇には左に實頼、小野宮殿、右に師輔、九條殿、貞信公の御
+子なり。御冷泉院の御時は、左に教通、大二條殿、右に頼宗、堀河殿、御堂の關白の
+御子なり。二條院の御宇には左に基房、松殿、右に兼實、月輪殿、法性寺殿の御子な
+り。是皆攝祿の臣の御子息、凡人にとりては其例なし。殿上
+の交をだにきらはれし人の子孫にて禁色雜袍をゆり、綾羅錦繍を身にまとひ、大臣大
+將になて、兄弟、左右に相並事、末代とはいひながら不思議なりし事どもなり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-120-nlp_gloss-3">1</a></p>
+      <p class="occurrence-context">一人は六條の攝政殿の北政所にならせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-124-nlp_gloss-3">1</a></p>
+      <p class="occurrence-context">一人は七條修理大夫信隆卿に相具し給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-147-nlp_gloss-6">1</a></p>
+      <p class="occurrence-context">そねむ者どもは「なん條名により、文字にはよるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-159-nlp_gloss-6">1</a></p>
+      <p class="occurrence-context">」とて、ある時西八條へぞまゐりたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-253-nlp_gloss-17">1</a></p>
+      <p class="occurrence-context">其外白拍子二人、惣じて四人一車に乘て、西八條へぞ參たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-450-nlp_gloss-16">1</a></p>
+      <p class="occurrence-context">同年の十月八日、去年親王の宣旨蒙らせ給し皇子、東三條にて春宮に立たせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-453-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">三條院十一歳にて東宮に立せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-662-nlp_gloss-28">1</a></p>
+      <p class="occurrence-context">是によて日吉の社司、延暦寺の寺官、都合三十餘人、申文をささげて陣頭へ參じけるを後二條關白殿、大和源氏中務權少輔頼春に仰せてふせがせらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-667-nlp_gloss-51">1</a></p>
+      <p class="occurrence-context">結願の導師には、仲胤法印、その比はいまだ仲胤供奉と申しが、高座に上り、かね打ならし、表白の詞にいはく、「我等なたねの二葉よりおふし立て給ふ神達、後二條の關白殿に、鏑矢一つ放ち當て給へ、大八王子權現。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-672-nlp_gloss-9">1</a></p>
+      <p class="occurrence-context">やがて山王の御咎めとて、後二條の關白殿、重き御病をうけさせ給ひしかば、母上、大殿の北の政所大に歎かせ給つゝ、御樣をやつし、賤しき下臈のまねをして、日吉の社に御參籠あて、七日七夜が間祈申させ給けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-703-nlp_gloss-7">1</a></p>
+      <p class="occurrence-context">かゝりし程に、後二條關白殿、御病かろませ給て、もとの如くにならせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-705-nlp_gloss-7">1</a></p>
+      <p class="occurrence-context">六月二十一日、又後二條の關白殿、御髮の際に惡しき御瘡出きさせ給て、打ち臥させ給ひしが、同二十七日、御年三十八にて終にかくれさせ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-724-nlp_gloss-8">1</a></p>
+      <p class="occurrence-context">今度山門の御訴訟、理運の條勿論に候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-787-nlp_gloss-32">1</a></p>
+      <p class="occurrence-context">或は具平親王の千種殿、或は北野の天神の紅梅殿、橘逸勢のはひ松殿、鬼殿、高松殿、鴨居殿、東三條、冬嗣の大臣の閑院殿、昭宣公の堀川殿、これを始めて、昔今の名所三十餘箇所、公卿の家だにも、十六箇所まで燒にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%A2%9D#tk-1-790-nlp_gloss-201">1</a></p>
+      <p class="occurrence-context">家々の日記、代々の文書、
+七珍萬寶さながら塵灰となりぬ。その間の費如何ばかりぞ。人の燒け死ぬること數百人、牛馬の類は數を知らず。これ徒事にあらず、山王の御咎とて、比叡山より大なる
+猿共が、二三千おりくだり、手に手に松火をともいて、京中を燒くとぞ、人の夢には見えたりける。大極殿は清和天皇の御宇、貞觀十八年に始めて燒けたりければ、同十九年正月三日、陽成院の御即位は、豐樂院にてぞありける。元慶元年四月九日事始ありて同二年十月八日にぞ造り出されたりける。後冷泉院の御宇、天喜五年二月二十六日、又やけにけり。治歴四年八月十四日事始ありしかども、造りいだされずして、後冷泉院崩御なりぬ。後三條院の御宇、延久四年四月十五日造り出して、文人詩を作り奉り、伶人樂を奏して遷幸なし奉る。今は世末になて、國の力も皆衰たれば、その後
+はつひに造られず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-12-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">八條中納言長方卿、其時はいまだ左大辨宰相にて、末座に候はれけるが、申されけるは、「法家の勘状に任せて、死罪一等を減じて、遠流せらるべしと見えて候へ共、前座主明雲大僧正は、顯密兼學して、淨行持律の上、大乘妙經を公家に授奉り、菩薩淨戒を法皇に持せ奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-142-nlp_gloss-19">2</a></p>
+      <p class="occurrence-context">同五月二十九日の小夜深方に、多田藏人行綱、入道相國の西八條の亭に參て、「行綱こそ申べき事候間參て候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-166-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">其夜の中に西八條には、兵ども六七千騎も有らんとこそ見えたりけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-190-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">西八條近う成て見給へば、四五町に軍兵滿々たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-201-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">平家の侍共、道にて馳向ひ、「西八條へ召るゝぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-208-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">」とて、馬より取て引落し、中に縛て、西八條へさげて參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-234-nlp_gloss-24">2</a></p>
+      <p class="occurrence-context">白状四五枚に記され、やがて、しやつが口をさけとて、口を裂れ、五條朱雀にて、きられにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-236-nlp_gloss-18">2</a></p>
+      <p class="occurrence-context">次男近藤判官師經禁獄せられけるを、獄より引出され、六條河原にて誅せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-355-nlp_gloss-13">2</a></p>
+      <p class="occurrence-context">「何事にて候やらん、入道相國のきと西八條へ具し奉れと候と申せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-372-nlp_gloss-5">2</a></p>
+      <p class="occurrence-context">少將乳母に六條と云女房あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-379-nlp_gloss-2">2</a></p>
+      <p class="occurrence-context">西八條殿より、使しきなみに有ければ、宰相「行むかうてこそ、ともかうも成め。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-382-nlp_gloss-1">2</a></p>
+      <p class="occurrence-context">西八條近うなて、車を停め、先案内を申入られければ、太政入道「丹波少將をば此内へは入らるべからず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-462-nlp_gloss-37">2</a></p>
+      <p class="occurrence-context">」と申せば、大臣、爭かさる事在べきと思へ共、今朝の禪門の氣色、さる物狂しき事もあるらむとて、車を飛して、西八條へぞおはしたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-544-nlp_gloss-11">2</a></p>
+      <p class="occurrence-context">小松殿に噪ぐ事ありと聞えしかば、西八條に數千騎ありける兵共、入道にかうとも申も入ず、さざめき連て、皆小松殿へぞ馳たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-622-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">既に成親卿備中國へ流さるべきにて西の七條迄出されたりしを、君いかゞ思召されけん、中五日在て召返さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-628-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">是は三條殿造進の賞也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-646-nlp_gloss-21">2</a></p>
+      <p class="occurrence-context">一年山門の訴訟によて、流れしをば君惜ませ給ひて、西の七條より召還されぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-800-nlp_gloss-6">2</a></p>
+      <p class="occurrence-context">都へ上なば、西八條へぞ參候はんずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%A2%9D#tk-2-819-nlp_gloss-27">2</a></p>
+      <p class="occurrence-context">内侍共これまで上る程では、我等が主の太政入道殿へいかで參らであるべきとて、西八條へぞ參じたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-117-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">五條の大納言國綱卿、御馬二匹進ぜらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-149-nlp_gloss-46">3</a></p>
+      <p class="occurrence-context">御産によて、六波羅へ參らせ給ふ人々、關白松殿、太政大臣妙音院、左大臣大炊御門、右大臣月輪殿、内大臣小松殿、左大將實定、源大納言定房、三條大納言實房、五條大納言國綱、藤大納言實國、按察使資方、中御門中納言宗家、花山院中納言兼雅、源中納言雅頼、權中納言實綱、藤中納言資長、池中納言頼盛、左衞門督時忠、別當忠親、左宰相中將實家、右宰相中將實宗、新宰相中將通親、平宰相教盛、六角宰相家通、堀川宰相頼定、左大辨宰相長方、右大辨三位俊經、左兵衞督重教、右兵衞督光能、皇太后宮大夫朝方、左京大夫長教、太宰大貳親宣、新三位實清、以上三十三人、右大辨の外は直衣なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-149-nlp_gloss-53">3</a></p>
+      <p class="occurrence-context">御産によて、六波羅へ參らせ給ふ人々、關白松殿、太政大臣妙音院、左大臣大炊御門、右大臣月輪殿、内大臣小松殿、左大將實定、源大納言定房、三條大納言實房、五條大納言國綱、藤大納言實國、按察使資方、中御門中納言宗家、花山院中納言兼雅、源中納言雅頼、權中納言實綱、藤中納言資長、池中納言頼盛、左衞門督時忠、別當忠親、左宰相中將實家、右宰相中將實宗、新宰相中將通親、平宰相教盛、六角宰相家通、堀川宰相頼定、左大辨宰相長方、右大辨三位俊經、左兵衞督重教、右兵衞督光能、皇太后宮大夫朝方、左京大夫長教、太宰大貳親宣、新三位實清、以上三十三人、右大辨の外は直衣なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-150-nlp_gloss-35">3</a></p>
+      <p class="occurrence-context">不參の人々には、花山院前太政大臣忠雅公、大宮大納言隆季卿、已下十餘人、後日に布衣著して、入道相國の西八條の邸へ向はれけるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-210-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">九條右丞相、慈慧大僧正に契申させ給しに依てこそ、冷泉院の皇子御誕生は候しか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-255-nlp_gloss-143">3</a></p>
+      <p class="occurrence-context">
+暮る程とは待れけれ共、餘に名殘惜くて、夜更る迄こそ坐けれ。更行まゝに、荒たる
+宿の習とて、古き軒の板間よりもる月影ぞ隈もなき。鷄籠の山明なんとすれ共、家路
+は更に急がれず。さてしも有べき事ならねば、迎に乘物ども遣て、待らんも心なしと
+て、泣々洲濱殿を出つゝ、都へ歸り入給けん人々の心の中共、さこそは哀にも嬉しう
+も有けめ。康頼入道が迎にも乘物有けれ共其には乘らで、「今更名殘の惜に。」とて、
+少將の車の尻に乘て、七條河原までは行く。其より行別れけるに、猶行もやらざりけ
+り。花の下の半日の客、月の前の一夜の友、旅人が一村雨の過行に、一樹の陰に立よ
+て、別るゝ名殘も惜きぞかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-262-nlp_gloss-11">3</a></p>
+      <p class="occurrence-context">増て少將の北の方、乳母の六條が心の中、さこそは嬉しかりけめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-263-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">六條は盡せぬ物思ひに黒かりし髮も皆白く成り、北の方、さしも花やかにうつくしう坐しか共、いつしか痩衰へて、其人とも見え給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-266-nlp_gloss-7">3</a></p>
+      <p class="occurrence-context">」と宣へば、六條「是こそ」とばかり申て、袖を顏におし當て、涙を流しけるにこそ、「さては下りし時、心苦げなる有樣を見置しが、事故なく育けるよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-326-nlp_gloss-16">3</a></p>
+      <p class="occurrence-context">良有て起上り、涙を抑へて申けるは、「君の西八條へ出させ給しかば、やがて追捕の官人參て、御内の人々搦取り、御謀反の次第を尋て、失果て候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-345-nlp_gloss-2">3</a></p>
+      <p class="occurrence-context">西八條へ出し時、此子が我も行うと慕しを、軈て歸うずるぞと拵へ置しが、今の樣に覺るぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-523-nlp_gloss-7">3</a></p>
+      <p class="occurrence-context">靜憲法印御使に西八條の邸へ向ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-582-nlp_gloss-13">3</a></p>
+      <p class="occurrence-context">
+圓融院の御宇、天禄三年十一月一日、一條攝政謙徳公失給しかば、御弟堀川の關白忠
+義公、其時は未從二位中納言にてましましけり。其御弟法興院の大入道殿其比は大納
+言の右大將にておはしける間、忠義公は、御弟に越られ給しか共、今又越返し奉り、
+内大臣正二位にあがて、内覽の宣旨蒙らせ給ひたりしをこそ、人皆耳目を驚したる御
+昇進とは申しに、是は其には猶超過せり、非參議二位中將より大中納言を經ずして、
+大臣關白になり給ふ事いまだ承り及ばず。普賢寺殿の御事也。上卿の宰相、大外記、
+大夫史に至る迄、皆あきれたる樣にぞ見えたりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-623-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">二條院の御代には、辨官に加てゆゆしかりしか共、此十餘年は官を停められて、夏冬の衣がへにも及ばず、
+朝暮のざんも心に任せず、有か無かの體にて坐けるを、太政入道、「申べき事有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-627-nlp_gloss-8">3</a></p>
+      <p class="occurrence-context">」と泣悲しみ給ふに、西八條より、使布竝に有ければ、力及ばで、人に車借て西八條へ出られたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-627-nlp_gloss-28">3</a></p>
+      <p class="occurrence-context">」と泣悲しみ給ふに、西八條より、使布竝に有ければ、力及ばで、人に車借て西八條へ出られたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-657-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">又靜憲法印、入道相國の西八條の邸に行て、「夕法皇の鳥羽殿へ御幸成て候なるに、
+御前に人一人も候はぬ由承るが餘に淺ましう覺え候。何か苦う候べき、靜憲ばかりは
+御ゆるされ候へかし。參り給はん。」と申されければ、「とう／＼、御房は事あやま
+つまじき人なれば。」とて許されけり。法印鳥羽殿へ參て、門前にて車よりおり、門
+の内へさし入給へば、折しも法皇、御經を打上々々遊されける御聲も、殊にすごう聞えさせ給ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-674-nlp_gloss-1">3</a></p>
+      <p class="occurrence-context">二條院は、賢王にて渡せ給しか共、天子に父母なしとて、常は法皇の仰をも申替させましける故にや、繼體の君にてもましまさず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-675-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">されば御讓を受させ給ひたりし六條院も、安元二年七月十四日御年十三にて崩御成りぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%A2%9D#tk-3-684-nlp_gloss-195">3</a></p>
+      <p class="occurrence-context">寛平の昔をも訪ひ、
+花山の古をも尋て、家をいで世をのがれ山林流浪の行者とも成ぬべうこそ候へ。」と
+遊されたりければ、法皇の御返事には、「さな思召され候そ。さて渡せ給ふこそ一つ
+の頼にても候へ。跡なく思召し成せ給ひなん後は、何の頼か候べき。唯愚老がともか
+うもならむ樣を聞召果させ給ふべし。」と遊されたりければ、主上此返事を龍顏に押
+當て、いとゞ御涙に沈ませ給ふ。君は船、臣は水、水能く船を浮べ、水又船を覆す。
+臣能く君を保ち、臣又君を覆す。保元平治の比は、入道相國君を保ち奉ると云共、安
+元治承の今は、又君をなみし奉る。史書の文に違はず。大宮大相國、三條内大臣、葉
+室大納言、中山中納言も失せられぬ。今は古き人とては成頼、親範ばかり也。此人々
+も、かゝらむ世には、朝に仕へ身を立て、大中納言を經ても何かはせんとて、いまだ
+盛んなし人々の、家を出で世を遁れ、民部卿入道親範は、大原の霜に伴ひ、宰相入道
+成頼は、高野の霧に交り、一向後世菩提の營みの外は他事なしとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-14-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">傳はれる御物共しな％＼司々請取て新帝の皇居五條内裡へ渡し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-43-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">同十七日、嚴島御幸の御門出とて、入道相國の西八條の亭へ入せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-46-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">」と仰ければ、宗盛卿涙をはら／＼と流いて、「何條事か候ふべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-51-nlp_gloss-13">4</a></p>
+      <p class="occurrence-context">此日比聞えさせ給ひつる嚴島の御幸、西八條より既に遂させ御座す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-97-nlp_gloss-32">4</a></p>
+      <p class="occurrence-context">」とて、笑はせおはしましければ、大納言大に爭がひ申さるゝ所に、文持たる便女が參て、「五條の大納言殿へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-116-nlp_gloss-19">4</a></p>
+      <p class="occurrence-context">還御の時は、鳥羽殿へは御幸もならず、入道相國の西八條の亭へいらせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-119-nlp_gloss-19">4</a></p>
+      <p class="occurrence-context">太政官の廳にて、行はるべしと、定められたりけるを、其時の九條殿申させ給ひけるは、「太政官の廳は、凡人の家にとらば公文所體の所也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-124-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">只後三條院の延久の佳例に任せ、太政官の廳にて行はるべき物を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-128-nlp_gloss-40">4</a></p>
+      <p class="occurrence-context">藏人左衞門權佐定長、今度の御即位に違亂なく目出たき樣を、厚紙十枚計にこま
+％＼と記いて、入道相國の北方、八條の二位殿へ參らせたりければ笑を含んでぞ悦ばれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-131-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">三條高倉にましませば、高倉宮とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-142-nlp_gloss-35">4</a></p>
+      <p class="occurrence-context">「先京都には、出羽前司光信が子共、伊賀守光基、出羽判官光長、出羽藏人光重、出羽冠者光能、熊野には、故六條判官爲義が末子、十郎義盛とて隱て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-144-nlp_gloss-142">4</a></p>
+      <p class="occurrence-context">さりながら、其弟多田次郎朝實、手島冠者高頼、太田太郎頼基、河内國には、武藏權守入道義基、子息石河判官代義兼、大和國には、宇野七郎親治が子ども、太郎有治、次郎清治、三郎成治、四郎義治、近江國には、山本、柏木、錦古里、美濃、尾張には山田次郎重廣、河邊太郎重直、泉太郎重光、浦野四郎重遠、安食次郎重頼、其子太郎重資、木太三郎重長、開田判官代重國、矢島先生重高、其子太郎重行、甲斐國には、逸見冠者義清、其子太郎清光、武田太郎信義、加々美次郎遠光、同小次郎長清、一條次郎忠頼、板垣三郎兼信、逸見兵衞有義、武田五郎信光、安田三郎義定、信濃國には、大内太郎維義、岡田冠者親義、平賀冠者盛義、其子の四郎義信、故帶刀先生義方が次男、木曽冠者義仲、伊豆國には流人前右兵衞佐頼朝、常陸國には、信太三郎先生義教、佐竹冠者正義、其子太郎忠義、同三郎義宗、四郎高義、五郎義季、陸奧國には故左馬頭義朝が末子、九郎冠者義經、是皆六孫王の苗裔、多田新發意滿仲が後胤也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-184-nlp_gloss-35">4</a></p>
+      <p class="occurrence-context">さる程に前右大將宗盛卿、法皇の御事をたりふし申されければ、入道相國漸思直て、同十三日鳥羽殿を出奉り、八條烏丸美福門院の御所へ御幸なし奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-189-nlp_gloss-4">4</a></p>
+      <p class="occurrence-context">上卿は三條大納言實房、職事は頭辨光雅とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-193-nlp_gloss-46">4</a></p>
+      <p class="occurrence-context">宮は五月十五夜の雲間の月を詠させ給ひ、何の行方も思召よらざりけるに、源三位入道の使者とて、文持て忙しげに出來り、宮の御乳母子、六條のすけの大夫宗信、是を取て、御前へ參り開いて見に、「君の御謀反已に顯れさせ給ひて、土佐の畑へ流し參すべしとて、官人共御迎に參り候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-203-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">六條のすけの大夫宗信、唐笠持て御供仕る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-219-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">三條面の惣門をも、高倉面の小門をも、共に開いて待かけたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-227-nlp_gloss-8">4</a></p>
+      <p class="occurrence-context">」と言ければ、「何條此御所ならでは、いづくへか渡せ給ふべかんなる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-326-nlp_gloss-25">4</a></p>
+      <p class="occurrence-context">同十六日の夜に入て、源三位入道頼政、嫡子伊豆守仲綱、次男源太夫判官兼綱、六條藏人仲家、其子藏人太郎仲光已下、都合其勢三百餘騎、館に火かけ燒上て、三井寺へこそ參られけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-404-nlp_gloss-44">4</a></p>
+      <p class="occurrence-context">山門の大衆、此状を披見して、こは如何に、當山の末寺で有ながら、鳥の左右の翅の如く、又車の二つの輪に似たりと、抑て書く條、奇怪なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-456-nlp_gloss-13">4</a></p>
+      <p class="occurrence-context">隨て又貴寺身命を捨てゝ、守護し奉る條、含識の類、誰か隨喜せざらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-493-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">大手の大將軍には嫡子伊豆守仲綱、次男源大夫判官兼綱、六條藏人仲家、其子藏人太郎仲光、大衆には圓滿院大輔源覺、成喜院荒土佐、律成房伊賀公、法輪院鬼佐渡、是等は力の強さ、弓箭打物もては、鬼にも神にも逢うと云ふ一人當千の兵也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-525-nlp_gloss-20">4</a></p>
+      <p class="occurrence-context">是は一年平治の合戰の時、故左馬頭義朝が手に候ひて、六條河原で討死仕り候し相摸國住人山内須藤刑部丞俊通が子で候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-554-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">人は恐れて渡らねども、淨妙房が心地には、一條二條の大路とこそ振舞たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-554-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">人は恐れて渡らねども、淨妙房が心地には、一條二條の大路とこそ振舞たれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-623-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">六條藏人仲家、其子藏人太郎仲光も、散々に戰ひ、分捕餘たして、遂に討死してけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-659-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">八條女院に伊豫守盛教が娘、三位局とて候はれける女房の腹に、七歳の若宮、五歳の姫宮御座けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-660-nlp_gloss-13">4</a></p>
+      <p class="occurrence-context">入道相國、弟池中納言頼盛卿を以て、八條女院へ申されけるは、「高倉宮の御子の宮達のあまた渡らせ給候なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-664-nlp_gloss-2">4</a></p>
+      <p class="occurrence-context">「何條其御所ならでは、何くへか渡せ給ふべかんなる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-683-nlp_gloss-6">4</a></p>
+      <p class="occurrence-context">宗盛卿、此由を八條女院に申されければ、女院「何の樣もあるべからず、唯疾々。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-691-nlp_gloss-3">4</a></p>
+      <p class="occurrence-context">宇治殿二條殿をば、君三代の關白、共に御年八十と申たりしも違はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-699-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">」と、後三條院、御遺詔有しかども、白河院如何思召されけん、終に位にも即け參らさせ給はず、責ての御事には、資仁親王の御子に、源氏の姓を授け參らさせ給て、無位より一度に三位に叙して、軈て中將に成參らさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-720-nlp_gloss-10">4</a></p>
+      <p class="occurrence-context">御惱は丑刻許で在けるに、東三條の森の方より、黒雲一村立來て、御殿の上に掩へば、必ずおびえさせ給ひけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-732-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">日來人の申に違はず、御惱の刻限に及で、東三條の森の方より、黒雲一村立來て、御殿の上にたなびいたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%A2%9D#tk-4-752-nlp_gloss-6">4</a></p>
+      <p class="occurrence-context">去る應保の比ほひ、二條院御在位の御時、ぬえと云ふ化鳥、禁中に鳴て、屡宸襟を惱す事有き。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-65-nlp_gloss-69">5</a></p>
+      <p class="occurrence-context">同き六月九日、新都の事始め有るべしとて、上卿には徳大寺左大將實定卿、土御門宰相中將通親卿、奉行の辨には、藏人左少辨行隆、官人共召具して、和田の松原の西の野を點じて、九條の地を割れけるに、一條より下五條までは其所あて、五條より下は無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-65-nlp_gloss-73">5</a></p>
+      <p class="occurrence-context">同き六月九日、新都の事始め有るべしとて、上卿には徳大寺左大將實定卿、土御門宰相中將通親卿、奉行の辨には、藏人左少辨行隆、官人共召具して、和田の松原の西の野を點じて、九條の地を割れけるに、一條より下五條までは其所あて、五條より下は無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-65-nlp_gloss-80">5</a></p>
+      <p class="occurrence-context">同き六月九日、新都の事始め有るべしとて、上卿には徳大寺左大將實定卿、土御門宰相中將通親卿、奉行の辨には、藏人左少辨行隆、官人共召具して、和田の松原の西の野を點じて、九條の地を割れけるに、一條より下五條までは其所あて、五條より下は無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-71-nlp_gloss-16">5</a></p>
+      <p class="occurrence-context">土御門宰相中將通親卿の申されけるは、異國には三條の廣路を開いて、十二の通門を立と見えたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-72-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">況や五條迄有ん都に、などか内裏を立ざるべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-73-nlp_gloss-12">5</a></p>
+      <p class="occurrence-context">
+且々里内裏造るべき由、議定有て、五條大納言國綱卿、臨時に周防國を賜て、造進せ
+らるべき由、入道相國計ひ申されけり。此國綱卿は大福長者にておはすれば、造出れ
+ん事、左右に及ばねども、如何が國の費え民の煩ひ無るべき。指當る大事、大嘗會な
+どの行はるべきを差置いて、かゝる世の亂に遷都造内裏、少も相應せず。古の賢き御
+代には、即内裏に茨を葺き、軒をだにも調へず、煙の乏きを見給ふ時は、限有る御貢
+物をも許れき。是即民を惠み、國を扶け給ふに依て也。楚、章華臺を立て黎民をあら
+け、秦、阿房殿を起して、天下亂ると云へり。茅茨剪ず、采椽けづらず、舟車飾ず、
+衣服文無ける世も有けん物を。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-154-nlp_gloss-42">5</a></p>
+      <p class="occurrence-context">
+                  同九月二日、相摸國の住人、大庭三郎景親、福原へ早馬を以て申けるは、「去ぬる八月十七日、伊豆國の流人、前右兵衞佐頼朝、舅北條四郎時政を遣して、伊豆の目代、和泉判官兼高を、やまきの館にて夜討に討候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-286-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">一條の羅穀は勁くとも、引かばなどかは絶ざらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-377-nlp_gloss-27">5</a></p>
+      <p class="occurrence-context">はやりの若者共、我も我もと進ける中に、資行判官と云ふ者、走出でゝ、「何條事申ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-626-nlp_gloss-13">5</a></p>
+      <p class="occurrence-context">やがて打取る所なればとて、駿河國をば一條次郎忠頼、遠江をば安田三郎義定に預けらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%A2%9D#tk-5-653-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">九條右丞相師輔公の申させ給ひけるは、「坂東へ討手は向うたりと云へども、將門容易う亡ひ難き處に、此人共仰を蒙て、關の東へ赴く時、朝敵既に亡びたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-75-nlp_gloss-24">6</a></p>
+      <p class="occurrence-context">申慰め參せんとて、急ぎ御參内有て、「さ樣に叡慮にかゝらせ坐さん事、何條事か候べき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-189-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">去る永萬には第一の御子、二條院崩御なりぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-190-nlp_gloss-10">6</a></p>
+      <p class="occurrence-context">安元二年の七月には御孫六條院かくれさせ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-204-nlp_gloss-2">6</a></p>
+      <p class="occurrence-context">故六條判官爲義が次男帶刀先生義方が子なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-313-nlp_gloss-12">6</a></p>
+      <p class="occurrence-context">玉を磨き金銀を鏤て作られし西八條殿、其夜俄に燒ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-390-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">尊慧是を以て、西八條へ參り、入道相國に參せたりければ、斜ならず悦て、樣々もてなし樣々の引出物共給で、其勸賞に律師に成されけるとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%A2%9D#tk-6-441-nlp_gloss-7">6</a></p>
+      <p class="occurrence-context">
+                  同閏二月廿日、五條大納言國綱卿失せ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-487-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">七條を西へ朱雀を南へ行幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-492-nlp_gloss-15">7</a></p>
+      <p class="occurrence-context">攝政殿も行幸に供奉して、御出なりけるが、七條大宮にて、髫結たる童子の、御車の前をつと走通るを御覽ずれば、彼童子の左の袂に、「春の日」と云ふ文字ぞ顯れたる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-536-nlp_gloss-16">7</a></p>
+      <p class="occurrence-context">平家都を落行に、六波羅、池殿、小松殿、八條、西八條以下、一門の卿相雲客の家々、二十餘箇所、次々の輩の宿所々々、京白川に四五萬の在家一度に火をかけて、皆燒拂ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-536-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">平家都を落行に、六波羅、池殿、小松殿、八條、西八條以下、一門の卿相雲客の家々、二十餘箇所、次々の輩の宿所々々、京白川に四五萬の在家一度に火をかけて、皆燒拂ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-560-nlp_gloss-27">7</a></p>
+      <p class="occurrence-context">薩摩守忠度は、いづくよりか歸られたりけん、侍五騎、童一人、我身共に七騎取て返し、五條の三位俊成卿の宿所におはして見給へば門戸をとぢて開かず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-649-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">八條女院の仁和寺の常磐殿に渡らせ給ふに參り籠られけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-685-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">貞能は、西八條の燒跡に、大幕ひかせ一夜宿したりけれども、歸り入給ふ平家の君達一所も坐ねば、さすが心細うや思ひけん、源氏の馬の蹄に懸じとて、小松殿の御墓掘せ、御骨に向ひ奉て、泣々申けるは、「あな淺まし、御一門の御果御覽候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%A2%9D#tk-7-714-nlp_gloss-66">7</a></p>
+      <p class="occurrence-context">何歸るべし共覺えねば、故入道相國の造り置き給ひし所々を見給ふに、春は花見の岡の御所、秋は月見の濱の御所、泉殿、松蔭殿、馬場殿、二階の棧敷殿、雪見の御所、萱の御所、人々の館ども五條大納言國綱卿の承て造進せられし里内裏、鴦の瓦、玉の甃、何れも／＼三年が程に荒果てゝ、舊苔徑を塞ぎ、秋の草門を閉づ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-28-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">木曾は大膳太夫成忠が宿所、六條西洞院を給はる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-46-nlp_gloss-5">8</a></p>
+      <p class="occurrence-context">御母儀は七條修理大夫信隆卿の御娘なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-49-nlp_gloss-39">8</a></p>
+      <p class="occurrence-context">信隆卿内々うれしうは思はれけれども、平家にも憚り、中宮にも恐れ參せて、もてなし奉る事もおはせざりしを、入道相國の北方八條の二位殿、「苦しかるまじ、我育て參せて、儲の君にして奉らむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-53-nlp_gloss-23">8</a></p>
+      <p class="occurrence-context">」と申されたりければ、北方斜ならず悦び、宮いざなひ參せて、西の七條なる處まで出られたりしを、女房の兄紀伊守教光、「是は物の附て狂給ふか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-302-nlp_gloss-30">8</a></p>
+      <p class="occurrence-context">其の跡に木曾冠者、十郎藏人打入て、我高名顏に、官加階を思ふ樣に成り、剩へ國を嫌ひ申す條奇怪也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-533-nlp_gloss-10">8</a></p>
+      <p class="occurrence-context">殘り六手は、各が居たらんずる條里小路より河原へ出で、七條河原にて一つになれと、相圖を定て出立けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-533-nlp_gloss-20">8</a></p>
+      <p class="occurrence-context">殘り六手は、各が居たらんずる條里小路より河原へ出で、七條河原にて一つになれと、相圖を定て出立けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-555-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">七條が末は攝津國の源氏の固たりけるが、七條を西へ落て行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-563-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">八條が末は山僧固めたりけるが、恥有る者は討死し、強顏者は落ぞ行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-597-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">軈て御輿に手かけ參せ、五條内裡に押籠め奉り緊しう守護したてまつる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-633-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">明る廿日、木曾左馬頭六條河原に打立て、昨日切る所の頸ども、懸竝べて記いたりければ、六百三十餘人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-638-nlp_gloss-14">8</a></p>
+      <p class="occurrence-context">故少納言入道信西の子息宰相長教、法皇の渡せ給ふ五條内裏にまゐて、「是は君に奏すべき事があるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-659-nlp_gloss-8">8</a></p>
+      <p class="occurrence-context">同十一月二十三日、三條中納言朝方卿を始として、卿相雲客四十九人が官職を停めて、押籠め奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-684-nlp_gloss-8">8</a></p>
+      <p class="occurrence-context">同十二月十日法皇は五條内裏を出させ給ひて、大膳大夫成忠が宿所、六條西洞院へ御幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%A2%9D#tk-8-684-nlp_gloss-23">8</a></p>
+      <p class="occurrence-context">同十二月十日法皇は五條内裏を出させ給ひて、大膳大夫成忠が宿所、六條西洞院へ御幸なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-0-nlp_gloss-18">9</a></p>
+      <p class="occurrence-context">
+                  壽永三年正月一日、院の御所は大膳大夫成忠が宿所、六條西洞院なれば、御所の體しかるべからずとて、禮儀行はるべきにあらねば拜禮もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-52-nlp_gloss-21">9</a></p>
+      <p class="occurrence-context">大手の大將軍、蒲御曹司範頼、相伴ふ人々、武田太郎、加賀見次郎、一條次郎、板垣三郎、稻毛三郎、榛谷四郎、熊谷次郎、猪俣小平六を先として、都合其勢三萬五千餘騎、近江國、野路、篠原にぞつきにける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-112-nlp_gloss-25">9</a></p>
+      <p class="occurrence-context">宇治勢田破れぬと聞えしかば、木曾左馬頭最後の暇申さんとて、院の御所六條殿へ馳參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-117-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">六條高倉なる所に始めて見そめたる女房のおはしければ、其へ打いり、最後の名殘惜まんとて、とみに出もやらざりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-125-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">六條河原に打出で見れば、東國の勢と覺くて、先三十騎計出來たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-132-nlp_gloss-39">9</a></p>
+      <p class="occurrence-context">大將軍九郎義經、軍兵共に軍をばせさせ、院御所の覺束なきに、守護し奉らんとて、先づ我身共に直甲五六騎、六條殿へ馳參る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-160-nlp_gloss-12">9</a></p>
+      <p class="occurrence-context">」とて、河原を上りに懸る程に、六條河原と三條河原との間に敵襲て懸れば、取て返し取て返し、僅なる小勢にて、雲霞の如くなる敵の大勢を、五六度までぞ追返す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-160-nlp_gloss-16">9</a></p>
+      <p class="occurrence-context">」とて、河原を上りに懸る程に、六條河原と三條河原との間に敵襲て懸れば、取て返し取て返し、僅なる小勢にて、雲霞の如くなる敵の大勢を、五六度までぞ追返す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-176-nlp_gloss-14">9</a></p>
+      <p class="occurrence-context">木曾殿今井が手を取て宣けるは、「義仲六條河原で如何にも成べかりつれ共、汝が行末の戀しさに、多くの敵の中を懸け破て、是迄は逃たる也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-186-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">」「甲斐の一條次郎殿とこそ承候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-194-nlp_gloss-3">9</a></p>
+      <p class="occurrence-context">甲斐の一條次郎とこそきけ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-198-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">一條次郎、「唯今名乘は、大將軍ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-263-nlp_gloss-17">9</a></p>
+      <p class="occurrence-context">樋口次郎今日既に都へ入と聞えしかば、黨も高家も、七條、朱雀、四塚さまへ馳向ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-265-nlp_gloss-26">9</a></p>
+      <p class="occurrence-context">四塚に幾も馳向うたる敵の中へ馳入り、大音聲を揚て、「此御中に甲斐の一條次郎殿の御手の人やまします。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-266-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」と問ければ、「強一條次郎殿の手で、軍をばするか、誰にも合へかし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-268-nlp_gloss-34">9</a></p>
+      <p class="occurrence-context">笑はれて名のりけるは、「かう申す者は信濃國諏訪上宮の住人、茅野大夫光家が子に、茅野太郎光廣、必ず一條の次郎殿の御手を尋るには非ず、弟の茅野七郎それにあり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-316-nlp_gloss-7">9</a></p>
+      <p class="occurrence-context">其國に源氏二人有り、故六條判官爲義が末子、賀茂冠者義嗣、淡路冠者義久と聞えしを、西國の兵共大將に憑んで、城廓を構へて待處に、能登殿やがて押寄攻給へば、一日戰ひ賀茂冠者討死す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%A2%9D#tk-9-397-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">俗姓を尋ぬれば、後三條院の第三の王子、資仁親王より五代の孫也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-8-nlp_gloss-9">10</a></p>
+      <p class="occurrence-context">同十三日、大夫判官仲頼、六條河原に出向て、頸共請取。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-10-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">法皇此條いかがあるべからむと思召し煩ひて、太政大臣、左右の大臣、内大臣、堀河大納言忠親卿に仰合せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-66-nlp_gloss-13">10</a></p>
+      <p class="occurrence-context">同十四日、生捕本三位中將重衡卿、六條を東へわたされけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-75-nlp_gloss-17">10</a></p>
+      <p class="occurrence-context">河原迄渡されて、かへて、故中御門藤中納言家成卿の八條堀河の御堂に居奉て、土肥次郎守護し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-76-nlp_gloss-15">10</a></p>
+      <p class="occurrence-context">院御所より御使に藏人左衞門權佐定長、八條堀河へ向はれけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-94-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">八條女院に候けるが、土肥次郎が許に行向て、「是は中將殿に先年召仕れ候し某と申す者にて候が、西國へも御供仕べき由存候しかども、八條の女院に兼參の者にて候間、力及ばで罷留て候が、今日大路で見參せ候へば、目も當られず、いとほしう思奉り候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-423-nlp_gloss-1">10</a></p>
+      <p class="occurrence-context">三條の齋藤左衞門茂頼が子に、齋藤瀧口時頼と云ひし者也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-502-nlp_gloss-65">10</a></p>
+      <p class="occurrence-context">」と宣へば、二人の者共、さめ％＼と泣いて、暫は御返事にも及ばず、稍有て與三兵衞涙を押へて申けるは、「重景が父與三左衞門景康は、平治の逆亂の時、故殿の御供に候けるが、二條堀河の邊にて、鎌田兵衞に組んで、惡源太に討たれ候ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%A2%9D#tk-10-766-nlp_gloss-111">10</a></p>
+      <p class="occurrence-context">相伴ふ人々、足利藏人義兼、加賀美小次郎長清、北條小四郎義時、齋院次官親義、侍大將には、土肥次郎實平、子息彌太郎遠平、三浦介義澄、子息平六義村、畠山庄司次郎重忠、同長野三郎重清、稻毛三郎重成、榛谷四郎重朝、同五郎行重、小山小四郎朝政、同長沼五郎宗政、土屋三郎宗遠、佐々木三郎盛綱、八田四郎武者朝家、安西三郎秋益、大胡三郎實秀、天野藤内遠景、比氣藤内朝宗、同藤四郎義員、中條藤次家長、一品房章玄、土佐坊正俊、此等を初として、都合其勢三萬餘騎、都を立て播磨の室にぞ著にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-46-nlp_gloss-186">11</a></p>
+      <p class="occurrence-context">」とて、營む樣で船に物具いれ兵粮米積、馬共立させて、
+「疾々仕れ。」と宣ひければ、水主梶取申けるは、「此風は追手にて候へども、普通
+に過たる風で候。沖はさぞ吹候らん。爭か仕候べき。」と申せば、判官大に怒て宣ひ
+けるは、「野山の末にてし、海河のそこにおぼれてうするも皆これせんぜの宿業也。
+海上にいで浮うだる時風強きとていかゞする。向ひ風に渡らんと言ばこそ、僻事なら
+め。順風なるが、少し過たればとて、是程の御大事に、爭か渡らじとは申ぞ。船仕ら
+ずば一々にしやつ原射殺せ。」と下知せらる。奧州の佐藤三郎兵衞嗣信、伊勢三郎義
+盛、片手矢はげ進み出で、「何條子細を申ぞ。御定であるに、とく／＼つかまつれ。
+舟仕つらずば一々に射殺さんずるぞ。」といひければ、水主梶取是を聞て、「射殺れ
+んも同事、風強くば、只馳死に死ねや者共。」とて、二百餘艘の舟の中に、唯五艘出
+てぞ走りける。殘の船は風に恐るるか梶原に怖かして、皆留まりぬ。判官宣ひけるは、
+「人の出ねばとて留まるべきにあらず、唯の時は敵も用心すらむ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-505-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">」とて、から／＼と笑ひ給へば、「何條の只今の戲れぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-698-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">法皇は六條東洞院に御車を立て叡覽あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-710-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">六條を東へ河原までわたされて、歸て、大臣殿父子は九郎判官の宿所、六條堀河にぞおはしける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-710-nlp_gloss-24">11</a></p>
+      <p class="occurrence-context">六條を東へ河原までわたされて、歸て、大臣殿父子は九郎判官の宿所、六條堀河にぞおはしける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-723-nlp_gloss-5">11</a></p>
+      <p class="occurrence-context">此歌は、祖父八條判官資忠と云し伶人の外は知れる者なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-819-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">六條を東へやて行く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-885-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">此條故亡父尊靈再誕し給はずば誰の人か愚意の悲歎を申開ん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-891-nlp_gloss-11">11</a></p>
+      <p class="occurrence-context">剩さへ義經五位の尉に補任之條、當家の重職何事かこれにしかん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-976-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">檢非違使ども三條河原にいで向て、是を請取り、大路を渡して、獄門の左の樗の木にぞ懸たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-981-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">西國より上ては、生て六條を東へ渡され、東國より歸ては、死んで三條を西へ渡され給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-981-nlp_gloss-26">11</a></p>
+      <p class="occurrence-context">西國より上ては、生て六條を東へ渡され、東國より歸ては、死んで三條を西へ渡され給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-986-nlp_gloss-17">11</a></p>
+      <p class="occurrence-context">此重衡卿の北方と申は鳥飼中納言惟實の女、五條大納言國綱の養子、先帝の御乳母、大納言佐殿とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%A2%9D#tk-11-1040-nlp_gloss-1">11</a></p>
+      <p class="occurrence-context">八條女院に候けるが、最後を見奉らんとて、鞭を打てぞ馳たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-55-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">入道相國の北方、八條の二位殿も姉にておはせしかば、兼官兼職、思の如く心の如し。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-118-nlp_gloss-4">12</a></p>
+      <p class="occurrence-context">」とて、六條河原に引出て切てげり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-129-nlp_gloss-3">12</a></p>
+      <p class="occurrence-context">其後北條四郎時政を大將として討手のぼると聞えしかば、判官殿鎭西の方へ落ばやと思ひ立ち給ふ處に緒方三郎維義は平家を九國の内へも入奉らず、逐出す程の威勢の者なりければ、判官「我に憑まれよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-134-nlp_gloss-8">12</a></p>
+      <p class="occurrence-context">左右なくたうだりければ、六條河原に引出して切てげり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-139-nlp_gloss-15">12</a></p>
+      <p class="occurrence-context">」[_][1]と申されけれは、法皇「此條頼朝がかへり聞かん事いかゞあるべからん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-154-nlp_gloss-18">12</a></p>
+      <p class="occurrence-context">同十一月七日鎌倉の源二位頼朝卿の代官として北條四郎時政、六萬餘騎を相具して都へ入。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-174-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條四郎策に「平家の子孫といはん人、尋出したらん輩に於ては、所望請ふに依べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-190-nlp_gloss-16">12</a></p>
+      <p class="occurrence-context">」と思ひ、急ぎ走り歸てかくと申せば、次の日北條かしこに打向ひ、四方を打圍み、人をいれていはせけるは、「平家小松三位中將殿の若君六代御前、是におはしますと承はて、鎌倉殿の御代官に北條四郎時政と申者が、御迎に參て候、はや／＼出し參させ給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-195-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條も是を聞て世に心くるしげに思ひ、涙拭ひつく％＼とぞ待たれける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-270-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條申されけるは、「鎌倉殿の仰には、平家の子孫京中に多く忍んでありと聞く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-292-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條も、「文覺房の約束の日數もすぎぬ、さのみ在京して、年を暮すべきにもあらず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-316-nlp_gloss-11">12</a></p>
+      <p class="occurrence-context">さる程に、同十二月十六日北條四郎若君具し奉て既に都を立にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-318-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條、「馬に乘れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-329-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條四郎若君の御前近う參て申されけるは、「是まで具し參せ候つるは別の事候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-351-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條「仔細あり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-355-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條披て見給へば、誠や、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-357-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條四郎殿へ　　　　頼朝</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-361-nlp_gloss-99">12</a></p>
+      <p class="occurrence-context">
+「『此若君の父三位中將殿は、初度の戰の大將軍也。誰申とも叶ふまじ。』と宣ひつ
+れば『文覺が心を破ては、爭か冥加もおはすべき。』など惡口申つれども、猶『叶ま
+じ。』とて、那須野の狩に下り給し間、剩文覺も狩場の供して、漸々に申てこひ請た
+り。いかに遲うおぼしつらん。」と申されければ、北條「廿日と仰せられ候ひし御約
+束の日數も過候ぬ。鎌倉殿の御宥れなきよと存じて、具し奉て下る程に、かしこうぞ、
+爰にて誤ち仕候らんに。」とて、鞍置て引せたる馬共に齋藤五、齋藤六を乘せて上せ
+らる。我身も遙に打送り奉て、「暫く御供申たう候へども、鎌倉殿に指て申べき大事
+共候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-367-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">二條猪熊なる所に、文覺坊の宿房ありければ、其に入奉て、暫く休奉り、夜半ばかり大覺寺へぞおはしける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-385-nlp_gloss-4">12</a></p>
+      <p class="occurrence-context">さる程に北條四郎六代御前具し奉て下りけるに、鎌倉殿御使鏡宿にて行合たりけるに、「如何に」と問へば、「十郎藏人殿、信太三郎先生殿、九郎判官殿に同心の由聞え候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-388-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">北條「吾身は大事の召人具したれば。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-389-nlp_gloss-5">12</a></p>
+      <p class="occurrence-context">」とて甥の北條平六時貞が送りに下りけるを、おいその森より「疾和殿は歸て此人人おはし處聞出して討て參せよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-413-nlp_gloss-18">12</a></p>
+      <p class="occurrence-context">彼の主の男、藏人を見知て夜もすがら京へ馳上り、北條平六につげたりければ「天王寺の手の者はいまだのぼらず、誰をか遣るべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-482-nlp_gloss-6">12</a></p>
+      <p class="occurrence-context">明る日の午刻ばかり北條平六其勢百騎ばかり旗さゝせて下るほどに淀の赤井河原で行合たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-491-nlp_gloss-8">12</a></p>
+      <p class="occurrence-context">やがて持せて京へ上り、北條平六に見せたりければ「やがて持せて下り、鎌倉殿の見參に入て御恩蒙給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-494-nlp_gloss-23">12</a></p>
+      <p class="occurrence-context">「下りはては勸賞蒙らんとこそ思ひつるに、さこそ無らめ、剩流罪に處せらるゝ條存外の次第也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-559-nlp_gloss-12">12</a></p>
+      <p class="occurrence-context">」とて供養果てて都へ入せ給ひて、六條河原にて切られにけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-565-nlp_gloss-53">12</a></p>
+      <p class="occurrence-context">逆茂木引て晝は人音もせず、夜になれば尋常なる輩多く集て詩作り歌を讀み管絃などして遊びける程に何としてか漏れ聞えたりけん、其比人のおぢ怖れけるは一條の二位入道義泰といふ人也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-576-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">一條の大路へ車遣出して頸共實檢せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-579-nlp_gloss-10">12</a></p>
+      <p class="occurrence-context">此人の母上は治部卿局とて八條女院に候はれけるを迎へ寄せ奉て見せ奉り給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%A2%9D#tk-12-610-nlp_gloss-87">12</a></p>
+      <p class="occurrence-context">二の宮は、御學問怠らせ給はず、正理を先とせさせ給ひしかば、如何にもして、此宮を位に即奉らんとはからひけれども、前右大將頼朝卿のおはせし程は叶はざりけるが、
+建久十年正月十三日、頼朝卿失せ給ひしかば、やがて謀反を起さんとしける程に忽に
+洩聞えて、二條猪熊の宿所に官人共つけられ召捕て八十に餘て後隱岐國へぞ流されけ
+る。文覺京を出るとて、「是程老の波に望て、今日明日とも知ぬ身を、縱勅勘なりと
+も都の片邊には置給はで隱岐國まで流さるる及丁冠者こそ安からね。終には文覺が流
+さるゝ國へ迎へ申さんずるものを。」と、申けるこそ怖しけれ。此君は餘に毬杖の玉
+を愛せさせ給ひければ文覺かやうに惡口申ける也。されば承久に御謀反起させ給ひて、
+國こそ多けれ、隱岐國へうつされ給ひけるこそ不思議なれ。彼國にても文覺が亡靈荒て、
+常は御物語申けるとぞ聞えし。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

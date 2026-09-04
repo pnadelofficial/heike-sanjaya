@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>打</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>strike</li>
+      
+      <li>striking</li>
+      
+      <li>to beat</li>
+      
+      <li>to surround</li>
+      
+      <li>struck</li>
+      
+      <li>nod</li>
+      
+      <li>wash ashore</li>
+      
+      <li>to strike</li>
+      
+      <li>strike (as in ringing a bell)</li>
+      
+      <li>beaten</li>
+      
+      <li>hit</li>
+      
+      <li>hang</li>
+      
+      <li>crossing</li>
+      
+      <li>to send (someone)</li>
+      
+      <li>to throw away</li>
+      
+      <li>break</li>
+      
+      <li>cut</li>
+      
+      <li>to go up</li>
+      
+      <li>breaking through</li>
+      
+      <li>to be struck</li>
+      
+      <li>strike (as in to redden, literally &#39;strike red&#39;)</li>
+      
+      <li>pass</li>
+      
+      <li>be struck</li>
+      
+      <li>to cover</li>
+      
+      <li>to nod</li>
+      
+      <li>lift</li>
+      
+      <li>suddenly</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (66)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%89%93#tk-1-545-nlp_gloss-86">1</a></p>
+      <p class="occurrence-context">
+                  新大納言猶恐れをも致されず、賀茂の上の社に、ある聖を籠て、御寶殿の御後なる杉の洞に壇を立てて、拏吉尼の法を百日行はせられけるほどに、彼の大杉に雷落ち
+かゝり、雷火おびただしく燃え上て、宮中已に危く見えけるを、宮人ども多く走り集て、これを打消つ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E6%89%93#tk-1-667-nlp_gloss-24">1</a></p>
+      <p class="occurrence-context">結願の導師には、仲胤法印、その比はいまだ仲胤供奉と申しが、高座に上り、かね打ならし、表白の詞にいはく、「我等なたねの二葉よりおふし立て給ふ神達、後二條の關白殿に、鏑矢一つ放ち當て給へ、大八王子權現。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-192-nlp_gloss-8">2</a></p>
+      <p class="occurrence-context">こは何事やらんと、胸打騒ぎ、車より下り、門の内に差入て見給へば、内にも、兵共隙はざまも無ぞ滿々たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-384-nlp_gloss-7">2</a></p>
+      <p class="occurrence-context">少將をば、いつしか兵共打圍んで守護し奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-436-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">既に赤地の錦の直垂に、黒絲縅の腹卷の、白金物打たる胸板せめて、先年安藝守たりし時、神拜の次に、靈夢を蒙て、嚴島の大明神より現に賜はられたりける銀の蛭卷したる小長刀、常の枕を放ず立られたりしを脇挾み、中門の廊へぞ出られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-460-nlp_gloss-3">2</a></p>
+      <p class="occurrence-context">侍共も皆打立て法住寺殿へ寄んと出たち候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-620-nlp_gloss-14">2</a></p>
+      <p class="occurrence-context">目代法に任せて防ぎければ、神人等十餘人打殺さる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-674-nlp_gloss-19">2</a></p>
+      <p class="occurrence-context">」と宣へば、いまだ幼き心に、何事をか聞わき給ふべきなれども、打點頭給へば、少將を始奉て母上乳母の女房、其座に竝居たる人々、心有も心無も、皆袖をぞ濡しける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E6%89%93#tk-2-930-nlp_gloss-23">2</a></p>
+      <p class="occurrence-context">千本の卒都婆のなかに、一本、安藝國嚴島の大明神の御前の渚に打あげたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%89%93#tk-3-80-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">打乘奉ても上たう候が、都の御使も叶ふまじき由申す上、赦れも無に、三人ながら島を出たりなど聞えば、中々惡う候なん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%89%93#tk-3-462-nlp_gloss-7">3</a></p>
+      <p class="occurrence-context">」と申と覺えて、夢打覺ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%89%93#tk-3-657-nlp_gloss-116">3</a></p>
+      <p class="occurrence-context">又靜憲法印、入道相國の西八條の邸に行て、「夕法皇の鳥羽殿へ御幸成て候なるに、
+御前に人一人も候はぬ由承るが餘に淺ましう覺え候。何か苦う候べき、靜憲ばかりは
+御ゆるされ候へかし。參り給はん。」と申されければ、「とう／＼、御房は事あやま
+つまじき人なれば。」とて許されけり。法印鳥羽殿へ參て、門前にて車よりおり、門
+の内へさし入給へば、折しも法皇、御經を打上々々遊されける御聲も、殊にすごう聞えさせ給ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%89%93#tk-4-599-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">足利は、朽葉の綾の直垂に、赤革威の鎧著て、高角打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、重籐の弓持て、連錢蘆毛なる馬に、柏木にみゝづく打たる金覆輪の鞍置てぞ乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%89%93#tk-4-599-nlp_gloss-51">4</a></p>
+      <p class="occurrence-context">足利は、朽葉の綾の直垂に、赤革威の鎧著て、高角打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、重籐の弓持て、連錢蘆毛なる馬に、柏木にみゝづく打たる金覆輪の鞍置てぞ乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%89%93#tk-5-626-nlp_gloss-1">5</a></p>
+      <p class="occurrence-context">やがて打取る所なればとて、駿河國をば一條次郎忠頼、遠江をば安田三郎義定に預けらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%89%93#tk-6-3-nlp_gloss-1">6</a></p>
+      <p class="occurrence-context">男女打ひそめて、禁中忌々しうぞ見えける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%89%93#tk-6-11-nlp_gloss-28">6</a></p>
+      <p class="occurrence-context">興福寺別當花林院僧正永圓は、佛像經卷の煙とのぼりけるを見て、あな淺ましと、心打騒ぎ、心をくだかれけるより病附て、幾程もなく終に失給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%89%93#tk-6-174-nlp_gloss-21">6</a></p>
+      <p class="occurrence-context">」とて、寮の御馬繋せ、ありつる女房の裝束をばはね馬の障子に打掛け、南殿の方へ参れば主上は未夜邊の御座にぞまし／＼ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%89%93#tk-6-177-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">」と、打詠めさせ給ふ處に、仲國つと參りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%89%93#tk-6-287-nlp_gloss-3">6</a></p>
+      <p class="occurrence-context">二位殿打驚き、汗水になり、是を人に語給へば、聞く人皆身の毛よだちけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../6.html?highlight=%E6%89%93#tk-6-556-nlp_gloss-11">6</a></p>
+      <p class="occurrence-context">」と有しが、大小事の怱劇に、打紛れて其後沙汰も無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-154-nlp_gloss-31">7</a></p>
+      <p class="occurrence-context">次第に闇うなりければ北南より廻れる搦手の勢一萬餘騎、倶利迦羅の堂の邊にまゐり會ひ、箙の方立打敲き、鬨をどとぞ作ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-162-nlp_gloss-204">7</a></p>
+      <p class="occurrence-context">」
+と云ふ族多かりけれ共、大勢の傾立ちぬるは、左右なう取て返す事難ければ、倶利迦
+羅谷へ、我先にとぞ落しける。ま先に落したる者が見えねば、此谷の底に、道の有に
+こそとて、親落せば子も落し、兄落せば弟も續く。主落せば家子郎等落しけり。馬に
+は人、人には馬、落重り落重りさばかり深き谷一つを、平家の勢七萬餘騎でぞ填たり
+ける。巖泉血を流し、死骸岳を成せり。されば其谷の邊には、矢の穴刀の瑕殘て今に
+有りとぞ承はる。平家には宗と憑まれたりける上總大夫判官忠綱、飛騨大夫判官景高、
+河内判官秀國も、此谷に埋もれて失にけり。備中國住人瀬尾太郎兼康といふ聞ゆる大
+力も、そこにて加賀國住人藏光次郎成澄が手に懸て、生捕にせらる。越前國火打が城
+にて、返忠したりける平泉寺の長吏齋明威儀師も捕はれぬ。木曾殿「あまりに憎きに
+其法師をば先切れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-182-nlp_gloss-5">7</a></p>
+      <p class="occurrence-context">木曾殿は志保山打越えて、能登の小田中、親王の塚の前に陣を取る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-236-nlp_gloss-20">7</a></p>
+      <p class="occurrence-context">存ずる旨有ければ、赤地の錦の直垂に、萠黄威の鎧著て、鍬形打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓持て、連錢葦毛なる馬に金覆輪の鞍置てぞ乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-295-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">高座に上り敬白の鐘打鳴す時、俄に空掻曇り雷おびたゞしう鳴て、[_][3]玄ばうの上に落懸り、其首を取て雲の中へぞ入にける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-524-nlp_gloss-40">7</a></p>
+      <p class="occurrence-context">さる程に御弟新三位中將資盛卿、左中將清經、同少將有盛、丹後侍從忠房、備中守師盛、兄弟五騎馬に乘ながら、門の中へ打入り、庭にひかへて、「行幸は遙に延させ給ひぬらん、如何にや今迄。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-607-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">餘に名殘を惜みて、桂河の端迄打送り、さてもあるべきならねば其より暇請うて泣々別れ給ふに、法印かうぞ思續け給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%89%93#tk-7-694-nlp_gloss-44">7</a></p>
+      <p class="occurrence-context">
+                  平家は小松三位中將維盛卿の外は、大臣殿以下妻子を具せられけれ共、次樣の人共はさのみ引しろふに及ばねば、後會其期を知らず、皆打捨てぞ落行ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%89%93#tk-8-152-nlp_gloss-2">8</a></p>
+      <p class="occurrence-context">大臣殿打驚き、胸打噪ぎ、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%89%93#tk-8-184-nlp_gloss-1">8</a></p>
+      <p class="occurrence-context">弓矢打物取て、九州二島にならぶ者も有まじきぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%89%93#tk-8-562-nlp_gloss-2">8</a></p>
+      <p class="occurrence-context">或は打殺るゝ者もありけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-31-nlp_gloss-2">9</a></p>
+      <p class="occurrence-context">梶原源太打寄て、「其れは誰が御馬ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-55-nlp_gloss-29">9</a></p>
+      <p class="occurrence-context">比は睦月廿日餘の事なれば、比良の高峯、志賀の山、昔ながらの雪も消え、谷々の氷打解て、水は折節増りたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-76-nlp_gloss-62">9</a></p>
+      <p class="occurrence-context">」といひければ、佐々木、太刀を拔き、馬の足に懸りける大綱共をふつ／＼と打切打切、いけずきといふ世一の馬には乘たりけり、宇治川はやしといへども一文字にさと渡いて、向への岸に打上る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-77-nlp_gloss-23">9</a></p>
+      <p class="occurrence-context">梶原が乘たりける摺墨は、河中よりのだめ形に押流されて遙の下より打上げたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-99-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">其後畠山乘替に乘て打上る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-141-nlp_gloss-24">9</a></p>
+      <p class="occurrence-context">九郎義經其日の裝束には、赤地の錦の直垂に、紫裳濃の鎧著て、鍬形打たる甲の緒しめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓の鳥打を紙を廣さ一寸許に切て、左卷にぞ卷たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-141-nlp_gloss-45">9</a></p>
+      <p class="occurrence-context">九郎義經其日の裝束には、赤地の錦の直垂に、紫裳濃の鎧著て、鍬形打たる甲の緒しめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓の鳥打を紙を廣さ一寸許に切て、左卷にぞ卷たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-191-nlp_gloss-25">9</a></p>
+      <p class="occurrence-context">木曾左馬頭其日の裝束には、赤地の錦の直垂に、唐綾威の鎧著て、鍬形打たる甲の緒しめ、いか物作の大太刀帶き、石打の矢の、其日の軍に射て、少々殘たるを、首高に負なし、滋籐の弓持て、聞る木曾の鬼葦毛と云ふ馬の究て太う逞に金覆輪の鞍置て乘たりける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-455-nlp_gloss-18">9</a></p>
+      <p class="occurrence-context">」とて、白葦毛なる老馬に鏡鞍置き、白轡はげ、手綱結で打懸け、先に追立て、未知ぬ深山へこそ入給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-509-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">熊谷は波打際より夜に紛て、そこをつと打通り、一谷の西の木戸口にぞ押寄たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-536-nlp_gloss-5">9</a></p>
+      <p class="occurrence-context">』と言ひかけ、打捨て寄つれば、遙に下りぬらん、よも後影をも見たらじ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-678-nlp_gloss-19">9</a></p>
+      <p class="occurrence-context">かくする事とは知ながら、乘じとする船には取付きつかみ附き、或はうで打切れ、或はひぢ打落されて一谷の汀に、朱になてぞ並臥たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-756-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">三位中將敵は近付く、馬は弱し、海へ打入れ給ひたりけれども、そこしも遠淺にて沈べき樣も無りければ、馬より下、鎧の上帶切り、高紐はづし物具脱ぎ棄、腹を切んとし給ふ處を梶原より先に、庄の四郎高家鞭鐙を合せて馳來り、急ぎ馬より飛下り、「正なう候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-766-nlp_gloss-25">9</a></p>
+      <p class="occurrence-context">」とて、磯の方へ歩まする處に、練貫に鶴縫たる直垂に、萠黄匂の鎧著て、鍬形打たる甲の緒をしめ、金作の太刀を帶き、切斑の矢負ひ、滋籐の弓持て、連錢蘆毛なる馬に、黄覆輪の鞍置て乘たる武者一騎、沖なる船に目を懸て、海へさと打入れ、五六段計泳がせたるを熊谷、「あれは、大將軍とこそ見參せ候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-869-nlp_gloss-1">9</a></p>
+      <p class="occurrence-context">明日打出んとての夜、白地なる所にて行逢たりしかば、何よりも心細げに打歎いて、『明日の軍には、一定討れなんずと覺ゆるはとよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-869-nlp_gloss-22">9</a></p>
+      <p class="occurrence-context">明日打出んとての夜、白地なる所にて行逢たりしかば、何よりも心細げに打歎いて、『明日の軍には、一定討れなんずと覺ゆるはとよ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-908-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">」と喚ければ、乳母の女房打驚き、傍を探れども、おはせざりければ、「あれよ、あれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%89%93#tk-9-935-nlp_gloss-8">9</a></p>
+      <p class="occurrence-context">其中に小宰相殿は顏打赤めて物も申されず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%89%93#tk-10-312-nlp_gloss-3">10</a></p>
+      <p class="occurrence-context">清見が關打過ぎて、富士のすそ野に成ぬれば、北には青山峨々として、松吹く風索々たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%89%93#tk-10-797-nlp_gloss-29">10</a></p>
+      <p class="occurrence-context">馬のくさわき胸懸づくし、太腹につく所も有り、鞍壺越す所も有り、深き所は游がせ淺き所に打あがる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%89%93#tk-10-815-nlp_gloss-42">10</a></p>
+      <p class="occurrence-context">八島には浦吹く風も烈しく、磯打つ波も高かりければ、兵も攻來らず、商客の行通ふも稀なれば、都の傳も聞まほしく、何しか空かき曇り、霰打散り、いとゞ消入る心地ぞし給ひける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-30-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">折節北風木を折て烈う吹ければ、大浪に船共散々に打損ぜられて、出すに及ばず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-125-nlp_gloss-14">11</a></p>
+      <p class="occurrence-context">明る十八日の寅刻に、讃岐國ひけ田と云ふ所に打下りて、人馬の息をぞ休めける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-291-nlp_gloss-41">11</a></p>
+      <p class="occurrence-context">判官深入して戰ふ程に船の中より熊手を持て、判官の甲の錣に、からり／＼と二三度迄打懸けるを、御方の兵共、太刀長刀で打のけ／＼しける程に、如何したりけん、判官弓をかけ落されぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-506-nlp_gloss-31">11</a></p>
+      <p class="occurrence-context">」とて、
+聲々にをめき叫給ひけり。二位殿は此有樣を御覽じて日比思食設けたる事なれば、に
+ぶ色の二衣打覆き、練袴の傍高く挾み、伸璽を脇に挾み、寶劔を腰にさし、主上を抱
+奉て、「我身は女なりとも、敵の手にはかゝるまじ。君の御供に參る也。御志思ひ參
+せ給はん人々は、急ぎ續き給へ。」とて舟端へ歩み出られけり。主上は今年は八歳に
+成せ給へども御年の程より遙にねびさせ給ひて、御容美しくあたりも照り輝くばかり
+也。御ぐし黒う優々として御せなかすぎさせ給へり。あきれたる御樣にて、「尼ぜ、
+我をばいづちへ具してゆかんとするぞ。」と仰ければ、幼き君に向奉り涙を押へて申
+されけるは、「君は未知し召れさぶらはずや。先世の十善戒行の御力に依て、今萬乘
+の主と生させ給へども、惡縁に引かれて、御運既に盡させ給ひぬ。先づ東に向はせ給
+ひて、伊勢大神宮に御暇申させ給ひ、其後西方淨土の來迎に預らむと思食し、西に向はせ給ひて御念佛候ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-751-nlp_gloss-26">11</a></p>
+      <p class="occurrence-context">」と宣へば、中將申されけるは、「判官は大かたも情ある者にて候なる上女房などの打たへ歎く事をば、如何なる大事をももてはなれぬと承り候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-861-nlp_gloss-96">11</a></p>
+      <p class="occurrence-context">生捕も死捕も義經にこそ見すべきに、
+物の用にもあひ給はぬ蒲殿の方へ見參に入べき樣やある。本三位中將殿こなたへたば
+ずば參て給はるべし。』とて既に軍出來候はんとし候しを、景時が土肥に心を合せて、
+三位中將殿を土肥次郎に預けて後こそ靜まり給て候しか。」と語り申ければ、鎌倉殿
+打頷いて、「今日九郎が鎌倉へ入なるに、各用意し給へ。」と仰られければ大名小名
+馳集て、程なく數千騎に成にけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%89%93#tk-11-1004-nlp_gloss-6">11</a></p>
+      <p class="occurrence-context">三位中將、御簾打かついで、泣々宣ひけるは、「去年の春一谷で如何にも成べかりし身の、責ての罪の報いにや生ながら捕られて大路を渡され、京鎌倉に恥をさらすだに口惜きに、果は奈良の大衆の手に渡されて、斬るべしとて罷り候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%89%93#tk-12-20-nlp_gloss-14">12</a></p>
+      <p class="occurrence-context">法皇はその折しも新熊野へ御幸成て、人多く打殺され觸穢出來にければ、急ぎ六波羅へ還御なる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%89%93#tk-12-25-nlp_gloss-16">12</a></p>
+      <p class="occurrence-context">天文の博士共馳參て、夕さりの亥子の刻には必ず大地打返すべしと申せば、怖しなども愚也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%89%93#tk-12-230-nlp_gloss-28">12</a></p>
+      <p class="occurrence-context">』とて、傍につい居て、何とやらん世に恨しげに思ひてさめ％＼と泣きつるが、程なく打おどろかされて若やとかたはらを探れども人もなし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%89%93#tk-12-277-nlp_gloss-1">12</a></p>
+      <p class="occurrence-context">今夜打とけて、寢給はぬと覺しくて、少し面痩給へるにつけていとゞ心苦しうらうたくぞ覺えける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%89%93#tk-12-326-nlp_gloss-2">12</a></p>
+      <p class="occurrence-context">國々宿々打過々々行程に、駿河國にもつき給ひぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E6%89%93#tk-12-361-nlp_gloss-168">12</a></p>
+      <p class="occurrence-context">
+「『此若君の父三位中將殿は、初度の戰の大將軍也。誰申とも叶ふまじ。』と宣ひつ
+れば『文覺が心を破ては、爭か冥加もおはすべき。』など惡口申つれども、猶『叶ま
+じ。』とて、那須野の狩に下り給し間、剩文覺も狩場の供して、漸々に申てこひ請た
+り。いかに遲うおぼしつらん。」と申されければ、北條「廿日と仰せられ候ひし御約
+束の日數も過候ぬ。鎌倉殿の御宥れなきよと存じて、具し奉て下る程に、かしこうぞ、
+爰にて誤ち仕候らんに。」とて、鞍置て引せたる馬共に齋藤五、齋藤六を乘せて上せ
+らる。我身も遙に打送り奉て、「暫く御供申たう候へども、鎌倉殿に指て申べき大事
+共候。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>禪</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>禪</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>abdication</li>
+      
+      <li>Zen</li>
+      
+      <li>Buddhist priest</li>
+      
+      <li>Zen master</li>
+      
+      <li>meditation</li>
+      
+      <li>Zen (Buddhist)</li>
+      
+      <li>Zen (a school of Mahayana Buddhism)</li>
+      
+      <li>Zen (meditation), in the compound &#39;zenmon&#39; meaning Zen master/practitioner</li>
+      
+      <li>Zen (meditation); Zen priest; here, a title for a lay Zen practitioner, referring to the monk&#39;s title &#39;Zenmon&#39; (Zen gate)</li>
+      
+      <li>Zen (meditation)</li>
+      
+      <li>meditation (Zen)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (19)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%A6%AA#tk-1-391-nlp_gloss-65">1</a></p>
+      <p class="occurrence-context">是によて、大藏の大輔伊吉兼盛が娘の腹に、今上の一の宮の二歳にならせ給ふがまし／＼けるを、太子にたてまゐらせ給ふべしと聞えし程に、同六月二十五日、俄に親王の宣旨下されて、やがてその夜受禪ありしかば、天下何となうあわてたるさま也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%A6%AA#tk-1-392-nlp_gloss-35">1</a></p>
+      <p class="occurrence-context">その時の有職の人々申しあはれけるは、本朝に、童帝の例を尋ぬれば、清和天皇九歳にして、文徳天皇の御禪を受けさせ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%A6%AA#tk-1-455-nlp_gloss-6">1</a></p>
+      <p class="occurrence-context">主上は二歳にて御禪を受けさせ給ひ、纔に五歳と申二月十九日、東宮踐祚ありしかば、位をすべらせ給て、新院とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%A6%AA#tk-1-487-nlp_gloss-16">1</a></p>
+      <p class="occurrence-context">資盛朝臣、はふ／＼六波羅へおはして、祖父の相國禪門に、此由訴へ申されければ、入道大きに怒て、「縱ひ殿下なりとも、淨海があたりをば憚り給ふべきに、少者に左右なく、耻辱を與へられけるこそ遺恨の次第なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%A6%AA#tk-1-710-nlp_gloss-64">1</a></p>
+      <p class="occurrence-context">さる程に山門の大衆、國司加賀守師高を流罪に處せられ、目代近藤判官師經を禁獄せらるべき由、奏聞度々に及ぶといへども、御裁許なかりければ、日吉の祭禮を打ち留めて、安元三年四月十三日辰の一點に、十禪師、客人、八王子三社の神輿かざり奉りて、陣頭へ振奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E7%A6%AA#tk-1-746-nlp_gloss-1">1</a></p>
+      <p class="occurrence-context">十禪師の御輿にも、矢どもあまた射立たり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%A6%AA#tk-2-65-nlp_gloss-12">2</a></p>
+      <p class="occurrence-context">大衆これをあやしみて、「誠に十禪師權現の御託宣にてあらば、我等驗を參らせん、少しもたがへず元の主に返し給へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%A6%AA#tk-2-66-nlp_gloss-17">2</a></p>
+      <p class="occurrence-context">」とて、老僧共四五百人、手手に持たる數珠どもを、十禪師の大床の上へぞ投上たる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E7%A6%AA#tk-2-848-nlp_gloss-10">2</a></p>
+      <p class="occurrence-context">其後は山門彌荒はてゝ、十二禪衆の外は、止住の僧侶も稀なり、谷々の講演磨滅して、堂堂の行法も退轉す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%A6%AA#tk-3-504-nlp_gloss-6">3</a></p>
+      <p class="occurrence-context">育王山の方丈、佛照禪師徳光に逢奉り、此由申たりければ、隨喜感嘆して、千兩を僧に引き、二千兩をば御門へ參せ、大臣の申されける旨を具に奏聞せられたりければ、御門大に感じ思召て、五百町の田代を育王山へぞ寄られける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%A6%AA#tk-3-510-nlp_gloss-5">3</a></p>
+      <p class="occurrence-context">同十四日、相國禪門此日比福原におはしけるが、何とか思ひなられたりけん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%A6%AA#tk-3-514-nlp_gloss-20">3</a></p>
+      <p class="occurrence-context">關白殿、内内聞召るゝ旨や有けん、急ぎ御參内有て、「今度相國禪門入洛の事は、ひとへに基房亡すべき結構にて候也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E7%A6%AA#tk-3-584-nlp_gloss-37">3</a></p>
+      <p class="occurrence-context">去ぬる保元に父惡左大臣殿の縁座に依て、兄弟四人流罪せられ給しが、御兄右大將兼長、御弟左中將隆長、範長禪師三人は歸洛を待ず、配所にてうせ給ぬ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%A6%AA#tk-4-45-nlp_gloss-1">4</a></p>
+      <p class="occurrence-context">相國禪門にしらせずしては、惡かりなんや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E7%A6%AA#tk-4-679-nlp_gloss-16">4</a></p>
+      <p class="occurrence-context">前右大將宗盛卿此宮を見參せて、父の相國禪門の御前に坐て、「何と候やらん、此宮を見奉るが、餘に痛う思ひ參せ候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E7%A6%AA#tk-7-428-nlp_gloss-1">7</a></p>
+      <p class="occurrence-context">十禪寺權現の御殿に籠て、三日加持して、其後衆徒に披露せらる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E7%A6%AA#tk-10-738-nlp_gloss-5">10</a></p>
+      <p class="occurrence-context">其故は、故池の禪尼の使として、頼朝を流罪に申宥られしは、偏に彼内府の芳恩也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%A6%AA#tk-12-524-nlp_gloss-4">12</a></p>
+      <p class="occurrence-context">其故は池の禪尼の使として頼朝を流罪に申宥られしは偏に彼内府の芳恩也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E7%A6%AA#tk-12-611-nlp_gloss-10">12</a></p>
+      <p class="occurrence-context">さる程に六代御前は、三位禪師とて、高雄に行ひすましておはしけるを、「さる人の子也。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

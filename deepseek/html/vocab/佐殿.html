@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>佐殿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>佐殿</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Lord (honorific title for a military governor)</li>
+      
+      <li>Lord Sa</li>
+      
+      <li>Lord Suke</li>
+      
+      <li>Lord Suke (title for the Governor of the Military Affairs Bureau)</li>
+      
+      <li>Lord Assistant Captain of the Guards</li>
+      
+      <li>Lord Saemon</li>
+      
+      <li>Lord</li>
+      
+      <li>Lord Sado</li>
+      
+      <li>Lord Sado (a title for a nobleman; specifically, the lord of Sado province)</li>
+      
+      <li>Lord Suke (honorific title for a military official)</li>
+      
+      <li>Lord Minister (佐殿, an honorific title for a high-ranking noble)</li>
+      
+      <li>Major Counselor</li>
+      
+      <li>the Lord (honorific title for a nobleman)</li>
+      
+      <li>the lord (honorific title for a nobleman)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (23)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E4%BD%90%E6%AE%BF#tk-4-160-nlp_gloss-40">4</a></p>
+      <p class="occurrence-context">同四月二十八日都を立て近江國より始めて美濃、尾張の源氏共に次第に觸て行程に、五月十日伊豆の北條に下りつき流人前兵衞佐殿に令旨奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%BD%90%E6%AE%BF#tk-5-448-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">
+                  さる程に兵衞佐殿へ常は參て、昔今の物語ども申て慰む程に、ある時文學申しけるは、「平家には小松大臣殿こそ、心も剛に策も勝て坐しか。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%BD%90%E6%AE%BF#tk-5-459-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">兵衞佐殿、「あれは如何に。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%BD%90%E6%AE%BF#tk-5-463-nlp_gloss-7">5</a></p>
+      <p class="occurrence-context">」と申ければ、兵衞佐殿、一定とは覺ねども、父の頭と聞く懷しさに、先涙をぞ流されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%BD%90%E6%AE%BF#tk-5-495-nlp_gloss-21">5</a></p>
+      <p class="occurrence-context">此院宣をば、錦の袋に入れて、石橋山の合戰の時も、兵衞佐殿頸に懸られたりけるとかや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E4%BD%90%E6%AE%BF#tk-5-574-nlp_gloss-3">5</a></p>
+      <p class="occurrence-context">「抑兵衞佐殿の勢、いか程有ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E4%BD%90%E6%AE%BF#tk-7-186-nlp_gloss-11">7</a></p>
+      <p class="occurrence-context">
+                  一年石橋山の合戰の時、兵衞佐殿射奉し者共、都へにげ上て、平家の方にぞ候ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E4%BD%90%E6%AE%BF#tk-8-296-nlp_gloss-18">8</a></p>
+      <p class="occurrence-context">上には高麗縁の疊を敷御簾高く揚させて、兵衞佐殿出られたり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%BD%90%E6%AE%BF#tk-9-36-nlp_gloss-13">9</a></p>
+      <p class="occurrence-context">爰で佐々木に引組み刺違へ、好い侍二人死で兵衞佐殿に損とらせ奉らん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E4%BD%90%E6%AE%BF#tk-9-547-nlp_gloss-37">9</a></p>
+      <p class="occurrence-context">熊谷鎧に立たる矢どもかなぐり捨て、城の内を睨まへ、大音聲を揚て、「去年の冬の比鎌倉を出しより、命をば兵衞佐殿に奉り、屍をば一谷で曝さんと思切たる直實ぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%BD%90%E6%AE%BF#tk-10-89-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">北方大納言佐殿へも、御詞にて申されけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%BD%90%E6%AE%BF#tk-10-195-nlp_gloss-3">10</a></p>
+      <p class="occurrence-context">北方大納言佐殿は、唯泣より外の事なくて、つや／＼御返事もし給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%BD%90%E6%AE%BF#tk-10-303-nlp_gloss-24">10</a></p>
+      <p class="occurrence-context">御子の一人もおはせぬ事を、母の二位殿も歎き、北の方大納言佐殿も本意なき事にして、萬の神佛に祈申されけれども、其驗なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%BD%90%E6%AE%BF#tk-10-352-nlp_gloss-5">10</a></p>
+      <p class="occurrence-context">』とこそ兵衞佐殿は仰られ候つれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%BD%90%E6%AE%BF#tk-10-403-nlp_gloss-2">10</a></p>
+      <p class="occurrence-context">兵衞佐殿うちゑみ給ひて、「千手に中人をば面白もしたるもの哉。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E4%BD%90%E6%AE%BF#tk-10-668-nlp_gloss-14">10</a></p>
+      <p class="occurrence-context">五月四日、池大納言頼盛關東へ下向、兵衞佐殿使者を奉て、「御方をば全く愚に思參らせ候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%BD%90%E6%AE%BF#tk-11-518-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">大納言佐殿は、内侍所の御唐櫃をもて、海へ入らんとし給ひけるが、袴の裾を舟端にいつけられ、蹴纒ひて倒れ給たりけるを、兵ども取留め奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%BD%90%E6%AE%BF#tk-11-986-nlp_gloss-31">11</a></p>
+      <p class="occurrence-context">此重衡卿の北方と申は鳥飼中納言惟實の女、五條大納言國綱の養子、先帝の御乳母、大納言佐殿とぞ申ける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%BD%90%E6%AE%BF#tk-11-997-nlp_gloss-10">11</a></p>
+      <p class="occurrence-context">中將斜ならず悦で、「大納言佐殿の御局は是に渡せ給候やらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%BD%90%E6%AE%BF#tk-11-1003-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">大納言佐殿は、目もくれ心も消果てしばしは物ものたまはず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%BD%90%E6%AE%BF#tk-11-1030-nlp_gloss-2">11</a></p>
+      <p class="occurrence-context">大納言佐殿やがてはしりついても、おはしぬべくはおぼしけれども、それもさすがなれば、引覆いてぞ臥給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E4%BD%90%E6%AE%BF#tk-11-1065-nlp_gloss-3">11</a></p>
+      <p class="occurrence-context">北方大納言佐殿首をはねられたりとも屍をば取寄せて孝養せんとて、輿を迎へに遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E4%BD%90%E6%AE%BF#tk-12-35-nlp_gloss-48">12</a></p>
+      <p class="occurrence-context">是は年來義朝の不便にして召使はれける紺掻の男、年來獄門に懸られて後世弔ふ人も無りし事をかなしんで時の大理に逢ひ奉り申給はり取おろして、兵衞佐殿流人でおはすれども、末たのもしき人なり。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

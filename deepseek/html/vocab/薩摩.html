@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>薩摩</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>薩摩</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>Satsuma</li>
+      
+      <li>Satsuma (a former province in southern Kyushu, Japan)</li>
+      
+      <li>Satsuma (a province in southern Kyushu, Japan)</li>
+      
+      <li>Satsuma (a province name)</li>
+      
+      <li>Satsuma (place name)</li>
+      
+      <li>Satsuma (place name; refers to Satsuma province, part of the title &#39;Satsuma no kami&#39;)</li>
+      
+      <li>Satsuma (province or its guardian)</li>
+      
+      <li>Satsuma (a province name; here referring to the governor of Satsuma)</li>
+      
+      <li>Satsuma (province)</li>
+      
+      <li>Satsuma (the old province name)</li>
+      
+      <li>Satsuma (a province in Kyushu, Japan)</li>
+      
+      <li>Satsuma (a former province in Japan)</li>
+      
+      <li>Satsuma (a province name; refers to the governor of Satsuma)</li>
+      
+      <li>Satsuma (province name; here refers to the title &#39;Satsuma no kami&#39; and by extension the person, i.e., the governor of Satsuma)</li>
+      
+      <li>Satsuma (the name of a province in Japan, used here as a title for the person referred to)</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (32)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E8%96%A9%E6%91%A9#tk-1-77-nlp_gloss-0">1</a></p>
+      <p class="occurrence-context">薩摩守忠度の母、是なり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%96%A9%E6%91%A9#tk-2-704-nlp_gloss-20">2</a></p>
+      <p class="occurrence-context">さる程に法勝寺の執行俊寛僧都、平判官康頼、この少將相具して薩摩潟鬼界が島へぞ流されける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%96%A9%E6%91%A9#tk-2-923-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">薩摩潟沖の小島に我ありと、親には告よ八重の汐風。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E8%96%A9%E6%91%A9#tk-2-954-nlp_gloss-0">2</a></p>
+      <p class="occurrence-context">薩摩潟より遙々と、都まで傳はりけるこそ不思議なれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E8%96%A9%E6%91%A9#tk-3-286-nlp_gloss-16">3</a></p>
+      <p class="occurrence-context">三月の末に都を出て、多くの波路を凌つゝ、薩摩潟へぞ下りける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E8%96%A9%E6%91%A9#tk-3-287-nlp_gloss-0">3</a></p>
+      <p class="occurrence-context">薩摩より彼島へ渡る船津にて、人怪み、著たる物を剥取などしけれ共、少しも後悔せず、姫御前の御文計ぞ人に見せじとて、髻結の中に隱したり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%96%A9%E6%91%A9#tk-4-496-nlp_gloss-31">4</a></p>
+      <p class="occurrence-context">堂衆には、筒井淨妙明秀、小藏尊月、尊永、慈慶、樂住、鐡拳玄永、武士には渡邊省播磨次郎、授薩摩兵衞、長七唱、競瀧口、與右馬允、續源太、清、勸を先として、都合其勢一千五百餘人三井寺をこそ打立けれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%96%A9%E6%91%A9#tk-4-532-nlp_gloss-39">4</a></p>
+      <p class="occurrence-context">六波羅には、
+「すはや宮こそ南都へ落させ給ふなれ。追懸て討奉れ。」とて、大將軍には左兵衞督
+知盛、頭中將重衡、左馬頭行盛、薩摩守忠教、侍大將には、上總守忠清、其子上總太
+郎判官忠綱、飛騨守景家、其子飛騨太郎判官景高、高橋判官長綱、河内判官秀國、武
+藏三郎左衞門尉有國、越中次郎兵衞尉盛繼、上總五郎兵衞忠光、惡七兵衞景清を先と
+して、都合其勢二萬八千餘騎、木幡山打越て、宇治橋の詰にぞ押寄たる。敵平等院に
+と見てんげれば、閧を作る事三箇度、宮の御方にも、同う閧の聲をぞ合せたる。先陣
+が、「橋を引いたぞ、過すな。」とどよみけれども、後陣に是を聞つけず、我先にと
+進程に、先陣二百餘騎押落され、水に溺れて流けり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E8%96%A9%E6%91%A9#tk-4-769-nlp_gloss-36">4</a></p>
+      <p class="occurrence-context">されば三井寺をも南都をも攻らるべしとて、同五月二十七日、大將軍には入道の四男頭中將重衡、副將軍には薩摩守忠度、都合其勢一萬餘騎で園城寺へ發向す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%96%A9%E6%91%A9#tk-5-496-nlp_gloss-39">5</a></p>
+      <p class="occurrence-context">さる程に、福原には勢の附ぬ先に、急ぎ討手を下べしと公卿僉議有て、大將軍には小松權亮少將維盛、副將軍には薩摩守忠度、都合其勢三萬餘騎、九月十八日に新都を立て、十九日には舊都に著き、やがて廿日東國へこそ討立れけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%96%A9%E6%91%A9#tk-5-500-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">副將軍薩摩守忠度は、紺地の錦の直垂に、黒糸威の鎧著て、黒き馬の太う逞に沃懸地の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%96%A9%E6%91%A9#tk-5-502-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">薩摩守忠度は、年來或る宮腹の女房の許へ通はれけるが、或時坐たりけるに、其女房の許へ、止事なき女房客人に來て、良久しう物語し給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%96%A9%E6%91%A9#tk-5-505-nlp_gloss-12">5</a></p>
+      <p class="occurrence-context">」と、優にやさしく口ずさみ給へば、薩摩守やがて遣ひ止て歸られけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%96%A9%E6%91%A9#tk-5-511-nlp_gloss-0">5</a></p>
+      <p class="occurrence-context">薩摩守返事には</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E8%96%A9%E6%91%A9#tk-5-691-nlp_gloss-24">5</a></p>
+      <p class="occurrence-context">同十二月二十三日、近江源氏の背きしを攻んとて、大將軍には左兵衞督知盛、薩摩守忠度、都合其勢二萬餘騎で、近江國へ發向して、山本、柏木、錦古里など云ふ溢れ源氏共一々に皆攻落し、やがて美濃尾張へ越え給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-24-nlp_gloss-19">7</a></p>
+      <p class="occurrence-context">大將軍には小松三位中將維盛、越前三位通盛、但馬守經正、薩摩守忠度、參河守知度、淡路守清房、侍大將には、越中前司盛俊、上總大夫判官忠綱、飛騨大夫判官景高、高橋判官長綱、河内判官秀國、武藏三郎左衞門有國、越中二郎兵衞盛嗣、上總五郎兵衞忠光、惡七兵衞景清を先として、以上大將軍六人、しかるべき侍三百四十餘人、都合其勢十萬餘騎、壽永二年四月十七日辰の一點に都を立て、北國へこそ趣きけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-71-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">搦手の大將軍は、薩摩守忠度、參河守知度、侍大將には、武藏三郎左衞門を先として、都合其勢三萬餘騎、能登越中の境なる志保の山へぞ懸かられける。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-448-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">左馬頭行盛、薩摩守忠度、一千餘騎で淀路を守護せられけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-560-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">薩摩守忠度は、いづくよりか歸られたりけん、侍五騎、童一人、我身共に七騎取て返し、五條の三位俊成卿の宿所におはして見給へば門戸をとぢて開かず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-562-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">薩摩守馬より下り、自高らかに宣ひけるは、「別の子細候はず、三位殿に申べき事有て、忠度が歸り參て候。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-569-nlp_gloss-0">7</a></p>
+      <p class="occurrence-context">薩摩守宣ひけるは、「年來申承はて後、愚ならぬ御事に思ひ參らせ候へ共、この二三年は京都の噪、國々の亂併當家の身の上の事に候間疎略を存せずといへども、常に參り寄る事も候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-579-nlp_gloss-6">7</a></p>
+      <p class="occurrence-context">」と宣へば、薩摩守悦で「今は西海の浪の底に沈まば沈め、山野に尸をさらさばさらせ、浮世に思置く事候はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E8%96%A9%E6%91%A9#tk-7-664-nlp_gloss-86">7</a></p>
+      <p class="occurrence-context">前内大臣宗盛公、平大納言時忠、平中納言教盛、新中納言知盛、修理大夫經盛、右衞門督清宗、本三位中將重衡、小松三位中將維盛、新三位中將資盛、越前三位通盛、殿上人には、内藏頭信基、讃岐中將時實、左中將清經、小松少將有盛、丹後侍從忠房、皇后宮亮經正、左馬頭行盛、薩摩守忠度、能登守教經、武藏守知明、備中守師盛、淡路守清房、尾張守清定、若狹守經俊、兵部少輔正明、藏人大夫成盛、大夫敦盛、僧には二位僧都專親、法勝寺執行能圓、中納言律師仲快、經誦坊阿闍梨祐圓、侍には受領、檢非違使、衞府、諸司百六十人、都合其勢七千餘騎、是は東國北國度々の軍に此二三箇年が間、討泄れて、僅に殘る所也。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E8%96%A9%E6%91%A9#tk-8-158-nlp_gloss-23">8</a></p>
+      <p class="occurrence-context">九重の雲の上、久堅の月に思を述し夕も、今の樣に覺て、薩摩守忠度、</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-723-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">薩摩守忠度は、一谷の西手の大將軍にて坐けるが、紺地の錦の直垂に、黒絲威の鎧著て黒き馬の太う逞きに、沃懸地の鞍置て乘り給へり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-730-nlp_gloss-0">9</a></p>
+      <p class="occurrence-context">薩摩守「惡い奴かな。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-734-nlp_gloss-44">9</a></p>
+      <p class="occurrence-context">一刀は、内甲へ突入られたれども、薄手なれば死なざりけるを、捕て押へ頸を掻んとし給ふ處を、六彌太が童、後馳に馳來て、討刀を拔き、薩摩守のかひなをひぢの本よりふと切り落す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-738-nlp_gloss-14">9</a></p>
+      <p class="occurrence-context">」と宣ひも果ねば、六彌太後よりよて、薩摩守の頸を討。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-741-nlp_gloss-9">9</a></p>
+      <p class="occurrence-context">忠度と書かれたりけるにこそ、薩摩守とは知てけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-742-nlp_gloss-28">9</a></p>
+      <p class="occurrence-context">太刀の先に貫ぬき、高く差上げ、大音聲を揚て、「此日來平家の御方と聞えさせ給つる薩摩守殿をば、岡部の六彌太忠純討奉たるぞや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E8%96%A9%E6%91%A9#tk-9-850-nlp_gloss-21">9</a></p>
+      <p class="occurrence-context">今度討れ給へるむねとの人々には、越前三位通盛、弟藏人大夫成盛、薩摩守忠度、武藏盛知明、備中守師盛、尾張守清定、淡路守清房、修理大夫經盛の嫡子皇后宮亮經正、弟若狹守經俊、其弟大夫敦盛、以上十人とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../12.html?highlight=%E8%96%A9%E6%91%A9#tk-12-555-nlp_gloss-5">12</a></p>
+      <p class="occurrence-context">是は平家の侍薩摩中務家資と申者にて候。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

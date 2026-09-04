@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渡せ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>渡せ</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>pass (over)</li>
+      
+      <li>to pass (across)</li>
+      
+      <li>to pass (someone) (auxiliary verb expressing respectful action)</li>
+      
+      <li>grant</li>
+      
+      <li>hand over</li>
+      
+      <li>hand over (imperative form)</li>
+      
+      <li>to pass (over)</li>
+      
+      <li>spend (time)</li>
+      
+      <li>to hand over</li>
+      
+      <li>cross over</li>
+      
+      <li>cross</li>
+      
+      <li>cross (imperative)</li>
+      
+      <li>pass across</li>
+      
+      <li>passed (honorific auxiliary)</li>
+      
+      <li>to cross (over)</li>
+      
+      <li>to cross over (honorific)</li>
+      
+      <li>offer</li>
+      
+      <li>to hand over / to cross</li>
+      
+      <li>cross (over)</li>
+      
+      <li>pass over</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (40)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-9-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">され共、御惱たゞにも渡せ給はず、御懷姙とぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-225-nlp_gloss-35">3</a></p>
+      <p class="occurrence-context">成經彼島へ流れて露の命の消やらずして、二年を送て、召還さるる嬉さは、さる事にて候へ共、此世に渡せ給ふを見參て候はばこそ、命の長きかひもあらめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-336-nlp_gloss-8">3</a></p>
+      <p class="occurrence-context">男の身にて候はば、渡せ給ふ島へも、などか尋ね參らで候ふべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-406-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">延喜の御門は、さばかの賢王にて渡せまし／＼けれ共、異國の相人を都の内へ入させ給たりけるをば、末代迄も賢王の御誤、本朝の耻とこそ見えたれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-530-nlp_gloss-14">3</a></p>
+      <p class="occurrence-context">保元以後は亂逆打つゞいて、君安い御心も渡せ給はざりしに、入道は唯大方を執行ふ許りでこそ候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-578-nlp_gloss-9">3</a></p>
+      <p class="occurrence-context">禮儀能く知めし、曇なき鏡にて渡せ給ひつる者をとて、世の惜奉る事斜ならず、遠流の人の道にて出家したるをば、約束の國へは遣ぬ事である間、初は日向國と定られたりしか共、御出家の間、備前の國府の邊、井ばさまと云ふ所に留め奉る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E6%B8%A1%E3%81%9B#tk-3-684-nlp_gloss-60">3</a></p>
+      <p class="occurrence-context">寛平の昔をも訪ひ、
+花山の古をも尋て、家をいで世をのがれ山林流浪の行者とも成ぬべうこそ候へ。」と
+遊されたりければ、法皇の御返事には、「さな思召され候そ。さて渡せ給ふこそ一つ
+の頼にても候へ。跡なく思召し成せ給ひなん後は、何の頼か候べき。唯愚老がともか
+うもならむ樣を聞召果させ給ふべし。」と遊されたりければ、主上此返事を龍顏に押
+當て、いとゞ御涙に沈ませ給ふ。君は船、臣は水、水能く船を浮べ、水又船を覆す。
+臣能く君を保ち、臣又君を覆す。保元平治の比は、入道相國君を保ち奉ると云共、安
+元治承の今は、又君をなみし奉る。史書の文に違はず。大宮大相國、三條内大臣、葉
+室大納言、中山中納言も失せられぬ。今は古き人とては成頼、親範ばかり也。此人々
+も、かゝらむ世には、朝に仕へ身を立て、大中納言を經ても何かはせんとて、いまだ
+盛んなし人々の、家を出で世を遁れ、民部卿入道親範は、大原の霜に伴ひ、宰相入道
+成頼は、高野の霧に交り、一向後世菩提の營みの外は他事なしとぞ聞えし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-3-nlp_gloss-9">4</a></p>
+      <p class="occurrence-context">二月廿一日、主上異なる恙も渡せ給はぬを押下し奉り、東宮踐祚有り。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-136-nlp_gloss-17">4</a></p>
+      <p class="occurrence-context">太子にも立ち、位にも即せ給ふべきに、三十迄宮にて渡せ給ふ御事をば、心憂しとは思召さずや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-138-nlp_gloss-22">4</a></p>
+      <p class="occurrence-context">御謀反起させ給ひて、平家を亡し、法皇のいつとなく鳥羽殿に押籠られて渡せ給ふ御心をも休め參せ、君も位に即せ給ふべし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-227-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">」と言ければ、「何條此御所ならでは、いづくへか渡せ給ふべかんなる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-260-nlp_gloss-8">4</a></p>
+      <p class="occurrence-context">又宮の御在所は何くにか渡せ給ふらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-271-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">宮は高倉を北へ、近衞を東へ、賀茂河を渡せ給て、如意山へいらせ御座す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-576-nlp_gloss-18">4</a></p>
+      <p class="occurrence-context">水に溺れて死なば死ね、いざ渡さんとて、馬筏を作て渡せばこそ渡しけめ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-597-nlp_gloss-5">4</a></p>
+      <p class="occurrence-context">水にしなうて渡せや渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-597-nlp_gloss-7">4</a></p>
+      <p class="occurrence-context">水にしなうて渡せや渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-604-nlp_gloss-12">4</a></p>
+      <p class="occurrence-context">是を見給て、大將軍左兵衞督知盛、「渡せや渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-604-nlp_gloss-14">4</a></p>
+      <p class="occurrence-context">是を見給て、大將軍左兵衞督知盛、「渡せや渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-662-nlp_gloss-40">4</a></p>
+      <p class="occurrence-context">」と申されたりければ、女院御返事に、「かゝる聞えの有し曉、御乳人などが、心少う具し奉て失にけるにや、全く此御所に渡せ給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-664-nlp_gloss-13">4</a></p>
+      <p class="occurrence-context">「何條其御所ならでは、何くへか渡せ給ふべかんなる。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../4.html?highlight=%E6%B8%A1%E3%81%9B#tk-4-696-nlp_gloss-27">4</a></p>
+      <p class="occurrence-context">中比兼明親王、具平親王と申しは、前中書王、後中書王とて、共に賢王聖主の王子にて渡せ給ひしかども、位にも即せ給はず。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B8%A1%E3%81%9B#tk-5-4-nlp_gloss-2">5</a></p>
+      <p class="occurrence-context">主上少なう渡せ給ふ時の御同輿には、母后こそ參せ給ふに、是は其儀なし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../5.html?highlight=%E6%B8%A1%E3%81%9B#tk-5-477-nlp_gloss-5">5</a></p>
+      <p class="occurrence-context">法皇も押籠られて渡せ給へば、如何有んずらん。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%B8%A1%E3%81%9B#tk-7-175-nlp_gloss-4">7</a></p>
+      <p class="occurrence-context">「淺かりけるぞ、渡せや。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E6%B8%A1%E3%81%9B#tk-7-521-nlp_gloss-51">7</a></p>
+      <p class="occurrence-context">中門の廊に出て、鎧取て著、馬引寄させ、既に乘らんとし給へば、若君姫君走出でて、父の鎧の袖、草摺に取附き、「是はされば何地へとて、渡せ給ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-11-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">法皇天台山に渡せ給と聞えさせ給しかば、馳參らせ給ふ人々、其比の入道殿と申は、前關白松殿、當殿とは近衞殿、太政大臣、左右大臣、内大臣、大納言、中納言、宰相、三位、四位、五位の殿上人、すべて世に人とかぞへられ、官加階に望をかけ、所帶所職を帶する程の人の、一人も漏るは無りけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-202-nlp_gloss-36">8</a></p>
+      <p class="occurrence-context">剩へ「君達をも、只今爰で取籠參すべう候へども、大事の中の小事なれとて、取籠參らせずは、何程の事か渡せ給ふべき。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-326-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">」「是は猫間中納言殿と申公卿で渡せ給ふ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-599-nlp_gloss-33">8</a></p>
+      <p class="occurrence-context">武士ども頻に矢を參せければ、七條侍從信清、紀伊守教光、御船に候はれけるが、「是は内の渡せ給ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-638-nlp_gloss-11">8</a></p>
+      <p class="occurrence-context">故少納言入道信西の子息宰相長教、法皇の渡せ給ふ五條内裏にまゐて、「是は君に奏すべき事があるぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-654-nlp_gloss-4">8</a></p>
+      <p class="occurrence-context">殿は源氏で渡せ給に、其こそ叶ひ候まじけれ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E6%B8%A1%E3%81%9B#tk-8-677-nlp_gloss-9">8</a></p>
+      <p class="occurrence-context">十善の帝王三種神器を帶して渡せ給へば、甲を脱ぎ弓の弦を弛いて、降人に是へ參れとは仰候べし。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../9.html?highlight=%E6%B8%A1%E3%81%9B#tk-9-118-nlp_gloss-19">9</a></p>
+      <p class="occurrence-context">今參したりける越後中太家光と云ふ者有り、「如何にかうは打解て渡せ給候ぞ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%B8%A1%E3%81%9B#tk-10-669-nlp_gloss-4">10</a></p>
+      <p class="occurrence-context">只故池殿の渡せ給ふとこそ存候へ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%B8%A1%E3%81%9B#tk-10-770-nlp_gloss-26">10</a></p>
+      <p class="occurrence-context">平家の方よりはやりをの若者共小舟に乘て漕ぎいださせ、扇を上て、「こゝ渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%B8%A1%E3%81%9B#tk-10-789-nlp_gloss-23">10</a></p>
+      <p class="occurrence-context">同二十六日の辰刻ばかり、平家又小船に乘て漕出させ扇を上て「源氏爰を渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%B8%A1%E3%81%9B#tk-10-800-nlp_gloss-0">10</a></p>
+      <p class="occurrence-context">渡せや、渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../10.html?highlight=%E6%B8%A1%E3%81%9B#tk-10-800-nlp_gloss-3">10</a></p>
+      <p class="occurrence-context">渡せや、渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%B8%A1%E3%81%9B#tk-11-983-nlp_gloss-39">11</a></p>
+      <p class="occurrence-context">
+                  本三位中將重衡卿は、狩野介宗茂に預られて、去年より伊豆國におはしけるを、南都の大衆頻に申ければ、「さらば渡せ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../11.html?highlight=%E6%B8%A1%E3%81%9B#tk-11-997-nlp_gloss-17">11</a></p>
+      <p class="occurrence-context">中將斜ならず悦で、「大納言佐殿の御局は是に渡せ給候やらん。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>

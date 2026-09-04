@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>速</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gentium Plus', "Gentium", 'New Athena Unicode', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .site-nav {
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: right;
+        }
+
+        .site-nav a {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #8b4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b4513;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            border-left: 4px solid #8b4513;
+            padding-left: 15px;
+        }
+
+        .reference {
+            color: #666;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-indent: 1em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #6b3410;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+
+        .home-link {
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .glossed-token {
+            cursor: pointer;
+            border-bottom: 1px dotted #8b4513;
+            transition: background-color 0.2s;
+        }
+
+        .glossed-token:hover {
+            background-color: #fff3e0;
+        }
+
+        .glossed-token.active {
+            background-color: #ffe0b2;
+            font-weight: bold;
+        }
+
+        .gloss-box {
+            display: block;
+            margin: 10px 0 10px 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #8b4513;
+            border-radius: 4px;
+            font-size: 0.95em;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gloss-box .token-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 8px;
+        }
+
+        .gloss-box .definition {
+            color: #333;
+        }
+
+        .gloss-box .label {
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .translation-word {
+            transition: background-color 0.2s;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .translation-word.highlighted {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        details.note {
+            margin-top: 4px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        details.note summary {
+            cursor: pointer;
+            color: #8b4513;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details.note summary::before  { content: "▶ "; font-size: 0.75em; }
+        details.note[open] summary::before { content: "▼ "; }
+
+        .annotation-error {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .glossed-token.form-highlight {
+            background-color: #fff176;
+            border-bottom: 2px solid #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../search.html">Search</a>
+  </nav>
+
+  
+<div data-pagefind-body>
+
+  <p class="reference">
+    <a href="../index.html">← Home</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">← Vocabulary</a>
+  </p>
+  <h1>速</h1>
+
+  
+  <section>
+    <h2>Glosses</h2>
+    <ul>
+      
+      <li>quickly</li>
+      
+      <li>immediately</li>
+      
+      <li>slowly</li>
+      
+    </ul>
+  </section>
+  
+
+  <section>
+    <h2>Occurrences (7)</h2>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../0.html?highlight=%E9%80%9F#tk-0-60-nlp_gloss-200">0</a></p>
+      <p class="occurrence-context">かの西光が子に、師高といふ者あり。是も切者にて、檢非違使五位尉に歴上て、安元元年十二月廿九日、追儺の除目に加賀守にぞなされける。國務を行ふ間、非法非禮を張行し、神社佛寺、權門勢家の庄領を沒倒し、散々の事共にてぞありける。假令せう公が跡を隔つといふとも、穩便の政を行ふべかりしに、かく心のまゝにふるまひし程に、同二年夏の比、國司師高が弟、近藤判官師經、加賀の目代に補せらる。目代下著のはじめ、國府の邊に鵜川といふ山寺あり。寺僧どもが境節湯をわかいて浴びけるを、亂入しておひあげ、我身あび、雜人共おろし、馬洗はせなどしけり。寺僧怒をなして、「昔より此處は國方の者入部することなし。速に先例に任せて、入部の押妨をとゞめよ。」とぞ申ける。「先先の目代は、不覺でこそいやしまれたれ。當目代はその儀あるまじ。唯法に任せよ。」といふ程こそありけれ、寺僧どもは、國方の者を追出せむとす。國方の者共は次を以て、亂入せんとす。うちあひ張合ひしける程に、目代師經が秘藏しける馬の足をぞ打折りける。その後は互に弓箭兵仗をたいして、射合ひ截合ひ數刻戰ふ。目代かなはじとや思ひけむ、夜に入て引退く。其後當國の在廳ども催し集め、其勢一千餘騎鵜川に押寄せて、坊舎一宇も殘さず燒拂ふ。鵜川といふは、白山の末寺なり。この事訴へんとて進む老僧誰々ぞ。智釋、學明、寶臺房、正智、學音、土佐阿闍梨ぞ進みける。白山三社、八院の大衆、悉く起りあひ、都合その勢二千餘人、同七月九日の暮方に、目代師經が館近うこそ押寄せたれ。今日は日暮れぬ。明日の軍と定めて、その日はよせでゆらへたり。露ふき結ぶ秋風は、射向の袖を飜し、雲井を照す稻妻は冑の星を耀す。目代かなはじとや思ひけん、夜逃にして京へのぼる。明くる卯刻に押寄て、閧をどとつくる。城の中には音もせず。人を入れて見せければ、皆落て候と申す。大衆力及ばで引退く。然らば山門へ訴へんとて、白山中宮の神輿をかざり奉り、比叡山へふりあげ奉る。同八月十二日の午刻許、白山の神輿、既に比叡山東坂本につかせ給ふと云程こそありけれ。北國の方より雷おびたゞしく鳴て、都をさして鳴りのぼる。白雪くだりて地を埋み、山上洛中おしなべて、常葉の山の梢まで皆白妙になりけり。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../1.html?highlight=%E9%80%9F#tk-1-47-nlp_gloss-157">1</a></p>
+      <p class="occurrence-context">山門の騒動を靜られんが爲に、三井寺にて御灌頂は無りしか共、山上には堂衆學生、不快の事出來て、合戰度々に及ぶ。毎度に學侶打落されて山門の滅亡、朝家の御大事とぞ見えし。堂衆と申は、學生の所從なりける童部が法師に成たるや、若は中間法師原にてありけるが、金剛壽院の座主、覺尋權僧正治山の時より、三塔に結番して、夏衆と號して、佛に花進せし者共也。近年行人とて、大衆をも事共せざりしが、かく度々の軍に打勝ぬ。堂衆等師主の命を背いて、合戰を企つ、速に誅罰せらるべき由、大衆公家に奏聞し、武家へ觸訴ふ。これに依て太政入道院宣を承り、紀伊國の住人、湯淺權守宗重以下、畿内の兵二千餘騎、大衆に指添て、堂衆を攻らる。堂衆日來は東陽坊にありしが、近江の國三箇の庄に下向して、數多の勢を率し、又登山して、早尾坂に城をして立籠る。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../2.html?highlight=%E9%80%9F#tk-2-12-nlp_gloss-265">2</a></p>
+      <p class="occurrence-context">かゝりしか共、中宮は隙なく頻らせ給ふばかりにて、御産も頓に成遣ず。入道相國、
+二位殿、胸に手を置て、こはいかにせんとぞあきれ給ふ。人の物申しけれども、唯と
+もかくも好樣にとぞ宣ける。さり共「軍の陣ならば、是程淨海は臆せじ物を。」とぞ
+後には仰られける。御驗者は、房覺性運兩僧正、春堯法印、豪禪、實專兩僧都、各僧
+伽の句どもあげ、本寺本山の三寶、年來所持の本尊達、責ふせ々々々もまれけり。誠
+にさこそはと覺えて尊かりける中に法皇は、折しも新熊野へ御幸なるべきにて、御精
+進の次なりける間、錦帳近く御座有て、千手經を打上遊されけるにこそ、今一際事替
+て、さしも躍狂ふ御よりまし共が縛も、暫打靜けれ。法皇仰なりけるは、「如何なる
+御物氣なり共、此老法師がかくて候はんには、爭か近附奉るべき。就中に今現るる所
+の怨靈共は、皆我朝恩によて、人と成し者共ぞかし。縱報謝の心をこそ存ぜず共、豈
+障碍を成すべきや。速に罷退き候へ。」とて女人生産し難からん時に臨で、邪魔遮障
+し、苦忍難からんにも、心を致して大悲呪を稱誦せば、鬼神退散して、安樂に生ぜん
+と遊いて、皆水精の御數珠を推揉せ給へば、御産平安のみならず、皇子にてこそ坐け
+れ。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../3.html?highlight=%E9%80%9F#tk-3-36-nlp_gloss-241">3</a></p>
+      <p class="occurrence-context">譬へば、源三位入道の嫡子、仲綱の許に、九重に聞えたる名馬有り。鹿毛なる馬の雙なき逸物、乘走り心むき、又有るべし共覺えず。名をば木の下とぞ云れける。前右大將是を傳聞き仲綱の許へ使者を立て、「聞え候名馬を見候はばや。」と宣ひ遣されければ、伊豆守の返事には、「さる馬は持て候つれ共、此程餘に乘損じて候つる間、暫勞せ候はむとて田舎へ遣して候。」「さらんには力なし。」とて、其後沙汰も無りしを、多く竝居たりける平家の侍共、「哀其馬は一昨日迄は候し者を、昨日も候ひし、今朝も庭乘し候つる。」など申ければ、「さては惜むごさんなれ。惡し、乞へ。」とて侍して馳させ、文などして、一日が中に五六度七八度など乞はれければ、三位入道是を聞き、伊豆守喚寄せ、「縱金を丸たる馬なりとも、其程に人の乞うものを惜べき樣やある。速に其馬六波羅へ遣せ。」とぞ宣ける。伊豆守力及ばで一首の歌を書そへて、六波羅へ遣す。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%80%9F#tk-7-24-nlp_gloss-229">7</a></p>
+      <p class="occurrence-context">平家いまは筑紫に都を定め、内裏造るべきよし沙汰ありしに維義が謀反と聞えしかば、こは如何と噪がれけり。平大納言時忠卿申されけるは、「彼維義は、小松殿の御家人也。小松殿の君達一所向はせ給ひて、こしらへて御覽ぜらるべうや候らん。」と申されければ、誠にもとて、小松の新三位中將資盛卿五百餘騎で豐後國に打越えて樣々にこしらへ給へども、維義從奉らず。剩へ「君達をも、只今爰で取籠參すべう候へども、大事の中の小事なれとて、取籠參らせずは、何程の事か渡せ給ふべき。とう／＼太宰府へ歸らせ給ひて、只御一所で如何にも成せ給へ。」とて、追返し奉る。維義が次男、野尻次郎維村を使者で、太宰府へ申けるは、「平家は重恩の君にてましませば、甲を脱ぎ弦を弛いて參るべう候へども、一院の御定に速に九國内を逐出し參らせよと候。急ぎ出させ給ふべうや候らん。」と申送たりければ、平大納言時忠卿、緋緒括の袴、絲葛の直垂、立烏帽子で、維村に出向て宣けるは、「夫我君は、天孫四十九世の正統、人王八十一代の御門也。天照大神正八幡宮も、吾君をこそ守り參させ給らめ。就中に故太政大臣入道殿は保元平治兩度の逆亂を靜め、其上鎭西の者どもをばうち樣にこそ召されしか。東國北國の凶徒等が頼朝義仲等に語らはれて、爲おほせたらば國を預けう、庄をたばんといふを、實と思ひて、其鼻豐後が下知に從はん事、然べからず。」とぞ宣ける。豐後國司刑部卿三位頼資卿は、究て鼻の大きにおはしければ、かうは宣けり。維村歸て、父に此由云ければ、「こは如何に、昔は昔今は今、其儀ならば、速に九國の中を逐出し奉れ。」とて、勢汰ふるなど聞えしかば、平家の侍源太夫判官季定、攝津判官守澄、「向後傍輩のため奇怪に候。召取候はん。」とて、其勢三千餘騎で、筑後國、高野本庄に發向して、一日一夜攻戰ふ。されども維義が勢、雲霞の如く重りければ、力及ばで引退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../7.html?highlight=%E9%80%9F#tk-7-24-nlp_gloss-458">7</a></p>
+      <p class="occurrence-context">平家いまは筑紫に都を定め、内裏造るべきよし沙汰ありしに維義が謀反と聞えしかば、こは如何と噪がれけり。平大納言時忠卿申されけるは、「彼維義は、小松殿の御家人也。小松殿の君達一所向はせ給ひて、こしらへて御覽ぜらるべうや候らん。」と申されければ、誠にもとて、小松の新三位中將資盛卿五百餘騎で豐後國に打越えて樣々にこしらへ給へども、維義從奉らず。剩へ「君達をも、只今爰で取籠參すべう候へども、大事の中の小事なれとて、取籠參らせずは、何程の事か渡せ給ふべき。とう／＼太宰府へ歸らせ給ひて、只御一所で如何にも成せ給へ。」とて、追返し奉る。維義が次男、野尻次郎維村を使者で、太宰府へ申けるは、「平家は重恩の君にてましませば、甲を脱ぎ弦を弛いて參るべう候へども、一院の御定に速に九國内を逐出し參らせよと候。急ぎ出させ給ふべうや候らん。」と申送たりければ、平大納言時忠卿、緋緒括の袴、絲葛の直垂、立烏帽子で、維村に出向て宣けるは、「夫我君は、天孫四十九世の正統、人王八十一代の御門也。天照大神正八幡宮も、吾君をこそ守り參させ給らめ。就中に故太政大臣入道殿は保元平治兩度の逆亂を靜め、其上鎭西の者どもをばうち樣にこそ召されしか。東國北國の凶徒等が頼朝義仲等に語らはれて、爲おほせたらば國を預けう、庄をたばんといふを、實と思ひて、其鼻豐後が下知に從はん事、然べからず。」とぞ宣ける。豐後國司刑部卿三位頼資卿は、究て鼻の大きにおはしければ、かうは宣けり。維村歸て、父に此由云ければ、「こは如何に、昔は昔今は今、其儀ならば、速に九國の中を逐出し奉れ。」とて、勢汰ふるなど聞えしかば、平家の侍源太夫判官季定、攝津判官守澄、「向後傍輩のため奇怪に候。召取候はん。」とて、其勢三千餘騎で、筑後國、高野本庄に發向して、一日一夜攻戰ふ。されども維義が勢、雲霞の如く重りければ、力及ばで引退く。</p>
+    </div>
+    
+    <div class="occurrence-block">
+      <p class="reference"><a href="../8.html?highlight=%E9%80%9F#tk-8-0-nlp_gloss-200">8</a></p>
+      <p class="occurrence-context">壽永三年正月一日、院の御所は大膳大夫成忠が宿所、六條西洞院なれば、御所の體しかるべからずとて、禮儀行はるべきにあらねば拜禮もなし。院の拜禮無りければ、内裏の小朝拜もおこなはれず。平家は讃岐國八島の磯におくり迎へて、年のはじめなれども元旦元三の儀式事宜からず、主上わたらせ給へども、節會も行はれず、四方拜もなし。はらか魚も奏せず。吉野のくずも參らず。「世亂れたりしかども都にてはさすがかくは無りし者を。」とぞ、各宣ひあはれける。青陽の春も來り、浦吹く風もやはらかに、日影も長閑に成行けど、唯平家の人々は、いつも氷に閉籠られたる心地して、寒苦鳥に異ならず。東岸西岸の柳遲速を交へ、南枝北枝の梅開落已に異にして、花の朝月の夜、詩歌管絃、鞠、小弓、扇合、繪合、草盡、蟲盡、樣々興有し事ども思出で語りつゞけて、永き日を暮しかね給ふぞ哀なる。</p>
+    </div>
+    
+  </section>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gloss popups
+    document.querySelectorAll('.glossed-token').forEach(token => {
+        token.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wasActive = this.classList.contains('active');
+            document.querySelectorAll('.gloss-box').forEach(g => g.remove());
+            document.querySelectorAll('.glossed-token.active').forEach(t => t.classList.remove('active'));
+            if (wasActive) return;
+
+            const sentenceSpan = this.closest('.sentence');
+            const insertionPoint = sentenceSpan || this;
+            const glossBox = createGlossBox(this);
+            this.classList.add('active');
+            insertionPoint.insertAdjacentElement('afterend', glossBox);
+        });
+    });
+
+    // Highlight a word form when navigated to via ?highlight=
+    const highlightForm = new URLSearchParams(window.location.search).get('highlight');
+    if (highlightForm) {
+        document.querySelectorAll(`.glossed-token[data-form="${CSS.escape(highlightForm)}"]`)
+            .forEach(el => el.classList.add('form-highlight'));
+    }
+
+    function createGlossBox(tokenElement) {
+        const form = tokenElement.dataset.form;
+        let annotation = {};
+        try {
+            annotation = JSON.parse(tokenElement.dataset.annotation || '{}');
+        } catch (e) {
+            annotation = {};
+        }
+
+        const box = document.createElement('div');
+        box.className = 'gloss-box';
+
+        // Build with textContent, not innerHTML: form/annotation values
+        // originate from annotator output and must never be interpreted as markup.
+        const tokenDiv = document.createElement('div');
+        tokenDiv.className = 'token-display';
+        tokenDiv.textContent = form;
+        box.appendChild(tokenDiv);
+
+        // Canonical primary field, shown first and prominently.
+        const label = annotation.label;
+        if (label) {
+            box.appendChild(makeGlossRow('Gloss', label));
+        }
+
+        // Every other field the annotator returned, rendered generically so
+        // new fields (lemma, part of speech, morphology, …) appear with no
+        // template change. Skip the canonical key and any field that merely
+        // repeats the gloss value (e.g. an annotator's source field aliased
+        // onto label, like GlossAnnotator's "gloss").
+        Object.keys(annotation).forEach(key => {
+            if (key === 'label') return;
+            const value = annotation[key];
+            if (value === null || value === undefined || value === '') return;
+            if (value === label) return;
+            box.appendChild(makeGlossRow(formatKey(key), value));
+        });
+        return box;
+    }
+
+    function makeGlossRow(keyText, value) {
+        const row = document.createElement('div');
+        row.className = 'definition';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'label';
+        labelSpan.textContent = keyText + ':';
+        row.appendChild(labelSpan);
+        row.appendChild(document.createTextNode(' ' + value));
+        return row;
+    }
+
+    function formatKey(key) {
+        return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+});
+</script>
+
+
+</body>
+</html>
